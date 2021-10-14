@@ -2,20 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nocturover.github.io/post/hello-world/</loc>
+    <loc>https://nocturover.github.io/getting-start/installation/direct-copy/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/newsection/direct-copy/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/installation/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/installation/as-git-clone/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/newsection/as-git-clone/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/</loc>
+    <lastmod>2020-08-20T16:42:11+00:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/configuration/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/getting-start/newsection/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/folder/</loc>
+    <lastmod>2021-10-13T20:48:06+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/folder/hello-world/</loc>
+    <lastmod>2021-10-13T20:48:06+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/folder/newsection/hello-world/</loc>
     <lastmod>2021-10-13T20:48:06+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/</loc>
     <lastmod>2021-10-13T20:48:06+09:00</lastmod>
   </url><url>
-    <loc>https://nocturover.github.io/post/</loc>
-    <lastmod>2021-10-13T20:48:06+09:00</lastmod>
+    <loc>https://nocturover.github.io/_layout/footer/</loc>
   </url><url>
-    <loc>https://nocturover.github.io/post/test/</loc>
-    <lastmod>2021-10-13T20:48:06+09:00</lastmod>
-  </url><url>
-    <loc>https://nocturover.github.io/post/test2/</loc>
-    <lastmod>2021-10-13T20:48:06+09:00</lastmod>
+    <loc>https://nocturover.github.io/_layout/</loc>
   </url><url>
     <loc>https://nocturover.github.io/categories/</loc>
   </url><url>
