@@ -2,8 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nocturover.github.io/go/hugo/</loc>
+    <lastmod>2021-10-16T17:05:46+09:00</lastmod>
+  </url><url>
     <loc>https://nocturover.github.io/hello/</loc>
     <lastmod>2021-10-15T22:56:37+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/project/investo/idea/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/project/investo/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/csharp/winform/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/go/hugo/00_custom_theme/</loc>
+    <lastmod>2021-10-16T17:05:46+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/insight/</loc>
     <lastmod>2021-10-15T23:06:47+09:00</lastmod>
@@ -15,9 +27,13 @@
     <lastmod>2021-10-15T23:07:36+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/csharp/</loc>
+    <lastmod>2021-10-15T23:07:36+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/python/</loc>
     <lastmod>2021-10-15T23:07:26+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/go/</loc>
+    <lastmod>2021-10-16T17:05:46+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/windows/</loc>
     <lastmod>2021-10-15T23:06:27+09:00</lastmod>
@@ -29,7 +45,21 @@
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/</loc>
-    <lastmod>2021-10-15T23:56:27+09:00</lastmod>
+    <lastmod>2021-10-16T17:05:46+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/_layout/</loc>
+    <lastmod>2020-08-20T15:41:15+00:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/_layout/footer/</loc>
+    <lastmod>2020-08-20T15:41:15+00:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/_layout/sidebar-before/</loc>
+    <lastmod>2020-08-20T11:08:17+00:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/_layout/sidebar-after/</loc>
+    <lastmod>2020-08-20T11:07:48+00:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/_layout/article-sidebar-after/</loc>
   </url><url>
     <loc>https://nocturover.github.io/shortcodes/attachments/</loc>
   </url><url>
