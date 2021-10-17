@@ -9,7 +9,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-10-17T19:39:36 KST">
+<meta name="revised" content="2021-10-17T22:23:20 KST">
 <meta name="description" content="">
 
 
@@ -874,6 +874,16 @@
     
 
 
+<script>
+	var element = document.getElementById("search-by");
 
+	window.addEventListener("keydown", (e) => 
+	{
+		if (e.key == "/"){
+			e.preventDefault();
+			element.focus();		
+		}
+	});
+</script>  
   </body>
 </html>

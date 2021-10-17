@@ -17,7 +17,7 @@
  2. Shooting  git config --global core.autocrlf true 각 계정에 remote add로 등록된 해당 레퍼지토리의 config 를 변경함으로써 해결가능하다.
  3. Summary  Reference
 CRLF 차이점과 해결법
-</description>
+ </description>
     </item>
     
   </channel>
