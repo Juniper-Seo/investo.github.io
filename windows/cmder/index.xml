@@ -16,7 +16,7 @@
       <description>Environment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.
 시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.
 나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.
-Common command  Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정이 가능하다.
+ Common command  Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정이 가능하다.
 alias [명령어] [별칭] xcopy :: 파일/폴더 복사 rename 이 가능하다는 특징이 있다.</description>
     </item>
     
