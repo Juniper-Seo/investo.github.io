@@ -1,0 +1,803 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+	00_CRLF_TROUBLE :: 1998
+</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="revised" content="2021-10-20T20:52:57 KST">
+<meta name="description" content="">
+
+
+
+<title>00_CRLF_TROUBLE :: 1998</title>
+
+<link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel="stylesheet">
+
+
+
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/layout.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/css/style.main.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/css/style.menu.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/notice.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/tabs.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/panel.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/columns.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/children.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/attachments.css'>
+<link rel="stylesheet" type="text/css" href='https://nocturover.github.io/sass/shortcodes/alert.css'>
+<link rel="stylesheet" type="text/css" href='/css/docport.css'>
+
+<script src='/js/docport.js'></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/nocturover.github.io\/";
+</script>
+
+
+
+
+    
+  </head>
+
+  <body data-url="/git/troubleshooting/00_crlf_trouble/"
+
+  class="">
+
+<style type="text/css">
+  #debug{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.5rem;
+    margin-bottom: .35rem;
+    padding: 0 2rem;
+    position: fixed;
+    left: 0;      right: 0;     top: 0;
+   
+    top:0px;
+    
+    min-height: 150px;
+
+    background-color: white;
+    border: 3px solid red;
+    z-index: 10000 ;
+    word-wrap: all;
+    overflow: auto;
+  }
+</style>
+ 
+
+
+    
+    
+    <header style="">
+        <div>
+    
+    <div class="burger ">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">&#9776;</a>
+    </div>
+    
+
+    <div>
+
+		
+	
+			
+		
+	    	<a class='baselink' href='https://nocturover.github.io/'>1998</a>
+	  	
+	</div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/nocturover"  rel="noopener">
+                  Github
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://nocturover.github.io/project/investo/progress/"  rel="noopener">
+                  Progress
+                </a>
+            </li>
+    </nav>
+
+</div>
+    </header>
+    
+
+    <article>
+      
+      <aside class="">
+        
+<div class="search">
+	<div class="searchbox">
+	  <input data-search-input id="search-by" type="text" placeholder="&#39; / &#39; 키를 눌러 이동">
+	</div>
+	<script type="text/javascript" src="/vendor/lunr/lunr.min.js"></script>
+	<script type="text/javascript" src="/vendor/auto-complete/auto-complete.js"></script>
+	<link href="/vendor/auto-complete/auto-complete.css" rel="stylesheet">
+	<script type="text/javascript">
+	  
+	      var baseurl = "https:\/\/nocturover.github.io\/";
+	  
+	</script>
+	<script type="text/javascript" src="/js/search.js"></script>
+</div>
+
+		
+	
+			
+		
+	    	
+	    
+	<div id="close_menu">
+  <a href="javascript:void(0);" style="font-size:15px;" onclick="$('article > aside').toggleClass('responsive')">
+      <i class="fa fa-lg fa-times"></i>
+  </a>
+</div>
+
+<ul class="menu">
+
+    <li data-nav-id="https://nocturover.github.io/hello/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+			
+          <a href="/hello/">Hello&nbsp;(1)&nbsp;👋</a>
+      
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://nocturover.github.io/daily/" class="dd-item alwaysopen
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+			
+          <a href="/daily/">Daily&nbsp;(2)</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/insight/" class="dd-item alwaysopen
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+			
+          <a href="/insight/">Insight&nbsp;(2)</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/review/" class="dd-item alwaysopen
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+			
+          <a href="/review/">Review&nbsp;(1)&nbsp;✔️</a>
+      
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://nocturover.github.io/project/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+			
+          <a href="/project/">Project&nbsp;(4)&nbsp;⚗️</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://nocturover.github.io/project/investo/" class="dd-item alwaysopen haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/project/investo/">Investo&nbsp;⚙</a>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+        <ul>
+              
+
+    <li data-nav-id="https://nocturover.github.io/project/investo/idea/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/project/investo/idea/">Idea</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://nocturover.github.io/project/investo/progress/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/project/investo/progress/">Progress</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+			
+          <a href="/csharp/">C#&nbsp;(2)</a>
+      
+        <ul>
+              
+<hr/>
+    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/csharp/winform/">Winform</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/python/" class="dd-item alwaysopen
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+			
+          <a href="/python/">Python&nbsp;(1)</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/go/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+			
+          <a href="/go/">Go&nbsp;(3)</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://nocturover.github.io/go/hugo/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/go/hugo/">Hugo</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/git/" class="dd-item parent haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <i class="fas fa-chevron-down ddexp"></i>
+        
+      
+			
+          <a href="/git/">Git&nbsp;(4)</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://nocturover.github.io/git/troubleshooting/" class="dd-item parent active
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/git/troubleshooting/">Troubleshooting</a>
+      
+        
+      
+    </li>
+              
+        </ul>
+    </li>
+    
+<hr/>
+    <li data-nav-id="https://nocturover.github.io/windows/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+			
+          <a href="/windows/">Windows&nbsp;(3)&nbsp;🖥️</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://nocturover.github.io/windows/cmder/" class="dd-item alwaysopen
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/windows/cmder/">cmder</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/linux/" class="dd-item alwaysopen
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+        
+      
+			
+          <a href="/linux/">Linux&nbsp;(1)&nbsp;🖥️</a>
+      
+    </li>
+    
+
+    <li data-nav-id="https://nocturover.github.io/shortcodes/" class="dd-item haschildren
+        item_level_$level
+        ">
+
+      
+      
+      
+      <i class="fas fa-chevron-right ddexp"></i>
+        
+      
+			
+          <a href="/shortcodes/">Shortcodes&nbsp;(3)</a>
+      
+        <ul>
+              
+
+    <li data-nav-id="https://nocturover.github.io/shortcodes/attachments/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/attachments/">attachments</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://nocturover.github.io/shortcodes/badge/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/shortcodes/badge/">badge</a>
+      
+        
+      
+    </li>
+        </ul>
+    </li>
+    
+
+
+
+</ul>
+
+		
+	
+			
+		
+	    	<center>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docport on GitHub">Download</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docport on GitHub">Star</a>
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docport/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docport on GitHub">Fork</a>
+</center>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+	    
+	
+      </aside>
+      
+
+      <section class="page ">
+      
+	
+    
+    
+    <nav id="ariane" aria-label="breadcrumb">
+      <ol class="ariane">
+        
+  
+  	
+		
+  
+  	
+		
+  
+  	
+	<li >
+      <a class="text-link" href="https://nocturover.github.io/">
+        Home
+      </a>
+    </li>
+	
+  
+    <li class="">
+      <a class="text-link" href="/git/">
+        Git
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/git/troubleshooting/">
+        Troubleshooting
+      </a>
+    </li>
+	
+  	
+  
+    <li class="active">
+      
+        00_CRLF_TROUBLE
+      
+    </li>
+
+      </ol>
+    </nav>
+    
+    
+
+    
+		
+        
+		
+		
+		
+		
+		
+		
+		
+
+		
+			<h1>Troubleshooting<span>00_CRLF_TROUBLE</span></h1>
+        
+
+			
+			
+		
+
+		
+				<nav class="subpages">
+	            		
+	        			
+	            	<li class="active">
+	            		<a title="$pagetitle" href="/git/troubleshooting/00_crlf_trouble/">00_CRLF_TROUBLE</a>
+	            	</li>
+	        	</nav> 
+		
+	
+
+	
+	
+	<div class="jump-to-section">
+		<span onclick="$h = $(this);$h.next('nav').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('nav').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+  			<span class="fas fa-align-right"></span>
+  			Jump to Section
+  			<i style=";" class="fas fa-chevron-right"></i>
+		</span>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-trouble">1. Trouble</a></li>
+    <li><a href="#2-shooting">2. Shooting</a></li>
+    <li><a href="#3-summary">3. Summary</a></li>
+  </ul>
+</nav>
+	</div>
+	
+	
+
+
+
+
+
+
+	<div class="content">
+	    <hr>
+<h2 ref="1-trouble" >1. Trouble</h2><a class="anchor" id="1-trouble"></a>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">CRLF ERR
+</code></pre></div><p><code>clone</code> / <code>push</code> 등의 단계에서 <code>CRLF</code>(Carriage Return Line Feed)와 관련된 트러블이 발생한다.</p>
+<br/>
+<h2 ref="2-shooting" >2. Shooting</h2><a class="anchor" id="2-shooting"></a>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git config --global core.autocrlf true
+</code></pre></div><p>각 계정에 <code>remote add</code>로 등록된 해당 레퍼지토리의 <code>config</code> 를 변경함으로써 해결가능하다.</p>
+<br/>
+<h2 ref="3-summary" >3. Summary</h2><a class="anchor" id="3-summary"></a>
+<hr>
+
+
+<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference</span></p>
+<p><a href="http://www.coolio.so/git%EC%97%90%EC%84%9C-crlf-%EA%B0%9C%ED%96%89-%EB%AC%B8%EC%9E%90-%EC%B0%A8%EC%9D%B4-%ED%95%B4%EA%B2%B0%EB%B2%95/">CRLF 차이점과 해결법</a></p>
+</div>
+
+
+		</div>
+
+
+
+
+
+
+	 
+	<div class="chevrons">
+		<a class="next" href="/windows/" title="Windows" style="margin-right: 0px;">
+            <div>
+                <p>다음 글</p>
+                <label>Windows</label>
+            </div>
+            <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
+	</div>
+	
+
+      </section>
+
+      
+      
+      <section class="right-menu ">
+      
+	
+
+		
+	
+			
+		
+	    	
+	  	
+	<div class="TableOfContents">
+    <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
+    <nav>
+        <ul >
+            <li><a href="/git/troubleshooting/00_crlf_trouble/">00_CRLF_TROUBLE</a></li>
+        </ul>
+    </nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-trouble">1. Trouble</a></li>
+    <li><a href="#2-shooting">2. Shooting</a></li>
+    <li><a href="#3-summary">3. Summary</a></li>
+  </ul>
+</nav>
+</div>
+
+		
+	
+			
+		
+	    	
+<a>
+	<p class="title"> Recent Articles (5) </p>
+	<p class="list-box">
+		
+		
+			<a class="list" href="/daily/01_%EC%84%A0%ED%83%9D%EA%B3%BC%EC%A7%91%EC%A4%91/"> > <strong>10.20</strong> | 01_선택과집중 </a> <br/> 
+		
+			<a class="list" href="/git/01_command/"> > <strong>10.20</strong> | 01_Command </a> <br/> 
+		
+			<a class="list" href="/windows/cmder/01_command/"> > <strong>10.18</strong> | 01_Command </a> <br/> 
+		
+			<a class="list" href="/insight/01_%EA%B8%B0%EB%A1%9D%EC%9D%98_%EC%9D%98%EB%AF%B8/"> > <strong>10.17</strong> | 01_기록의_의미 </a> <br/> 
+		
+			<a class="list" href="/git/troubleshooting/00_crlf_trouble/"> > <strong>10.17</strong> | 00_CRLF_TROUBLE </a> <br/> 
+		
+	</p>
+</a>
+
+<style>
+    .title {
+			text-align: left;
+            font-size: 130%;
+			color: #FFFFFF;
+			background-color: #333333;
+			padding: .1rem .75rem;
+			border-radius: .25rem;
+			margin-bottom: 0.3em;
+	}
+
+	.head{
+		border-bottom: 1px dotted #999999;
+		margin-bottom: 1em;
+	}
+
+	.list-box{
+		padding: .375rem
+	}
+    
+    .list {
+        position: relative;
+        display: inline-block;
+        
+		padding-left: 0.1rem;
+		padding-bottom: 0.25rem;
+	}
+    
+    .title:hover{
+        color: #FFFFFF;
+	}
+	.list:hover{
+        opacity: 0.5
+		
+	}
+</style>
+
+	    
+	<div class="Actions">
+	<nav>
+		<ul>
+				
+		    
+		    
+			
+		      <li>
+		          <i class='fas fa-calendar'></i>
+		          Last update on 17 October 2021
+		      </li>
+		    
+		    
+
+    	</ul>
+	</nav>
+    
+</div>
+
+      </section>
+      
+    </article>
+    
+    
+    <footer>
+      
+
+		
+	
+			
+		
+	    	<h2 id="since-1998">Since 1998</h2>
+
+	    
+	
+    </footer>
+    
+
+
+<script>
+	var element = document.getElementById("search-by");
+
+	window.addEventListener("keydown", (e) => 
+	{
+		if (e.key == "/"){
+			e.preventDefault();
+			element.focus();		
+		}
+	});
+</script>  
+  </body>
+</html>

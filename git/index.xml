@@ -6,6 +6,21 @@
     <description>Recent content in Git on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Oct 2021 16:03:46 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Oct 2021 19:14:05 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01_Command</title>
+      <link>https://nocturover.github.io/git/01_command/</link>
+      <pubDate>Wed, 20 Oct 2021 19:14:05 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/git/01_command/</guid>
+      <description>Common command  Basic 로컬 저장소 파일 추가
+git add [file] // or . (means all files) 로컬에 저장된 파일의 comment 추가
+git commit -m &amp;#34;[comments]&amp;#34; 원격 저장소에 등록된 repository로 로컬 저장소 내 파일 업로드
+git push [reopository] [name] 원격 저장소의 파일 로컬 저장소에 적재
+git pull [reopository] 원격 저장소의 파일 복사
+git clone --recursive [repository]	// --recursive: with submodules. 원격 저장소 리스트 관리
+git remote -v	// registed remote list.</description>
+    </item>
+    
   </channel>
 </rss>
