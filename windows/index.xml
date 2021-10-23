@@ -7,5 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Oct 2021 23:06:27 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installation</title>
+      <link>https://nocturover.github.io/windows/installation/</link>
+      <pubDate>Sat, 23 Oct 2021 12:12:57 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/windows/installation/</guid>
+      <description>Overview  windows10 기반 필수 설치 프로그램 및 setting 리스트
+Installation List   환경변수 등록  set PATH=%PATH%;C:\Program Files (x86)\Notepad++ SystemLenovo Driver
+cmder
+cd c:\cmder 
+-ProgrammingVisual Studio &amp;amp; Code
+alias vs=devenv git
+ssh-keygen -t ed25519 -C &amp;#34;email@gmail.com&amp;#34; notepad++
+alias npp=start notepad++ Python
+hugo
+alias dir_hugo=cd c:\[user]\Programs\hugo 
+-UtilsVLC
+7-zip
+chrome
+-Settings    ctrl-Fn key swap : In BIOS (Lenovo)
+  ctrl-Capslock key swap : In regedit / ref</description>
+    </item>
+    
   </channel>
 </rss>

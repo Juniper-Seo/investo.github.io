@@ -1,17 +1,17 @@
 [
 {
+	"uri": "https://nocturover.github.io/git/troubleshooting/",
+	"title": "Troubleshooting",
+	"tags": [],
+	"description": "Troubleshooting",
+	"content": "Overview 이 곳은 Git Troubleshooting을 다룹니다.\n\r1. Setting     항목 내용 중요도     00_CRLF_TROUBLE\r core.autocrlf true설정 ⭐\r   01_SSH\r ssh-keygen 생성 및 등록 ⭐\r⭐\r              "
+},
+{
 	"uri": "https://nocturover.github.io/windows/cmder/",
 	"title": "cmder",
 	"tags": [],
 	"description": "Windows-cmder",
 	"content": "Overview  이 곳은 commander application cmder 의 자주사용되는 기능들을 기술한 공간입니다.\nLink 01_Command \n\r\r"
-},
-{
-	"uri": "https://nocturover.github.io/git/troubleshooting/",
-	"title": "Troubleshooting",
-	"tags": [],
-	"description": "Troubleshooting",
-	"content": "Overview 이 곳은 Git Troubleshooting을 다룹니다.\n\r1. Setting     항목 내용 난이도     00_CRLF_TROUBLE\r core.autocrlf true설정 ⭐\r                   "
 },
 {
 	"uri": "https://nocturover.github.io/go/hugo/",
@@ -49,6 +49,13 @@
 	"content": "Overview 이 곳은 C# Winform의 학습공간 입니다.\n"
 },
 {
+	"uri": "https://nocturover.github.io/windows/installation/",
+	"title": "Installation",
+	"tags": [],
+	"description": "",
+	"content": "Overview  windows10 기반 필수 설치 프로그램 및 setting 리스트\n\rInstallation List   환경변수 등록  set PATH=%PATH%;C:\\Program Files (x86)\\Notepad++ \rSystemLenovo Driver\ncmder\ncd c:\\cmder \n-\rProgrammingVisual Studio \u0026amp; Code\nalias vs=devenv git\nssh-keygen -t ed25519 -C \u0026#34;email@gmail.com\u0026#34; notepad++\nalias npp=start notepad++ Python\nhugo\nalias dir_hugo=cd c:\\[user]\\Programs\\hugo \n-\rUtilsVLC\n7-zip\nchrome\n-\r\rSettings    ctrl-Fn key swap : In BIOS (Lenovo)\n  ctrl-Capslock key swap : In regedit / ref\n----- [add new regedit code] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 ----- [reset regedit] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=-   "
+},
+{
 	"uri": "https://nocturover.github.io/daily/",
 	"title": "Daily",
 	"tags": [],
@@ -74,7 +81,7 @@
 	"title": "01_Command",
 	"tags": [],
 	"description": "Windows-cmder-command",
-	"content": "\rEnvironment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.\n시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.\n나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.\n\rCommon command  Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정이 가능하다.\nalias [명령어] [별칭] xcopy :: 파일/폴더 복사 rename 이 가능하다는 특징이 있다.\nxcopy [대상] [목적지] start . :: 현재 폴더 탐색기 열기 explorer .  로 대체될 수 있다.\nstart [destination] start . // 현재 폴더 탐색기 실행 \r- "
+	"content": "\rEnvironment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.\n시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.\n나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.\n\rKeyboard Shortcuts  Tab manipulation   Ctrl + `  : Global Summon from taskbar\n  Win + Alt + p : Preferences (Or right click on title bar)\n  Ctrl + t : New tab dialog (maybe you want to open cmd as admin?)\n  Ctrl + w : Close tab\n  ⭐\r⭐\r Shift + Alt + number : Fast new tab:\n 1. CMD 2. PowerShell    Shell  Ctrl + Alt + u : Traverse up in directory structure (lovely feature!) \r⭐\r⭐\r⭐\r Ctrl + r : History search  \rCommon command  Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정이 가능하다.\nalias [명령어] [별칭] xcopy :: 파일/폴더 복사 rename 이 가능하다는 특징이 있다.\nxcopy [대상] [목적지] start . :: 현재 폴더 탐색기 열기 explorer .  로 대체될 수 있다.\nstart [destination] start . // 현재 폴더 탐색기 실행 \r"
 },
 {
 	"uri": "https://nocturover.github.io/insight/01_%EA%B8%B0%EB%A1%9D%EC%9D%98_%EC%9D%98%EB%AF%B8/",
@@ -105,6 +112,13 @@
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing  30 [min]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 구현 가능 리스트 추출 passing  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri)  API - R.T. HOG_ Sub/Pub Limit 검토  계획\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
 },
 {
+	"uri": "https://nocturover.github.io/git/troubleshooting/02_ssh/",
+	"title": "02_SSH",
+	"tags": [],
+	"description": "",
+	"content": "1. Trouble  SSH REGISTER ERR clone / push Pirvate repo의 접근 권한이 부여되지 않아 발생하는 에러.\n\r2. Shooting  ssh-keygen -t rsa -b 4096 -C \u0026#34;[email]@google.com\u0026#34;\t// rsa encrypt 방식의 4096 bit 암호 생성 start notepad++ c:\\users\\[user]\\.ssh\\id_rsa.pub\t// copy and paste.\tgit command ssh-keygen으로 ssh를 생성하여 github.com 각 계정의 settings에서 해당 PC의 ssh 키를 수동으로 등록해준다.\n\r3. Summary  Reference\nSSH key 생성하고 GitHub에 등록\n\r"
+},
+{
 	"uri": "https://nocturover.github.io/daily/02_%EC%88%99%EB%8B%AC%EA%B3%BC_%EC%9D%BC%EC%B2%98%EB%A6%AC/",
 	"title": "02_숙달과_일처리",
 	"tags": [],
@@ -117,6 +131,13 @@
 	"tags": [],
 	"description": "Insight",
 	"content": "Overview  이 곳은 아이디어 및 인사이트를 담아두는 Archive 입니다.\n\rInsight Children List  \r01_기록의_의미\rOverview 기록이란 완결성을 지닌다. 문장을 작성하기 위해서 추상적으로만 상상하던 내용의 보다 세심한 구체화가 요구되는 작업이다. 하여 작업의 결과물이 도출되었을 때는 추상적 이미지의 한계성을 다시금 상기시켜주는 영향도 미친다. 내가 기록을 시작한 것은 복잡한 생각들에 대한 정리가 필요할 때, 내려놓는다는 행위를 취함으로써 일부 부담을 절하하려는 목적이 강했었다. 기록을 하기와 그만두기를 반복하며 얻었던 각 개별 장점에 대해서 기술해보고자 한다. Features 1. Advantage 기억공간 확장 재귀성 이해도 역시 빼놓을 수 없는 기록의 장점은 기억공간의 확장이다.\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/git/troubleshooting/03_timeout/",
+	"title": "03_TimeOut",
+	"tags": [],
+	"description": "",
+	"content": "1. Trouble  ssh: connect to host github.com port 22: Connection timed out pull / push 에서 원격 저장소에 접근하지 못하여 발생하는 timed out err.\n\r2. Shooting  git config --local -e\t// .git/config 파일 code 편집모드로 실행 ├─── config url = git@github.com:nocturover/repo.git ----- [change to] ----- url = https://github.com/nocturover/repo.git 기존 ssh url 방식으로 등록되어있던 원격저장소 url을 https url 포멧으로 변경해준다.\n\r3. Summary  Reference\nAsk Question\nSometimes, firewalls refuse to allow SSH connections entirely. If using HTTPS cloning with credential caching is not an option, you can attempt to clone using an SSH connection made over the HTTPS port. Most firewall rules should allow this, but proxy servers may interfere.\n\r"
 },
 {
 	"uri": "https://nocturover.github.io/daily/03_%EB%A7%88%EC%9D%8C%EA%B4%80%EB%A6%AC/",
