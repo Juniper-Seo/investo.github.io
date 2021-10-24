@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	Hugo :: 1998
+	02_SQL_문법 :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-10-24T18:34:43 KST">
-<meta name="description" content="Hugo">
+<meta name="description" content="">
 
 
 
-<title>Hugo :: 1998</title>
+<title>02_SQL_문법 :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/web/hugo/"
+  <body data-url="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/"
 
   class="">
 
@@ -282,14 +282,15 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item haschildren
+    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
 			
@@ -298,7 +299,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -346,15 +347,14 @@
     </li>
     
 
-    <li data-nav-id="https://nocturover.github.io/web/" class="dd-item parent haschildren
+    <li data-nav-id="https://nocturover.github.io/web/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
 			
@@ -363,7 +363,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/web/hugo/" class="dd-item parent active
+    <li data-nav-id="https://nocturover.github.io/web/hugo/" class="dd-item
         item_level_$level
         ">
 
@@ -538,12 +538,14 @@
       <section class="page ">
       
 	
-		
     
     
     <nav id="ariane" aria-label="breadcrumb">
       <ol class="ariane">
         
+  
+  	
+		
   
   	
 		
@@ -557,8 +559,16 @@
 	
   
     <li class="">
-      <a class="text-link" href="/web/">
-        Web
+      <a class="text-link" href="/csharp/">
+        C#
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/csharp/db/">
+        DB
       </a>
     </li>
 	
@@ -566,7 +576,7 @@
   
     <li class="active">
       
-        Hugo
+        02_SQL_문법
       
     </li>
 
@@ -587,7 +597,7 @@
 		
 
 		
-			<h1>Hugo</h1>
+			<h1>DB<span>02_SQL_문법</span></h1>
         
 
 			
@@ -599,12 +609,12 @@
 	            		
 	        			
 	            	<li >
-	            		<a title="$pagetitle" href="/web/hugo/01_custom_theme/">01_Custom_Theme</a>
+	            		<a title="$pagetitle" href="/csharp/db/01_mariadb_connection/">01_MariaDB_connection</a>
 	            	</li>
 	            		
 	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/web/hugo/02_favicon/">02_FAVICON</a>
+	            	<li class="active">
+	            		<a title="$pagetitle" href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/">02_SQL_문법</a>
 	            	</li>
 	        	</nav> 
 		
@@ -621,6 +631,19 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#structure--sql">Structure :: SQL</a>
+      <ul>
+        <li><a href="#ddl--data-defination-language">DDL :: Data Defination Language</a></li>
+        <li><a href="#dml--data-manipulation-language">DML :: Data Manipulation Language</a></li>
+        <li><a href="#dcl--data-control-language">DCL :: Data Control Language</a></li>
+      </ul>
+    </li>
+    <li><a href="#command">Command</a>
+      <ul>
+        <li><a href="#where"><code>WHERE</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
@@ -634,21 +657,59 @@
 
 	<div class="content">
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
-<p>이 곳은 <code>Go</code>-<code>Hugo</code> Static site 개설과 커스터마이징 학습 공간입니다.</p>
-
-
-
-<div class="card "><div class="card-header light">Link</div><div class="card-body">
-    <p class="card-text"><ul class="children children-li">
-<p><span><li>
-<a href="/web/hugo/01_custom_theme/" >01_Custom_Theme</a></li>
-</span></p>
-<p><span><li>
-<a href="/web/hugo/02_favicon/" >02_FAVICON</a></li>
-</span></p>
+<hr>
+<p><code>SQL</code>에서 사용되는 문법의 정리</p>
+<br/>
+<h2 ref="structure--sql" >Structure :: SQL</h2><a class="anchor" id="structure--sql"></a>
+<hr>
+<h3 ref="ddl--data-defination-language" >DDL :: Data Defination Language</h3><a class="anchor" id="ddl--data-defination-language"></a>
+<ul>
+<li><code>CREATE</code></li>
+<li><code>ALTER</code></li>
+<li><code>DROP</code></li>
 </ul>
-</p>
-  </div></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql">
+</code></pre></div><h3 ref="dml--data-manipulation-language" >DML :: Data Manipulation Language</h3><a class="anchor" id="dml--data-manipulation-language"></a>
+<ul>
+<li><code>SELECT</code> = <code>query</code> statement</li>
+<li><code>DELETE</code></li>
+<li><code>INSERT</code></li>
+<li><code>UPDATE</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql">
+</code></pre></div><h3 ref="dcl--data-control-language" >DCL :: Data Control Language</h3><a class="anchor" id="dcl--data-control-language"></a>
+<ul>
+<li><code>GRANT</code></li>
+<li><code>REVOKE</code></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql">
+</code></pre></div><br/>
+<h2 ref="command" >Command</h2><a class="anchor" id="command"></a>
+<hr>
+<h3 ref="where" ><code>WHERE</code></h3><a class="anchor" id="where"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WHERE</span> age <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">20</span>;
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IN</span> (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span> ) <span style="color:#f92672">//</span> <span style="color:#f92672">???</span>
+<span style="color:#66d9ef">WHERE</span> age EXIST			<span style="color:#f92672">//</span> <span style="color:#f92672">???</span>
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">LIKE</span>
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span> <span style="color:#f92672">/</span> <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+
+</code></pre></div><br/>
+<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
+<hr>
+
+
+<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
+<p><a href="https://mariadb.com/kb/ko/training-tutorials/">SQL Tutorial &amp; Training Documentation</a></p>
+<p><span ></p>
+<pre><code>    ⭐
+<pre><code>⭐
+
+⭐
+</code></pre>
+<p></code></pre></p>
+<p></span> <a href="https://psun.tistory.com/entry/SQL-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC">SQL 문법 정리</a></p>
+</div>
 
 
 		</div>
@@ -660,14 +721,13 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/git/" title="Git" style="margin-right: 0px;">
+		<a class="next" href="/csharp/winform/" title="Winform" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Git</label>
+                <label>Winform</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
-	
 	
 
       </section>
@@ -688,12 +748,25 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/web/hugo/">Hugo</a></li>
+            <li><a href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/">02_SQL_문법</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
+    <li><a href="#structure--sql">Structure :: SQL</a>
+      <ul>
+        <li><a href="#ddl--data-defination-language">DDL :: Data Defination Language</a></li>
+        <li><a href="#dml--data-manipulation-language">DML :: Data Manipulation Language</a></li>
+        <li><a href="#dcl--data-control-language">DCL :: Data Control Language</a></li>
+      </ul>
+    </li>
+    <li><a href="#command">Command</a>
+      <ul>
+        <li><a href="#where"><code>WHERE</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 </div>

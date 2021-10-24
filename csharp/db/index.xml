@@ -5,17 +5,28 @@
     <link>https://nocturover.github.io/csharp/db/</link>
     <description>Recent content in DB on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Oct 2021 18:06:41 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01_MariaDB_connection</title>
       <link>https://nocturover.github.io/csharp/db/01_mariadb_connection/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 24 Oct 2021 14:01:41 +0900</pubDate>
       
       <guid>https://nocturover.github.io/csharp/db/01_mariadb_connection/</guid>
       <description>Overview  오픈소스 DBMS MariaDB 와 C#의 연동을 기술.
 Installation  종속성   MySql.Data Assembly Download &amp;amp; Install
   프로젝트 종속성 로드
   cd C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll Connection  Code :: Form using System; using System.Windows.Forms; using MySql.Data.MySqlClient;	// Load;  namespace UNIT_TEST_DB { public partial class MainForm : Form { public MainForm() { InitializeComponent(); } ~MainForm() { conn.Close(); conn.Dispose(); } MySqlConnection conn;	// local variable;  private bool connectMariaDB() { string connStr = string.</description>
+    </item>
+    
+    <item>
+      <title>02_SQL_문법</title>
+      <link>https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/</link>
+      <pubDate>Sun, 24 Oct 2021 18:06:41 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/</guid>
+      <description>Overview  SQL에서 사용되는 문법의 정리
+Structure :: SQL  DDL :: Data Defination Language  CREATE ALTER DROP  DML :: Data Manipulation Language  SELECT = query statement DELETE INSERT UPDATE  DCL :: Data Control Language  GRANT REVOKE  Command  WHERE WHERE age &amp;lt; 10; WHERE age BETWEEN 2 AND 20; WHERE age IN (10, 20 ) // ??? WHERE age EXIST	// ?</description>
     </item>
     
   </channel>

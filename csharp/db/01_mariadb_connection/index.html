@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-10-24T14:24:22 KST">
+<meta name="revised" content="2021-10-24T18:34:43 KST">
 <meta name="description" content="">
 
 
@@ -179,7 +179,7 @@
         
       
 			
-          <a href="/daily/">Daily&nbsp;(4)</a>
+          <a href="/daily/">Daily&nbsp;(5)</a>
       
     </li>
     
@@ -294,11 +294,11 @@
         
       
 			
-          <a href="/csharp/">C#&nbsp;(4)</a>
+          <a href="/csharp/">C#&nbsp;(5)</a>
       
         <ul>
               
-<hr/>
+
     <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item parent active
         item_level_$level
         ">
@@ -313,7 +313,7 @@
       
     </li>
               
-<hr/>
+
     <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
         item_level_$level
         ">
@@ -611,6 +611,11 @@
 	            	<li class="active">
 	            		<a title="$pagetitle" href="/csharp/db/01_mariadb_connection/">01_MariaDB_connection</a>
 	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/">02_SQL_문법</a>
+	            	</li>
 	        	</nav> 
 		
 	
@@ -773,6 +778,9 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 <br/>
 <h2 ref="sql-command" >Sql Command</h2><a class="anchor" id="sql-command"></a>
 <hr>
+<ul>
+<li>Common</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mydb; <span style="color:#75715e">-- mydb 데이터베이스 생성
 </span><span style="color:#75715e"></span>USE mydb; <span style="color:#75715e">-- 기본 데이터베이스로 mydb를 지정
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> mytable ( id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, name VARCHAR(<span style="color:#ae81ff">20</span>) ); <span style="color:#75715e">-- mytable 테이블 생성
@@ -786,6 +794,11 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 <span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable;
 <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> mydb;
 <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">count</span>(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">from</span> mytable; gives the number <span style="color:#66d9ef">of</span> records <span style="color:#66d9ef">in</span> the <span style="color:#66d9ef">table</span>
+</code></pre></div><ul>
+<li>Complex</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">user</span> <span style="color:#66d9ef">WHERE</span> ((id <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span> <span style="color:#66d9ef">AND</span> id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">OR</span> (id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">900000</span>)) <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> id <span style="color:#66d9ef">DESC</span>;
+
 </code></pre></div><br/>
 <h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
 <hr>
@@ -866,15 +879,15 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 	<p class="list-box">
 		
 		
+			<a class="list" href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/"> > <strong>10.24</strong> | 02_SQL_문법 </a> <br/> 
+		
+			<a class="list" href="/daily/04_%EB%B0%B0%EC%9B%80/"> > <strong>10.24</strong> | 04_배움 </a> <br/> 
+		
+			<a class="list" href="/csharp/db/01_mariadb_connection/"> > <strong>10.24</strong> | 01_MariaDB_connection </a> <br/> 
+		
 			<a class="list" href="/web/hugo/02_favicon/"> > <strong>10.24</strong> | 02_FAVICON </a> <br/> 
 		
 			<a class="list" href="/git/troubleshooting/03_timeout/"> > <strong>10.23</strong> | 03_TimeOut </a> <br/> 
-		
-			<a class="list" href="/git/troubleshooting/02_ssh/"> > <strong>10.23</strong> | 02_SSH </a> <br/> 
-		
-			<a class="list" href="/windows/installation/"> > <strong>10.23</strong> | Installation </a> <br/> 
-		
-			<a class="list" href="/daily/03_%EB%A7%88%EC%9D%8C%EA%B4%80%EB%A6%AC/"> > <strong>10.21</strong> | 03_마음관리 </a> <br/> 
 		
 	</p>
 </a>
@@ -924,6 +937,11 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 		    
 		    
 			
+		      <li>
+		          <i class='fas fa-calendar'></i>
+		          Last update on 24 October 2021
+		      </li>
+		    
 		    
 
     	</ul>
