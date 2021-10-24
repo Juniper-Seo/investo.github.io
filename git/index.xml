@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Oct 2021 13:38:34 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>01_Command</title>
-      <link>https://nocturover.github.io/git/01_command/</link>
+      <title>Command</title>
+      <link>https://nocturover.github.io/git/command/</link>
       <pubDate>Wed, 20 Oct 2021 19:14:05 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/git/01_command/</guid>
+      <guid>https://nocturover.github.io/git/command/</guid>
       <description>Common command  Basic 로컬 저장소 파일 추가
 git add [file] // or . (means all files) 로컬에 저장된 파일의 comment 추가
 git commit -m &amp;#34;[comments]&amp;#34; 원격 저장소에 등록된 repository로 로컬 저장소 내 파일 업로드

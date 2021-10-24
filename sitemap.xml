@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nocturover.github.io/go/hugo/</loc>
+    <lastmod>2021-10-24T11:43:29+09:00</lastmod>
+  </url><url>
     <loc>https://nocturover.github.io/git/troubleshooting/</loc>
     <lastmod>2021-10-23T13:38:34+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/windows/cmder/</loc>
     <lastmod>2021-10-18T16:04:46+09:00</lastmod>
-  </url><url>
-    <loc>https://nocturover.github.io/go/hugo/</loc>
-    <lastmod>2021-10-16T17:05:46+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/hello/</loc>
     <lastmod>2021-10-15T22:56:37+09:00</lastmod>
@@ -29,10 +29,10 @@
     <loc>https://nocturover.github.io/daily/01_%EC%84%A0%ED%83%9D%EA%B3%BC_%EC%A7%91%EC%A4%91/</loc>
     <lastmod>2021-10-20T20:31:34+09:00</lastmod>
   </url><url>
-    <loc>https://nocturover.github.io/git/01_command/</loc>
+    <loc>https://nocturover.github.io/git/command/</loc>
     <lastmod>2021-10-20T19:14:05+09:00</lastmod>
   </url><url>
-    <loc>https://nocturover.github.io/windows/cmder/01_command/</loc>
+    <loc>https://nocturover.github.io/windows/cmder/command/</loc>
     <lastmod>2021-10-18T23:15:46+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/insight/01_%EA%B8%B0%EB%A1%9D%EC%9D%98_%EC%9D%98%EB%AF%B8/</loc>
@@ -41,10 +41,13 @@
     <loc>https://nocturover.github.io/git/troubleshooting/00_crlf_trouble/</loc>
     <lastmod>2021-10-17T16:03:46+09:00</lastmod>
   </url><url>
-    <loc>https://nocturover.github.io/go/hugo/00_custom_theme/</loc>
+    <loc>https://nocturover.github.io/go/hugo/01_custom_theme/</loc>
     <lastmod>2021-10-16T17:05:46+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/project/investo/progress/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/go/hugo/02_favicon/</loc>
+    <lastmod>2021-10-24T11:43:29+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/git/troubleshooting/02_ssh/</loc>
     <lastmod>2021-10-23T13:18:20+09:00</lastmod>
@@ -74,7 +77,7 @@
     <lastmod>2021-10-15T23:07:26+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/go/</loc>
-    <lastmod>2021-10-16T17:05:46+09:00</lastmod>
+    <lastmod>2021-10-24T11:43:29+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/git/</loc>
     <lastmod>2021-10-23T13:38:34+09:00</lastmod>
@@ -89,7 +92,7 @@
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/</loc>
-    <lastmod>2021-10-23T13:38:34+09:00</lastmod>
+    <lastmod>2021-10-24T11:43:29+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/_layout/</loc>
     <lastmod>2020-08-20T15:41:15+00:00</lastmod>

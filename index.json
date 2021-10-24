@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://nocturover.github.io/go/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "Hugo",
+	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\nLink 01_Custom_Theme \n 02_FAVICON \n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/git/troubleshooting/",
 	"title": "Troubleshooting",
 	"tags": [],
@@ -11,14 +18,7 @@
 	"title": "cmder",
 	"tags": [],
 	"description": "Windows-cmder",
-	"content": "Overview  이 곳은 commander application cmder 의 자주사용되는 기능들을 기술한 공간입니다.\nLink 01_Command \n\r\r"
-},
-{
-	"uri": "https://nocturover.github.io/go/hugo/",
-	"title": "Hugo",
-	"tags": [],
-	"description": "Hugo",
-	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\n   항목 내용 난이도     00_Trouble_Shooting\r {{ children }} {{ /children }} ⭐\r⭐\r⭐\r   00_Custom_Theme\r left menu bar page counts, font-familly 변경 ⭐\r⭐\r     ⭐\r         "
+	"content": "Overview  이 곳은 commander application cmder 의 자주사용되는 기능들을 기술한 공간입니다.\nLink Command \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/hello/",
@@ -53,7 +53,7 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": "Overview  windows10 기반 필수 설치 프로그램 및 setting 리스트\n\rInstallation List   환경변수 등록  set PATH=%PATH%;C:\\Program Files (x86)\\Notepad++ \rSystemLenovo Driver\ncmder\ncd c:\\cmder \n-\rProgrammingVisual Studio \u0026amp; Code\nalias vs=devenv git\nssh-keygen -t ed25519 -C \u0026#34;email@gmail.com\u0026#34; notepad++\nalias npp=start notepad++ Python\nhugo\nalias dir_hugo=cd c:\\[user]\\Programs\\hugo \n-\rUtilsVLC\n7-zip\nchrome\n-\r\rSettings    ctrl-Fn key swap : In BIOS (Lenovo)\n  ctrl-Capslock key swap : In regedit / ref\n----- [add new regedit code] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 ----- [reset regedit] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=-   "
+	"content": "Overview  windows10 기반 필수 설치 프로그램 및 setting 리스트\n\rInstallation List   환경변수 등록  set PATH=%PATH%;C:\\Program Files (x86)\\Notepad++ \rSystemLenovo Driver\ncmder\ncd c:\\cmder \n-\rProgrammingVisual Studio \u0026amp; Code\nalias vs=devenv git\nssh-keygen -t ed25519 -C \u0026#34;email@gmail.com\u0026#34; notepad++\nalias npp=start notepad++ Python\nhugo\nalias dir_hugo=cd c:\\[user]\\Programs\\hugo MariaDB or MongoDB\n-\rUtilsVLC\n7-zip\nchrome\njcpicker\n-\r\rSettings    ctrl-Fn key swap : In BIOS (Lenovo)\n  ctrl-Capslock key swap : In regedit / ref\n----- [add new regedit code] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 ----- [reset regedit] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=-   "
 },
 {
 	"uri": "https://nocturover.github.io/daily/",
@@ -70,18 +70,18 @@
 	"content": "1\n모든 선택에는 에너지가 소모되더라도 객관화가 필요하다.\n여기서 말하는 객관화는 자기 객관화를 의미하는데, 자신의 능력 정도를 평가하는 방식부터 현재 하려는 행동의 방향성까지 모두 생각이 닿을 수 있는 끝자락까지는 수행하는 것이 옳다.\n이런 방식이 반드시 옳은 선택을 부여하는 것은 아니지만 닥친 상황에서의 최선의 선택을 할 수 있게끔 방향성을 제시해주고 또 다른 루트를 열어주는 역할을 한다.\n사소한 코드 구현 방식부터 일상생활에 모두 녹여야할 가치가 있다.\n\r2\n단축키 / 커맨드는 극한의 생산성을 요하는 프로가 아니더라도 필수적인 덕목이자 행동양식이라고 생각한다.\n마우스를 해당 지점에 이동하여 여러번 자식 리스트에 접속하여 특정 기능을 사용하는 노력을 거치는 것 보단 하나의 단축키에 의미를 부여하는 방식을 통해 암기하고 사용하는 것이 더욱 효율적이다. 치매 예방에 도움이 될지도 모른다.\n\r3\n정형화된 방식을 고수하는 것은 자신의 패턴 습관을 만들어 시간을 단축하는데 도움이 된다.\n사회는 시스템 내에서 돌아간다. 정확히는 알고리즘에 의해 동작하는 세상에 살아가고 있다고 생각한다. 시스템을 최초로 구현하는 비상한 사람들의 사고패턴 (= 하위 알고리즘 )을 그들의 입장에서 사고하는 훈련은 자신만의 커스텀 패턴을 제작하는 데 아이디어를 제공받을 수 있다.\n패턴화의 주어는 대단히 큰 시스템을 구축하는 것에서부터 최소 단위의 알고리즘을 구현하는 것도 포함된다.\n가령 naming convention을 무엇으로 택할지도 고려사항이 될 수 있는데, 파스칼 방식도 하나의 패턴화된 공식이라고 볼 수 있겠다.\n생산성 측면에서는 깊은 사고를 보다 낮은 개념에서 높은 개념으로 그륩화하고 자동화함으로써 에너지 사용을 줄일 수 있다고 생각한다.\n\r4\n시간관리는 자신에게 맞는 방식이 존재한다.\n"
 },
 {
-	"uri": "https://nocturover.github.io/git/01_command/",
-	"title": "01_Command",
+	"uri": "https://nocturover.github.io/git/command/",
+	"title": "Command",
 	"tags": [],
 	"description": "",
 	"content": "Common command  Basic 로컬 저장소 파일 추가\ngit add [file] // or . (means all files) 로컬에 저장된 파일의 comment 추가\ngit commit -m \u0026#34;[comments]\u0026#34; 원격 저장소에 등록된 repository로 로컬 저장소 내 파일 업로드\ngit push [reopository] [name] 원격 저장소의 파일 로컬 저장소에 적재\ngit pull [reopository] 원격 저장소의 파일 복사\ngit clone --recursive [repository]\t// --recursive: with submodules. 원격 저장소 리스트 관리\ngit remote -v\t// registed remote list. git remote add [repository] git remote delete [repository] 로컬 or 원격 저장소 branch 리스트 관리\ngit branch -v // created branch list. git branch [name] git checkout [branchName] git switch [branchName] \rsubmodule :: git 내부 git Add submodule\ngit submodule add [git@github.com:userID/ProjectNm] [location] update - .gitmodules 파일 필수 :: recursive - 모든 submodules 적재\ngit submodule update --init --recursive \r"
 },
 {
-	"uri": "https://nocturover.github.io/windows/cmder/01_command/",
-	"title": "01_Command",
+	"uri": "https://nocturover.github.io/windows/cmder/command/",
+	"title": "Command",
 	"tags": [],
 	"description": "Windows-cmder-command",
-	"content": "\rEnvironment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.\n시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.\n나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.\n\rKeyboard Shortcuts  Tab manipulation   Ctrl + `  : Global Summon from taskbar\n  Win + Alt + p : Preferences (Or right click on title bar)\n  Ctrl + t : New tab dialog (maybe you want to open cmd as admin?)\n  Ctrl + w : Close tab\n  ⭐\r⭐\r Shift + Alt + number : Fast new tab:\n 1. CMD 2. PowerShell    Shell  Ctrl + Alt + u : Traverse up in directory structure (lovely feature!) \r⭐\r⭐\r⭐\r Ctrl + r : History search  \rCommon command  Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정이 가능하다.\nalias [명령어] [별칭] xcopy :: 파일/폴더 복사 rename 이 가능하다는 특징이 있다.\nxcopy [대상] [목적지] start . :: 현재 폴더 탐색기 열기 explorer .  로 대체될 수 있다.\nstart [destination] start . // 현재 폴더 탐색기 실행 \r"
+	"content": "\rEnvironment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.\n시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.\n나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.\n\rKeyboard Shortcuts  Tab manipulation   Ctrl + `  : Global Summon from taskbar\n  Win + Alt + p : Preferences (Or right click on title bar)\n  Ctrl + t : New tab dialog (maybe you want to open cmd as admin?)\n  Ctrl + w : Close tab\n  ⭐\r⭐\r Shift + Alt + number : Fast new tab:\n 1. CMD 2. PowerShell    Shell  Ctrl + Alt + u : Traverse up in directory structure (lovely feature!) \r⭐\r⭐\r⭐\r Ctrl + r : History search  \rCommon command  set path :: 환경 변수 설정 환경 변수 path 를 지정하여 cmd에서 바로 실행 환경 구축\nset path =%path%;[경로];\t// temporary setx path \u0026#34;%PATH%[경로]\u0026#34;\t// permanent Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정\nalias [별칭]=[명령어]$* doskey [별칭]=[명령어]$* xcopy :: 파일/폴더 복사 rename 가능\nxcopy [대상] [목적지] start . :: 현재 폴더 탐색기 열기 explorer .  로 대체될 수 있다.\nstart [destination] start . // 현재 폴더 탐색기 실행 touch :: 파일 생성 touch [fileName1] [fileName2] [fileName3] del :: 파일 삭제 del [fileName] \r"
 },
 {
 	"uri": "https://nocturover.github.io/insight/01_%EA%B8%B0%EB%A1%9D%EC%9D%98_%EC%9D%98%EB%AF%B8/",
@@ -98,8 +98,8 @@
 	"content": " 1. Trouble  CRLF ERR clone / push 등의 단계에서 CRLF(Carriage Return Line Feed)와 관련된 트러블이 발생한다.\n\r2. Shooting  git config --global core.autocrlf true 각 계정에 remote add로 등록된 해당 레퍼지토리의 config 를 변경함으로써 해결가능하다.\n\r3. Summary  Reference\nCRLF 차이점과 해결법\n\r"
 },
 {
-	"uri": "https://nocturover.github.io/go/hugo/00_custom_theme/",
-	"title": "00_Custom_Theme",
+	"uri": "https://nocturover.github.io/go/hugo/01_custom_theme/",
+	"title": "01_Custom_Theme",
 	"tags": [],
 	"description": "",
 	"content": "Overview  hugo를 이용하여 생성된 static site 는\ngit submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파일의 모든 레이아웃을 따르게 되어있다.\n\r1. 개념  기본 레이아웃을 변경시키기 위해서는 원본 테마 폴더 내에 존재하는 layouts의 각 html을 수정해주거나 overriding을 위해 상위 폴더에 layouts를 생성하여 각 필요한 html을 수정해주는 방법이 존재한다.\n\r2. 적용범위  a. 사이트 상태 반환 hugo는 Go 언어와 html의 조합을 이용하여 동적인 코드 조합이 가능하기 때문에 이 사이트 좌측 메뉴바에서 볼 수 있듯 각 Section에 포함된 게시글의 전체개수를 반환하여 string 형태로 접미어에 붙이는 것도 가능하다.\n\rb. 스타일의 변환 또한 기본 폰트의 변경과 footer , header 의 내용에 버튼, 이미지 등의 컨트롤을 삽입하는 것도 가능하다.\n\nCustomizing  커스터마이징에 앞서 ~/themes/테마명/Layouts의 구조를 살펴보도록 하자.\n├─partials │ body-article-content.html │ body-article-sidepage.html │ body-footer.html │ body-header.html │ body-sidebar.html │ head.html │ html-head-vendor.html │ html-head.html │ _mdinclude.html │ _menu.html │ _next-prev-page.html │ _pagination.html │ _skwad-footer.html │ _skwad-header.html │ ├─raw │ section.html │ single.html │ ├─shortcodes │ │ alert.html │ │ emoji.html ~ 생략 ~ 현재 이 사이트는 vjeantet/hugo-theme-docport 테마가 적용되어 있는데, 해당 구성의 partial에는 사이트 화면의 구성요소들이 포함되어 있다.\n그 중 _menu.html 은 좌측의 메뉴바 구현에 대한 코드를 담고 있다.\n\r1. Counting Section pages  각 섹션(_index.md를 포함하고 있는 각 폴더)의 총 페이지 수는 다음 코드의 반환값으로 카운트한다.\n\u0026lt;!-- 디렉토리 이름과 비교하여 count를 반환 --\u0026gt; {{- $dirName :=substr .File.Dir 0 -1}} {{- $sectionCnt := len (where .Site.AllPages \u0026#34;Section\u0026#34; \u0026#34;==\u0026#34; $dirName) }} \u0026lt;a href=\u0026#34;{{ .RelPermalink}}\u0026#34;\u0026gt;({{$sectionCnt}})\u0026amp;nbsp;{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}\u0026lt;/a\u0026gt; .site.AllPages 는 Page(#총개수)를 반환하며 len은 각 변수가 가지고 있는 개수를 반환한다.\nwhere은 조건문으로 사용되며 where #범위 #비교1 \u0026quot;=\u0026quot; #비교2 각 섹션의 이름이 해당 디렉토리의 폴더명과 일치하는 pages의 개수를 반환하는 코드가 된다.\n코드의 첫 줄의 $dirName의 문자열 일부를 반환[0:-1]시키는 이유는 .File.Dir 의 반환값이 #폴더명/로 \u0026quot;/\u0026quot; 접두어가 함께 따라오기 때문이다.\n.Title이 아닌 디렉토리의 이름을 비교대상으로 사용하는 이유는 각 섹션이 보유하는 고유한 값은 폴더명이기 때문이다.\n\r2. Change Font  ~themes\\docport\\assets\\sass\\main.scss 파일은 scss파일로 html에서 표현되는 스타일을 구현한다.\n.Site.Params.color_main (config.toml설정 일부)으로부터 전체 테마의 색상을 적용하거나 body,a 등 각 태그의 스타일을 세부적으로 설정한다.\nfont-family: \u0026#34;Montserrat\u0026#34;,\u0026#34;나눔스퀘어\u0026#34;; font-weight: 400; line-height: 1.5; 의 내용을 수정하면, 본문과 같이 영문만 지원되는 Monterrat과 나눔스퀘어가 동시 적용된다.\n\n3. Summary html내부에 Go언어를 접목시킨다는 의미는 보다 넓은 확장성을 가져올 수 있는 이점이 있다. 특히 _index.md 시작부에 작성하는 Front matter의 간단한 변수 입력만으로도 해당 내용을 불러와 실제 마크다운 내용에 쉽게 적용시킬 수 있는 사용자 편의를 제공한다.\n이번 아티클에서 다룬 함수를 포함한 다양한 사용예시와 목록은 아래의 링크를 참조하자.\nHugo Link\nHugo Templates\nHugo Functions\n\r"
@@ -109,7 +109,14 @@
 	"title": "Progress",
 	"tags": [],
 	"description": "Project-Investo-Progress",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing  30 [min]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 구현 가능 리스트 추출 passing  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri)  API - R.T. HOG_ Sub/Pub Limit 검토  계획\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.23 (Sat) 구현 기능 리스트 추출  주문 기능    API - R.T. HoG_ Frm DESIGN  3 [hr]\r\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
+},
+{
+	"uri": "https://nocturover.github.io/go/hugo/02_favicon/",
+	"title": "02_FAVICON",
+	"tags": [],
+	"description": "",
+	"content": "Overview  웹페이지의 대표 아이콘인 favicon의 설정 방법을 기술\n\r1. 적용  favicon ├─static │ ├─admin │ │ └─shortcode │ ├─css │ ├─images │ ├─js │ └─vendor │ ├─auto-complete │ └─lunr static/images에 favicon.png 이름으로 로고 파일을 저장한다.\nlayouts/partials/html-head.html 파일에 사이트 title과 link가 작성되어 있다.\n\u0026lt;title\u0026gt;{{ .Title }} :: {{ .Site.Title }}\u0026lt;/title\u0026gt; \u0026lt;link rel=\u0026#34;shortcut icon\u0026#34; href=\u0026#39;{{\u0026#34;images/favicon.png\u0026#34; | relURL}}\u0026#39; type=\u0026#34;image/x-icon\u0026#34; /\u0026gt; \rlogo layouts/partials/body-header.html 파일에 div태그 내부에 상부 헤더 title이 작성되어 있다.\na태그를 새로 생성하여 아래와 같이 작성한다.\n\u0026lt;a href=\u0026#34;{{ .Site.BaseURL }}\u0026#34;\u0026gt; \u0026lt;img src=\u0026#39;/images/favicon.png\u0026#39; style=\u0026#34;width:20px;height:20px;margin-top:3px;\u0026#34;/\u0026gt; \u0026lt;/a\u0026gt; \u0026lt;div\u0026gt; {{- $defaultheader := printf \u0026#34;\u0026lt;a class=\u0026#39;baselink\u0026#39; href=\u0026#39;%s\u0026#39;\u0026gt;%s\u0026lt;/a\u0026gt;\u0026#34; .Site.BaseURL .Site.Title -}} {{- partial \u0026#34;_mdinclude.html\u0026#34; (dict \u0026#34;name\u0026#34; \u0026#34;header\u0026#34; \u0026#34;context\u0026#34; . \u0026#34;tip\u0026#34; $defaultheader ) -}} \u0026lt;/div\u0026gt; \r3. Summary  상대경로를 go 방식이나 html방식으로 작성하여 href / src 등을 작성할 수 있다.\nimg의 width / height로 적용했을 때 height가 적용되지 않는 오류가 있어서 style 속성으로 대신 적용하였다. margin을 이용해 정렬을 할 수 있다.\nHugo Link\nHugo Templates\nHugo Functions\n\r"
 },
 {
 	"uri": "https://nocturover.github.io/git/troubleshooting/02_ssh/",
@@ -186,14 +193,14 @@
 	"title": "Git",
 	"tags": [],
 	"description": "Git",
-	"content": "Overview 이 곳은 Git 사용법의 학습 공간입니다.\nLink Troubleshooting \n 01_Command \n\r\r"
+	"content": "Overview 이 곳은 Git 사용법의 학습 공간입니다.\nLink Troubleshooting \n Command \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/windows/",
 	"title": "Windows",
 	"tags": [],
 	"description": "Windows",
-	"content": "Overview 이 곳은 Windows OS의 설정 및 사용방법에 대한 공간입니다.\n"
+	"content": "Overview 이 곳은 Windows OS의 설정 및 사용방법에 대한 공간입니다.\nLink cmder \n Installation \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/linux/",

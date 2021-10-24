@@ -22,12 +22,12 @@ alias vs=devenv git
 ssh-keygen -t ed25519 -C &amp;#34;email@gmail.com&amp;#34; notepad++
 alias npp=start notepad++ Python
 hugo
-alias dir_hugo=cd c:\[user]\Programs\hugo 
+alias dir_hugo=cd c:\[user]\Programs\hugo MariaDB or MongoDB
 -UtilsVLC
 7-zip
 chrome
--Settings    ctrl-Fn key swap : In BIOS (Lenovo)
-  ctrl-Capslock key swap : In regedit / ref</description>
+jcpicker
+-Settings    ctrl-Fn key swap : In BIOS (Lenovo)</description>
     </item>
     
   </channel>

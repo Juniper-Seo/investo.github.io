@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Oct 2021 16:04:46 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/windows/cmder/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>01_Command</title>
-      <link>https://nocturover.github.io/windows/cmder/01_command/</link>
+      <title>Command</title>
+      <link>https://nocturover.github.io/windows/cmder/command/</link>
       <pubDate>Mon, 18 Oct 2021 23:15:46 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/windows/cmder/01_command/</guid>
+      <guid>https://nocturover.github.io/windows/cmder/command/</guid>
       <description>Environment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.
 시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.
 나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.

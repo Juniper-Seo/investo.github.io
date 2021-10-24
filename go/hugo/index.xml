@@ -6,17 +6,29 @@
     <description>Recent content in Hugo on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Oct 2021 17:05:46 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/go/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Oct 2021 11:43:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/go/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>00_Custom_Theme</title>
-      <link>https://nocturover.github.io/go/hugo/00_custom_theme/</link>
+      <title>01_Custom_Theme</title>
+      <link>https://nocturover.github.io/go/hugo/01_custom_theme/</link>
       <pubDate>Sat, 16 Oct 2021 17:05:46 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/go/hugo/00_custom_theme/</guid>
+      <guid>https://nocturover.github.io/go/hugo/01_custom_theme/</guid>
       <description>Overview  hugo를 이용하여 생성된 static site 는
 git submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파일의 모든 레이아웃을 따르게 되어있다.
 1. 개념  기본 레이아웃을 변경시키기 위해서는 원본 테마 폴더 내에 존재하는 layouts의 각 html을 수정해주거나 overriding을 위해 상위 폴더에 layouts를 생성하여 각 필요한 html을 수정해주는 방법이 존재한다.
 2. 적용범위  a. 사이트 상태 반환 hugo는 Go 언어와 html의 조합을 이용하여 동적인 코드 조합이 가능하기 때문에 이 사이트 좌측 메뉴바에서 볼 수 있듯 각 Section에 포함된 게시글의 전체개수를 반환하여 string 형태로 접미어에 붙이는 것도 가능하다.</description>
+    </item>
+    
+    <item>
+      <title>02_FAVICON</title>
+      <link>https://nocturover.github.io/go/hugo/02_favicon/</link>
+      <pubDate>Sun, 24 Oct 2021 11:43:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/go/hugo/02_favicon/</guid>
+      <description>Overview  웹페이지의 대표 아이콘인 favicon의 설정 방법을 기술
+1. 적용  favicon ├─static │ ├─admin │ │ └─shortcode │ ├─css │ ├─images │ ├─js │ └─vendor │ ├─auto-complete │ └─lunr static/images에 favicon.png 이름으로 로고 파일을 저장한다.
+layouts/partials/html-head.html 파일에 사이트 title과 link가 작성되어 있다.
+&amp;lt;title&amp;gt;{{ .Title }} :: {{ .Site.Title }}&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;shortcut icon&amp;#34; href=&amp;#39;{{&amp;#34;images/favicon.png&amp;#34; | relURL}}&amp;#39; type=&amp;#34;image/x-icon&amp;#34; /&amp;gt; logo layouts/partials/body-header.html 파일에 div태그 내부에 상부 헤더 title이 작성되어 있다.</description>
     </item>
     
   </channel>
