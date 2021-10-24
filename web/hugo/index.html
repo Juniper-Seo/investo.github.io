@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	02_SSH :: 1998
+	Hugo :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-10-24T14:24:22 KST">
-<meta name="description" content="">
+<meta name="description" content="Hugo">
 
 
 
-<title>02_SSH :: 1998</title>
+<title>Hugo :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/git/troubleshooting/02_ssh/"
+  <body data-url="/web/hugo/"
 
   class="">
 
@@ -346,14 +346,15 @@
     </li>
     
 
-    <li data-nav-id="https://nocturover.github.io/web/" class="dd-item haschildren
+    <li data-nav-id="https://nocturover.github.io/web/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
 			
@@ -362,7 +363,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/web/hugo/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/web/hugo/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -379,15 +380,14 @@
     </li>
     
 
-    <li data-nav-id="https://nocturover.github.io/git/" class="dd-item parent haschildren
+    <li data-nav-id="https://nocturover.github.io/git/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
 			
@@ -396,7 +396,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/git/troubleshooting/" class="dd-item parent active
+    <li data-nav-id="https://nocturover.github.io/git/troubleshooting/" class="dd-item
         item_level_$level
         ">
 
@@ -538,14 +538,12 @@
       <section class="page ">
       
 	
+		
     
     
     <nav id="ariane" aria-label="breadcrumb">
       <ol class="ariane">
         
-  
-  	
-		
   
   	
 		
@@ -559,16 +557,8 @@
 	
   
     <li class="">
-      <a class="text-link" href="/git/">
-        Git
-      </a>
-    </li>
-	
-  	
-  
-    <li class="">
-      <a class="text-link" href="/git/troubleshooting/">
-        Troubleshooting
+      <a class="text-link" href="/web/">
+        Web
       </a>
     </li>
 	
@@ -576,7 +566,7 @@
   
     <li class="active">
       
-        02_SSH
+        Hugo
       
     </li>
 
@@ -597,7 +587,7 @@
 		
 
 		
-			<h1>Troubleshooting<span>02_SSH</span></h1>
+			<h1>Hugo</h1>
         
 
 			
@@ -609,17 +599,12 @@
 	            		
 	        			
 	            	<li >
-	            		<a title="$pagetitle" href="/git/troubleshooting/00_crlf_trouble/">00_CRLF_TROUBLE</a>
-	            	</li>
-	            		
-	        			
-	            	<li class="active">
-	            		<a title="$pagetitle" href="/git/troubleshooting/02_ssh/">02_SSH</a>
+	            		<a title="$pagetitle" href="/web/hugo/01_custom_theme/">01_Custom_Theme</a>
 	            	</li>
 	            		
 	        			
 	            	<li >
-	            		<a title="$pagetitle" href="/git/troubleshooting/03_timeout/">03_TimeOut</a>
+	            		<a title="$pagetitle" href="/web/hugo/02_favicon/">02_FAVICON</a>
 	            	</li>
 	        	</nav> 
 		
@@ -635,9 +620,7 @@
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-trouble">1. Trouble</a></li>
-    <li><a href="#2-shooting">2. Shooting</a></li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#overview">Overview</a></li>
   </ul>
 </nav>
 	</div>
@@ -650,24 +633,22 @@
 
 
 	<div class="content">
-	    <h2 ref="1-trouble" >1. Trouble</h2><a class="anchor" id="1-trouble"></a>
-<hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">SSH REGISTER ERR
-</code></pre></div><p><code>clone</code> / <code>push</code> Pirvate repo의 접근 권한이 부여되지 않아 발생하는 에러.</p>
-<br/>
-<h2 ref="2-shooting" >2. Shooting</h2><a class="anchor" id="2-shooting"></a>
-<hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">ssh-keygen -t rsa -b 4096 -C <span style="color:#e6db74">&#34;[email]@google.com&#34;</span>		// rsa encrypt 방식의 4096 bit 암호 생성
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">start</span> notepad++ c:\users\[user]\.ssh\id_rsa.pub			// copy and paste.	
-</code></pre></div><p>git command <code>ssh-keygen</code>으로 ssh를 생성하여 <a href="https://github.com">github.com</a> 각 계정의 settings에서 해당 PC의 ssh 키를 수동으로 등록해준다.</p>
-<br/>
-<h2 ref="3-summary" >3. Summary</h2><a class="anchor" id="3-summary"></a>
-<hr>
+	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
+<p>이 곳은 <code>Go</code>-<code>Hugo</code> Static site 개설과 커스터마이징 학습 공간입니다.</p>
 
 
-<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference</span></p>
-<p><a href="https://codechacha.com/ko/ssh-keygen-github/">SSH key 생성하고 GitHub에 등록</a></p>
-</div>
+
+<div class="card "><div class="card-header light">Link</div><div class="card-body">
+    <p class="card-text"><ul class="children children-li">
+<p><span><li>
+<a href="/web/hugo/01_custom_theme/" >01_Custom_Theme</a></li>
+</span></p>
+<p><span><li>
+<a href="/web/hugo/02_favicon/" >02_FAVICON</a></li>
+</span></p>
+</ul>
+</p>
+  </div></div>
 
 
 		</div>
@@ -679,13 +660,14 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/windows/" title="Windows" style="margin-right: 0px;">
+		<a class="next" href="/git/" title="Git" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Windows</label>
+                <label>Git</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
+	
 	
 
       </section>
@@ -706,14 +688,12 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/git/troubleshooting/02_ssh/">02_SSH</a></li>
+            <li><a href="/web/hugo/">Hugo</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-trouble">1. Trouble</a></li>
-    <li><a href="#2-shooting">2. Shooting</a></li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#overview">Overview</a></li>
   </ul>
 </nav>
 </div>
@@ -788,7 +768,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 23 October 2021
+		          Last update on 24 October 2021
 		      </li>
 		    
 		    

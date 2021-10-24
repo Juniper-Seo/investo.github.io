@@ -1,6 +1,6 @@
 [
 {
-	"uri": "https://nocturover.github.io/go/hugo/",
+	"uri": "https://nocturover.github.io/web/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "Hugo",
@@ -28,6 +28,13 @@
 	"content": "Overview 이 사이트는 코딩과 그 밖의 모든 것에 대한 보관함 입니다.\n\r[사용가능 도구들] \r[ALERT]  \rprimary is a primary\rinfo is a text\rsuccess is a text\rwarning is a text\rdanger is a text\rdark is a dark\rlight is a light\rsecondary is a secondary\r\r[ATTATCHMENTS]  \t\r_files\r\rCarroll_AliceAuPaysDesMerveilles.pdf\u0026nbsp;(175 kB)adivorciarsetoca00cape.pdf\u0026nbsp;(212 kB)hugo.png\u0026nbsp;(17 kB)movieselectricsheep-flock-244-32500-2.mp4\u0026nbsp;(340 kB)zip.mp3\u0026nbsp;(57 kB)\r\r\r[TAB]  PHP\r​\tThis is how we do a Hello world with php\n\u0026lt;?php Print \u0026#34;Hello, World!\u0026#34;; ?\u0026gt;​\nGolang\r​\tThis is how we do a Hello world with go\npackage main import \u0026#34;fmt\u0026#34; func main() { fmt.Println(\u0026#34;hello world\u0026#34;) }\t​\nJava\r​\tThis is how we do a Hello world with java\nclass HelloWorld { public static void main(String[] args) { System.out.println(\u0026#34;Hello, World!\u0026#34;); } } ​\n\r\r[BADGE]  primary (default) In progress docport beta danger warning info light dark\n\r[BUTTON]  Google 이동\rInsight 페이지 이동\r\r\r[COLUMN]  1st column Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\r2nd column Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\rlast column Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\r \r[EXCERPT]  excerpt paragraph test\r\u0026lt;Excerpt\u0026gt;\r{{% alert primary %}} excerpt paragraph test {{% /alert %}}\r\r\r\r[EXPAND]  \rExpand me\r\rgit\nλ git submodule add https://github.com/~/~.git themes/~ \r\r\r[NOTICE]  TODOLearn language\n\r\r[PANEL]  panel titlethis is a panel text\npanel footer\r\r[ICON]  ICON LINKFONTAWESOME\n\r\n   "
 },
 {
+	"uri": "https://nocturover.github.io/csharp/db/",
+	"title": "DB",
+	"tags": [],
+	"description": "C#-DB",
+	"content": "Overview 이 곳은 C# Database 연동의 학습공간 입니다.\n"
+},
+{
 	"uri": "https://nocturover.github.io/project/investo/idea/",
 	"title": "Idea",
 	"tags": [],
@@ -53,7 +60,7 @@
 	"title": "Installation",
 	"tags": [],
 	"description": "",
-	"content": "Overview  windows10 기반 필수 설치 프로그램 및 setting 리스트\n\rInstallation List   환경변수 등록  set PATH=%PATH%;C:\\Program Files (x86)\\Notepad++ \rSystemLenovo Driver\ncmder\ncd c:\\cmder \n-\rProgrammingVisual Studio \u0026amp; Code\nalias vs=devenv git\nssh-keygen -t ed25519 -C \u0026#34;email@gmail.com\u0026#34; notepad++\nalias npp=start notepad++ Python\nhugo\nalias dir_hugo=cd c:\\[user]\\Programs\\hugo MariaDB or MongoDB\n-\rUtilsVLC\n7-zip\nchrome\njcpicker\n-\r\rSettings    ctrl-Fn key swap : In BIOS (Lenovo)\n  ctrl-Capslock key swap : In regedit / ref\n----- [add new regedit code] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 ----- [reset regedit] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=-   "
+	"content": "Overview  windows10 기반 필수 설치 프로그램 및 setting 리스트\n\rInstallation List   환경변수 등록  set PATH=%PATH%;C:\\Program Files (x86)\\Notepad++ \rSystemLenovo Driver\ncmder\ncd c:\\cmder \n-\rProgrammingVisual Studio \u0026amp; Code\nalias vs=devenv git\nssh-keygen -t ed25519 -C \u0026#34;email@gmail.com\u0026#34; notepad++\nalias npp=start notepad++ Python\nhugo\nalias dir_hugo=cd c:\\[user]\\Programs\\hugo MariaDB\n​\t- MySql.Data Assembly\n-\rUtilsVLC\n7-zip\nchrome\njcpicker\n-\r\rSettings    ctrl-Fn key swap : In BIOS (Lenovo)\n  ctrl-Capslock key swap : In regedit / ref\n----- [add new regedit code] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=hex:00,00,00,00,00,00,00,00,02,00,00,00,1d,00,3a,00,00,00,00,00 ----- [reset regedit] ----- Windows Registry Editor Version 5.00 [HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Keyboard Layout] \u0026#34;Scancode Map\u0026#34;=-   "
 },
 {
 	"uri": "https://nocturover.github.io/daily/",
@@ -98,7 +105,7 @@
 	"content": " 1. Trouble  CRLF ERR clone / push 등의 단계에서 CRLF(Carriage Return Line Feed)와 관련된 트러블이 발생한다.\n\r2. Shooting  git config --global core.autocrlf true 각 계정에 remote add로 등록된 해당 레퍼지토리의 config 를 변경함으로써 해결가능하다.\n\r3. Summary  Reference\nCRLF 차이점과 해결법\n\r"
 },
 {
-	"uri": "https://nocturover.github.io/go/hugo/01_custom_theme/",
+	"uri": "https://nocturover.github.io/web/hugo/01_custom_theme/",
 	"title": "01_Custom_Theme",
 	"tags": [],
 	"description": "",
@@ -109,10 +116,10 @@
 	"title": "Progress",
 	"tags": [],
 	"description": "Project-Investo-Progress",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.23 (Sat) 구현 기능 리스트 추출  주문 기능    API - R.T. HoG_ Frm DESIGN  3 [hr]\r\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.24 (Sun) 구현 기능 리스트 추출  주문 기능 T.K 추출 + DB updater   API - R.T. HoG_ Frm DESIGN  6 [hr]\r\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
 },
 {
-	"uri": "https://nocturover.github.io/go/hugo/02_favicon/",
+	"uri": "https://nocturover.github.io/web/hugo/02_favicon/",
 	"title": "02_FAVICON",
 	"tags": [],
 	"description": "",
@@ -182,11 +189,11 @@
 	"content": "Overview 이 곳은 Python 언어의 학습 공간입니다.\n"
 },
 {
-	"uri": "https://nocturover.github.io/go/",
-	"title": "Go",
+	"uri": "https://nocturover.github.io/web/",
+	"title": "Web",
 	"tags": [],
-	"description": "Go",
-	"content": "Overview 이 곳은 Go 언어의 학습 공간입니다.\n"
+	"description": "Web",
+	"content": "Overview 이 곳은 Web / Frontend 언어들의 학습 공간입니다.\n"
 },
 {
 	"uri": "https://nocturover.github.io/git/",
@@ -215,6 +222,13 @@
 	"tags": [],
 	"description": "",
 	"content": "A bunch of Shortcodes are available with this theme :\n\rattachments\rThe Attachments shortcode displays a list of files attached to a page.\n\r\rbadge\rDisclaimers to help you structure your page\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/db/01_mariadb_connection/",
+	"title": "01_MariaDB_connection",
+	"tags": [],
+	"description": "",
+	"content": "Overview  오픈소스 DBMS MariaDB 와 C#의 연동을 기술.\n\rInstallation  종속성   MySql.Data Assembly Download \u0026amp; Install\n  프로젝트 종속성 로드\n  cd C:\\Program Files (x86)\\MySQL\\MySQL Connector Net 8.0.27\\Assemblies\\net5.0\\MySql.Data.dll \rConnection  Code :: Form using System; using System.Windows.Forms; using MySql.Data.MySqlClient;\t// Load;  namespace UNIT_TEST_DB { public partial class MainForm : Form { public MainForm() { InitializeComponent(); } ~MainForm() { conn.Close(); conn.Dispose(); } MySqlConnection conn;\t// local variable;  private bool connectMariaDB() { string connStr = string.Format(\u0026#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};\u0026#34;, this.txtServer.Text, \u0026#34;3306\u0026#34;, this.txtDB.Text, this.txtId.Text, this.txtPwd.Text); try { conn = new MySqlConnection(connStr);\t// connection;  conn.Open(); return true; } catch(Exception e) { Console.WriteLine(e); return false; } } private void btnClose_Click(object sender, EventArgs e) { this.Close(); } private void btnConn_Click(object sender, EventArgs e) { if (connectMariaDB() == true)\t// Print;  { this.lblStatus.Text = \u0026#34;Success\u0026#34;; } else { this.lblStatus.Text = \u0026#34;Fail\u0026#34;; } } private void btnSql_Click(object sender, EventArgs e) { string sqlStr = this.txtSql.Text; try { MySqlCommand command = new MySqlCommand(sqlStr, conn); command.ExecuteNonQuery();\t// send Sql String;  } catch (Exception ex) { Console.WriteLine(ex); } } } } Description  Connection string 작성 시 주의사항  string connStr = string.Format(\u0026#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};\u0026#34;, this.txtServer.Text, \u0026#34;3306\u0026#34;, this.txtDB.Text, this.txtId.Text, this.txtPwd.Text); \r Database가 존재하지 않거나 추후 선택을 희망할 경우 공란으로 비워둠.  USE [database]sql command 로 연결 가능   string 수준을 잘 지킬 것.  \r\r SqlCommand Excute  MySqlCommand command = new MySqlCommand(sqlStr, conn); command.ExecuteNonQuery();\t// send Sql String; \r ExecuteNonQuery : 반영된 행 수를 반환하는 메서드  \r\rSql Command  CREATE DATABASE mydb; -- mydb 데이터베이스 생성 USE mydb; -- 기본 데이터베이스로 mydb를 지정 CREATE TABLE mytable ( id INT PRIMARY KEY, name VARCHAR(20) ); -- mytable 테이블 생성 INSERT INTO mytable VALUES ( 1, \u0026#39;Will\u0026#39; ); -- 데이터 입력 INSERT INTO mytable VALUES ( 2, \u0026#39;Marry\u0026#39; ); INSERT INTO mytable VALUES ( 3, \u0026#39;Dean\u0026#39; ); SELECT id, name FROM mytable WHERE id = 1; UPDATE mytable SET name = \u0026#39;Willy\u0026#39; WHERE id = 1; SELECT id, name FROM mytable; DELETE FROM mytable WHERE id = 1; SELECT id, name FROM mytable; DROP DATABASE mydb; SELECT count(1) from mytable; gives the number of records in the table \rSummary  Reference Link\n기본 SQL 문장\nSQL 쿼리 기본\n\r"
 },
 {
 	"uri": "https://nocturover.github.io/shortcodes/attachments/",

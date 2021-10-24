@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DB on 1998</title>
+    <link>https://nocturover.github.io/csharp/db/</link>
+    <description>Recent content in DB on 1998</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01_MariaDB_connection</title>
+      <link>https://nocturover.github.io/csharp/db/01_mariadb_connection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/db/01_mariadb_connection/</guid>
+      <description>Overview  오픈소스 DBMS MariaDB 와 C#의 연동을 기술.
+Installation  종속성   MySql.Data Assembly Download &amp;amp; Install
+  프로젝트 종속성 로드
+  cd C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll Connection  Code :: Form using System; using System.Windows.Forms; using MySql.Data.MySqlClient;	// Load;  namespace UNIT_TEST_DB { public partial class MainForm : Form { public MainForm() { InitializeComponent(); } ~MainForm() { conn.Close(); conn.Dispose(); } MySqlConnection conn;	// local variable;  private bool connectMariaDB() { string connStr = string.</description>
+    </item>
+    
+  </channel>
+</rss>

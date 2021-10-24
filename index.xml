@@ -22,7 +22,8 @@ alias vs=devenv git
 ssh-keygen -t ed25519 -C &amp;#34;email@gmail.com&amp;#34; notepad++
 alias npp=start notepad++ Python
 hugo
-alias dir_hugo=cd c:\[user]\Programs\hugo MariaDB or MongoDB
+alias dir_hugo=cd c:\[user]\Programs\hugo MariaDB
+​	- MySql.Data Assembly
 -UtilsVLC
 7-zip
 chrome
@@ -102,10 +103,10 @@ CRLF 차이점과 해결법
     
     <item>
       <title>01_Custom_Theme</title>
-      <link>https://nocturover.github.io/go/hugo/01_custom_theme/</link>
+      <link>https://nocturover.github.io/web/hugo/01_custom_theme/</link>
       <pubDate>Sat, 16 Oct 2021 17:05:46 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/go/hugo/01_custom_theme/</guid>
+      <guid>https://nocturover.github.io/web/hugo/01_custom_theme/</guid>
       <description>Overview  hugo를 이용하여 생성된 static site 는
 git submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파일의 모든 레이아웃을 따르게 되어있다.
 1. 개념  기본 레이아웃을 변경시키기 위해서는 원본 테마 폴더 내에 존재하는 layouts의 각 html을 수정해주거나 overriding을 위해 상위 폴더에 layouts를 생성하여 각 필요한 html을 수정해주는 방법이 존재한다.
@@ -114,10 +115,10 @@ git submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파
     
     <item>
       <title>02_FAVICON</title>
-      <link>https://nocturover.github.io/go/hugo/02_favicon/</link>
+      <link>https://nocturover.github.io/web/hugo/02_favicon/</link>
       <pubDate>Sun, 24 Oct 2021 11:43:29 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/go/hugo/02_favicon/</guid>
+      <guid>https://nocturover.github.io/web/hugo/02_favicon/</guid>
       <description>Overview  웹페이지의 대표 아이콘인 favicon의 설정 방법을 기술
 1. 적용  favicon ├─static │ ├─admin │ │ └─shortcode │ ├─css │ ├─images │ ├─js │ └─vendor │ ├─auto-complete │ └─lunr static/images에 favicon.png 이름으로 로고 파일을 저장한다.
 layouts/partials/html-head.html 파일에 사이트 title과 link가 작성되어 있다.
@@ -176,6 +177,18 @@ Sometimes, firewalls refuse to allow SSH connections entirely.</description>
 물론 답이 나오지 않는 경우도 있겠지만, 대게는 그와 비슷했던 과거의 경험들이 오버랩되면서 현재의 상태가 이해될 수 있으리라 생각된다.
 내가 현재 뭘하고 있는 건가 방향성이 흔들릴 때도 분명히 있다.
 그런 불안감을 잠재우기 위해서 자잘한 계획들을 세우기도 하고 현실의 상황과 미래의 상황을 구체적으로 그려가는 편이다.</description>
+    </item>
+    
+    <item>
+      <title>01_MariaDB_connection</title>
+      <link>https://nocturover.github.io/csharp/db/01_mariadb_connection/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/db/01_mariadb_connection/</guid>
+      <description>Overview  오픈소스 DBMS MariaDB 와 C#의 연동을 기술.
+Installation  종속성   MySql.Data Assembly Download &amp;amp; Install
+  프로젝트 종속성 로드
+  cd C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll Connection  Code :: Form using System; using System.Windows.Forms; using MySql.Data.MySqlClient;	// Load;  namespace UNIT_TEST_DB { public partial class MainForm : Form { public MainForm() { InitializeComponent(); } ~MainForm() { conn.Close(); conn.Dispose(); } MySqlConnection conn;	// local variable;  private bool connectMariaDB() { string connStr = string.</description>
     </item>
     
   </channel>

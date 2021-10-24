@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nocturover.github.io/go/hugo/</loc>
+    <loc>https://nocturover.github.io/web/hugo/</loc>
     <lastmod>2021-10-24T11:43:29+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/git/troubleshooting/</loc>
@@ -13,6 +13,8 @@
   </url><url>
     <loc>https://nocturover.github.io/hello/</loc>
     <lastmod>2021-10-15T22:56:37+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/csharp/db/</loc>
   </url><url>
     <loc>https://nocturover.github.io/project/investo/idea/</loc>
   </url><url>
@@ -41,12 +43,12 @@
     <loc>https://nocturover.github.io/git/troubleshooting/00_crlf_trouble/</loc>
     <lastmod>2021-10-17T16:03:46+09:00</lastmod>
   </url><url>
-    <loc>https://nocturover.github.io/go/hugo/01_custom_theme/</loc>
+    <loc>https://nocturover.github.io/web/hugo/01_custom_theme/</loc>
     <lastmod>2021-10-16T17:05:46+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/project/investo/progress/</loc>
   </url><url>
-    <loc>https://nocturover.github.io/go/hugo/02_favicon/</loc>
+    <loc>https://nocturover.github.io/web/hugo/02_favicon/</loc>
     <lastmod>2021-10-24T11:43:29+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/git/troubleshooting/02_ssh/</loc>
@@ -76,7 +78,7 @@
     <loc>https://nocturover.github.io/python/</loc>
     <lastmod>2021-10-15T23:07:26+09:00</lastmod>
   </url><url>
-    <loc>https://nocturover.github.io/go/</loc>
+    <loc>https://nocturover.github.io/web/</loc>
     <lastmod>2021-10-24T11:43:29+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/git/</loc>
@@ -107,6 +109,8 @@
     <lastmod>2020-08-20T11:07:48+00:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/_layout/article-sidebar-after/</loc>
+  </url><url>
+    <loc>https://nocturover.github.io/csharp/db/01_mariadb_connection/</loc>
   </url><url>
     <loc>https://nocturover.github.io/shortcodes/attachments/</loc>
   </url><url>

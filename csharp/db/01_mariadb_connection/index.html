@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	02_SSH :: 1998
+	01_MariaDB_connection :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>02_SSH :: 1998</title>
+<title>01_MariaDB_connection :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/git/troubleshooting/02_ssh/"
+  <body data-url="/csharp/db/01_mariadb_connection/"
 
   class="">
 
@@ -282,14 +282,15 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item haschildren
+    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
 			
@@ -298,7 +299,7 @@
         <ul>
               
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -379,15 +380,14 @@
     </li>
     
 
-    <li data-nav-id="https://nocturover.github.io/git/" class="dd-item parent haschildren
+    <li data-nav-id="https://nocturover.github.io/git/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
 			
@@ -396,7 +396,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/git/troubleshooting/" class="dd-item parent active
+    <li data-nav-id="https://nocturover.github.io/git/troubleshooting/" class="dd-item
         item_level_$level
         ">
 
@@ -559,16 +559,16 @@
 	
   
     <li class="">
-      <a class="text-link" href="/git/">
-        Git
+      <a class="text-link" href="/csharp/">
+        C#
       </a>
     </li>
 	
   	
   
     <li class="">
-      <a class="text-link" href="/git/troubleshooting/">
-        Troubleshooting
+      <a class="text-link" href="/csharp/db/">
+        DB
       </a>
     </li>
 	
@@ -576,7 +576,7 @@
   
     <li class="active">
       
-        02_SSH
+        01_MariaDB_connection
       
     </li>
 
@@ -597,7 +597,7 @@
 		
 
 		
-			<h1>Troubleshooting<span>02_SSH</span></h1>
+			<h1>DB<span>01_MariaDB_connection</span></h1>
         
 
 			
@@ -608,18 +608,8 @@
 				<nav class="subpages">
 	            		
 	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/git/troubleshooting/00_crlf_trouble/">00_CRLF_TROUBLE</a>
-	            	</li>
-	            		
-	        			
 	            	<li class="active">
-	            		<a title="$pagetitle" href="/git/troubleshooting/02_ssh/">02_SSH</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/git/troubleshooting/03_timeout/">03_TimeOut</a>
+	            		<a title="$pagetitle" href="/csharp/db/01_mariadb_connection/">01_MariaDB_connection</a>
 	            	</li>
 	        	</nav> 
 		
@@ -635,9 +625,20 @@
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#1-trouble">1. Trouble</a></li>
-    <li><a href="#2-shooting">2. Shooting</a></li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#종속성">종속성</a></li>
+      </ul>
+    </li>
+    <li><a href="#connection">Connection</a>
+      <ul>
+        <li><a href="#code--form">Code :: Form</a></li>
+        <li><a href="#description">Description</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql-command">Sql Command</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
@@ -650,23 +651,149 @@
 
 
 	<div class="content">
-	    <h2 ref="1-trouble" >1. Trouble</h2><a class="anchor" id="1-trouble"></a>
+	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">SSH REGISTER ERR
-</code></pre></div><p><code>clone</code> / <code>push</code> Pirvate repo의 접근 권한이 부여되지 않아 발생하는 에러.</p>
+<p>오픈소스 DBMS <code>MariaDB</code> 와 <code>C#</code>의 연동을 기술.</p>
 <br/>
-<h2 ref="2-shooting" >2. Shooting</h2><a class="anchor" id="2-shooting"></a>
+<h2 ref="installation" >Installation</h2><a class="anchor" id="installation"></a>
 <hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">ssh-keygen -t rsa -b 4096 -C <span style="color:#e6db74">&#34;[email]@google.com&#34;</span>		// rsa encrypt 방식의 4096 bit 암호 생성
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">start</span> notepad++ c:\users\[user]\.ssh\id_rsa.pub			// copy and paste.	
-</code></pre></div><p>git command <code>ssh-keygen</code>으로 ssh를 생성하여 <a href="https://github.com">github.com</a> 각 계정의 settings에서 해당 PC의 ssh 키를 수동으로 등록해준다.</p>
+<h3 ref="종속성" >종속성</h3><a class="anchor" id="종속성"></a>
+<ul>
+<li>
+<p><a href="https://dev.mysql.com/downloads/connector/net/">MySql.Data Assembly</a> Download &amp; Install</p>
+</li>
+<li>
+<p>프로젝트 종속성 로드</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll
+</code></pre></div><br/>
+<h2 ref="connection" >Connection</h2><a class="anchor" id="connection"></a>
+<hr>
+<h3 ref="code--form" >Code :: Form</h3><a class="anchor" id="code--form"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Windows.Forms;
+<span style="color:#66d9ef">using</span> MySql.Data.MySqlClient;					<span style="color:#75715e">// Load;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">namespace</span> UNIT_TEST_DB
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">partial</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainForm</span> : Form
+    {
+        <span style="color:#66d9ef">public</span> MainForm()
+        {
+            InitializeComponent();
+        }
+        ~MainForm()
+        {
+            conn.Close();
+            conn.Dispose();
+        }
+
+        MySqlConnection conn;			<span style="color:#75715e">// local variable;
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">bool</span> connectMariaDB()
+        {
+            <span style="color:#66d9ef">string</span> connStr = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
+<span style="color:#66d9ef">this</span>.txtServer.Text, <span style="color:#e6db74">&#34;3306&#34;</span>, <span style="color:#66d9ef">this</span>.txtDB.Text, <span style="color:#66d9ef">this</span>.txtId.Text, <span style="color:#66d9ef">this</span>.txtPwd.Text);
+            <span style="color:#66d9ef">try</span>
+            {
+                conn = <span style="color:#66d9ef">new</span> MySqlConnection(connStr);	<span style="color:#75715e">// connection;
+</span><span style="color:#75715e"></span>                conn.Open();
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+            }
+            <span style="color:#66d9ef">catch</span>(Exception e)
+            {
+                Console.WriteLine(e);
+                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+            }
+        }
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnClose_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            <span style="color:#66d9ef">this</span>.Close();
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnConn_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            <span style="color:#66d9ef">if</span> (connectMariaDB() == <span style="color:#66d9ef">true</span>)			<span style="color:#75715e">// Print;
+</span><span style="color:#75715e"></span>            {
+                <span style="color:#66d9ef">this</span>.lblStatus.Text = <span style="color:#e6db74">&#34;Success&#34;</span>;
+            }
+            <span style="color:#66d9ef">else</span>
+            {
+                <span style="color:#66d9ef">this</span>.lblStatus.Text = <span style="color:#e6db74">&#34;Fail&#34;</span>;
+            }
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnSql_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            <span style="color:#66d9ef">string</span> sqlStr = <span style="color:#66d9ef">this</span>.txtSql.Text;
+            <span style="color:#66d9ef">try</span>
+            {
+                MySqlCommand command = <span style="color:#66d9ef">new</span> MySqlCommand(sqlStr, conn);
+                command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
+</span><span style="color:#75715e"></span>            }
+            <span style="color:#66d9ef">catch</span> (Exception ex)
+            {
+                Console.WriteLine(ex); 
+            }
+        }
+    }
+}
+</code></pre></div><h3 ref="description" >Description</h3><a class="anchor" id="description"></a>
+<ul>
+<li>Connection string 작성 시 주의사항</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">string</span> connStr = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
+<span style="color:#66d9ef">this</span>.txtServer.Text, <span style="color:#e6db74">&#34;3306&#34;</span>, <span style="color:#66d9ef">this</span>.txtDB.Text, <span style="color:#66d9ef">this</span>.txtId.Text, <span style="color:#66d9ef">this</span>.txtPwd.Text);
+</code></pre></div>
+
+<div class="alert warning" role="alert"><ul>
+<li><code>Database</code>가 존재하지 않거나 추후 선택을 희망할 경우 공란으로 비워둠.
+<ul>
+<li><code>USE [database]</code>sql command 로 연결 가능</li>
+</ul>
+</li>
+<li><code>string</code> 수준을 잘 지킬 것.</li>
+</ul>
+</div>
+
 <br/>
-<h2 ref="3-summary" >3. Summary</h2><a class="anchor" id="3-summary"></a>
+<ul>
+<li>SqlCommand Excute</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">MySqlCommand command = <span style="color:#66d9ef">new</span> MySqlCommand(sqlStr, conn);
+command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
+</span></code></pre></div>
+
+<div class="alert info" role="alert"><ul>
+<li><code>ExecuteNonQuery</code> : 반영된 행 수를 반환하는 메서드</li>
+</ul>
+</div>
+
+<br/>
+<h2 ref="sql-command" >Sql Command</h2><a class="anchor" id="sql-command"></a>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mydb; <span style="color:#75715e">-- mydb 데이터베이스 생성
+</span><span style="color:#75715e"></span>USE mydb; <span style="color:#75715e">-- 기본 데이터베이스로 mydb를 지정
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> mytable ( id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, name VARCHAR(<span style="color:#ae81ff">20</span>) ); <span style="color:#75715e">-- mytable 테이블 생성
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Will&#39;</span> ); <span style="color:#75715e">-- 데이터 입력
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Marry&#39;</span> ); 
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Dean&#39;</span> );
+<span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">UPDATE</span> mytable <span style="color:#66d9ef">SET</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Willy&#39;</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable;
+<span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> mytable <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable;
+<span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> mydb;
+<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">count</span>(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">from</span> mytable; gives the number <span style="color:#66d9ef">of</span> records <span style="color:#66d9ef">in</span> the <span style="color:#66d9ef">table</span>
+</code></pre></div><br/>
+<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
 <hr>
 
 
-<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference</span></p>
-<p><a href="https://codechacha.com/ko/ssh-keygen-github/">SSH key 생성하고 GitHub에 등록</a></p>
+<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
+<p><a href="https://mariadb.com/kb/ko/basic-sql-statements/">기본 SQL 문장</a></p>
+<p><a href="https://reddb.tistory.com/108">SQL 쿼리 기본</a></p>
 </div>
 
 
@@ -679,10 +806,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/windows/" title="Windows" style="margin-right: 0px;">
+		<a class="next" href="/csharp/winform/" title="Winform" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Windows</label>
+                <label>Winform</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -706,14 +833,25 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/git/troubleshooting/02_ssh/">02_SSH</a></li>
+            <li><a href="/csharp/db/01_mariadb_connection/">01_MariaDB_connection</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-trouble">1. Trouble</a></li>
-    <li><a href="#2-shooting">2. Shooting</a></li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#종속성">종속성</a></li>
+      </ul>
+    </li>
+    <li><a href="#connection">Connection</a>
+      <ul>
+        <li><a href="#code--form">Code :: Form</a></li>
+        <li><a href="#description">Description</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql-command">Sql Command</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 </div>
@@ -786,11 +924,6 @@
 		    
 		    
 			
-		      <li>
-		          <i class='fas fa-calendar'></i>
-		          Last update on 23 October 2021
-		      </li>
-		    
 		    
 
     	</ul>
