@@ -6,7 +6,19 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Oct 2021 18:06:41 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Oct 2021 19:40:36 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01_Form_Group</title>
+      <link>https://nocturover.github.io/csharp/winform/01_form_group/</link>
+      <pubDate>Mon, 25 Oct 2021 19:40:36 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/01_form_group/</guid>
+      <description>Overview  .csproj 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개
+
+Way  Premise  partial class의 작성  Code .csproj.user &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;Project ToolsVersion=&amp;#34;Current&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/developer/msbuild/2003&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Form&amp;lt;/SubType&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.ANIMATION.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;EmbeddedResource Update=&amp;#34;Properties\Resources.resx&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Designer&amp;lt;/SubType&amp;gt; &amp;lt;/EmbeddedResource&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;/Project&amp;gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt;&amp;lt;/Compile&amp;gt; 
+Troubleshooting  1 .csproj.user 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제  같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영</description>
+    </item>
+    
     <item>
       <title>01_MariaDB_connection</title>
       <link>https://nocturover.github.io/csharp/db/01_mariadb_connection/</link>

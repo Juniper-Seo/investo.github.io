@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://nocturover.github.io/csharp/winform/",
+	"title": "Winform",
+	"tags": [],
+	"description": "C#-Winform",
+	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/csharp/db/",
 	"title": "DB",
 	"tags": [],
@@ -49,11 +56,11 @@
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Trouble shooting 과 진척도를 기록하는 공간입니다.\n"
 },
 {
-	"uri": "https://nocturover.github.io/csharp/winform/",
-	"title": "Winform",
+	"uri": "https://nocturover.github.io/csharp/winform/01_form_group/",
+	"title": "01_Form_Group",
 	"tags": [],
-	"description": "C#-Winform",
-	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\n"
+	"description": "C#-Winform-FormGroup",
+	"content": "Overview  .csproj 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개\n\nWay  Premise  partial class의 작성  \rCode .csproj.user \u0026lt;?xml version=\u0026#34;1.0\u0026#34; encoding=\u0026#34;utf-8\u0026#34;?\u0026gt; \u0026lt;Project ToolsVersion=\u0026#34;Current\u0026#34; xmlns=\u0026#34;http://schemas.microsoft.com/developer/msbuild/2003\u0026#34;\u0026gt; \u0026lt;ItemGroup\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;SubType\u0026gt;Form\u0026lt;/SubType\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.ANIMATION.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.OPENAPI.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;/ItemGroup\u0026gt; \u0026lt;ItemGroup\u0026gt; \u0026lt;EmbeddedResource Update=\u0026#34;Properties\\Resources.resx\u0026#34;\u0026gt; \u0026lt;SubType\u0026gt;Designer\u0026lt;/SubType\u0026gt; \u0026lt;/EmbeddedResource\u0026gt; \u0026lt;/ItemGroup\u0026gt; \u0026lt;/Project\u0026gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.OPENAPI.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt;\u0026lt;/Compile\u0026gt; \nTroubleshooting  1 .csproj.user 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제\r  같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영\n  main Form 을 제외하고 하위 form들의 DependentUpon을 포함한 모든 커스텀 속성을 주석처리 후 저장\n  주석 처리 해제 후 저장\n  반영 확인\n  2 그륩화된 폼 복사 시 발생하는 오류\r  폼이 포함하고 있는 리소스 파일 .resx의 출력 중복 오류 - .resx파일 삭제\n  클래스 중복\n  \nSummary   N/A  "
 },
 {
 	"uri": "https://nocturover.github.io/daily/",
@@ -123,7 +130,7 @@
 	"title": "Progress",
 	"tags": [],
 	"description": "Project-Investo-Progress",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.24 (Sun) 구현 기능 리스트 추출  주문 기능 T.K 추출 + DB updater   API - R.T. HoG_ Frm DESIGN  6 [hr]\r\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.25 (Mon) Function lists  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/",

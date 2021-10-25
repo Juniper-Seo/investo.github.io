@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	Command :: 1998
+	01_Form_Group :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2021-10-25T21:40:14 KST">
-<meta name="description" content="Windows-cmder-command">
+<meta name="description" content="C#-Winform-FormGroup">
 
 
 
-<title>Command :: 1998</title>
+<title>01_Form_Group :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/windows/cmder/command/"
+  <body data-url="/csharp/winform/01_form_group/"
 
   class="">
 
@@ -282,14 +282,15 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item haschildren
+    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
 			
@@ -298,7 +299,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -413,15 +414,14 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/windows/" class="dd-item parent haschildren
+    <li data-nav-id="https://nocturover.github.io/windows/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
 			
@@ -430,7 +430,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/windows/cmder/" class="dd-item parent active alwaysopen
+    <li data-nav-id="https://nocturover.github.io/windows/cmder/" class="dd-item alwaysopen
         item_level_$level
         ">
 
@@ -559,16 +559,16 @@
 	
   
     <li class="">
-      <a class="text-link" href="/windows/">
-        Windows
+      <a class="text-link" href="/csharp/">
+        C#
       </a>
     </li>
 	
   	
   
     <li class="">
-      <a class="text-link" href="/windows/cmder/">
-        cmder
+      <a class="text-link" href="/csharp/winform/">
+        Winform
       </a>
     </li>
 	
@@ -576,7 +576,7 @@
   
     <li class="active">
       
-        Command
+        01_Form_Group
       
     </li>
 
@@ -597,7 +597,7 @@
 		
 
 		
-			<h1>cmder<span>Command</span></h1>
+			<h1>Winform<span>01_Form_Group</span></h1>
         
 
 			
@@ -609,7 +609,7 @@
 	            		
 	        			
 	            	<li class="active">
-	            		<a title="$pagetitle" href="/windows/cmder/command/">Command</a>
+	            		<a title="$pagetitle" href="/csharp/winform/01_form_group/">01_Form_Group</a>
 	            	</li>
 	        	</nav> 
 		
@@ -625,22 +625,15 @@
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#environment-variable">Environment variable</a></li>
-    <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#way">Way</a>
       <ul>
-        <li></li>
+        <li><a href="#premise">Premise</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
       </ul>
     </li>
-    <li><a href="#common-command">Common command</a>
-      <ul>
-        <li><a href="#set-path---환경-변수-설정">set path  :: 환경 변수 설정</a></li>
-        <li><a href="#alias--별칭-지정">Alias :: 별칭 지정</a></li>
-        <li><a href="#xcopy--파일폴더-복사">xcopy :: 파일/폴더 복사</a></li>
-        <li><a href="#start---현재-폴더-탐색기-열기">start . :: 현재 폴더 탐색기 열기</a></li>
-        <li><a href="#touch--파일-생성">touch :: 파일 생성</a></li>
-        <li><a href="#del--파일-삭제">del :: 파일 삭제</a></li>
-      </ul>
-    </li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
@@ -653,87 +646,79 @@
 
 
 	<div class="content">
-	    <br/>
-<h2 ref="environment-variable" >Environment variable</h2><a class="anchor" id="environment-variable"></a>
+	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<p><code>cmder</code>에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.</p>
-<p><code>시스템 환경 변수 편집</code> - <code>시스템 환경 변수</code> - <code>path</code>항목의 편집을 누르고 원하는 <code>.exe</code>파일이 존재하는 폴더를 추가해주면 된다.</p>
-<p>나의 경우 <code>vscode</code> / <code>vs</code> / <code>typora</code> / <code>npp</code> 등을 등록하여 사용 중이다.</p>
-<br/>
-<h2 ref="keyboard-shortcuts" >Keyboard Shortcuts</h2><a class="anchor" id="keyboard-shortcuts"></a>
+<p><code>.csproj</code> 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개</p>
+<p><br/><br/></p>
+<h2 ref="way" >Way</h2><a class="anchor" id="way"></a>
 <hr>
-<h4 ref="tab-manipulation" >Tab manipulation</h4><a class="anchor" id="tab-manipulation"></a>
+<h3 ref="premise" >Premise</h3><a class="anchor" id="premise"></a>
 <ul>
-<li>
-<p><code>Ctrl + ` </code> : <strong>Global</strong> Summon from taskbar</p>
-</li>
-<li>
-<p><code>Win + Alt + p</code> : Preferences (Or right click on title bar)</p>
-</li>
-<li>
-<p><code>Ctrl + t</code> : New tab dialog (maybe you want to open cmd as admin?)</p>
-</li>
-<li>
-<p><code>Ctrl + w</code> : Close tab</p>
-</li>
-<li>
-
-
-<span >
-	
-	
-		⭐
-	
-		⭐
-	
-</span>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">Shift + Alt + number
-</code></pre></div><p>: Fast new tab:</p>
-<ol>
-<li><code>1.</code> CMD</li>
-<li><code>2.</code> PowerShell</li>
-</ol>
-</li>
-</ul>
-<h4 ref="shell" >Shell</h4><a class="anchor" id="shell"></a>
-<ul>
-<li><code>Ctrl + Alt + u</code> : Traverse up in directory structure (lovely feature!)</li>
-<li>
-
-<span >
-	
-	
-		⭐
-	
-		⭐
-	
-		⭐
-	
-</span> <code>Ctrl + r</code> : History search</li>
+<li><code>partial class</code>의 작성</li>
 </ul>
 <br/>
-<h2 ref="common-command" >Common command</h2><a class="anchor" id="common-command"></a>
+<h3 ref="code" >Code</h3><a class="anchor" id="code"></a>
+<h4 ref="csprojuser" ><code>.csproj.user</code></h4><a class="anchor" id="csprojuser"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;Project</span> <span style="color:#a6e22e">ToolsVersion=</span><span style="color:#e6db74">&#34;Current&#34;</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://schemas.microsoft.com/developer/msbuild/2003&#34;</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;ItemGroup&gt;</span>
+	<span style="color:#f92672">&lt;Compile</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.cs&#34;</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;SubType&gt;</span>Form<span style="color:#f92672">&lt;/SubType&gt;</span>
+    <span style="color:#f92672">&lt;/Compile&gt;</span>
+    <span style="color:#f92672">&lt;Compile</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.ANIMATION.cs&#34;</span> <span style="color:#a6e22e">DependentUpon=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.cs&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;/Compile&gt;</span>
+	<span style="color:#f92672">&lt;Compile</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.OPENAPI.cs&#34;</span> <span style="color:#a6e22e">DependentUpon=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.cs&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;/Compile&gt;</span>
+  <span style="color:#f92672">&lt;/ItemGroup&gt;</span>
+  <span style="color:#f92672">&lt;ItemGroup&gt;</span>
+    <span style="color:#f92672">&lt;EmbeddedResource</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;Properties\Resources.resx&#34;</span><span style="color:#f92672">&gt;</span>
+      <span style="color:#f92672">&lt;SubType&gt;</span>Designer<span style="color:#f92672">&lt;/SubType&gt;</span>
+    <span style="color:#f92672">&lt;/EmbeddedResource&gt;</span>
+  <span style="color:#f92672">&lt;/ItemGroup&gt;</span>
+<span style="color:#f92672">&lt;/Project&gt;</span>
+</code></pre></div><ul>
+<li>ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Compile</span> <span style="color:#a6e22e">Update=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.OPENAPI.cs&#34;</span> <span style="color:#a6e22e">DependentUpon=</span><span style="color:#e6db74">&#34;childForm/ChildAccount.cs&#34;</span><span style="color:#f92672">&gt;&lt;/Compile&gt;</span>
+</code></pre></div><p><br/><br/></p>
+<h3 ref="troubleshooting" >Troubleshooting</h3><a class="anchor" id="troubleshooting"></a>
 <hr>
-<h3 ref="set-path---환경-변수-설정" >set path  :: 환경 변수 설정</h3><a class="anchor" id="set-path---환경-변수-설정"></a>
-<p>환경 변수 <code>path</code> 를 지정하여 <code>cmd</code>에서 바로 실행 환경 구축</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">set</span> path =%path%;[경로];		// temporary
-setx path <span style="color:#e6db74">&#34;</span>%PATH%<span style="color:#e6db74">[경로]&#34;</span>		// permanent
-</code></pre></div><h3 ref="alias--별칭-지정" >Alias :: 별칭 지정</h3><a class="anchor" id="alias--별칭-지정"></a>
-<p>명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">alias [별칭]=[명령어]$*
-doskey 	[별칭]=[명령어]$*
-</code></pre></div><h3 ref="xcopy--파일폴더-복사" >xcopy :: 파일/폴더 복사</h3><a class="anchor" id="xcopy--파일폴더-복사"></a>
-<p><code>rename</code> 가능</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">xcopy [대상] [목적지]
-</code></pre></div><h3 ref="start---현재-폴더-탐색기-열기" >start . :: 현재 폴더 탐색기 열기</h3><a class="anchor" id="start---현재-폴더-탐색기-열기"></a>
-<p><code>explorer . </code> 로 대체될 수 있다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">start</span> [destination]
-<span style="color:#66d9ef">start</span> . 								// 현재 폴더 탐색기 실행
-</code></pre></div><h3 ref="touch--파일-생성" >touch :: 파일 생성</h3><a class="anchor" id="touch--파일-생성"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">touch [fileName1] [fileName2] [fileName3]
-</code></pre></div><h3 ref="del--파일-삭제" >del :: 파일 삭제</h3><a class="anchor" id="del--파일-삭제"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">del</span> [fileName]
-</code></pre></div><br/>
+
+
+<div class="alert warning" role="alert"><strong>1</strong> <code>.csproj.user</code> 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제</div>
+
+<ul>
+<li>
+<p><strong>같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영</strong></p>
+</li>
+<li>
+<p>main Form 을 제외하고 하위 form들의 DependentUpon을 포함한 모든 커스텀 속성을 주석처리 후 저장</p>
+</li>
+<li>
+<p>주석 처리 해제 후 저장</p>
+</li>
+<li>
+<p>반영 확인</p>
+</li>
+</ul>
+
+
+<div class="alert warning" role="alert"><strong>2</strong> 그륩화된 폼 복사 시 발생하는 오류</div>
+
+<ul>
+<li>
+<p>폼이 포함하고 있는 리소스 파일 <code>.resx</code>의 출력 중복 오류 - <code>.resx</code>파일 삭제</p>
+</li>
+<li>
+<p>클래스 중복</p>
+</li>
+</ul>
+<p><br/><br/></p>
+<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
+<hr>
+<ul>
+<li>N/A</li>
+</ul>
 
 		</div>
 
@@ -744,10 +729,10 @@ doskey 	[별칭]=[명령어]$*
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/linux/" title="Linux" style="margin-right: 0px;">
+		<a class="next" href="/csharp/db/" title="DB" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Linux</label>
+                <label>DB</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -771,27 +756,20 @@ doskey 	[별칭]=[명령어]$*
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/windows/cmder/command/">Command</a></li>
+            <li><a href="/csharp/winform/01_form_group/">01_Form_Group</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#environment-variable">Environment variable</a></li>
-    <li><a href="#keyboard-shortcuts">Keyboard Shortcuts</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#way">Way</a>
       <ul>
-        <li></li>
+        <li><a href="#premise">Premise</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
       </ul>
     </li>
-    <li><a href="#common-command">Common command</a>
-      <ul>
-        <li><a href="#set-path---환경-변수-설정">set path  :: 환경 변수 설정</a></li>
-        <li><a href="#alias--별칭-지정">Alias :: 별칭 지정</a></li>
-        <li><a href="#xcopy--파일폴더-복사">xcopy :: 파일/폴더 복사</a></li>
-        <li><a href="#start---현재-폴더-탐색기-열기">start . :: 현재 폴더 탐색기 열기</a></li>
-        <li><a href="#touch--파일-생성">touch :: 파일 생성</a></li>
-        <li><a href="#del--파일-삭제">del :: 파일 삭제</a></li>
-      </ul>
-    </li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 </div>
@@ -866,7 +844,7 @@ doskey 	[별칭]=[명령어]$*
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 18 October 2021
+		          Last update on 25 October 2021
 		      </li>
 		    
 		    
