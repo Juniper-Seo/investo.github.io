@@ -7,5 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Oct 2021 22:56:37 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/hello/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>00_Sample</title>
+      <link>https://nocturover.github.io/hello/sample/</link>
+      <pubDate>Wed, 20 Oct 2021 13:59:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/hello/sample/</guid>
+      <description>Overview  Sample Title  first code third Troubleshooting         Summary  Reference Link
+HomePage LInk
+</description>
+    </item>
+    
   </channel>
 </rss>

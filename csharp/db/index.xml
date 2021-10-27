@@ -6,7 +6,7 @@
     <description>Recent content in DB on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Oct 2021 18:06:41 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2021 00:40:41 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01_MariaDB_connection</title>
       <link>https://nocturover.github.io/csharp/db/01_mariadb_connection/</link>
@@ -26,7 +26,17 @@
       
       <guid>https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/</guid>
       <description>Overview  SQL에서 사용되는 문법의 정리
-Structure :: SQL  DDL :: Data Defination Language  CREATE ALTER DROP  DML :: Data Manipulation Language  SELECT = query statement DELETE INSERT UPDATE  DCL :: Data Control Language  GRANT REVOKE  Command  WHERE WHERE age &amp;lt; 10; WHERE age BETWEEN 2 AND 20; WHERE age IN (10, 20 ) // ??? WHERE age EXIST	// ?</description>
+Structure :: SQL  DDL :: Data Defination Language  CREATE ALTER DROP  DML :: Data Manipulation Language  SELECT = query statement DELETE INSERT UPDATE  DCL :: Data Control Language  GRANT REVOKE  Command  CREATE CREATE DATABASE `tastdb`; CREATE TABLE `testtable` (code INT(6) UNSIGNED ZEROFILL NOT NULL PRIMARY KEY , name VARCHAR(20) NOT NULL, lastUpdate DATETIME NOT NULL);  SQl Command 전송으로 테이블을 직접 생성할 시 각 데이터 유형 생성 방법 (순서 유의)  UNSIGNED - 부호 없음 ZEROFILL - 0으로 채움 NOT NULL - Null 값 없음 PRIMARY KEY - 기본 키 DEFAULT [val] - 기본 값    INSERT INSERT INTO testDB.</description>
+    </item>
+    
+    <item>
+      <title>03_SQL_캡슐화</title>
+      <link>https://nocturover.github.io/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/</link>
+      <pubDate>Wed, 27 Oct 2021 00:40:41 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/</guid>
+      <description>Overview  MairaDB - C#의 연동 및 기타 메서드를 담는 클래스 생성
+ Architecture  목적 :: 캡슐화  DB의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임. 단, (단일적 &amp;amp;&amp;amp; 외부 사용 필수) 요소는 static 허용 처리 방식의 고수준화  디자인  Member - Property - Structure - Method - TestCase   Warning  한정자  한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.  private - 소스 코드 내에서만 Retrieving public - 인스턴스로 외부에서 적용될 때 static - global setting의 개념 (단일성 - singleton Design pattern)    Execute command  반환값에 따른 방법 적용  ExecuteScalar - 1개 요소 ExecuteReader - next/current 방식 ExecuteAdapter - fill in Dataset[Datatable]    MySqlConnection  conn 할당 후 conn.</description>
     </item>
     
   </channel>

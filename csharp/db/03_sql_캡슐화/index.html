@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	01_MariaDB_connection :: 1998
+	03_SQL_캡슐화 :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>01_MariaDB_connection :: 1998</title>
+<title>03_SQL_캡슐화 :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/csharp/db/01_mariadb_connection/"
+  <body data-url="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/"
 
   class="">
 
@@ -576,7 +576,7 @@
   
     <li class="active">
       
-        01_MariaDB_connection
+        03_SQL_캡슐화
       
     </li>
 
@@ -597,7 +597,7 @@
 		
 
 		
-			<h1>DB<span>01_MariaDB_connection</span></h1>
+			<h1>DB<span>03_SQL_캡슐화</span></h1>
         
 
 			
@@ -608,7 +608,7 @@
 				<nav class="subpages">
 	            		
 	        			
-	            	<li class="active">
+	            	<li >
 	            		<a title="$pagetitle" href="/csharp/db/01_mariadb_connection/">01_MariaDB_connection</a>
 	            	</li>
 	            		
@@ -618,7 +618,7 @@
 	            	</li>
 	            		
 	        			
-	            	<li >
+	            	<li class="active">
 	            		<a title="$pagetitle" href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/">03_SQL_캡슐화</a>
 	            	</li>
 	        	</nav> 
@@ -636,18 +636,26 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#installation">Installation</a>
+    <li><a href="#architecture">Architecture</a>
       <ul>
-        <li><a href="#종속성">종속성</a></li>
+        <li><a href="#목적--캡슐화">목적 :: 캡슐화</a></li>
+        <li><a href="#디자인">디자인</a></li>
       </ul>
     </li>
-    <li><a href="#connection">Connection</a>
+    <li><a href="#warning">Warning</a>
       <ul>
-        <li><a href="#code--form">Code :: Form</a></li>
+        <li><a href="#한정자">한정자</a></li>
+        <li><a href="#execute-command">Execute command</a></li>
+        <li><a href="#mysqlconnection">MySqlConnection</a></li>
+      </ul>
+    </li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#code">Code</a>
+      <ul>
+        <li><a href="#mariadbcs"><code>MariaDB.cs</code></a></li>
         <li><a href="#description">Description</a></li>
       </ul>
     </li>
-    <li><a href="#sql-command">Sql Command</a></li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -663,155 +671,247 @@
 	<div class="content">
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<p>오픈소스 DBMS <code>MariaDB</code> 와 <code>C#</code>의 연동을 기술.</p>
+<p><code>MairaDB</code> - <code>C#</code>의 연동 및 기타 메서드를 담는 클래스 생성</p>
 <br/>
-<h2 ref="installation" >Installation</h2><a class="anchor" id="installation"></a>
+<h2 ref="architecture" >Architecture</h2><a class="anchor" id="architecture"></a>
 <hr>
-<h3 ref="종속성" >종속성</h3><a class="anchor" id="종속성"></a>
+<h3 ref="목적--캡슐화" >목적 :: 캡슐화</h3><a class="anchor" id="목적--캡슐화"></a>
 <ul>
-<li>
-<p><a href="https://dev.mysql.com/downloads/connector/net/">MySql.Data Assembly</a> Download &amp; Install</p>
-</li>
-<li>
-<p>프로젝트 종속성 로드</p>
+<li><code>DB</code>의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임.</li>
+<li>단, (단일적 &amp;&amp; 외부 사용 필수) 요소는 <code>static</code> 허용</li>
+<li>처리 방식의 고수준화</li>
+</ul>
+<h3 ref="디자인" >디자인</h3><a class="anchor" id="디자인"></a>
+<ul>
+<li><code>Member</code> - <code>Property</code> - <code>Structure</code> - <code>Method</code> - <code>TestCase</code></li>
+</ul>
+<br/>
+<h2 ref="warning" >Warning</h2><a class="anchor" id="warning"></a>
+<hr>
+<h3 ref="한정자" >한정자</h3><a class="anchor" id="한정자"></a>
+<ul>
+<li>한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.
+<ul>
+<li><code>private</code> - 소스 코드 내에서만 Retrieving</li>
+<li><code>public</code> - 인스턴스로 외부에서 적용될 때</li>
+<li><code>static</code> - global setting의 개념 (단일성 - <a href="https://ivorycirrus.github.io/TIL/csharp-singleton/">singleton Design pattern</a>)</li>
+</ul>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll
-</code></pre></div><br/>
-<h2 ref="connection" >Connection</h2><a class="anchor" id="connection"></a>
+<h3 ref="execute-command" >Execute command</h3><a class="anchor" id="execute-command"></a>
+<ul>
+<li>반환값에 따른 방법 적용
+<ul>
+<li><code>ExecuteScalar</code> - 1개 요소</li>
+<li><code>ExecuteReader</code> - next/current 방식</li>
+<li><code>ExecuteAdapter</code> - fill in Dataset[Datatable]</li>
+</ul>
+</li>
+</ul>
+<h3 ref="mysqlconnection" >MySqlConnection</h3><a class="anchor" id="mysqlconnection"></a>
+<ul>
+<li><code>conn</code> 할당 후 <code>conn.Open()</code> <code>conn.Close()</code> 의 사용 패턴 주의 필요.
+<ul>
+<li><code>SQL</code> service를 담당하는 <code>mysqld.exe</code> 서비스의 중지가 발생될 수 있음
+<ul>
+<li>Err - host err</li>
+<li><code>C:\Program Files\MariaDB 10.5\bin\mysqld.exe</code> 파일 직접 실행</li>
+<li>Or, <code>service start mysqld</code> 명령문 실행</li>
+</ul>
+</li>
+<li>각 Execute command 시점 전 후로 커넥션 제어 필요
+<ul>
+<li><code>using</code> 문 사용</li>
+<li>Or,  수동 <code>Open()</code> / <code>Close()</code></li>
+<li>Or, <code>Connection Pooling</code> 방식 사용</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br/>
+<h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
 <hr>
-<h3 ref="code--form" >Code :: Form</h3><a class="anchor" id="code--form"></a>
+<br/>
+<h2 ref="code" >Code</h2><a class="anchor" id="code"></a>
+<hr>
+<h3 ref="mariadbcs" ><code>MariaDB.cs</code></h3><a class="anchor" id="mariadbcs"></a>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.Windows.Forms;
-<span style="color:#66d9ef">using</span> MySql.Data.MySqlClient;					<span style="color:#75715e">// Load;
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">namespace</span> UNIT_TEST_DB
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+<span style="color:#66d9ef">using</span> System.Data;
+<span style="color:#66d9ef">using</span> System.Linq;
+<span style="color:#66d9ef">using</span> MySql.Data.MySqlClient;
+
+<span style="color:#66d9ef">namespace</span> UNIT_TEST_CODE
 {
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">partial</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MainForm</span> : Form
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MariaDB</span>
     {
-        <span style="color:#66d9ef">public</span> MainForm()
+        <span style="color:#66d9ef">private</span> MySqlConnection conn = <span style="color:#66d9ef">null</span>;
+        <span style="color:#66d9ef">private</span> MySqlCommand command = <span style="color:#66d9ef">null</span>;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> server;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> port;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> db;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> id;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> pwd;
+
+        <span style="color:#66d9ef">public</span> MariaDB(<span style="color:#66d9ef">string</span> server, <span style="color:#66d9ef">int</span> port, <span style="color:#66d9ef">string</span> db, <span style="color:#66d9ef">string</span> id, <span style="color:#66d9ef">string</span> pwd)
         {
-            InitializeComponent();
+            <span style="color:#66d9ef">this</span>.server = server;
+            <span style="color:#66d9ef">this</span>.port = port;
+            <span style="color:#66d9ef">this</span>.db = db;
+            <span style="color:#66d9ef">this</span>.id = id;
+            <span style="color:#66d9ef">this</span>.pwd = pwd;
+
+            connectDBMS();
         }
-        ~MainForm()
+        ~MariaDB()
         {
             conn.Close();
             conn.Dispose();
         }
 
-        MySqlConnection conn;			<span style="color:#75715e">// local variable;
-</span><span style="color:#75715e"></span>
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">bool</span> connectMariaDB()
+        <span style="color:#66d9ef">public</span> Array connInfo
+        {
+            <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String[] { <span style="color:#66d9ef">this</span>.server, <span style="color:#66d9ef">this</span>.port.ToString(), <span style="color:#66d9ef">this</span>.db, <span style="color:#66d9ef">this</span>.id, <span style="color:#66d9ef">this</span>.pwd }; }
+        }
+        <span style="color:#66d9ef">public</span> ConnectionState DBMSstate
+        {
+            <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> conn.State; }
+        }
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> connectDBMS()
         {
             <span style="color:#66d9ef">string</span> connStr = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
-<span style="color:#66d9ef">this</span>.txtServer.Text, <span style="color:#e6db74">&#34;3306&#34;</span>, <span style="color:#66d9ef">this</span>.txtDB.Text, <span style="color:#66d9ef">this</span>.txtId.Text, <span style="color:#66d9ef">this</span>.txtPwd.Text);
+                                           <span style="color:#66d9ef">this</span>.server, <span style="color:#66d9ef">this</span>.port.ToString(), <span style="color:#66d9ef">this</span>.db, <span style="color:#66d9ef">this</span>.id, <span style="color:#66d9ef">this</span>.pwd);
             <span style="color:#66d9ef">try</span>
             {
-                conn = <span style="color:#66d9ef">new</span> MySqlConnection(connStr);	<span style="color:#75715e">// connection;
-</span><span style="color:#75715e"></span>                conn.Open();
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+                <span style="color:#66d9ef">if</span> (conn == <span style="color:#66d9ef">null</span>)
+                {
+                    conn = <span style="color:#66d9ef">new</span> MySqlConnection(connStr);
+                }
+                <span style="color:#66d9ef">if</span> (conn.State == ConnectionState.Closed)		<span style="color:#75715e">// DBMSstate == conn.State
+</span><span style="color:#75715e"></span>                {
+                    conn.Open();
+                }
             }
-            <span style="color:#66d9ef">catch</span>(Exception e)
+            <span style="color:#66d9ef">catch</span> (Exception connErr)
             {
-                Console.WriteLine(e);
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+                Console.WriteLine(connErr);
             }
         }
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnClose_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> disconnectDBMS()
         {
-            <span style="color:#66d9ef">this</span>.Close();
+            <span style="color:#66d9ef">if</span> (DBMSstate == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+        }
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> setData(<span style="color:#66d9ef">string</span> queryString)
+        {
+
         }
 
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnConn_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        <span style="color:#66d9ef">public</span> DataSet getData_dataset(<span style="color:#66d9ef">string</span> queryString)
         {
-            <span style="color:#66d9ef">if</span> (connectMariaDB() == <span style="color:#66d9ef">true</span>)			<span style="color:#75715e">// Print;
-</span><span style="color:#75715e"></span>            {
-                <span style="color:#66d9ef">this</span>.lblStatus.Text = <span style="color:#e6db74">&#34;Success&#34;</span>;
-            }
-            <span style="color:#66d9ef">else</span>
+            DataSet ds = <span style="color:#66d9ef">new</span> DataSet(<span style="color:#e6db74">&#34;companyInfo&#34;</span>);
+            command = <span style="color:#66d9ef">new</span> MySqlCommand(queryString, MariaDB.conn);
+            <span style="color:#66d9ef">using</span> (MySqlDataAdapter adapter = <span style="color:#66d9ef">new</span> MySqlDataAdapter(command))
             {
-                <span style="color:#66d9ef">this</span>.lblStatus.Text = <span style="color:#e6db74">&#34;Fail&#34;</span>;
+                adapter.Fill(ds, <span style="color:#e6db74">&#34;comp&#34;</span>);
+                adapter.Fill(ds, <span style="color:#e6db74">&#34;comp2&#34;</span>);
             }
+            <span style="color:#66d9ef">return</span> ds;
         }
-
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnSql_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        <span style="color:#66d9ef">public</span> List&lt;<span style="color:#66d9ef">string</span>&gt; getData_list(<span style="color:#66d9ef">string</span> queryString)
         {
-            <span style="color:#66d9ef">string</span> sqlStr = <span style="color:#66d9ef">this</span>.txtSql.Text;
+            List&lt;<span style="color:#66d9ef">string</span>&gt; fieldNames = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+            List&lt;<span style="color:#66d9ef">string</span>&gt; datas = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
             <span style="color:#66d9ef">try</span>
-            {
-                MySqlCommand command = <span style="color:#66d9ef">new</span> MySqlCommand(sqlStr, conn);
-                command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
-</span><span style="color:#75715e"></span>            }
-            <span style="color:#66d9ef">catch</span> (Exception ex)
-            {
-                Console.WriteLine(ex); 
+            { 
+                command = <span style="color:#66d9ef">new</span> MySqlCommand(queryString, MariaDB.conn);
+                <span style="color:#66d9ef">using</span> (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> fieldCnt=<span style="color:#ae81ff">0</span>; fieldCnt&lt;reader.FieldCount; fieldCnt++)
+                    {
+                        fieldNames.Add(reader.GetName(fieldCnt));
+                    }
+                    Console.WriteLine(<span style="color:#e6db74">&#34;fieldNames : &#34;</span> + fieldNames.Aggregate((x,y)=&gt; x + <span style="color:#e6db74">&#34;,&#34;</span> + y));
+
+                    <span style="color:#66d9ef">while</span> (reader.Read())
+                    {
+                        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> fieldCnt = <span style="color:#ae81ff">0</span>; fieldCnt &lt; reader.FieldCount; fieldCnt++)
+                        {
+                            datas.Add((<span style="color:#66d9ef">string</span>)reader[fieldCnt]);
+                        }
+                    }
+                    <span style="color:#75715e">//Console.WriteLine(datas.Aggregate((x, y) =&gt; x + &#34;,&#34; + y));
+</span><span style="color:#75715e"></span>                }
             }
+            <span style="color:#66d9ef">catch</span> (MySqlException sqlErr)
+            {
+                Console.WriteLine(sqlErr);
+            }
+            <span style="color:#66d9ef">return</span> datas;
+        }
+
+    }
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+    {
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+        {
+            
+            MariaDB mariaDB = <span style="color:#66d9ef">new</span> MariaDB(<span style="color:#e6db74">&#34;127.0.0.1&#34;</span>, <span style="color:#ae81ff">1111</span>, <span style="color:#e6db74">&#34;dbName&#34;</span>, <span style="color:#e6db74">&#34;root&#34;</span>, <span style="color:#e6db74">&#34;password&#34;</span>);
+            Console.WriteLine(<span style="color:#e6db74">&#34;[*] DBMS state : &#34;</span> + mariaDB.DBMSstate);
+
+            <span style="color:#75715e">//List&lt;string&gt; datas = mariaDB.getData_list(&#34;SELECT code, company FROM company_info WHERE code &lt;= 100&#34;);
+</span><span style="color:#75715e"></span>            
+            DataSet ds1 = mariaDB.getData_dataset(<span style="color:#e6db74">&#34;SELECT code, company FROM company_info WHERE code &lt;= 100&#34;</span>);
+            Console.WriteLine(ds1.Tables[<span style="color:#e6db74">&#34;comp&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] + <span style="color:#e6db74">&#34; &#34;</span> + ds1.Tables[<span style="color:#e6db74">&#34;comp&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]);
+            DataSet ds2 = mariaDB.getData_dataset(<span style="color:#e6db74">&#34;SELECT code, company FROM company_info WHERE code &lt;= 300&#34;</span>);
+            Console.WriteLine(ds2.Tables[<span style="color:#e6db74">&#34;comp2&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] + <span style="color:#e6db74">&#34; &#34;</span> + ds2.Tables[<span style="color:#ae81ff">0</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]);
+            DataSet ds3 = mariaDB.getData_dataset(<span style="color:#e6db74">&#34;SELECT code, company FROM company_info WHERE code &lt;= 600&#34;</span>);
+            Console.WriteLine(ds3.Tables[<span style="color:#e6db74">&#34;comp&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] + <span style="color:#e6db74">&#34; &#34;</span> + ds3.Tables[<span style="color:#e6db74">&#34;comp&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]);
+
+            mariaDB.disconnectDBMS();
+            Console.WriteLine(<span style="color:#e6db74">&#34;[*] DBMS state : &#34;</span> + mariaDB.DBMSstate);
         }
     }
 }
+
+
 </code></pre></div><h3 ref="description" >Description</h3><a class="anchor" id="description"></a>
 <ul>
-<li>Connection string 작성 시 주의사항</li>
+<li>2가지 Type 지원</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">string</span> connStr = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
-<span style="color:#66d9ef">this</span>.txtServer.Text, <span style="color:#e6db74">&#34;3306&#34;</span>, <span style="color:#66d9ef">this</span>.txtDB.Text, <span style="color:#66d9ef">this</span>.txtId.Text, <span style="color:#66d9ef">this</span>.txtPwd.Text);
-</code></pre></div>
-
-<div class="alert warning" role="alert"><ul>
-<li><code>Database</code>가 존재하지 않거나 추후 선택을 희망할 경우 공란으로 비워둠.
-<ul>
-<li><code>USE [database]</code>sql command 로 연결 가능</li>
-</ul>
-</li>
-<li><code>string</code> 수준을 잘 지킬 것.</li>
-</ul>
-</div>
-
-<br/>
-<ul>
-<li>SqlCommand Excute</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">MySqlCommand command = <span style="color:#66d9ef">new</span> MySqlCommand(sqlStr, conn);
-command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
-</span></code></pre></div>
-
-<div class="alert info" role="alert"><ul>
-<li><code>ExecuteNonQuery</code> : 반영된 행 수를 반환하는 메서드</li>
-</ul>
-</div>
-
-<br/>
-<h2 ref="sql-command" >Sql Command</h2><a class="anchor" id="sql-command"></a>
-<hr>
-<ul>
-<li>Common</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mydb; <span style="color:#75715e">-- mydb 데이터베이스 생성
-</span><span style="color:#75715e"></span>USE mydb; <span style="color:#75715e">-- 기본 데이터베이스로 mydb를 지정
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> mytable ( id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, name VARCHAR(<span style="color:#ae81ff">20</span>) ); <span style="color:#75715e">-- mytable 테이블 생성
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Will&#39;</span> ); <span style="color:#75715e">-- 데이터 입력
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;Marry&#39;</span> ); 
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;Dean&#39;</span> );
-<span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">UPDATE</span> mytable <span style="color:#66d9ef">SET</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Willy&#39;</span> <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable;
-<span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> mytable <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#66d9ef">SELECT</span> id, name <span style="color:#66d9ef">FROM</span> mytable;
-<span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">DATABASE</span> mydb;
-<span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">count</span>(<span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">from</span> mytable; gives the number <span style="color:#66d9ef">of</span> records <span style="color:#66d9ef">in</span> the <span style="color:#66d9ef">table</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">public</span> DataSet getData_dataset(<span style="color:#66d9ef">string</span> queryString){ <span style="color:#66d9ef">return</span> ds; }
+<span style="color:#66d9ef">public</span> List&lt;<span style="color:#66d9ef">string</span>&gt; getData_list(<span style="color:#66d9ef">string</span> queryString){ <span style="color:#66d9ef">return</span> datas; }
 </code></pre></div><ul>
-<li>Complex</li>
+<li>FieldCount를 이용한 column name 취득</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">user</span> <span style="color:#66d9ef">WHERE</span> ((id <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span> <span style="color:#66d9ef">AND</span> id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">OR</span> (id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">900000</span>)) <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> id <span style="color:#66d9ef">DESC</span>;
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">fieldNames.Add(reader.GetName(fieldCnt));
+</code></pre></div><ul>
+<li>FieldCount를 이용한 열 수에 따른 데이터 자동 반환</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"> <span style="color:#66d9ef">while</span> (reader.Read())
+ {
+     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> fieldCnt = <span style="color:#ae81ff">0</span>; fieldCnt &lt; reader.FieldCount; fieldCnt++)
+     {
+     	datas.Add((<span style="color:#66d9ef">string</span>)reader[fieldCnt]);
+     }
+ }
+</code></pre></div><ul>
+<li>Datatable의 데이터 접근 방식 다각화</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">Console.WriteLine(ds2.Tables[<span style="color:#e6db74">&#34;comp2&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] + <span style="color:#e6db74">&#34; &#34;</span> + ds2.Tables[<span style="color:#ae81ff">0</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]);
 </code></pre></div><br/>
 <h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
 <hr>
 
 
 <div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
-<p><a href="https://mariadb.com/kb/ko/basic-sql-statements/">기본 SQL 문장</a></p>
-<p><a href="https://reddb.tistory.com/108">SQL 쿼리 기본</a></p>
+<p><a href="https://www.csharpstudy.com/Data/SQL-dataadapter.aspx">SQL-Dataadapter</a></p>
+<p><a href="https://www.csharpstudy.com/Data/SQL-connection-pooling.aspx">SQL-Connection Pooling</a></p>
+<p><a href="https://docs.microsoft.com/ko-kr/dotnet/api/system.data.datacolumn.columnname?view=net-5.0">Datatable-column</a></p>
 </div>
 
 
@@ -851,24 +951,32 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/csharp/db/01_mariadb_connection/">01_MariaDB_connection</a></li>
+            <li><a href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/">03_SQL_캡슐화</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#installation">Installation</a>
+    <li><a href="#architecture">Architecture</a>
       <ul>
-        <li><a href="#종속성">종속성</a></li>
+        <li><a href="#목적--캡슐화">목적 :: 캡슐화</a></li>
+        <li><a href="#디자인">디자인</a></li>
       </ul>
     </li>
-    <li><a href="#connection">Connection</a>
+    <li><a href="#warning">Warning</a>
       <ul>
-        <li><a href="#code--form">Code :: Form</a></li>
+        <li><a href="#한정자">한정자</a></li>
+        <li><a href="#execute-command">Execute command</a></li>
+        <li><a href="#mysqlconnection">MySqlConnection</a></li>
+      </ul>
+    </li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#code">Code</a>
+      <ul>
+        <li><a href="#mariadbcs"><code>MariaDB.cs</code></a></li>
         <li><a href="#description">Description</a></li>
       </ul>
     </li>
-    <li><a href="#sql-command">Sql Command</a></li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -944,7 +1052,7 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 24 October 2021
+		          Last update on 27 October 2021
 		      </li>
 		    
 		    

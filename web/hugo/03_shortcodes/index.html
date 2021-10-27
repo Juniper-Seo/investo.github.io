@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	01_Custom_Theme :: 1998
+	03_ShortCodes :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>01_Custom_Theme :: 1998</title>
+<title>03_ShortCodes :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/web/hugo/01_custom_theme/"
+  <body data-url="/web/hugo/03_shortcodes/"
 
   class="">
 
@@ -576,7 +576,7 @@
   
     <li class="active">
       
-        01_Custom_Theme
+        03_ShortCodes
       
     </li>
 
@@ -597,7 +597,7 @@
 		
 
 		
-			<h1>Hugo<span>01_Custom_Theme</span></h1>
+			<h1>Hugo<span>03_ShortCodes</span></h1>
         
 
 			
@@ -608,7 +608,7 @@
 				<nav class="subpages">
 	            		
 	        			
-	            	<li class="active">
+	            	<li >
 	            		<a title="$pagetitle" href="/web/hugo/01_custom_theme/">01_Custom_Theme</a>
 	            	</li>
 	            		
@@ -618,7 +618,7 @@
 	            	</li>
 	            		
 	        			
-	            	<li >
+	            	<li class="active">
 	            		<a title="$pagetitle" href="/web/hugo/03_shortcodes/">03_ShortCodes</a>
 	            	</li>
 	        	</nav> 
@@ -635,19 +635,15 @@
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#custom-shortcodes">Custom Shortcodes</a>
       <ul>
-        <li><a href="#1-개념">1. 개념</a></li>
-        <li><a href="#2-적용범위">2. 적용범위</a></li>
+        <li><a href="#생성">생성</a></li>
+        <li><a href="#parameter">Parameter</a></li>
       </ul>
     </li>
-    <li><a href="#customizing">Customizing</a>
-      <ul>
-        <li><a href="#1-counting-section-pages">1. Counting Section pages</a></li>
-        <li><a href="#2-change-font">2. Change Font</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
@@ -662,86 +658,58 @@
 	<div class="content">
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<p><code>hugo</code>를 이용하여 생성된 <code>static site</code> 는</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git submodule add ~.git themes/~~
-</code></pre></div><p>커맨드를 이용하여 적재한 테마 파일의 모든 레이아웃을  따르게 되어있다.</p>
+<p><code>ShortCodes</code> 생성과 활용</p>
 <br/>
-<h3 ref="1-개념" >1. 개념</h3><a class="anchor" id="1-개념"></a>
+<h2 ref="custom-shortcodes" >Custom Shortcodes</h2><a class="anchor" id="custom-shortcodes"></a>
 <hr>
-<p>기본 레이아웃을 변경시키기 위해서는 원본 테마 폴더 내에 존재하는 <code>layouts</code>의 각 html을 수정해주거나 overriding을 위해 상위 폴더에 <code>layouts</code>를 생성하여 각 필요한 html을 수정해주는 방법이 존재한다.</p>
+<h3 ref="생성" >생성</h3><a class="anchor" id="생성"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">span</span> <span style="color:#960050;background-color:#1e0010">{{$</span><span style="color:#a6e22e">count:</span><span style="color:#f92672">=</span><span style="color:#e6db74">.Get</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">count</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">|</span> <span style="color:#a6e22e">default</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">1</span><span style="color:#960050;background-color:#1e0010">&#34;}}</span>&gt;{{ $emoji:=( .Inner | emojify)}}{{ range $idx, $sequence := (seq $count) }}{{ $emoji }}{{ end }}&lt;/<span style="color:#f92672">spna</span>&gt;
+</code></pre></div><ul>
+<li><code>Go</code> / <code>html</code> / <code>style-css</code> / <code>script-js</code> 혼합 작성 가능</li>
+<li>한 줄로 작</li>
+</ul>
+<h3 ref="parameter" >Parameter</h3><a class="anchor" id="parameter"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-go" data-lang="go">{{<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">count</span><span style="color:#f92672">:=</span>.<span style="color:#a6e22e">Get</span> <span style="color:#e6db74">&#34;count&#34;</span> | <span style="color:#66d9ef">default</span> <span style="color:#e6db74">&#34;1&#34;</span>}}
+</code></pre></div><ul>
+<li><code>.Get</code> 메서드 사용하여 <code>$[var]</code> <code>:=</code> 문법으로 할당</li>
+<li><code>default</code>로 기본 값 설정</li>
+</ul>
 <br/>
-<h3 ref="2-적용범위" >2. 적용범위</h3><a class="anchor" id="2-적용범위"></a>
+<h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
 <hr>
-<h5 ref="a-사이트-상태-반환" >a. 사이트 상태 반환</h5><a class="anchor" id="a-사이트-상태-반환"></a>
-<p><code>hugo</code>는 <code>Go</code> 언어와 <code>html</code>의 조합을 이용하여 동적인 코드 조합이 가능하기 때문에 이 사이트 좌측 메뉴바에서 볼 수 있듯 각 Section에 포함된 게시글의 전체개수를 반환하여 string 형태로 접미어에 붙이는 것도 가능하다.</p>
-<br/>
-<h5 ref="b-스타일의-변환" >b. 스타일의 변환</h5><a class="anchor" id="b-스타일의-변환"></a>
-<p>또한 기본 폰트의 변경과 <code>footer</code> , <code>header</code> 의 내용에 <code>버튼</code>, <code>이미지</code> 등의 컨트롤을 삽입하는 것도 가능하다.</p>
-<p><br/><br/></p>
-<h2 ref="customizing" >Customizing</h2><a class="anchor" id="customizing"></a>
-<hr>
-<p>커스터마이징에 앞서 <code>~/themes/테마명/Layouts</code>의 구조를 살펴보도록 하자.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">├─partials
-│      body-article-content.html
-│      body-article-sidepage.html
-│      body-footer.html
-│      body-header.html
-│      body-sidebar.html
-│      head.html
-│      html-head-vendor.html
-│      html-head.html
-│      _mdinclude.html
-│      _menu.html
-│      _next-prev-page.html
-│      _pagination.html
-│      _skwad-footer.html
-│      _skwad-header.html
-│
-├─raw
-│      section.html
-│      single.html
-│
-├─shortcodes
-│  │  alert.html
-│  │  emoji.html
-~ 생략 ~
-</code></pre></div><p>현재 이 사이트는 <a href="https://github.com/vjeantet/hugo-theme-docport">vjeantet/hugo-theme-docport</a> 테마가 적용되어 있는데, 해당 구성의 <code>partial</code>에는 사이트 화면의 구성요소들이 포함되어 있다.</p>
-<p>그 중 <code>_menu.html</code> 은 좌측의 메뉴바 구현에 대한 코드를 담고 있다.</p>
-<br/>
-<h3 ref="1-counting-section-pages" >1. Counting Section pages</h3><a class="anchor" id="1-counting-section-pages"></a>
-<hr>
-<p>각 섹션(<code>_index.md</code>를 포함하고 있는 각 폴더)의 총 페이지 수는 다음 코드의 반환값으로 카운트한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 디렉토리 이름과 비교하여 count를 반환 --&gt;</span>
-
-{{- $dirName :=substr .File.Dir 0 -1}}
-
-{{- $sectionCnt := len (where .Site.AllPages &#34;Section&#34; &#34;==&#34; $dirName) }}
-
-&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .RelPermalink}}&#34;</span>&gt;({{$sectionCnt}})&amp;nbsp;{{safeHTML .Params.Pre}}{{$menuTitle}}{{safeHTML .Params.Post}}&lt;/<span style="color:#f92672">a</span>&gt;
-</code></pre></div><p><code>.site.AllPages</code> 는 <code>Page(#총개수)</code>를 반환하며 <code>len</code>은 각 변수가 가지고 있는 개수를 반환한다.</p>
-<p><code>where</code>은 조건문으로 사용되며 <code>where #범위 #비교1 &quot;=&quot; #비교2</code> 각 섹션의 이름이 해당 디렉토리의 폴더명과 일치하는 pages의 개수를 반환하는 코드가 된다.</p>
-<p>코드의 첫 줄의 <code>$dirName</code>의 문자열 일부를 반환[0:-1]시키는 이유는 <code>.File.Dir</code> 의  반환값이 <code>#폴더명/</code>로 <code>&quot;/&quot;</code> 접두어가 함께 따라오기  때문이다.</p>
-<p><code>.Title</code>이 아닌 디렉토리의 이름을 비교대상으로 사용하는 이유는 각 섹션이 보유하는 고유한 값은 폴더명이기 때문이다.</p>
-<br/>
-<h3 ref="2-change-font" >2. Change Font</h3><a class="anchor" id="2-change-font"></a>
-<hr>
-<p><code>~themes\docport\assets\sass\main.scss</code> 파일은 <code>scss</code>파일로 html에서 표현되는 스타일을 구현한다.</p>
-<p><code>.Site.Params.color_main</code> (<code>config.toml</code>설정 일부)으로부터 전체 테마의 색상을 적용하거나 <code>body</code>,<code>a</code> 등 각 태그의 스타일을 세부적으로 설정한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-scss" data-lang="scss"><span style="color:#a6e22e">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Montserrat&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;나눔스퀘어&#34;</span>;
-<span style="color:#a6e22e">font-weight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">400</span>;
-<span style="color:#a6e22e">line-height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">.5</span>;
-</code></pre></div><p>의 내용을 수정하면, 본문과 같이 영문만 지원되는 <code>Monterrat</code>과 <code>나눔스퀘어</code>가 동시 적용된다.</p>
-<p><br/><br/></p>
-<h2 ref="3-summary" >3. Summary</h2><a class="anchor" id="3-summary"></a>
-<p><code>html</code>내부에 <code>Go</code>언어를 접목시킨다는 의미는 보다 넓은 확장성을 가져올 수 있는 이점이 있다. 특히 <code>_index.md</code> 시작부에 작성하는 <code>Front matter</code>의 간단한 변수 입력만으로도 해당 내용을 불러와 실제 마크다운 내용에 쉽게 적용시킬 수 있는 사용자 편의를 제공한다.</p>
-<p>이번 아티클에서 다룬 함수를 포함한 다양한 사용예시와 목록은 아래의 링크를 참조하자.</p>
 
 
-<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Hugo Link</span></p>
-<p><a href="https://gohugo.io/templates/section-templates/">Hugo Templates</a></p>
-<p><a href="https://gohugo.io/functions/math/">Hugo Functions</a></p>
+<div class="alert warning" role="alert">강제 개행 및 <code>html</code> 적용 불량</div>
+
+<ul>
+<li>short codes의 작성 구문이 여러줄 일 경우 그에 해당하는 강제개행이 이뤄짐
+<ul>
+<li>한 줄로 코드 formatting</li>
+<li><code>MarkDown</code>파일 내 작성 시 <code>{&lt; [shortcode] &gt;}} {&lt; /[shortcode] &gt;}}</code> 꺽쇠 문자로 작성 - 혼합</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="alert warning" role="alert">parameter 할당 오류</div>
+
+<ul>
+<li>파라미터 할당은 string형태로 하드 포메팅
+<ul>
+<li><code>count=&quot;2&quot;</code></li>
+</ul>
+</li>
+</ul>
+<br/>
+<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
+<hr>
+
+
+<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
+<p><a href="https://gohugo.io/functions/">hugo Functions</a></p>
 </div>
 
+<br/>
 
 		</div>
 
@@ -779,24 +747,20 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/web/hugo/01_custom_theme/">01_Custom_Theme</a></li>
+            <li><a href="/web/hugo/03_shortcodes/">03_ShortCodes</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#custom-shortcodes">Custom Shortcodes</a>
       <ul>
-        <li><a href="#1-개념">1. 개념</a></li>
-        <li><a href="#2-적용범위">2. 적용범위</a></li>
+        <li><a href="#생성">생성</a></li>
+        <li><a href="#parameter">Parameter</a></li>
       </ul>
     </li>
-    <li><a href="#customizing">Customizing</a>
-      <ul>
-        <li><a href="#1-counting-section-pages">1. Counting Section pages</a></li>
-        <li><a href="#2-change-font">2. Change Font</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 </div>
@@ -871,7 +835,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 16 October 2021
+		          Last update on 27 October 2021
 		      </li>
 		    
 		    

@@ -6,7 +6,7 @@
     <description>Recent content in Hugo on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Oct 2021 11:43:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/web/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Oct 2021 13:59:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/web/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01_Custom_Theme</title>
       <link>https://nocturover.github.io/web/hugo/01_custom_theme/</link>
@@ -29,6 +29,16 @@ git submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파
 1. 적용  favicon ├─static │ ├─admin │ │ └─shortcode │ ├─css │ ├─images │ ├─js │ └─vendor │ ├─auto-complete │ └─lunr static/images에 favicon.png 이름으로 로고 파일을 저장한다.
 layouts/partials/html-head.html 파일에 사이트 title과 link가 작성되어 있다.
 &amp;lt;title&amp;gt;{{ .Title }} :: {{ .Site.Title }}&amp;lt;/title&amp;gt; &amp;lt;link rel=&amp;#34;shortcut icon&amp;#34; href=&amp;#39;{{&amp;#34;images/favicon.png&amp;#34; | relURL}}&amp;#39; type=&amp;#34;image/x-icon&amp;#34; /&amp;gt; logo layouts/partials/body-header.html 파일에 div태그 내부에 상부 헤더 title이 작성되어 있다.</description>
+    </item>
+    
+    <item>
+      <title>03_ShortCodes</title>
+      <link>https://nocturover.github.io/web/hugo/03_shortcodes/</link>
+      <pubDate>Wed, 27 Oct 2021 13:59:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/web/hugo/03_shortcodes/</guid>
+      <description>Overview  ShortCodes 생성과 활용
+Custom Shortcodes  생성 &amp;lt;span {{$count:=.Get &amp;#34;count&amp;#34; | default &amp;#34;1&amp;#34;}}&amp;gt;{{ $emoji:=( .Inner | emojify)}}{{ range $idx, $sequence := (seq $count) }}{{ $emoji }}{{ end }}&amp;lt;/spna&amp;gt;  Go / html / style-css / script-js 혼합 작성 가능 한 줄로 작  Parameter {{$count:=.Get &amp;#34;count&amp;#34; | default &amp;#34;1&amp;#34;}}  .Get 메서드 사용하여 $[var] := 문법으로 할당 default로 기본 값 설정  Troubleshooting  강제 개행 및 html 적용 불량 short codes의 작성 구문이 여러줄 일 경우 그에 해당하는 강제개행이 이뤄짐  한 줄로 코드 formatting MarkDown파일 내 작성 시 {&amp;lt; [shortcode] &amp;gt;}} {&amp;lt; /[shortcode] &amp;gt;}} 꺽쇠 문자로 작성 - 혼합    parameter 할당 오류 파라미터 할당은 string형태로 하드 포메팅  count=&amp;quot;2&amp;quot;    Summary  Reference Link</description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-10-25T21:40:14 KST">
+<meta name="revised" content="2021-10-27T14:17:57 KST">
 <meta name="description" content="">
 
 
@@ -163,7 +163,7 @@
         
       
 			
-          <a href="/hello/">Hello&nbsp;(1)&nbsp;👋</a>
+          <a href="/hello/">Hello&nbsp;(2)&nbsp;👋</a>
       
     </li>
     
@@ -294,24 +294,9 @@
         
       
 			
-          <a href="/csharp/">C#&nbsp;(6)</a>
+          <a href="/csharp/">C#&nbsp;(7)</a>
       
         <ul>
-              
-
-    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
-        item_level_$level
-        ">
-
-      
-      
-      
-      
-          <a href="/csharp/winform/">Winform</a>
-      
-        
-      
-    </li>
               
 
     <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item parent active
@@ -323,6 +308,21 @@
       
       
           <a href="/csharp/db/">DB</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/csharp/winform/">Winform</a>
       
         
       
@@ -358,7 +358,7 @@
         
       
 			
-          <a href="/web/">Web&nbsp;(4)</a>
+          <a href="/web/">Web&nbsp;(5)</a>
       
         <ul>
               
@@ -616,6 +616,11 @@
 	            	<li class="active">
 	            		<a title="$pagetitle" href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/">02_SQL_문법</a>
 	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/">03_SQL_캡슐화</a>
+	            	</li>
 	        	</nav> 
 		
 	
@@ -640,9 +645,12 @@
     </li>
     <li><a href="#command">Command</a>
       <ul>
+        <li><a href="#create"><code>CREATE</code></a></li>
+        <li><a href="#insert"><code>INSERT</code></a></li>
         <li><a href="#where"><code>WHERE</code></a></li>
       </ul>
     </li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -668,47 +676,107 @@
 <li><code>ALTER</code></li>
 <li><code>DROP</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql">
-</code></pre></div><h3 ref="dml--data-manipulation-language" >DML :: Data Manipulation Language</h3><a class="anchor" id="dml--data-manipulation-language"></a>
+<h3 ref="dml--data-manipulation-language" >DML :: Data Manipulation Language</h3><a class="anchor" id="dml--data-manipulation-language"></a>
 <ul>
 <li><code>SELECT</code> = <code>query</code> statement</li>
 <li><code>DELETE</code></li>
 <li><code>INSERT</code></li>
 <li><code>UPDATE</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql">
-</code></pre></div><h3 ref="dcl--data-control-language" >DCL :: Data Control Language</h3><a class="anchor" id="dcl--data-control-language"></a>
+<h3 ref="dcl--data-control-language" >DCL :: Data Control Language</h3><a class="anchor" id="dcl--data-control-language"></a>
 <ul>
 <li><code>GRANT</code></li>
 <li><code>REVOKE</code></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql">
-</code></pre></div><br/>
+<br/>
 <h2 ref="command" >Command</h2><a class="anchor" id="command"></a>
 <hr>
+<h3 ref="create" ><code>CREATE</code></h3><a class="anchor" id="create"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> <span style="color:#f92672">`</span>tastdb<span style="color:#f92672">`</span>;
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>testtable<span style="color:#f92672">`</span> (code INT(<span style="color:#ae81ff">6</span>) UNSIGNED ZEROFILL <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> , name VARCHAR(<span style="color:#ae81ff">20</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>, lastUpdate DATETIME <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>);
+</code></pre></div><ul>
+<li><code>SQl</code> Command 전송으로 테이블을 직접 생성할 시 각 데이터 유형 생성 방법 (<strong>순서 유의</strong>)
+<ul>
+<li><code>UNSIGNED</code> - 부호 없음</li>
+<li><code>ZEROFILL</code> - 0으로 채움</li>
+<li><code>NOT NULL</code> - Null 값 없음</li>
+<li><code>PRIMARY KEY</code> - 기본 키</li>
+<li><code>DEFAULT [val]</code> - 기본 값</li>
+</ul>
+</li>
+</ul>
+<h3 ref="insert" ><code>INSERT</code></h3><a class="anchor" id="insert"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> testDB.testTable <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">12345</span>, <span style="color:#e6db74">&#34;sample&#34;</span>, <span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span>);
+</code></pre></div><ul>
+<li>데이터 형식 주의</li>
+</ul>
 <h3 ref="where" ><code>WHERE</code></h3><a class="anchor" id="where"></a>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">WHERE</span> age <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>;
 <span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">BETWEEN</span> <span style="color:#ae81ff">2</span> <span style="color:#66d9ef">AND</span> <span style="color:#ae81ff">20</span>;
-<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IN</span> (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span> ) <span style="color:#f92672">//</span> <span style="color:#f92672">???</span>
-<span style="color:#66d9ef">WHERE</span> age EXIST			<span style="color:#f92672">//</span> <span style="color:#f92672">???</span>
-<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">LIKE</span>
-<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span> <span style="color:#f92672">/</span> <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
-
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IN</span> (<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span> ); <span style="color:#f92672">//</span> <span style="color:#f92672">???</span>
+<span style="color:#66d9ef">WHERE</span> age EXIST;			<span style="color:#f92672">//</span> <span style="color:#f92672">???</span>
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">LIKE</span>;
+<span style="color:#66d9ef">WHERE</span> age <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NULL</span>; <span style="color:#f92672">/</span> <span style="color:#66d9ef">IS</span> <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>;
 </code></pre></div><br/>
+<h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
+<hr>
+
+
+<div class="alert warning" role="alert"><p><strong>UTF-8</strong></p>
+<p>한글 깨짐 (&quot;????&quot;) 현상</p>
+</div>
+
+<ul>
+<li>
+
+<span > ⭐ </spna>UTF8 미설정 오류
+<ul>
+<li><code>MariaDB</code> msi 설치 시 <code>utf8</code> 기본 설정 체크박스 체크</li>
+<li>Or, <code>Table</code> 옵션에서 <code>utf8mb3_general_ci</code> 선택</li>
+</ul>
+</li>
+</ul>
+
+
+<div class="alert warning" role="alert"><p><strong>C# Escape string</strong></p>
+<p>SQL commnad 전송 시 문법 Invalid Err</p>
+</div>
+
+<ul>
+<li>
+<p>
+
+<span > ⭐  ⭐ </spna>각 필드의 format에 맞지 않는 오류</p>
+<ul>
+<li>
+<p>C#에서 만들어낸 query string은 sql에서 해석시 escape string화 하기 때문에 <code>VARCHAR</code>속성 등은 내부 <code>quote</code> <code>'{0}'</code> 설정을 해주어야 함</p>
+</li>
+<li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">string</span> queryString = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;INSERT INTO testDB.testTable VALUES({0}, &#39;{1}&#39;, &#39;{2}&#39;)&#34;</span>, <span style="color:#ae81ff">12345</span>, <span style="color:#e6db74">&#34;sample&#34;</span>, DateTime.Now.ToString(<span style="color:#e6db74">&#34;yyyy-MM-dd HH:mm:ss&#34;</span>));
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+
+
+<div class="alert warning" role="alert"><p><strong>lowercase TABLE name</strong></p>
+<p>SQL commnad 전송 시 명확한 Table name</p>
+</div>
+
+<ul>
+<li>
+
+<span > ⭐ </spna><code>table</code> 생성 시 대문자로 정의하더라도 소문자로 reformating 수행 (<strong>주의 요</strong>)</li>
+</ul>
+<br/>
 <h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
 <hr>
 
 
 <div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
 <p><a href="https://mariadb.com/kb/ko/training-tutorials/">SQL Tutorial &amp; Training Documentation</a></p>
-<p><span ></p>
-<pre><code>    ⭐
-<pre><code>⭐
-
-⭐
-</code></pre>
-<p></code></pre></p>
-<p></span> <a href="https://psun.tistory.com/entry/SQL-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC">SQL 문법 정리</a></p>
+<p><span >⭐⭐⭐</spna> <a href="https://psun.tistory.com/entry/SQL-%EB%AC%B8%EB%B2%95-%EC%A0%95%EB%A6%AC">SQL 문법 정리</a></p>
+<p><span >⭐⭐⭐</spna> <a href="https://stackoverflow.com/questions/25323560/most-efficient-way-to-insert-rows-into-mysql-database">Most efficient way to insert Rows into MySQL Database</a></p>
 </div>
 
 
@@ -721,10 +789,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/python/" title="Python" style="margin-right: 0px;">
+		<a class="next" href="/csharp/winform/" title="Winform" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Python</label>
+                <label>Winform</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -763,9 +831,12 @@
     </li>
     <li><a href="#command">Command</a>
       <ul>
+        <li><a href="#create"><code>CREATE</code></a></li>
+        <li><a href="#insert"><code>INSERT</code></a></li>
         <li><a href="#where"><code>WHERE</code></a></li>
       </ul>
     </li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -781,15 +852,15 @@
 	<p class="list-box">
 		
 		
+			<a class="list" href="/web/hugo/03_shortcodes/"> > <strong>10.27</strong> | 03_ShortCodes </a> <br/> 
+		
+			<a class="list" href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/"> > <strong>10.27</strong> | 03_SQL_캡슐화 </a> <br/> 
+		
 			<a class="list" href="/csharp/winform/01_form_group/"> > <strong>10.25</strong> | 01_Form_Group </a> <br/> 
 		
 			<a class="list" href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/"> > <strong>10.24</strong> | 02_SQL_문법 </a> <br/> 
 		
 			<a class="list" href="/daily/04_%EB%B0%B0%EC%9B%80/"> > <strong>10.24</strong> | 04_배움 </a> <br/> 
-		
-			<a class="list" href="/csharp/db/01_mariadb_connection/"> > <strong>10.24</strong> | 01_MariaDB_connection </a> <br/> 
-		
-			<a class="list" href="/web/hugo/02_favicon/"> > <strong>10.24</strong> | 02_FAVICON </a> <br/> 
 		
 	</p>
 </a>

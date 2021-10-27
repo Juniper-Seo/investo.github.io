@@ -1,5 +1,19 @@
 [
 {
+	"uri": "https://nocturover.github.io/web/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "Hugo",
+	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\nLink 01_Custom_Theme \n 02_FAVICON \n 03_ShortCodes \n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/db/",
+	"title": "DB",
+	"tags": [],
+	"description": "C#-DB",
+	"content": "Overview  이 곳은 C# Database 연동의 학습공간 입니다.\nLink 01_MariaDB_connection \n 02_SQL_문법 \n 03_SQL_캡슐화 \n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/csharp/winform/",
 	"title": "Winform",
 	"tags": [],
@@ -7,25 +21,11 @@
 	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n\r\r"
 },
 {
-	"uri": "https://nocturover.github.io/csharp/db/",
-	"title": "DB",
-	"tags": [],
-	"description": "C#-DB",
-	"content": "Overview  이 곳은 C# Database 연동의 학습공간 입니다.\nLink 01_MariaDB_connection \n 02_SQL_문법 \n\r\r"
-},
-{
-	"uri": "https://nocturover.github.io/web/hugo/",
-	"title": "Hugo",
-	"tags": [],
-	"description": "Hugo",
-	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\nLink 01_Custom_Theme \n 02_FAVICON \n\r\r"
-},
-{
 	"uri": "https://nocturover.github.io/git/troubleshooting/",
 	"title": "Troubleshooting",
 	"tags": [],
 	"description": "Troubleshooting",
-	"content": "Overview 이 곳은 Git Troubleshooting을 다룹니다.\n\r1. Setting     항목 내용 중요도     00_CRLF_TROUBLE\r core.autocrlf true설정 ⭐\r   01_SSH\r ssh-keygen 생성 및 등록 ⭐\r⭐\r              "
+	"content": "Overview 이 곳은 Git Troubleshooting을 다룹니다.\n\r1. Setting     항목 내용 중요도     00_CRLF_TROUBLE\r core.autocrlf true설정 ⭐   01_SSH\r ssh-keygen 생성 및 등록 ⭐⭐              "
 },
 {
 	"uri": "https://nocturover.github.io/windows/cmder/",
@@ -102,7 +102,7 @@
 	"title": "Command",
 	"tags": [],
 	"description": "Windows-cmder-command",
-	"content": "\rEnvironment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.\n시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.\n나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.\n\rKeyboard Shortcuts  Tab manipulation   Ctrl + `  : Global Summon from taskbar\n  Win + Alt + p : Preferences (Or right click on title bar)\n  Ctrl + t : New tab dialog (maybe you want to open cmd as admin?)\n  Ctrl + w : Close tab\n  ⭐\r⭐\r Shift + Alt + number : Fast new tab:\n 1. CMD 2. PowerShell    Shell  Ctrl + Alt + u : Traverse up in directory structure (lovely feature!) \r⭐\r⭐\r⭐\r Ctrl + r : History search  \rCommon command  set path :: 환경 변수 설정 환경 변수 path 를 지정하여 cmd에서 바로 실행 환경 구축\nset path =%path%;[경로];\t// temporary setx path \u0026#34;%PATH%[경로]\u0026#34;\t// permanent Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정\nalias [별칭]=[명령어]$* doskey [별칭]=[명령어]$* xcopy :: 파일/폴더 복사 rename 가능\nxcopy [대상] [목적지] start . :: 현재 폴더 탐색기 열기 explorer .  로 대체될 수 있다.\nstart [destination] start . // 현재 폴더 탐색기 실행 touch :: 파일 생성 touch [fileName1] [fileName2] [fileName3] del :: 파일 삭제 del [fileName] \r"
+	"content": "\rEnvironment variable  cmder에서 단축코드를 타이핑해서 원하는 어플리케이션을 실행하기 위해서는 우선적으로 환경변수등록이 되어야 한다.\n시스템 환경 변수 편집 - 시스템 환경 변수 - path항목의 편집을 누르고 원하는 .exe파일이 존재하는 폴더를 추가해주면 된다.\n나의 경우 vscode / vs / typora / npp 등을 등록하여 사용 중이다.\n\rKeyboard Shortcuts  Tab manipulation   Ctrl + `  : Global Summon from taskbar\n  Win + Alt + p : Preferences (Or right click on title bar)\n  Ctrl + t : New tab dialog (maybe you want to open cmd as admin?)\n  Ctrl + w : Close tab\n  ⭐⭐ Shift + Alt + number : Fast new tab:\n 1. CMD 2. PowerShell    Shell  Ctrl + Alt + u : Traverse up in directory structure (lovely feature!) \r⭐⭐⭐ Ctrl + r : History search  \rCommon command  set path :: 환경 변수 설정 환경 변수 path 를 지정하여 cmd에서 바로 실행 환경 구축\nset path =%path%;[경로];\t// temporary setx path \u0026#34;%PATH%[경로]\u0026#34;\t// permanent Alias :: 별칭 지정 명령어를 통해 접근하는 실행파일이나 명령어들의 별칭 지정\nalias [별칭]=[명령어]$* doskey [별칭]=[명령어]$* xcopy :: 파일/폴더 복사 rename 가능\nxcopy [대상] [목적지] start . :: 현재 폴더 탐색기 열기 explorer .  로 대체될 수 있다.\nstart [destination] start . // 현재 폴더 탐색기 실행 touch :: 파일 생성 touch [fileName1] [fileName2] [fileName3] del :: 파일 삭제 del [fileName] \r"
 },
 {
 	"uri": "https://nocturover.github.io/insight/01_%EA%B8%B0%EB%A1%9D%EC%9D%98_%EC%9D%98%EB%AF%B8/",
@@ -130,14 +130,14 @@
 	"title": "Progress",
 	"tags": [],
 	"description": "Project-Investo-Progress",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.25 (Mon) Function lists  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r\r2021.08.27 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인  계획\r"
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.25 (Mon) Function lists passing 미정  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r2021.08.26 (Tue) Prototype 제작 (Connection UI)  2 [hr]\r2021.08.27 (Wed) Prototype 제작  DB Encapsulation API Encapsulation    2 [hr]\r\r2021.08.28 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인 Prototype 제작  Socket Encapsulation    계획\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/",
 	"title": "02_SQL_문법",
 	"tags": [],
 	"description": "",
-	"content": "Overview  SQL에서 사용되는 문법의 정리\n\rStructure :: SQL  DDL :: Data Defination Language  CREATE ALTER DROP  DML :: Data Manipulation Language  SELECT = query statement DELETE INSERT UPDATE  DCL :: Data Control Language  GRANT REVOKE  \rCommand  WHERE WHERE age \u0026lt; 10; WHERE age BETWEEN 2 AND 20; WHERE age IN (10, 20 ) // ??? WHERE age EXIST\t// ??? WHERE age LIKE WHERE age IS NULL / IS NOT NULL \rSummary  Reference Link\nSQL Tutorial \u0026amp; Training Documentation\n ⭐\r⭐\r⭐\r \n SQL 문법 정리\n\r"
+	"content": "Overview  SQL에서 사용되는 문법의 정리\n\rStructure :: SQL  DDL :: Data Defination Language  CREATE ALTER DROP  DML :: Data Manipulation Language  SELECT = query statement DELETE INSERT UPDATE  DCL :: Data Control Language  GRANT REVOKE  \rCommand  CREATE CREATE DATABASE `tastdb`; CREATE TABLE `testtable` (code INT(6) UNSIGNED ZEROFILL NOT NULL PRIMARY KEY , name VARCHAR(20) NOT NULL, lastUpdate DATETIME NOT NULL);  SQl Command 전송으로 테이블을 직접 생성할 시 각 데이터 유형 생성 방법 (순서 유의)  UNSIGNED - 부호 없음 ZEROFILL - 0으로 채움 NOT NULL - Null 값 없음 PRIMARY KEY - 기본 키 DEFAULT [val] - 기본 값    INSERT INSERT INTO testDB.testTable VALUES(12345, \u0026#34;sample\u0026#34;, \u0026#34;yyyy-MM-dd HH:mm:ss\u0026#34;);  데이터 형식 주의  WHERE WHERE age \u0026lt; 10; WHERE age BETWEEN 2 AND 20; WHERE age IN (10, 20 ); // ??? WHERE age EXIST;\t// ??? WHERE age LIKE; WHERE age IS NULL; / IS NOT NULL; \rTroubleshooting  UTF-8\n한글 깨짐 (\u0026quot;????\u0026quot;) 현상\n\r \r⭐ UTF8 미설정 오류  MariaDB msi 설치 시 utf8 기본 설정 체크박스 체크 Or, Table 옵션에서 utf8mb3_general_ci 선택    C# Escape string\nSQL commnad 전송 시 문법 Invalid Err\n\r  \r⭐ ⭐ 각 필드의 format에 맞지 않는 오류\n  C#에서 만들어낸 query string은 sql에서 해석시 escape string화 하기 때문에 VARCHAR속성 등은 내부 quote '{0}' 설정을 해주어야 함\n  string queryString = string.Format(\u0026#34;INSERT INTO testDB.testTable VALUES({0}, \u0026#39;{1}\u0026#39;, \u0026#39;{2}\u0026#39;)\u0026#34;, 12345, \u0026#34;sample\u0026#34;, DateTime.Now.ToString(\u0026#34;yyyy-MM-dd HH:mm:ss\u0026#34;));     lowercase TABLE name\nSQL commnad 전송 시 명확한 Table name\n\r \r⭐ table 생성 시 대문자로 정의하더라도 소문자로 reformating 수행 (주의 요)  \rSummary  Reference Link\nSQL Tutorial \u0026amp; Training Documentation\n⭐⭐⭐ SQL 문법 정리\n⭐⭐⭐ Most efficient way to insert Rows into MySQL Database\n\r"
 },
 {
 	"uri": "https://nocturover.github.io/web/hugo/02_favicon/",
@@ -168,6 +168,20 @@
 	"content": "Overview  이 곳은 아이디어 및 인사이트를 담아두는 Archive 입니다.\n\rInsight Children List  \r01_기록의_의미\rOverview 기록이란 완결성을 지닌다. 문장을 작성하기 위해서 추상적으로만 상상하던 내용의 보다 세심한 구체화가 요구되는 작업이다. 하여 작업의 결과물이 도출되었을 때는 추상적 이미지의 한계성을 다시금 상기시켜주는 영향도 미친다. 내가 기록을 시작한 것은 복잡한 생각들에 대한 정리가 필요할 때, 내려놓는다는 행위를 취함으로써 일부 부담을 절하하려는 목적이 강했었다. 기록을 하기와 그만두기를 반복하며 얻었던 각 개별 장점에 대해서 기술해보고자 한다. Features 1. Advantage 기억공간 확장 재귀성 이해도 역시 빼놓을 수 없는 기록의 장점은 기억공간의 확장이다.\n\r\r"
 },
 {
+	"uri": "https://nocturover.github.io/web/hugo/03_shortcodes/",
+	"title": "03_ShortCodes",
+	"tags": [],
+	"description": "",
+	"content": "Overview  ShortCodes 생성과 활용\n\rCustom Shortcodes  생성 \u0026lt;span {{$count:=.Get \u0026#34;count\u0026#34; | default \u0026#34;1\u0026#34;}}\u0026gt;{{ $emoji:=( .Inner | emojify)}}{{ range $idx, $sequence := (seq $count) }}{{ $emoji }}{{ end }}\u0026lt;/spna\u0026gt;  Go / html / style-css / script-js 혼합 작성 가능 한 줄로 작  Parameter {{$count:=.Get \u0026#34;count\u0026#34; | default \u0026#34;1\u0026#34;}}  .Get 메서드 사용하여 $[var] := 문법으로 할당 default로 기본 값 설정  \rTroubleshooting  강제 개행 및 html 적용 불량\r short codes의 작성 구문이 여러줄 일 경우 그에 해당하는 강제개행이 이뤄짐  한 줄로 코드 formatting MarkDown파일 내 작성 시 {\u0026lt; [shortcode] \u0026gt;}} {\u0026lt; /[shortcode] \u0026gt;}} 꺽쇠 문자로 작성 - 혼합    parameter 할당 오류\r 파라미터 할당은 string형태로 하드 포메팅  count=\u0026quot;2\u0026quot;    \rSummary  Reference Link\nhugo Functions\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/",
+	"title": "03_SQL_캡슐화",
+	"tags": [],
+	"description": "",
+	"content": "Overview  MairaDB - C#의 연동 및 기타 메서드를 담는 클래스 생성\n Architecture  목적 :: 캡슐화  DB의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임. 단, (단일적 \u0026amp;\u0026amp; 외부 사용 필수) 요소는 static 허용 처리 방식의 고수준화  디자인  Member - Property - Structure - Method - TestCase   Warning  한정자  한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.  private - 소스 코드 내에서만 Retrieving public - 인스턴스로 외부에서 적용될 때 static - global setting의 개념 (단일성 - singleton Design pattern)    Execute command  반환값에 따른 방법 적용  ExecuteScalar - 1개 요소 ExecuteReader - next/current 방식 ExecuteAdapter - fill in Dataset[Datatable]    MySqlConnection  conn 할당 후 conn.Open() conn.Close() 의 사용 패턴 주의 필요.  SQL service를 담당하는 mysqld.exe 서비스의 중지가 발생될 수 있음  Err - host err C:\\Program Files\\MariaDB 10.5\\bin\\mysqld.exe 파일 직접 실행 Or, service start mysqld 명령문 실행   각 Execute command 시점 전 후로 커넥션 제어 필요  using 문 사용 Or, 수동 Open() / Close() Or, Connection Pooling 방식 사용       Troubleshooting   Code  MariaDB.cs using System; using System.Collections.Generic; using System.Data; using System.Linq; using MySql.Data.MySqlClient; namespace UNIT_TEST_CODE { class MariaDB { private MySqlConnection conn = null; private MySqlCommand command = null; private string server; private int port; private string db; private string id; private string pwd; public MariaDB(string server, int port, string db, string id, string pwd) { this.server = server; this.port = port; this.db = db; this.id = id; this.pwd = pwd; connectDBMS(); } ~MariaDB() { conn.Close(); conn.Dispose(); } public Array connInfo { get { return new String[] { this.server, this.port.ToString(), this.db, this.id, this.pwd }; } } public ConnectionState DBMSstate { get { return conn.State; } } public void connectDBMS() { string connStr = string.Format(\u0026#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};\u0026#34;, this.server, this.port.ToString(), this.db, this.id, this.pwd); try { if (conn == null) { conn = new MySqlConnection(connStr); } if (conn.State == ConnectionState.Closed)\t// DBMSstate == conn.State  { conn.Open(); } } catch (Exception connErr) { Console.WriteLine(connErr); } } public void disconnectDBMS() { if (DBMSstate == ConnectionState.Open) { conn.Close(); } } public void setData(string queryString) { } public DataSet getData_dataset(string queryString) { DataSet ds = new DataSet(\u0026#34;companyInfo\u0026#34;); command = new MySqlCommand(queryString, MariaDB.conn); using (MySqlDataAdapter adapter = new MySqlDataAdapter(command)) { adapter.Fill(ds, \u0026#34;comp\u0026#34;); adapter.Fill(ds, \u0026#34;comp2\u0026#34;); } return ds; } public List\u0026lt;string\u0026gt; getData_list(string queryString) { List\u0026lt;string\u0026gt; fieldNames = new List\u0026lt;string\u0026gt;(); List\u0026lt;string\u0026gt; datas = new List\u0026lt;string\u0026gt;(); try { command = new MySqlCommand(queryString, MariaDB.conn); using (MySqlDataReader reader = command.ExecuteReader()) { for (int fieldCnt=0; fieldCnt\u0026lt;reader.FieldCount; fieldCnt++) { fieldNames.Add(reader.GetName(fieldCnt)); } Console.WriteLine(\u0026#34;fieldNames : \u0026#34; + fieldNames.Aggregate((x,y)=\u0026gt; x + \u0026#34;,\u0026#34; + y)); while (reader.Read()) { for (int fieldCnt = 0; fieldCnt \u0026lt; reader.FieldCount; fieldCnt++) { datas.Add((string)reader[fieldCnt]); } } //Console.WriteLine(datas.Aggregate((x, y) =\u0026gt; x + \u0026#34;,\u0026#34; + y));  } } catch (MySqlException sqlErr) { Console.WriteLine(sqlErr); } return datas; } } class Program { private static void Main(string[] args) { MariaDB mariaDB = new MariaDB(\u0026#34;127.0.0.1\u0026#34;, 1111, \u0026#34;dbName\u0026#34;, \u0026#34;root\u0026#34;, \u0026#34;password\u0026#34;); Console.WriteLine(\u0026#34;[*] DBMS state : \u0026#34; + mariaDB.DBMSstate); //List\u0026lt;string\u0026gt; datas = mariaDB.getData_list(\u0026#34;SELECT code, company FROM company_info WHERE code \u0026lt;= 100\u0026#34;);  DataSet ds1 = mariaDB.getData_dataset(\u0026#34;SELECT code, company FROM company_info WHERE code \u0026lt;= 100\u0026#34;); Console.WriteLine(ds1.Tables[\u0026#34;comp\u0026#34;].Rows[^1][0] + \u0026#34; \u0026#34; + ds1.Tables[\u0026#34;comp\u0026#34;].Rows[^1][1]); DataSet ds2 = mariaDB.getData_dataset(\u0026#34;SELECT code, company FROM company_info WHERE code \u0026lt;= 300\u0026#34;); Console.WriteLine(ds2.Tables[\u0026#34;comp2\u0026#34;].Rows[^1][0] + \u0026#34; \u0026#34; + ds2.Tables[0].Rows[^1][1]); DataSet ds3 = mariaDB.getData_dataset(\u0026#34;SELECT code, company FROM company_info WHERE code \u0026lt;= 600\u0026#34;); Console.WriteLine(ds3.Tables[\u0026#34;comp\u0026#34;].Rows[^1][0] + \u0026#34; \u0026#34; + ds3.Tables[\u0026#34;comp\u0026#34;].Rows[^1][1]); mariaDB.disconnectDBMS(); Console.WriteLine(\u0026#34;[*] DBMS state : \u0026#34; + mariaDB.DBMSstate); } } } Description  2가지 Type 지원  public DataSet getData_dataset(string queryString){ return ds; } public List\u0026lt;string\u0026gt; getData_list(string queryString){ return datas; }  FieldCount를 이용한 column name 취득  fieldNames.Add(reader.GetName(fieldCnt));  FieldCount를 이용한 열 수에 따른 데이터 자동 반환  while (reader.Read()) { for (int fieldCnt = 0; fieldCnt \u0026lt; reader.FieldCount; fieldCnt++) { datas.Add((string)reader[fieldCnt]); } }  Datatable의 데이터 접근 방식 다각화  Console.WriteLine(ds2.Tables[\u0026#34;comp2\u0026#34;].Rows[^1][0] + \u0026#34; \u0026#34; + ds2.Tables[0].Rows[^1][1]);  Summary  Reference Link\nSQL-Dataadapter\nSQL-Connection Pooling\nDatatable-column\n\r"
+},
+{
 	"uri": "https://nocturover.github.io/git/troubleshooting/03_timeout/",
 	"title": "03_TimeOut",
 	"tags": [],
@@ -180,6 +194,13 @@
 	"tags": [],
 	"description": "",
 	"content": "1\n심리적 변화의 원천을 아는 것은 더한 심연에 빠지는 것을 방지해줄 수 있다.\n자기 자신이 현재 어떤 기분을 느끼고 있는가, 이것은 무슨 감정이며 어디에서 발현된 것인가를 고민해보자.\n물론 답이 나오지 않는 경우도 있겠지만, 대게는 그와 비슷했던 과거의 경험들이 오버랩되면서 현재의 상태가 이해될 수 있으리라 생각된다.\n내가 현재 뭘하고 있는 건가 방향성이 흔들릴 때도 분명히 있다.\n그런 불안감을 잠재우기 위해서 자잘한 계획들을 세우기도 하고 현실의 상황과 미래의 상황을 구체적으로 그려가는 편이다.\n자신을 아는 것은 감정을 다스리기 위한 제 1 법칙과도 같다. 내가 어떤 사고에 의해 행동하는 알고리즘을 이해하면 시도하는 과정을 시스템화 시키는 것도 가능할 것이다.\n\r2\n"
+},
+{
+	"uri": "https://nocturover.github.io/hello/sample/",
+	"title": "00_Sample",
+	"tags": [],
+	"description": "",
+	"content": "Overview  \rSample Title  first code third \rTroubleshooting  \r       \rSummary  Reference Link\nHomePage LInk\n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/review/",
