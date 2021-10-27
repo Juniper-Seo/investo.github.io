@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Sat, 23 Oct 2021 13:38:34 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/git/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>00_CRLF_TROUBLE</title>
+      <title>01. CRLF TROUBLE</title>
       <link>https://nocturover.github.io/git/troubleshooting/00_crlf_trouble/</link>
       <pubDate>Sun, 17 Oct 2021 16:03:46 +0900</pubDate>
       
@@ -21,7 +21,7 @@ CRLF 차이점과 해결법
     </item>
     
     <item>
-      <title>02_SSH</title>
+      <title>02. SSH</title>
       <link>https://nocturover.github.io/git/troubleshooting/02_ssh/</link>
       <pubDate>Sat, 23 Oct 2021 13:18:20 +0900</pubDate>
       
@@ -34,7 +34,7 @@ SSH key 생성하고 GitHub에 등록
     </item>
     
     <item>
-      <title>03_TimeOut</title>
+      <title>03. TimeOut</title>
       <link>https://nocturover.github.io/git/troubleshooting/03_timeout/</link>
       <pubDate>Sat, 23 Oct 2021 13:38:34 +0900</pubDate>
       

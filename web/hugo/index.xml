@@ -8,7 +8,7 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Oct 2021 13:59:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/web/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>01_Custom_Theme</title>
+      <title>01. Custom Theme</title>
       <link>https://nocturover.github.io/web/hugo/01_custom_theme/</link>
       <pubDate>Sat, 16 Oct 2021 17:05:46 +0900</pubDate>
       
@@ -20,7 +20,7 @@ git submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파
     </item>
     
     <item>
-      <title>02_FAVICON</title>
+      <title>02. FAVICON</title>
       <link>https://nocturover.github.io/web/hugo/02_favicon/</link>
       <pubDate>Sun, 24 Oct 2021 11:43:29 +0900</pubDate>
       
@@ -32,7 +32,7 @@ layouts/partials/html-head.html 파일에 사이트 title과 link가 작성되�
     </item>
     
     <item>
-      <title>03_ShortCodes</title>
+      <title>03. ShortCodes</title>
       <link>https://nocturover.github.io/web/hugo/03_shortcodes/</link>
       <pubDate>Wed, 27 Oct 2021 13:59:29 +0900</pubDate>
       
