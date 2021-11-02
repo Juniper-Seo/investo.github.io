@@ -6,7 +6,7 @@
     <description>Recent content in Winform on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Oct 2021 19:40:36 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/winform/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Oct 2021 18:33:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/winform/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01_Form_Group</title>
       <link>https://nocturover.github.io/csharp/winform/01_form_group/</link>
@@ -15,8 +15,34 @@
       <guid>https://nocturover.github.io/csharp/winform/01_form_group/</guid>
       <description>Overview  .csproj 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개
 
-Way  Premise  partial class의 작성  Code .csproj.user &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;Project ToolsVersion=&amp;#34;Current&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/developer/msbuild/2003&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Form&amp;lt;/SubType&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.ANIMATION.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;EmbeddedResource Update=&amp;#34;Properties\Resources.resx&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Designer&amp;lt;/SubType&amp;gt; &amp;lt;/EmbeddedResource&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;/Project&amp;gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt;&amp;lt;/Compile&amp;gt; 
-Troubleshooting  1 .csproj.user 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제  같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영</description>
+Way  Premise  partial class의 작성 .csproj.user 파일 itemgroup 항목 수정  Code .csproj.user &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;Project ToolsVersion=&amp;#34;Current&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/developer/msbuild/2003&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Form&amp;lt;/SubType&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.ANIMATION.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;EmbeddedResource Update=&amp;#34;Properties\Resources.resx&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Designer&amp;lt;/SubType&amp;gt; &amp;lt;/EmbeddedResource&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;/Project&amp;gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt;&amp;lt;/Compile&amp;gt; 
+Troubleshooting  1 .</description>
+    </item>
+    
+    <item>
+      <title>02. C# Event</title>
+      <link>https://nocturover.github.io/csharp/winform/02_event/</link>
+      <pubDate>Thu, 28 Oct 2021 13:59:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/02_event/</guid>
+      <description>Overview  C# 문법 Event의 실사용 예제 기술
+
+Event  개념   event 단어 자체의 의미로 접근
+ 특정 행위, 상황의 발생에 따른 신호 전달 신호에 따른 정해진 행위 수행    Delgate (대리자) 는 메서드 자체를 지니고 있는 행위 대리자
+  Eventhandler는 행위 대리자로 선언되며,
+ 행위 대리자인 Eventhandler에 행위(Method)를 추가 혹은 제거하여 하나의 신호 발생원에 대응하여 수행 object /EventArgs 는 이벤트 신호원으로부터 개별적 특성을 정의 Lambda식을 사용하여 간결하게 메서드를 Eventhandler에 담을 수 있음.</description>
+    </item>
+    
+    <item>
+      <title>03. Thread/Invoke/BeginInvoke</title>
+      <link>https://nocturover.github.io/csharp/winform/03_winform_thread/</link>
+      <pubDate>Sun, 31 Oct 2021 18:33:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/03_winform_thread/</guid>
+      <description>Overview  WinForm에서 멀티 쓰레딩 환경을 구성하는 방법을 기술
+WinForm Environment  개념   WinForm은 기본적으로 main() 메서드 내에서 Application.Run(new Form1())을 수행하게 되고 따라서 UI Thread라고 명명되는 MainThread환경에서 동작되게 된다.
+  이는 WinForm에서 컨트롤을 업데이트 하는 과정을 포함하여 모든 코드 동작이 MainThread 내에서 일어남을 의미하며, 따라서 다른 쓰레드에서 접근하여 컨트롤을 업데이트하는 것을 금지한다. ( Throw Cross-Thread Exception )
+  이러한 이유로 새로운 Thread를 생성하여 무거운 작업(DB Select / FileStream)을 수행한 후에 결과 Form에 반영하기 위한 Thread.</description>
     </item>
     
   </channel>

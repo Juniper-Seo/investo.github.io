@@ -1,10 +1,17 @@
 [
 {
+	"uri": "https://nocturover.github.io/csharp/winform/",
+	"title": "Winform",
+	"tags": [],
+	"description": "C#-Winform",
+	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n 02. C# Event \n 03. Thread/Invoke/BeginInvoke \n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/csharp/db/",
 	"title": "DB",
 	"tags": [],
 	"description": "C#-DB",
-	"content": "Overview  이 곳은 C# Database 연동의 학습공간 입니다.\nLink 01. MariaDB connection \n 02. SQL 문법 \n 03. SQL 캡슐화 \n 04. DB 적재 및 불러오기 \n\r\r"
+	"content": "Overview  이 곳은 C# Database 연동의 학습공간 입니다.\nLink 01. MariaDB connection \n 02. SQL 문법 \n 03. SQL 캡슐화 \n 04. DB 적재 및 불러오기 \n 05. Connection Pooling \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/web/hugo/",
@@ -12,13 +19,6 @@
 	"tags": [],
 	"description": "Hugo",
 	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\nLink 01. Custom Theme \n 02. FAVICON \n 03. ShortCodes \n\r\r"
-},
-{
-	"uri": "https://nocturover.github.io/csharp/winform/",
-	"title": "Winform",
-	"tags": [],
-	"description": "C#-Winform",
-	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/git/troubleshooting/",
@@ -56,18 +56,18 @@
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Trouble shooting 과 진척도를 기록하는 공간입니다.\n"
 },
 {
-	"uri": "https://nocturover.github.io/csharp/winform/01_form_group/",
-	"title": "01_Form_Group",
-	"tags": [],
-	"description": "C#-Winform-FormGroup",
-	"content": "Overview  .csproj 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개\n\nWay  Premise  partial class의 작성  \rCode .csproj.user \u0026lt;?xml version=\u0026#34;1.0\u0026#34; encoding=\u0026#34;utf-8\u0026#34;?\u0026gt; \u0026lt;Project ToolsVersion=\u0026#34;Current\u0026#34; xmlns=\u0026#34;http://schemas.microsoft.com/developer/msbuild/2003\u0026#34;\u0026gt; \u0026lt;ItemGroup\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;SubType\u0026gt;Form\u0026lt;/SubType\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.ANIMATION.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.OPENAPI.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;/ItemGroup\u0026gt; \u0026lt;ItemGroup\u0026gt; \u0026lt;EmbeddedResource Update=\u0026#34;Properties\\Resources.resx\u0026#34;\u0026gt; \u0026lt;SubType\u0026gt;Designer\u0026lt;/SubType\u0026gt; \u0026lt;/EmbeddedResource\u0026gt; \u0026lt;/ItemGroup\u0026gt; \u0026lt;/Project\u0026gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.OPENAPI.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt;\u0026lt;/Compile\u0026gt; \nTroubleshooting  1 .csproj.user 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제\r  같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영\n  main Form 을 제외하고 하위 form들의 DependentUpon을 포함한 모든 커스텀 속성을 주석처리 후 저장\n  주석 처리 해제 후 저장\n  반영 확인\n  2 그륩화된 폼 복사 시 발생하는 오류\r  폼이 포함하고 있는 리소스 파일 .resx의 출력 중복 오류 - .resx파일 삭제\n  클래스 중복\n  \nSummary   N/A  "
-},
-{
 	"uri": "https://nocturover.github.io/daily/",
 	"title": "Daily",
 	"tags": [],
 	"description": "Daily",
-	"content": "Overview  이 곳은 Daily Report를 기록하는 공간입니다.\n\rDaily Children List  \r01. 선택과 집중\r1 모든 선택에는 에너지가 소모되더라도 객관화가 필요하다. 여기서 말하는 객관화는 자기 객관화를 의미하는데, 자신의 능력 정도를 평가하는 방식부터 현재 하려는 행동의 방향성까지 모두 생각이 닿을 수 있는 끝자락까지는 수행하는 것이 옳다. 이런 방식이 반드시 옳은 선택을 부여하는 것은 아니지만 닥친 상황에서의 최선의 선택을 할 수 있게끔 방향성을 제시해주고 또 다른 루트를 열어주는 역할을 한다. 사소한 코드 구현 방식부터 일상생활에 모두 녹여야할 가치가 있다. 2 단축키 / 커맨드는 극한의 생산성을 요하는 프로가 아니더라도 필수적인 덕목이자 행동양식이라고 생각한다.\n\r\r02. 숙달과 일처리\r1 어떤 일이든 메뉴얼 / 경험사례가 존재하지 않는 온전히 새로운 일을 시도하는 것이 아니라면, 어느정도 옳바른 방식의 접근법을 알고 시간을 투자하면 궤도에 오르는 것이 가능하다. 그것은 학습하는 과정 자체가 될 수도 있으며 행동자체를 의미하기도 한다. 2 해야할 과제가 주어졌을 때 무작정 시작하는 방법은 무식할 수 있지만, 접근법을 메타인지적 관점에서 고려하고 빠르게 처리하려는 자세는 심적 부담을 줄여주는 동시에 돌아볼 수 있는 여유 시간을 부여하기 때문에 언제나 빠른 접근은 나은 결과를 창출할 수 있는 것 같다.\n\r\r03. 마음관리\r1 심리적 변화의 원천을 아는 것은 더한 심연에 빠지는 것을 방지해줄 수 있다. 자기 자신이 현재 어떤 기분을 느끼고 있는가, 이것은 무슨 감정이며 어디에서 발현된 것인가를 고민해보자. 물론 답이 나오지 않는 경우도 있겠지만, 대게는 그와 비슷했던 과거의 경험들이 오버랩되면서 현재의 상태가 이해될 수 있으리라 생각된다. 내가 현재 뭘하고 있는 건가 방향성이 흔들릴 때도 분명히 있다. 그런 불안감을 잠재우기 위해서 자잘한 계획들을 세우기도 하고 현실의 상황과 미래의 상황을 구체적으로 그려가는 편이다.\n\r\r04. 배움\r1 설계는 언제나 필요하다. pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에도 사소하게는 둘 중 하나의 선택을 해야하는 경우에도 적용될 수 있다. 정석적이며 보편적인 기본 내용들을 놓치고 싶지 않다면 인쇄물로 접근하는 방식이 간편할 수 있으며, 최신의 정보를 얻어내고 싶다면 공식 문서를 찾아보는 편이 좋다. 전체적인 흐름을 보고 싶다면, 실제 사용되고 있는 장면을 상상할 여지를 남겨줄 수 있는 비디오를 시청하는 것도 방법이다. 2 단축키를 익히는 것 또한 언제나 필요하다. 삶의 편리함이 주된 목표가 되지는 않는다.\n\r\r"
+	"content": "Overview  이 곳은 Daily Report를 기록하는 공간입니다.\n\rDaily Children List  \r01. 선택과 집중\r1 모든 선택에는 에너지가 소모되더라도 객관화가 필요하다. 여기서 말하는 객관화는 자기 객관화를 의미하는데, 자신의 능력 정도를 평가하는 방식부터 현재 하려는 행동의 방향성까지 모두 생각이 닿을 수 있는 끝자락까지는 수행하는 것이 옳다. 이런 방식이 반드시 옳은 선택을 부여하는 것은 아니지만 닥친 상황에서의 최선의 선택을 할 수 있게끔 방향성을 제시해주고 또 다른 루트를 열어주는 역할을 한다. 사소한 코드 구현 방식부터 일상생활에 모두 녹여야할 가치가 있다. 2 단축키 / 커맨드는 극한의 생산성을 요하는 프로가 아니더라도 필수적인 덕목이자 행동양식이라고 생각한다.\n\r\r02. 숙달과 일처리\r1 어떤 일이든 메뉴얼 / 경험사례가 존재하지 않는 온전히 새로운 일을 시도하는 것이 아니라면, 어느정도 옳바른 방식의 접근법을 알고 시간을 투자하면 궤도에 오르는 것이 가능하다. 그것은 학습하는 과정 자체가 될 수도 있으며 행동자체를 의미하기도 한다. 2 해야할 과제가 주어졌을 때 무작정 시작하는 방법은 무식할 수 있지만, 접근법을 메타인지적 관점에서 고려하고 빠르게 처리하려는 자세는 심적 부담을 줄여주는 동시에 돌아볼 수 있는 여유 시간을 부여하기 때문에 언제나 빠른 접근은 나은 결과를 창출할 수 있는 것 같다.\n\r\r03. 마음관리\r1 심리적 변화의 원천을 아는 것은 더한 심연에 빠지는 것을 방지해줄 수 있다. 자기 자신이 현재 어떤 기분을 느끼고 있는가, 이것은 무슨 감정이며 어디에서 발현된 것인가를 고민해보자. 물론 답이 나오지 않는 경우도 있겠지만, 대게는 그와 비슷했던 과거의 경험들이 오버랩되면서 현재의 상태가 이해될 수 있으리라 생각된다. 내가 현재 뭘하고 있는 건가 방향성이 흔들릴 때도 분명히 있다. 그런 불안감을 잠재우기 위해서 자잘한 계획들을 세우기도 하고 현실의 상황과 미래의 상황을 구체적으로 그려가는 편이다.\n\r\r04. 배움\r1 설계는 언제나 필요하다. pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에도 사소하게는 둘 중 하나의 선택을 해야하는 경우에도 적용될 수 있다. 정석적이며 보편적인 기본 내용들을 놓치고 싶지 않다면 인쇄물로 접근하는 방식이 간편할 수 있으며, 최신의 정보를 얻어내고 싶다면 공식 문서를 찾아보는 편이 좋다. 전체적인 흐름을 보고 싶다면, 실제 사용되고 있는 장면을 상상할 여지를 남겨줄 수 있는 비디오를 시청하는 것도 방법이다. 2 단축키를 익히는 것 또한 언제나 필요하다. 삶의 편리함이 주된 목표가 되지는 않는다.\n\r\r05. 구토감\r1 구토감이 밀려온다. 이런 감정은 머리 끝까지 나의 감정을 표출하듯 달아오르고 온몸의 열기가 가득하다. 상황이 잘못된 것은 아니다. 에너지도 남아있고 방법을 알고 있는 듯한 느낌도 가지고 있다.\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/winform/01_form_group/",
+	"title": "01_Form_Group",
+	"tags": [],
+	"description": "C#-Winform-FormGroup",
+	"content": "Overview  .csproj 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개\n\nWay  Premise  partial class의 작성 .csproj.user 파일 itemgroup 항목 수정  \rCode .csproj.user \u0026lt;?xml version=\u0026#34;1.0\u0026#34; encoding=\u0026#34;utf-8\u0026#34;?\u0026gt; \u0026lt;Project ToolsVersion=\u0026#34;Current\u0026#34; xmlns=\u0026#34;http://schemas.microsoft.com/developer/msbuild/2003\u0026#34;\u0026gt; \u0026lt;ItemGroup\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;SubType\u0026gt;Form\u0026lt;/SubType\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.ANIMATION.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.OPENAPI.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt; \u0026lt;/Compile\u0026gt; \u0026lt;/ItemGroup\u0026gt; \u0026lt;ItemGroup\u0026gt; \u0026lt;EmbeddedResource Update=\u0026#34;Properties\\Resources.resx\u0026#34;\u0026gt; \u0026lt;SubType\u0026gt;Designer\u0026lt;/SubType\u0026gt; \u0026lt;/EmbeddedResource\u0026gt; \u0026lt;/ItemGroup\u0026gt; \u0026lt;/Project\u0026gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  \u0026lt;Compile Update=\u0026#34;childForm/ChildAccount.OPENAPI.cs\u0026#34; DependentUpon=\u0026#34;childForm/ChildAccount.cs\u0026#34;\u0026gt;\u0026lt;/Compile\u0026gt; \nTroubleshooting  1 .csproj.user 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제\r 같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영 main Form 을 제외하고 하위 form들의 DependentUpon을 포함한 모든 커스텀 속성을 주석처리 후 저장 주석 처리 해제 후 저장 반영 확인  2-1 그륩화된 폼 복사 시 발생하는 오류\n2-2 Parial Form Class의 출력 중복 오류\n\r  폼이 포함하고 있는 리소스 파일 .resx의 출력 중복 오류 - .resx파일 삭제\n  클래스 중복\n  \nSummary   N/A  "
 },
 {
 	"uri": "https://nocturover.github.io/csharp/db/01_mariadb_connection/",
@@ -130,7 +130,14 @@
 	"title": "Progress",
 	"tags": [],
 	"description": "Project-Investo-Progress",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.08.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.08.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.08.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.08.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.08.25 (Mon) Function lists passing 미정  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r2021.08.26 (Tue) Prototype 제작 (Connection UI)  2 [hr]\r2021.08.27 (Wed) Prototype 제작  DB Encapsulation API Encapsulation    2 [hr]\r\r2021.08.28 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인 Prototype 제작  Socket Encapsulation    계획\r"
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.10.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.10.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.10.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.10.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.10.25 (Mon) Function lists passing 미정  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r2021.10.26 (Tue) Prototype 제작 (Connection UI)  2 [hr]\r2021.10.27 (Wed) Prototype 제작  DB Encapsulation API Encapsulation passing 28    5 [hr]\r2021.10.28 (Thr) Prototype 제작  API Encapsulation - (검토결과 : 필요X) ChildConnectionForm (DB, API status)    5 [hr]\r2021.10.29 (Fri)  Prototype 제작\n ChildConnectionForm (DB, API status) DB connection pooling 방식 적용 Pause  array type (관리차원) Garbage Collector 원리 적용      Code Standard ver_1.0\n  5 [hr]\r2021.10.30 (Sat)  Prototype 제작\n ChildConnectionForm (DB, API status)    Code Standard ver_1.0\n  5 [hr]\r2021.10.31 (Sun)  Prototype 제작\n ChildConnectionForm (DB, API status)  APItestUtilForm.cs      Code Standard ver_1.0\n  3 [hr]\r2021.11.02 (Tue) 프로토타입의 취지에 맞게 Prototype 제작  ChildConnectionForm (DB, API status)  APItestUtilForm.cs     Code Standard ver_1.0 Pseudo Code 작성 UML 작성  3 [hr]\r\r2021.10.28 (Wed) API - R.T. HOG_ Sub/Pub Limit 동작 사항 확인 C.J. 동작 사항 확인 Prototype 제작  Socket Encapsulation    계획\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/winform/02_event/",
+	"title": "02. C# Event",
+	"tags": [],
+	"description": "",
+	"content": "Overview  C# 문법 Event의 실사용 예제 기술\n\nEvent  개념   event 단어 자체의 의미로 접근\n 특정 행위, 상황의 발생에 따른 신호 전달 신호에 따른 정해진 행위 수행    Delgate (대리자) 는 메서드 자체를 지니고 있는 행위 대리자\n  Eventhandler는 행위 대리자로 선언되며,\n 행위 대리자인 Eventhandler에 행위(Method)를 추가 혹은 제거하여 하나의 신호 발생원에 대응하여 수행 object /EventArgs 는 이벤트 신호원으로부터 개별적 특성을 정의 Lambda식을 사용하여 간결하게 메서드를 Eventhandler에 담을 수 있음.    Example\n 각 캡슐화된 객체의 연동을 수행 시 개별 변동 사항에 대한 타 객체 업데이트 수행 시  Form에서 Button 클릭 시 다크모드 전환 (전체 폼 업데이트 필요)  (on_event)Form button Click =\u0026gt; (Eventhandler)((Method)다크모드 전환)     SQL 내 연결 Disconnected 시 Status Ramp의 전환 및 재연결 필요    \rcode MariaDB.cs using System; using System.Collections.Generic; using System.Data; using System.Windows.Forms; using MySql.Data.MySqlClient; // ver 1.1 namespace TEST_DB { public class DBEventArgs { public string message; public ConnectionState status; public string database; } delegate void DBEventHandler(object sender, DBEventArgs e); class MariaDB { public event DBEventHandler On_EventStatusChanged;\t// sql conn 변화에 따른 이벤트 발생  ~~생략~~ public void connectDBMS(string server, string port, string db, string id, string pwd) { this.server = server; this.port = port; this.db = db; this.id = id; this.pwd = pwd; this.connString = string.Format(\u0026#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};\u0026#34;, this.server, this.port, this.db, this.id, this.pwd); this.conn = new MySqlConnection(connString); On_EventStatusChanged(this, new DBEventArgs(){database=this.db, status=ConnectionState.Closed});\t// 상태 변화에 따른 이벤트 신호 발생 1  } public void disconnectDBMS() { this.conn = null; On_EventStatusChanged(this, new DBEventArgs(){database=this.db, status=ConnectionState.Broken});\t// 상태 변화에 따른 이벤트 신호 발생 2  } } } MainForm namespace TEST_FORM { public partial class ChildConnectionForm : Form { ~~생략~~ private void ChildFormLoad(object sender, EventArgs e) { DB.mariaDB.On_EventStatusChanged += new DBEventHandler(DBEvent_ChangedStatus); // 등록  } private void ChildFormClosed(object sender, FormClosedEventArgs e) { DB.mariaDB.On_EventStatusChanged -= new DBEventHandler(DBEvent_ChangedStatus);\t// 해제  } private void DBEvent_ChangedStatus(object sender, DBEventArgs e) {\t// sender는 MariaDB.cs의 인수인 해당 클래스 자체가 전달; \tchangeStatusRamp(color=\u0026#34;red\u0026#34;); connDB(\u0026#34;127.0.0.1\u0026#34;); Log.Write(\u0026#34;[*] Changed DB Conn status. {0} {1}\u0026#34;, e.stauts.ToString(), e.database); } } } \r\rTroubleshooting  Event발생 시 object null 오류\r Event발생 시 행위를 수행하는 자가 존재하지 않는 경우  += new Eventhandler(sender, e) 로 발생 되기 전 등록(=Form Load Or 객체 생성 시)    \r\rSummary  Reference Link\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/",
@@ -168,6 +175,13 @@
 	"content": "Overview  이 곳은 아이디어 및 인사이트를 담아두는 Archive 입니다.\n\rInsight Children List  \r01. 기록의_의미\rOverview 기록이란 완결성을 지닌다. 문장을 작성하기 위해서 추상적으로만 상상하던 내용의 보다 세심한 구체화가 요구되는 작업이다. 하여 작업의 결과물이 도출되었을 때는 추상적 이미지의 한계성을 다시금 상기시켜주는 영향도 미친다. 내가 기록을 시작한 것은 복잡한 생각들에 대한 정리가 필요할 때, 내려놓는다는 행위를 취함으로써 일부 부담을 절하하려는 목적이 강했었다. 기록을 하기와 그만두기를 반복하며 얻었던 각 개별 장점에 대해서 기술해보고자 한다. Features 1. Advantage 기억공간 확장 재귀성 이해도 역시 빼놓을 수 없는 기록의 장점은 기억공간의 확장이다.\n\r\r"
 },
 {
+	"uri": "https://nocturover.github.io/csharp/winform/03_winform_thread/",
+	"title": "03. Thread/Invoke/BeginInvoke",
+	"tags": [],
+	"description": "",
+	"content": "Overview  WinForm에서 멀티 쓰레딩 환경을 구성하는 방법을 기술\n\r\rWinForm Environment  개념   WinForm은 기본적으로 main() 메서드 내에서 Application.Run(new Form1())을 수행하게 되고 따라서 UI Thread라고 명명되는 MainThread환경에서 동작되게 된다.\n  이는 WinForm에서 컨트롤을 업데이트 하는 과정을 포함하여 모든 코드 동작이 MainThread 내에서 일어남을 의미하며, 따라서 다른 쓰레드에서 접근하여 컨트롤을 업데이트하는 것을 금지한다. ( Throw Cross-Thread Exception )\n  이러한 이유로 새로운 Thread를 생성하여 무거운 작업(DB Select / FileStream)을 수행한 후에 결과 Form에 반영하기 위한 Thread.Join() 과정에서 또한 Form의 Wait과정을 거쳐야하기 때문에 유저의 유동적 활동을 제한한다.\n  따라서 Form상속 클래스 내 인스턴스를 지칭하는 this.의 컨트롤 권한을 Delegate에 할당된 메서드에 전달하여 컨트롤을 타 Thread환경에서 연결되게 만들어줄 수 있는 Invoke 와 BeginInvoke를 사용한다.\n  \r(Thread + BeginInvoke) Code  일반적인 Thread환경을 구축하기 위한 방법으로 새로운 Thread를 생성하고 Method를 반환값 여부에 따라 Action Func 무명메서드를 전달하여 UI의 간섭을 배제한 채 작업을 수행한다.  반환값을 소유하는 Func Delegate를 사용할 경우, .EndInvoke()로 Thread작업의 종료를 대기하는 코드를 추가하여야 한다.   다음 코드는 버튼을 클릭하였을 때, .csv확장자 파일을 읽어들여 ComboBox Form control에 반영한다.  private void btnUpdateList_Click(object sneder, EventArgs e) { Thread T_ComboUpdate = new Thread(new ThreadStart(UpdateComboBox)); T_ComboUpdate.Start(); void UpdateComboBox() { FileStream fs = new FileStream(@\u0026#34;UserList.csv\u0026#34;, FileMode.Open); StreamReader sr = new StreamReader(fs, Encoding.UTF8); while (sr.Peek() \u0026gt;= 0)\t// 다음 read가 존재할 때,  { string row = sr.ReadLine(); this.BeginInvoke(new Action(() =\u0026gt; { this.cboUserList.Items.AddRange(row.Split(\u0026#34;\\r\\n\u0026#34;));\t// 문자개행으로 구분, 한줄 씩 받아옴.  })); } this.cboUserList.SelectedIndex = 0; sr.Close(); fs.Close(); } } \rInvoke vs BeginInvoke   단어의 구성에서 유추할 수 있듯이 BeginInvoke는 비동기 처리를 의미한다.\n  위 예시 코드에서는 비동기로 작동하는 Thread 내 BeginInvoke 를 사용한 것을 볼 수 있는데, 파일의 정보가 적기 때문에 Invoke를 사용하더라도 Overhead의 큰 차이 없이 또 유저측면의 Main UI 거동에도 간섭없이 동일한 결과가 표출되는 것으로 보여진다.\n  그러나, Invoke vs BeginInvoke 예시 아티클에서 제시된 예시처럼 Invoke를 사용하게 되면 UI의 동작에 영향을 받기 때문에 만약 또다른 Invoke 메서드가 동시에 사용될 경우 메시지 큐에서 순차적으로 처리하게 된다.\n  따라서 Control의 딜레이 없는 결과를 얻고 싶다면, BeginInvoke를 사용하는 것이 일반적인 경우에 부합한다.\n  [참고]  this.BeginInvoke 와 this.cboUserList.BeginInvoke 는 동일한 Form에서 파생되는 ThreadPool을 이용하기 때문에 차이가 없다.  \r\r(Task.Run + BeginInvoke) Code private async void btnUpdateList_Click(object sneder, EventArgs e) { await Task.Run(new Action(UpdateComboBox)); this.lblResult.Text = \u0026#34;UserList Loaded\u0026#34; void UpdateComboBox() { FileStream fs = new FileStream(@\u0026#34;UserList.csv\u0026#34;, FileMode.Open); StreamReader sr = new StreamReader(fs, Encoding.UTF8); while (sr.Peek() \u0026gt;= 0)\t// 다음 read가 존재할 때,  { string row = sr.ReadLine(); this.BeginInvoke(new Action(() =\u0026gt; { this.cboUserList.Items.AddRange(row.Split(\u0026#34;\\r\\n\u0026#34;));\t// 문자개행으로 구분, 한줄 씩 받아옴.  })); } this.cboUserList.SelectedIndex = 0; sr.Close(); fs.Close(); } }  async / await 구문에 따라 버튼이 클릭되면, UpdateComboBox()가 Form이 아닌 새로운 ThreadPool에서 실행되고 완료되면 label Text를 업데이트한다.  \nTroubleshooting  Performance CheckList \r       \nSummary  Reference Link\nDifference between BeginInvoke and Thread.Start\nDoes Thread.Sleep affect the ThreadPool?\nVisual C#: Thread.Sleep vs. Task.Delay\n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/web/hugo/03_shortcodes/",
 	"title": "03. ShortCodes",
 	"tags": [],
@@ -200,7 +214,7 @@
 	"title": "00. Sample",
 	"tags": [],
 	"description": "",
-	"content": "Overview  \rSample Title  first code third \rTroubleshooting  \r       \rSummary  Reference Link\nHomePage LInk\n\r\r"
+	"content": "Overview  \r\rSample Title  first \rcode \rthird \nTroubleshooting  \r       \nSummary  Reference Link\nHomePage LInk\n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/review/",
@@ -229,6 +243,20 @@
 	"tags": [],
 	"description": "Project",
 	"content": "Overview 이 곳은 프로젝트의 Trouble shooting 과 진척도를 기록하는 공간입니다.\n"
+},
+{
+	"uri": "https://nocturover.github.io/daily/05_/",
+	"title": "05. 구토감",
+	"tags": [],
+	"description": "",
+	"content": "1\n구토감이 밀려온다.\n이런 감정은 머리 끝까지 나의 감정을 표출하듯 달아오르고 온몸의 열기가 가득하다.\n상황이 잘못된 것은 아니다.\n에너지도 남아있고 방법을 알고 있는 듯한 느낌도 가지고 있다.\n"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/db/05_connection_pooling/",
+	"title": "05. Connection Pooling",
+	"tags": [],
+	"description": "",
+	"content": "Overview  MariaDB DBMS의 성능향상을 위한 Connection pooling방식에 대해 정리\n\r\rConnection Pooling  개념   Pooling방식은 DBMS 상호작용 방식에서 connection의 Open / Close의 반복적 호출로 걸리는 오베헤드를 감소시키는 성능향상에 기인될 수 있다.\n  연결을 미리 열어두고, 들어오는 각각의 command수행에 대응하여 수행할 수 있도록 arrangement 한다.\n  최대로 설정된 연결 개수에 도달하는 명령수행 요청이 들어오게 된다면, queue의 형태로 해당 수행일정을 계획할 수 있다.\n  MSDN 의 설명에 의하면 Close() Dispose()의 연결 종료와 관련하여 주 메서드(connection, datareader) 등에 다루지 말고, Finalize method 를 생성하고 관리하라고 지침한다.\n  \rcode \rthird \nTroubleshooting  \r       \nSummary  Reference Link\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/",

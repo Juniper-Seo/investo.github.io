@@ -6,7 +6,7 @@
     <description>Recent content in DB on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Oct 2021 18:20:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Oct 2021 17:30:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/csharp/db/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. MariaDB connection</title>
       <link>https://nocturover.github.io/csharp/db/01_mariadb_connection/</link>
@@ -51,6 +51,19 @@ INSERT INTO [tableName] VALUES ([col1_val],[col2_val]),([col1_val],[col2_val]), 
   절차1) Pre Query String
 string queryPreString = &amp;#34;INSERT INTO companyinfo VALUES&amp;#34;;   절차2) Post Query String
 List&amp;lt;string[]&amp;gt; masterList = new List&amp;lt;string[]&amp;gt; {new string[] {&amp;#34;0010&amp;#34;, &amp;#34;alpha&amp;#34;}, new string[] {&amp;#34;0020&amp;#34;, &amp;#34;bravo&amp;#34;}} foreach (string[] list in masterList) { queryPostString += string.</description>
+    </item>
+    
+    <item>
+      <title>05. Connection Pooling</title>
+      <link>https://nocturover.github.io/csharp/db/05_connection_pooling/</link>
+      <pubDate>Fri, 29 Oct 2021 17:30:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/db/05_connection_pooling/</guid>
+      <description>Overview  MariaDB DBMS의 성능향상을 위한 Connection pooling방식에 대해 정리
+Connection Pooling  개념   Pooling방식은 DBMS 상호작용 방식에서 connection의 Open / Close의 반복적 호출로 걸리는 오베헤드를 감소시키는 성능향상에 기인될 수 있다.
+  연결을 미리 열어두고, 들어오는 각각의 command수행에 대응하여 수행할 수 있도록 arrangement 한다.
+  최대로 설정된 연결 개수에 도달하는 명령수행 요청이 들어오게 된다면, queue의 형태로 해당 수행일정을 계획할 수 있다.
+  MSDN 의 설명에 의하면 Close() Dispose()의 연결 종료와 관련하여 주 메서드(connection, datareader) 등에 다루지 말고, Finalize method 를 생성하고 관리하라고 지침한다.</description>
     </item>
     
   </channel>

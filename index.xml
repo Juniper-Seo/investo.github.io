@@ -6,7 +6,7 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Oct 2021 18:20:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 31 Oct 2021 18:33:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01_Form_Group</title>
       <link>https://nocturover.github.io/csharp/winform/01_form_group/</link>
@@ -15,8 +15,8 @@
       <guid>https://nocturover.github.io/csharp/winform/01_form_group/</guid>
       <description>Overview  .csproj 내에서 파일을 관리하는 방법 중 winform dependent 방식을 소개
 
-Way  Premise  partial class의 작성  Code .csproj.user &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;Project ToolsVersion=&amp;#34;Current&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/developer/msbuild/2003&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Form&amp;lt;/SubType&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.ANIMATION.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;EmbeddedResource Update=&amp;#34;Properties\Resources.resx&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Designer&amp;lt;/SubType&amp;gt; &amp;lt;/EmbeddedResource&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;/Project&amp;gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt;&amp;lt;/Compile&amp;gt; 
-Troubleshooting  1 .csproj.user 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제  같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영</description>
+Way  Premise  partial class의 작성 .csproj.user 파일 itemgroup 항목 수정  Code .csproj.user &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;Project ToolsVersion=&amp;#34;Current&amp;#34; xmlns=&amp;#34;http://schemas.microsoft.com/developer/msbuild/2003&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Form&amp;lt;/SubType&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.ANIMATION.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt; &amp;lt;/Compile&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;EmbeddedResource Update=&amp;#34;Properties\Resources.resx&amp;#34;&amp;gt; &amp;lt;SubType&amp;gt;Designer&amp;lt;/SubType&amp;gt; &amp;lt;/EmbeddedResource&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;/Project&amp;gt;  ItemGroup 내 의존성을 정의 - update=[child] DependentUpon=[parent]  &amp;lt;Compile Update=&amp;#34;childForm/ChildAccount.OPENAPI.cs&amp;#34; DependentUpon=&amp;#34;childForm/ChildAccount.cs&amp;#34;&amp;gt;&amp;lt;/Compile&amp;gt; 
+Troubleshooting  1 .</description>
     </item>
     
     <item>
@@ -138,6 +138,20 @@ git submodule add ~.git themes/~~ 커맨드를 이용하여 적재한 테마 파
     </item>
     
     <item>
+      <title>02. C# Event</title>
+      <link>https://nocturover.github.io/csharp/winform/02_event/</link>
+      <pubDate>Thu, 28 Oct 2021 13:59:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/02_event/</guid>
+      <description>Overview  C# 문법 Event의 실사용 예제 기술
+
+Event  개념   event 단어 자체의 의미로 접근
+ 특정 행위, 상황의 발생에 따른 신호 전달 신호에 따른 정해진 행위 수행    Delgate (대리자) 는 메서드 자체를 지니고 있는 행위 대리자
+  Eventhandler는 행위 대리자로 선언되며,
+ 행위 대리자인 Eventhandler에 행위(Method)를 추가 혹은 제거하여 하나의 신호 발생원에 대응하여 수행 object /EventArgs 는 이벤트 신호원으로부터 개별적 특성을 정의 Lambda식을 사용하여 간결하게 메서드를 Eventhandler에 담을 수 있음.</description>
+    </item>
+    
+    <item>
       <title>02. SQL 문법</title>
       <link>https://nocturover.github.io/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/</link>
       <pubDate>Sun, 24 Oct 2021 18:06:41 +0900</pubDate>
@@ -184,6 +198,18 @@ SSH key 생성하고 GitHub에 등록
 2
 해야할 과제가 주어졌을 때 무작정 시작하는 방법은 무식할 수 있지만,
 접근법을 메타인지적 관점에서 고려하고 빠르게 처리하려는 자세는 심적 부담을 줄여주는 동시에 돌아볼 수 있는 여유 시간을 부여하기 때문에 언제나 빠른 접근은 나은 결과를 창출할 수 있는 것 같다.</description>
+    </item>
+    
+    <item>
+      <title>03. Thread/Invoke/BeginInvoke</title>
+      <link>https://nocturover.github.io/csharp/winform/03_winform_thread/</link>
+      <pubDate>Sun, 31 Oct 2021 18:33:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/03_winform_thread/</guid>
+      <description>Overview  WinForm에서 멀티 쓰레딩 환경을 구성하는 방법을 기술
+WinForm Environment  개념   WinForm은 기본적으로 main() 메서드 내에서 Application.Run(new Form1())을 수행하게 되고 따라서 UI Thread라고 명명되는 MainThread환경에서 동작되게 된다.
+  이는 WinForm에서 컨트롤을 업데이트 하는 과정을 포함하여 모든 코드 동작이 MainThread 내에서 일어남을 의미하며, 따라서 다른 쓰레드에서 접근하여 컨트롤을 업데이트하는 것을 금지한다. ( Throw Cross-Thread Exception )
+  이러한 이유로 새로운 Thread를 생성하여 무거운 작업(DB Select / FileStream)을 수행한 후에 결과 Form에 반영하기 위한 Thread.</description>
     </item>
     
     <item>
@@ -239,7 +265,9 @@ Sometimes, firewalls refuse to allow SSH connections entirely.</description>
       <pubDate>Wed, 20 Oct 2021 13:59:29 +0900</pubDate>
       
       <guid>https://nocturover.github.io/hello/sample/</guid>
-      <description>Overview  Sample Title  first code third Troubleshooting         Summary  Reference Link
+      <description>Overview  Sample Title  first code third 
+Troubleshooting         
+Summary  Reference Link
 HomePage LInk
 </description>
     </item>
@@ -272,6 +300,32 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
 2
 단축키를 익히는 것 또한 언제나 필요하다.
 삶의 편리함이 주된 목표가 되지는 않는다.</description>
+    </item>
+    
+    <item>
+      <title>05. 구토감</title>
+      <link>https://nocturover.github.io/daily/05_/</link>
+      <pubDate>Fri, 29 Oct 2021 18:25:31 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/05_/</guid>
+      <description>1
+구토감이 밀려온다.
+이런 감정은 머리 끝까지 나의 감정을 표출하듯 달아오르고 온몸의 열기가 가득하다.
+상황이 잘못된 것은 아니다.
+에너지도 남아있고 방법을 알고 있는 듯한 느낌도 가지고 있다.</description>
+    </item>
+    
+    <item>
+      <title>05. Connection Pooling</title>
+      <link>https://nocturover.github.io/csharp/db/05_connection_pooling/</link>
+      <pubDate>Fri, 29 Oct 2021 17:30:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/db/05_connection_pooling/</guid>
+      <description>Overview  MariaDB DBMS의 성능향상을 위한 Connection pooling방식에 대해 정리
+Connection Pooling  개념   Pooling방식은 DBMS 상호작용 방식에서 connection의 Open / Close의 반복적 호출로 걸리는 오베헤드를 감소시키는 성능향상에 기인될 수 있다.
+  연결을 미리 열어두고, 들어오는 각각의 command수행에 대응하여 수행할 수 있도록 arrangement 한다.
+  최대로 설정된 연결 개수에 도달하는 명령수행 요청이 들어오게 된다면, queue의 형태로 해당 수행일정을 계획할 수 있다.
+  MSDN 의 설명에 의하면 Close() Dispose()의 연결 종료와 관련하여 주 메서드(connection, datareader) 등에 다루지 말고, Finalize method 를 생성하고 관리하라고 지침한다.</description>
     </item>
     
   </channel>

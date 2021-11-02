@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	03. SQL 캡슐화 :: 1998
+	05. Connection Pooling :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>03. SQL 캡슐화 :: 1998</title>
+<title>05. Connection Pooling :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/"
+  <body data-url="/csharp/db/05_connection_pooling/"
 
   class="">
 
@@ -576,7 +576,7 @@
   
     <li class="active">
       
-        03. SQL 캡슐화
+        05. Connection Pooling
       
     </li>
 
@@ -597,7 +597,7 @@
 		
 
 		
-			<h1>DB<span>03. SQL 캡슐화</span></h1>
+			<h1>DB<span>05. Connection Pooling</span></h1>
         
 
 			
@@ -618,7 +618,7 @@
 	            	</li>
 	            		
 	        			
-	            	<li class="active">
+	            	<li >
 	            		<a title="$pagetitle" href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/">03. SQL 캡슐화</a>
 	            	</li>
 	            		
@@ -628,7 +628,7 @@
 	            	</li>
 	            		
 	        			
-	            	<li >
+	            	<li class="active">
 	            		<a title="$pagetitle" href="/csharp/db/05_connection_pooling/">05. Connection Pooling</a>
 	            	</li>
 	        	</nav> 
@@ -646,26 +646,14 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#architecture">Architecture</a>
+    <li><a href="#connection-pooling">Connection Pooling</a>
       <ul>
-        <li><a href="#목적--캡슐화">목적 :: 캡슐화</a></li>
-        <li><a href="#디자인">디자인</a></li>
-      </ul>
-    </li>
-    <li><a href="#warning">Warning</a>
-      <ul>
-        <li><a href="#한정자">한정자</a></li>
-        <li><a href="#execute-command">Execute command</a></li>
-        <li><a href="#mysqlconnection">MySqlConnection</a></li>
+        <li><a href="#개념">개념</a></li>
+        <li><a href="#code">code</a></li>
+        <li><a href="#third">third</a></li>
       </ul>
     </li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#code">Code</a>
-      <ul>
-        <li><a href="#mariadbcs"><code>MariaDB.cs</code></a></li>
-        <li><a href="#description">Description</a></li>
-      </ul>
-    </li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -681,238 +669,53 @@
 	<div class="content">
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<p><code>MairaDB</code> - <code>C#</code>의 연동 및 기타 메서드를 담는 클래스 생성</p>
+<p><code>MariaDB</code> DBMS의 성능향상을 위한 <code>Connection pooling</code>방식에 대해 정리</p>
 <br/>
-<h2 ref="architecture" >Architecture</h2><a class="anchor" id="architecture"></a>
+<br/>
+<h2 ref="connection-pooling" >Connection Pooling</h2><a class="anchor" id="connection-pooling"></a>
 <hr>
-<h3 ref="목적--캡슐화" >목적 :: 캡슐화</h3><a class="anchor" id="목적--캡슐화"></a>
+<h3 ref="개념" >개념</h3><a class="anchor" id="개념"></a>
 <ul>
-<li><code>DB</code>의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임.</li>
-<li>단, (단일적 &amp;&amp; 외부 사용 필수) 요소는 <code>static</code> 허용</li>
-<li>처리 방식의 고수준화</li>
-</ul>
-<h3 ref="디자인" >디자인</h3><a class="anchor" id="디자인"></a>
-<ul>
-<li><code>Member</code> - <code>Property</code> - <code>Structure</code> - <code>Method</code> - <code>TestCase</code></li>
-</ul>
-<br/>
-<h2 ref="warning" >Warning</h2><a class="anchor" id="warning"></a>
-<hr>
-<h3 ref="한정자" >한정자</h3><a class="anchor" id="한정자"></a>
-<ul>
-<li>한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.
-<ul>
-<li><code>private</code> - 소스 코드 내에서만 Retrieving</li>
-<li><code>public</code> - 인스턴스로 외부에서 적용될 때</li>
-<li><code>static</code> - global setting의 개념 (단일성 - <a href="https://ivorycirrus.github.io/TIL/csharp-singleton/">singleton Design pattern</a>)</li>
-</ul>
+<li>
+<p><code>Pooling</code>방식은 <code>DBMS</code> 상호작용 방식에서 connection의 <code>Open</code> / <code>Close</code>의 반복적 호출로 걸리는 오베헤드를 감소시키는 성능향상에 기인될 수 있다.</p>
 </li>
-</ul>
-<h3 ref="execute-command" >Execute command</h3><a class="anchor" id="execute-command"></a>
-<ul>
-<li>반환값에 따른 방법 적용
-<ul>
-<li><code>ExecuteScalar</code> - 1개 요소</li>
-<li><code>ExecuteReader</code> - next/current 방식</li>
-<li><code>ExecuteAdapter</code> - fill in Dataset[Datatable]</li>
-</ul>
+<li>
+<p>연결을 미리 열어두고, 들어오는 각각의 <code>command</code>수행에 대응하여 수행할 수 있도록 arrangement 한다.</p>
 </li>
-</ul>
-<h3 ref="mysqlconnection" >MySqlConnection</h3><a class="anchor" id="mysqlconnection"></a>
-<ul>
-<li><code>conn</code> 할당 후 <code>conn.Open()</code> <code>conn.Close()</code> 의 사용 패턴 주의 필요.
-<ul>
-<li><code>SQL</code> service를 담당하는 <code>mysqld.exe</code> 서비스의 중지가 발생될 수 있음
-<ul>
-<li>Err - host err</li>
-<li><code>C:\Program Files\MariaDB 10.5\bin\mysqld.exe</code> 파일 직접 실행</li>
-<li>Or, <code>service start mysqld</code> 명령문 실행</li>
-</ul>
+<li>
+<p>최대로 설정된 연결 개수에 도달하는 명령수행 요청이 들어오게 된다면, <code>queue</code>의 형태로 해당 수행일정을 계획할 수 있다.</p>
 </li>
-<li>각 Execute command 시점 전 후로 커넥션 제어 필요
-<ul>
-<li><code>using</code> 문 사용</li>
-<li>Or,  수동 <code>Open()</code> / <code>Close()</code></li>
-<li>Or, <code>Connection Pooling</code> 방식 사용</li>
-</ul>
-</li>
-</ul>
+<li>
+<p><code>MSDN</code> 의 <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql-server-connection-pooling?redirectedfrom=MSDN">설명</a>에 의하면 <code>Close()</code> <code>Dispose()</code>의 연결 종료와 관련하여 주 메서드(connection, datareader) 등에 다루지 말고, <code>Finalize</code> method 를 생성하고 관리하라고 지침한다.</p>
 </li>
 </ul>
 <br/>
+<h3 ref="code" >code</h3><a class="anchor" id="code"></a>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">
+</code></pre></div><br/>
+<h3 ref="third" >third</h3><a class="anchor" id="third"></a>
+<p><br/><br/></p>
 <h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
 <hr>
-<br/>
-<h2 ref="code" >Code</h2><a class="anchor" id="code"></a>
-<hr>
-<h3 ref="mariadbcs" ><code>MariaDB.cs</code></h3><a class="anchor" id="mariadbcs"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.Collections.Generic;
-<span style="color:#66d9ef">using</span> System.Data;
-<span style="color:#66d9ef">using</span> System.Linq;
-<span style="color:#66d9ef">using</span> System.Text;
-<span style="color:#66d9ef">using</span> System.Threading.Tasks;
-<span style="color:#66d9ef">using</span> MySql.Data.MySqlClient;
 
-<span style="color:#66d9ef">namespace</span> UNIT_TEST_DB
-{
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MariaDB</span>
-    {
-        <span style="color:#66d9ef">private</span> MySqlConnection conn = <span style="color:#66d9ef">null</span>;
-        <span style="color:#66d9ef">private</span> MySqlCommand command = <span style="color:#66d9ef">null</span>;
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> connString;
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> server;
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> port;
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> db;
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> id;
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> pwd;
 
-        <span style="color:#66d9ef">public</span> MariaDB(<span style="color:#66d9ef">string</span> server, <span style="color:#66d9ef">int</span> port, <span style="color:#66d9ef">string</span> db, <span style="color:#66d9ef">string</span> id, <span style="color:#66d9ef">string</span> pwd)
-        {
-            <span style="color:#66d9ef">this</span>.server = server;
-            <span style="color:#66d9ef">this</span>.port = port;
-            <span style="color:#66d9ef">this</span>.db = db;
-            <span style="color:#66d9ef">this</span>.id = id;
-            <span style="color:#66d9ef">this</span>.pwd = pwd;
+<div class="alert warning" role="alert"></div>
 
-            <span style="color:#66d9ef">this</span>.connString = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
-                                           <span style="color:#66d9ef">this</span>.server, <span style="color:#66d9ef">this</span>.port.ToString(), <span style="color:#66d9ef">this</span>.db, <span style="color:#66d9ef">this</span>.id, <span style="color:#66d9ef">this</span>.pwd);
-            <span style="color:#66d9ef">this</span>.conn = <span style="color:#66d9ef">new</span> MySqlConnection(connString);
-        }
-        ~MariaDB()
-        {
-            conn.Close();
-            conn.Dispose();
-        }
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> connectDBMS()
-        {
-            <span style="color:#66d9ef">try</span>
-            {
-                <span style="color:#66d9ef">if</span> (conn == <span style="color:#66d9ef">null</span>)
-                {
-                    conn = <span style="color:#66d9ef">new</span> MySqlConnection(connString);
-                }
-                <span style="color:#66d9ef">if</span> (conn.State == ConnectionState.Closed)
-                {
-                    conn.Open();
-                }
-            }
-            <span style="color:#66d9ef">catch</span> (Exception connErr)
-            {
-                Console.WriteLine(<span style="color:#e6db74">&#34;connErr : &#34;</span> + connErr);
-            }
-        }
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> disconnectDBMS()
-        {
-            <span style="color:#66d9ef">if</span> (DBMSstate == ConnectionState.Open)
-            {
-                conn.Close();
-            }
-        }
-
-        <span style="color:#66d9ef">public</span> Array connInfo
-        {
-            <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String[] { <span style="color:#66d9ef">this</span>.server, <span style="color:#66d9ef">this</span>.port.ToString(), <span style="color:#66d9ef">this</span>.db, <span style="color:#66d9ef">this</span>.id, <span style="color:#66d9ef">this</span>.pwd }; }
-        }
-        <span style="color:#66d9ef">public</span> ConnectionState DBMSstate
-        {
-            <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> conn.State; }
-        }
-
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> setData(<span style="color:#66d9ef">string</span> queryString)
-        {
-            conn.Open();
-            command = <span style="color:#66d9ef">new</span> MySqlCommand(queryString, conn);
-            <span style="color:#66d9ef">try</span>
-            {
-                command.ExecuteNonQuery();
-            }
-            <span style="color:#66d9ef">catch</span> (MySqlException sqlSetErr)
-            {
-                Console.WriteLine(<span style="color:#e6db74">&#34;sqlSetErr : &#34;</span> + sqlSetErr);
-            }
-            conn.Close();
-        }
-
-        <span style="color:#66d9ef">public</span> DataSet getData_dataset(<span style="color:#66d9ef">string</span> queryString)
-        {
-            conn.Open();
-            DataSet ds = <span style="color:#66d9ef">new</span> DataSet(<span style="color:#e6db74">&#34;mainSession&#34;</span>);
-            command = <span style="color:#66d9ef">new</span> MySqlCommand(queryString, conn);
-            <span style="color:#66d9ef">using</span> (MySqlDataAdapter adapter = <span style="color:#66d9ef">new</span> MySqlDataAdapter(command))
-            {
-                adapter.Fill(ds, <span style="color:#e6db74">&#34;userTable&#34;</span>);
-            }
-            conn.Close();
-            <span style="color:#66d9ef">return</span> ds;
-        }
-        <span style="color:#66d9ef">public</span> List&lt;<span style="color:#66d9ef">string</span>&gt; getData_list(<span style="color:#66d9ef">string</span> queryString)
-        {
-            conn.Open();
-            List&lt;<span style="color:#66d9ef">string</span>&gt; fieldNames = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
-            List&lt;<span style="color:#66d9ef">string</span>&gt; datas = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
-            <span style="color:#66d9ef">try</span>
-            {
-                command = <span style="color:#66d9ef">new</span> MySqlCommand(queryString, conn);
-                <span style="color:#66d9ef">using</span> (MySqlDataReader reader = command.ExecuteReader())
-                {
-                    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> fieldCnt = <span style="color:#ae81ff">0</span>; fieldCnt &lt; reader.FieldCount; fieldCnt++)
-                    {
-                        fieldNames.Add(reader.GetName(fieldCnt));
-                    }
-                    <span style="color:#66d9ef">while</span> (reader.Read())
-                    {
-                        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> fieldCnt = <span style="color:#ae81ff">0</span>; fieldCnt &lt; reader.FieldCount; fieldCnt++)
-                        {
-                            datas.Add(reader[fieldCnt].ToString());
-                        }
-                    }
-                }
-            }
-            <span style="color:#66d9ef">catch</span> (MySqlException sqlGetErr)
-            {
-                Console.WriteLine(<span style="color:#e6db74">&#34;sqlGetErr : &#34;</span> + sqlGetErr);
-            }
-            conn.Close();
-            <span style="color:#66d9ef">return</span> datas;
-        }
-    }
-}
-</code></pre></div><h3 ref="description" >Description</h3><a class="anchor" id="description"></a>
 <ul>
-<li>2가지 Type 지원</li>
+<li>
+<ul>
+<li></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">public</span> DataSet getData_dataset(<span style="color:#66d9ef">string</span> queryString){ <span style="color:#66d9ef">return</span> ds; }
-<span style="color:#66d9ef">public</span> List&lt;<span style="color:#66d9ef">string</span>&gt; getData_list(<span style="color:#66d9ef">string</span> queryString){ <span style="color:#66d9ef">return</span> datas; }
-</code></pre></div><ul>
-<li>FieldCount를 이용한 column name 취득</li>
+</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">fieldNames.Add(reader.GetName(fieldCnt));
-</code></pre></div><ul>
-<li>FieldCount를 이용한 열 수에 따른 데이터 자동 반환</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"> <span style="color:#66d9ef">while</span> (reader.Read())
- {
-     <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> fieldCnt = <span style="color:#ae81ff">0</span>; fieldCnt &lt; reader.FieldCount; fieldCnt++)
-     {
-     	datas.Add((<span style="color:#66d9ef">string</span>)reader[fieldCnt]);
-     }
- }
-</code></pre></div><ul>
-<li>Datatable의 데이터 접근 방식 다각화</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">Console.WriteLine(ds2.Tables[<span style="color:#e6db74">&#34;comp2&#34;</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>] + <span style="color:#e6db74">&#34; &#34;</span> + ds2.Tables[<span style="color:#ae81ff">0</span>].Rows[^<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]);
-</code></pre></div><br/>
+<p><br/><br/></p>
 <h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
 <hr>
 
 
-<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
-<p><a href="https://www.csharpstudy.com/Data/SQL-dataadapter.aspx">SQL-Dataadapter</a></p>
-<p><a href="https://www.csharpstudy.com/Data/SQL-connection-pooling.aspx">SQL-Connection Pooling</a></p>
-<p><a href="https://docs.microsoft.com/ko-kr/dotnet/api/system.data.datacolumn.columnname?view=net-5.0">Datatable-column</a></p>
-</div>
+<div class="alert dark" role="alert"><span   class="badge badge-secondary">Reference Link</span></div>
 
+<br/>
 
 		</div>
 
@@ -950,32 +753,20 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/">03. SQL 캡슐화</a></li>
+            <li><a href="/csharp/db/05_connection_pooling/">05. Connection Pooling</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#architecture">Architecture</a>
+    <li><a href="#connection-pooling">Connection Pooling</a>
       <ul>
-        <li><a href="#목적--캡슐화">목적 :: 캡슐화</a></li>
-        <li><a href="#디자인">디자인</a></li>
-      </ul>
-    </li>
-    <li><a href="#warning">Warning</a>
-      <ul>
-        <li><a href="#한정자">한정자</a></li>
-        <li><a href="#execute-command">Execute command</a></li>
-        <li><a href="#mysqlconnection">MySqlConnection</a></li>
+        <li><a href="#개념">개념</a></li>
+        <li><a href="#code">code</a></li>
+        <li><a href="#third">third</a></li>
       </ul>
     </li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#code">Code</a>
-      <ul>
-        <li><a href="#mariadbcs"><code>MariaDB.cs</code></a></li>
-        <li><a href="#description">Description</a></li>
-      </ul>
-    </li>
     <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
@@ -1051,7 +842,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 27 October 2021
+		          Last update on 29 October 2021
 		      </li>
 		    
 		    

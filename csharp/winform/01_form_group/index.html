@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-10-27T20:42:30 KST">
+<meta name="revised" content="2021-11-02T19:47:27 KST">
 <meta name="description" content="C#-Winform-FormGroup">
 
 
@@ -179,7 +179,7 @@
         
       
 			
-          <a href="/daily/">Daily&nbsp;(5)</a>
+          <a href="/daily/">Daily&nbsp;(6)</a>
       
     </li>
     
@@ -294,24 +294,9 @@
         
       
 			
-          <a href="/csharp/">C#&nbsp;(8)</a>
+          <a href="/csharp/">C#&nbsp;(11)</a>
       
         <ul>
-              
-
-    <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item
-        item_level_$level
-        ">
-
-      
-      
-      
-      
-          <a href="/csharp/db/">DB</a>
-      
-        
-      
-    </li>
               
 
     <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item parent active
@@ -323,6 +308,21 @@
       
       
           <a href="/csharp/winform/">Winform</a>
+      
+        
+      
+    </li>
+              
+
+    <li data-nav-id="https://nocturover.github.io/csharp/db/" class="dd-item
+        item_level_$level
+        ">
+
+      
+      
+      
+      
+          <a href="/csharp/db/">DB</a>
       
         
       
@@ -611,6 +611,16 @@
 	            	<li class="active">
 	            		<a title="$pagetitle" href="/csharp/winform/01_form_group/">01_Form_Group</a>
 	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/csharp/winform/02_event/">02. C# Event</a>
+	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/csharp/winform/03_winform_thread/">03. Thread/Invoke/BeginInvoke</a>
+	            	</li>
 	        	</nav> 
 		
 	
@@ -655,6 +665,7 @@
 <h3 ref="premise" >Premise</h3><a class="anchor" id="premise"></a>
 <ul>
 <li><code>partial class</code>의 작성</li>
+<li><code>.csproj.user</code> 파일 <code>itemgroup</code> 항목 수정</li>
 </ul>
 <br/>
 <h3 ref="code" >Code</h3><a class="anchor" id="code"></a>
@@ -688,22 +699,16 @@
 <div class="alert warning" role="alert"><strong>1</strong> <code>.csproj.user</code> 의 파일의 변동으로 자동 그륩 해제 혹은 일부 그륩 해제</div>
 
 <ul>
-<li>
-<p><strong>같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영</strong></p>
-</li>
-<li>
-<p>main Form 을 제외하고 하위 form들의 DependentUpon을 포함한 모든 커스텀 속성을 주석처리 후 저장</p>
-</li>
-<li>
-<p>주석 처리 해제 후 저장</p>
-</li>
-<li>
-<p>반영 확인</p>
-</li>
+<li><strong>같은 Parent form을 dependent하는 하위 폼들은 한 번에 load되어야 정상 반영</strong></li>
+<li>main Form 을 제외하고 하위 form들의 DependentUpon을 포함한 모든 커스텀 속성을 주석처리 후 저장</li>
+<li>주석 처리 해제 후 저장</li>
+<li>반영 확인</li>
 </ul>
 
 
-<div class="alert warning" role="alert"><strong>2</strong> 그륩화된 폼 복사 시 발생하는 오류</div>
+<div class="alert warning" role="alert"><p><strong>2-1</strong> 그륩화된 폼 복사 시 발생하는 오류</p>
+<p><strong>2-2</strong>  Parial Form Class의 출력 중복 오류</p>
+</div>
 
 <ul>
 <li>
@@ -729,10 +734,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/python/" title="Python" style="margin-right: 0px;">
+		<a class="next" href="/csharp/db/" title="DB" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Python</label>
+                <label>DB</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -784,15 +789,15 @@
 	<p class="list-box">
 		
 		
+			<a class="list" href="/csharp/winform/03_winform_thread/"> > <strong>10.31</strong> | 03. Thread/Invoke/BeginInvoke </a> <br/> 
+		
+			<a class="list" href="/daily/05_/"> > <strong>10.29</strong> | 05. 구토감 </a> <br/> 
+		
+			<a class="list" href="/csharp/db/05_connection_pooling/"> > <strong>10.29</strong> | 05. Connection Pooling </a> <br/> 
+		
+			<a class="list" href="/csharp/winform/02_event/"> > <strong>10.28</strong> | 02. C# Event </a> <br/> 
+		
 			<a class="list" href="/csharp/db/04_db_%EC%A0%81%EC%9E%AC_%EB%B0%8F_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/"> > <strong>10.27</strong> | 04. DB 적재 및 불러오기 </a> <br/> 
-		
-			<a class="list" href="/web/hugo/03_shortcodes/"> > <strong>10.27</strong> | 03. ShortCodes </a> <br/> 
-		
-			<a class="list" href="/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/"> > <strong>10.27</strong> | 03. SQL 캡슐화 </a> <br/> 
-		
-			<a class="list" href="/csharp/winform/01_form_group/"> > <strong>10.25</strong> | 01_Form_Group </a> <br/> 
-		
-			<a class="list" href="/csharp/db/02_sql_%EB%AC%B8%EB%B2%95/"> > <strong>10.24</strong> | 02. SQL 문법 </a> <br/> 
 		
 	</p>
 </a>
