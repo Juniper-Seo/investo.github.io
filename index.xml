@@ -6,7 +6,16 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Nov 2021 18:45:31 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Nov 2021 18:14:10 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01. Progress</title>
+      <link>https://nocturover.github.io/project/investo/progress/01_progress/</link>
+      <pubDate>Sun, 28 Nov 2021 18:14:10 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/project/investo/progress/01_progress/</guid>
+      <description>Purpose Progress CheckList </description>
+    </item>
+    
     <item>
       <title>01_Form_Group</title>
       <link>https://nocturover.github.io/csharp/winform/01_form_group/</link>

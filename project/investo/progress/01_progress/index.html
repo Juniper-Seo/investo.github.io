@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	02. C# Event :: 1998
+	01. Progress :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2021-11-28T18:15:16 KST">
+<meta name="revised" content="2021-11-28T18:15:17 KST">
 <meta name="description" content="">
 
 
 
-<title>02. C# Event :: 1998</title>
+<title>01. Progress :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/csharp/winform/02_event/"
+  <body data-url="/project/investo/progress/01_progress/"
 
   class="">
 
@@ -216,14 +216,15 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/project/" class="dd-item haschildren
+    <li data-nav-id="https://nocturover.github.io/project/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
 			
@@ -232,7 +233,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/project/investo/" class="dd-item alwaysopen haschildren
+    <li data-nav-id="https://nocturover.github.io/project/investo/" class="dd-item parent alwaysopen haschildren
         item_level_$level
         ">
 
@@ -263,7 +264,7 @@
     </li>
               
 
-    <li data-nav-id="https://nocturover.github.io/project/investo/progress/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/project/investo/progress/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -282,15 +283,14 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item parent haschildren
+    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
 			
@@ -299,7 +299,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item parent active
+    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
         item_level_$level
         ">
 
@@ -551,6 +551,9 @@
 		
   
   	
+		
+  
+  	
 	<li >
       <a class="text-link" href="https://nocturover.github.io/">
         Home
@@ -559,16 +562,24 @@
 	
   
     <li class="">
-      <a class="text-link" href="/csharp/">
-        C#
+      <a class="text-link" href="/project/">
+        Project
       </a>
     </li>
 	
   	
   
     <li class="">
-      <a class="text-link" href="/csharp/winform/">
-        Winform
+      <a class="text-link" href="/project/investo/">
+        Investo
+      </a>
+    </li>
+	
+  	
+  
+    <li class="">
+      <a class="text-link" href="/project/investo/progress/">
+        Progress
       </a>
     </li>
 	
@@ -576,7 +587,7 @@
   
     <li class="active">
       
-        02. C# Event
+        01. Progress
       
     </li>
 
@@ -597,7 +608,7 @@
 		
 
 		
-			<h1>Winform<span>02. C# Event</span></h1>
+			<h1>Progress<span>01. Progress</span></h1>
         
 
 			
@@ -608,18 +619,8 @@
 				<nav class="subpages">
 	            		
 	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/01_form_group/">01_Form_Group</a>
-	            	</li>
-	            		
-	        			
 	            	<li class="active">
-	            		<a title="$pagetitle" href="/csharp/winform/02_event/">02. C# Event</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/03_winform_thread/">03. Thread/Invoke/BeginInvoke</a>
+	            		<a title="$pagetitle" href="/project/investo/progress/01_progress/">01. Progress</a>
 	            	</li>
 	        	</nav> 
 		
@@ -635,15 +636,9 @@
 		</span>
 		<nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#event">Event</a>
-      <ul>
-        <li><a href="#개념">개념</a></li>
-        <li><a href="#code">code</a></li>
-      </ul>
-    </li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#summary">Summary</a></li>
+    <li><a href="#purpose">Purpose</a></li>
+    <li><a href="#progress">Progress</a></li>
+    <li><a href="#checklist">CheckList</a></li>
   </ul>
 </nav>
 	</div>
@@ -656,141 +651,9 @@
 
 
 	<div class="content">
-	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
-<hr>
-<p><code>C#</code> 문법 <code>Event</code>의 실사용 예제 기술</p>
-<p><br/><br/></p>
-<h2 ref="event" >Event</h2><a class="anchor" id="event"></a>
-<hr>
-<h3 ref="개념" >개념</h3><a class="anchor" id="개념"></a>
-<ul>
-<li>
-<p><code>event</code> 단어 자체의 의미로 접근</p>
-<ul>
-<li>특정 행위, 상황의 발생에 따른 신호 전달</li>
-<li>신호에 따른 정해진 행위 수행</li>
-</ul>
-</li>
-<li>
-<p><code>Delgate</code> (대리자) 는 메서드 자체를 지니고 있는 <code>행위 대리자</code></p>
-</li>
-<li>
-<p><code>Eventhandler</code>는 <code>행위 대리자</code>로 선언되며,</p>
-<ul>
-<li><code>행위 대리자</code>인 <code>Eventhandler</code>에 행위(Method)를 추가 혹은 제거하여 하나의 신호 발생원에 대응하여 수행</li>
-<li><code>object</code> /<code>EventArgs</code> 는 이벤트 신호원으로부터 개별적 특성을 정의</li>
-<li><code>Lambda</code>식을 사용하여 간결하게 메서드를 <code>Eventhandler</code>에 담을 수 있음.</li>
-</ul>
-</li>
-<li>
-<p><strong>Example</strong></p>
-<ul>
-<li>각 캡슐화된 객체의 연동을 수행 시 개별 변동 사항에 대한 타 객체 업데이트 수행 시
-<ul>
-<li>Form에서 Button 클릭 시 다크모드 전환 (전체 폼 업데이트 필요)
-<ul>
-<li>(on_event)Form button Click =&gt; (Eventhandler)((Method)다크모드 전환)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>SQL 내 연결 Disconnected 시 Status Ramp의 전환 및 재연결 필요</li>
-</ul>
-</li>
-</ul>
-<br/>
-<h3 ref="code" >code</h3><a class="anchor" id="code"></a>
-<h4 ref="mariadbcs" ><code>MariaDB.cs</code></h4><a class="anchor" id="mariadbcs"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
-<span style="color:#66d9ef">using</span> System.Collections.Generic;
-<span style="color:#66d9ef">using</span> System.Data;
-<span style="color:#66d9ef">using</span> System.Windows.Forms;
-<span style="color:#66d9ef">using</span> MySql.Data.MySqlClient;
-
-<span style="color:#75715e">// ver 1.1
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">namespace</span> TEST_DB
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DBEventArgs</span>
-    {
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> message;
-        <span style="color:#66d9ef">public</span> ConnectionState status;
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> database;
-    }
-    
-    <span style="color:#66d9ef">delegate</span> <span style="color:#66d9ef">void</span> DBEventHandler(<span style="color:#66d9ef">object</span> sender, DBEventArgs e);
-    
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MariaDB</span>
-    {
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> DBEventHandler On_EventStatusChanged;		<span style="color:#75715e">// sql conn 변화에 따른 이벤트 발생
-</span><span style="color:#75715e"></span>        
-        ~~<span style="color:#960050;background-color:#1e0010">생략</span>~~
-
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> connectDBMS(<span style="color:#66d9ef">string</span> server, <span style="color:#66d9ef">string</span> port, <span style="color:#66d9ef">string</span> db, <span style="color:#66d9ef">string</span> id, <span style="color:#66d9ef">string</span> pwd)
-        {
-            <span style="color:#66d9ef">this</span>.server = server;
-            <span style="color:#66d9ef">this</span>.port = port;
-            <span style="color:#66d9ef">this</span>.db = db;
-            <span style="color:#66d9ef">this</span>.id = id;
-            <span style="color:#66d9ef">this</span>.pwd = pwd;
-            <span style="color:#66d9ef">this</span>.connString = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
-                                           <span style="color:#66d9ef">this</span>.server, <span style="color:#66d9ef">this</span>.port, <span style="color:#66d9ef">this</span>.db, <span style="color:#66d9ef">this</span>.id, <span style="color:#66d9ef">this</span>.pwd);
-            <span style="color:#66d9ef">this</span>.conn = <span style="color:#66d9ef">new</span> MySqlConnection(connString);
-            On_EventStatusChanged(<span style="color:#66d9ef">this</span>, <span style="color:#66d9ef">new</span> DBEventArgs(){database=<span style="color:#66d9ef">this</span>.db, status=ConnectionState.Closed});	<span style="color:#75715e">// 상태 변화에 따른 이벤트 신호 발생 1
-</span><span style="color:#75715e"></span>        }
-        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> disconnectDBMS()
-        {
-            <span style="color:#66d9ef">this</span>.conn = <span style="color:#66d9ef">null</span>;
-            On_EventStatusChanged(<span style="color:#66d9ef">this</span>, <span style="color:#66d9ef">new</span> DBEventArgs(){database=<span style="color:#66d9ef">this</span>.db, status=ConnectionState.Broken});	<span style="color:#75715e">// 상태 변화에 따른 이벤트 신호 발생 2
-</span><span style="color:#75715e"></span>        }
-    }
-}
-</code></pre></div><h4 ref="mainform" ><code>MainForm</code></h4><a class="anchor" id="mainform"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">namespace</span> TEST_FORM
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">partial</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ChildConnectionForm</span> : Form
-    {
-        ~~<span style="color:#960050;background-color:#1e0010">생략</span>~~
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ChildFormLoad(<span style="color:#66d9ef">object</span> sender, EventArgs e)
-        {
-            DB.mariaDB.On_EventStatusChanged += <span style="color:#66d9ef">new</span> DBEventHandler(DBEvent_ChangedStatus); 	<span style="color:#75715e">// 등록
-</span><span style="color:#75715e"></span>        }
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ChildFormClosed(<span style="color:#66d9ef">object</span> sender, FormClosedEventArgs e)
-        {
-            DB.mariaDB.On_EventStatusChanged -= <span style="color:#66d9ef">new</span> DBEventHandler(DBEvent_ChangedStatus);	<span style="color:#75715e">// 해제
-</span><span style="color:#75715e"></span>        }        
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> DBEvent_ChangedStatus(<span style="color:#66d9ef">object</span> sender, DBEventArgs e)
-        {							<span style="color:#75715e">// sender는 MariaDB.cs의 인수인 해당 클래스 자체가 전달;
-</span><span style="color:#75715e"></span>						changeStatusRamp(color=<span style="color:#e6db74">&#34;red&#34;</span>);
-            connDB(<span style="color:#e6db74">&#34;127.0.0.1&#34;</span>);
-            Log.Write(<span style="color:#e6db74">&#34;[*] Changed DB Conn status. {0} {1}&#34;</span>, e.stauts.ToString(), e.database);
-        }
-    }
-}
-
-</code></pre></div><br/>
-<br/>
-<h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
-<hr>
-
-
-<div class="alert warning" role="alert">Event발생 시 object null 오류</div>
-
-<ul>
-<li>Event발생 시 행위를 수행하는 자가 존재하지 않는 경우
-<ul>
-<li><code>+= new Eventhandler(sender, e)</code> 로 발생 되기 전 등록(=Form Load Or 객체 생성 시)</li>
-</ul>
-</li>
-</ul>
-<br/>
-<br/>
-<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
-<hr>
-
-
-<div class="alert dark" role="alert"><span   class="badge badge-secondary">Reference Link</span></div>
-
-<br/>
+	    <h2 ref="purpose" >Purpose</h2><a class="anchor" id="purpose"></a>
+<h2 ref="progress" >Progress</h2><a class="anchor" id="progress"></a>
+<h2 ref="checklist" >CheckList</h2><a class="anchor" id="checklist"></a>
 
 		</div>
 
@@ -801,10 +664,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/csharp/db/" title="DB" style="margin-right: 0px;">
+		<a class="next" href="/csharp/" title="C#" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>DB</label>
+                <label>C#</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -828,20 +691,14 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/csharp/winform/02_event/">02. C# Event</a></li>
+            <li><a href="/project/investo/progress/01_progress/">01. Progress</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#event">Event</a>
-      <ul>
-        <li><a href="#개념">개념</a></li>
-        <li><a href="#code">code</a></li>
-      </ul>
-    </li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#summary">Summary</a></li>
+    <li><a href="#purpose">Purpose</a></li>
+    <li><a href="#progress">Progress</a></li>
+    <li><a href="#checklist">CheckList</a></li>
   </ul>
 </nav>
 </div>
@@ -916,7 +773,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 28 October 2021
+		          Last update on 28 November 2021
 		      </li>
 		    
 		    
