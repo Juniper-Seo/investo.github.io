@@ -6,14 +6,29 @@
     <description>Recent content in Progress on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Nov 2021 18:14:10 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/project/investo/progress/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Dec 2021 14:14:10 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/project/investo/progress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. Progress</title>
       <link>https://nocturover.github.io/project/investo/progress/01_progress/</link>
       <pubDate>Sun, 28 Nov 2021 18:14:10 +0900</pubDate>
       
       <guid>https://nocturover.github.io/project/investo/progress/01_progress/</guid>
-      <description>Purpose Progress CheckList </description>
+      <description>Purpose Progress    Scheduler
+  Windows scheduler list Scheduler add / edit / remove configuration with Queue manager Managing All Server Scheduler list and Editable system Logging for start/running/end time with Error code send Log to Telegram / Socket / Web socket for user interface     API
+  Scrape API Data (Daily/Tick/Financial Statement) as Command Scrape API Data (Financial Statement) as Win32API Click and Save File Dialog Scrape Real time data for avoiding API Transaction limitation Analyze Real time data with Python/C# DataFame and view Data Visualization Load and Execute Conditional state for sub Ordering system     Web</description>
+    </item>
+    
+    <item>
+      <title>01. Plan</title>
+      <link>https://nocturover.github.io/project/investo/progress/02_plan/</link>
+      <pubDate>Wed, 08 Dec 2021 14:14:10 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/project/investo/progress/02_plan/</guid>
+      <description>Investo  1.
+현 상황에서 재료의 준비상태를 확인한다.
+초창기 해당 프로젝트의 완성 이미지는 다음과 같았다.
+a. WinForm UI를 이용한 System 사용자 컨트롤 b. Socket 통신을 통한 최소 3대 컴퓨터 간의 Queue 관리 시스템 ​	가) Main Com(Order Server) : Open Api 주 거래 계좌를 이용해 거래(체결) 및 SS, AS의 총 Queue 관리
+​	나) Scrape Server : Web/API 내 데이터를 Win Scheduler에 따라 수집하고 Database에 적재 + OS에서 수행한 체결데이터(리포트 관리)를 Database에 적재 후 당일 리포트 발행 + Open API 실시간 데이터 수집 및 직전일 데이터 마이그레이션</description>
     </item>
     
   </channel>

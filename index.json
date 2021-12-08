@@ -1,17 +1,17 @@
 [
 {
-	"uri": "https://nocturover.github.io/project/investo/progress/01_progress/",
-	"title": "01. Progress",
-	"tags": [],
-	"description": "",
-	"content": "Purpose Progress CheckList "
-},
-{
 	"uri": "https://nocturover.github.io/project/investo/",
 	"title": "Investo",
 	"tags": [],
 	"description": "Project-Investo",
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Trouble shooting 과 진척도를 기록하는 공간입니다.\n"
+},
+{
+	"uri": "https://nocturover.github.io/project/investo/progress/01_progress/",
+	"title": "01. Progress",
+	"tags": [],
+	"description": "",
+	"content": "Purpose Progress    Scheduler\n  Windows scheduler list Scheduler add / edit / remove configuration with Queue manager Managing All Server Scheduler list and Editable system Logging for start/running/end time with Error code send Log to Telegram / Socket / Web socket for user interface     API\n  Scrape API Data (Daily/Tick/Financial Statement) as Command Scrape API Data (Financial Statement) as Win32API Click and Save File Dialog Scrape Real time data for avoiding API Transaction limitation Analyze Real time data with Python/C# DataFame and view Data Visualization Load and Execute Conditional state for sub Ordering system     Web\n  Scrape Web contents (Financial Statement/People Thought) using Selenium nuget Scrape Web contents (Financial Statement/People Thought) using Python Requests Lib     Telegram / Site\n  Show Basic Report as .Docs or .Xls Provide that Stop all ordering system called Emergency Stop Receive message or command that can send socket from new client of Ordering Server Set all Configuration for Time Scheduler Send Screenshot to remote user that control window task status     DB\n  Save and Load on Local/Remote server order to Analyzing, Ordering, Logging, Back Testing etc.     Check List    Strategies\n  Metacognition Robust Results     Strategy - Parameters\n  Change value in Parameters for testing after market Automatically Change value and pronunciate Optimaized Result     "
 },
 {
 	"uri": "https://nocturover.github.io/csharp/winform/",
@@ -61,6 +61,13 @@
 	"tags": [],
 	"description": "Project-Investo-Idea",
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Idea Archive 공간입니다.\n​\n"
+},
+{
+	"uri": "https://nocturover.github.io/project/investo/progress/02_plan/",
+	"title": "01. Plan",
+	"tags": [],
+	"description": "",
+	"content": "Investo  1.\n현 상황에서 재료의 준비상태를 확인한다.\n초창기 해당 프로젝트의 완성 이미지는 다음과 같았다.\na. WinForm UI를 이용한 System 사용자 컨트롤 b. Socket 통신을 통한 최소 3대 컴퓨터 간의 Queue 관리 시스템 ​\t가) Main Com(Order Server) : Open Api 주 거래 계좌를 이용해 거래(체결) 및 SS, AS의 총 Queue 관리\n​\t나) Scrape Server : Web/API 내 데이터를 Win Scheduler에 따라 수집하고 Database에 적재 + OS에서 수행한 체결데이터(리포트 관리)를 Database에 적재 후 당일 리포트 발행 + Open API 실시간 데이터 수집 및 직전일 데이터 마이그레이션\n​\t{{emoji}}:star:{{/emoji}}\u0026gt;다) Analyze Server : 직전일 데이터 / 당일 비정규 데이터 / 실시간 거래량 데이터 / 실시간 매수인 데이터 등 가용 가능 데이터 표준화 분석 후 ..\nAnalyze Server  [캘리 법칙 / Position Size / Portfolio Ratio / Montecarlo Method 등 매매 접근 전략] +\n  [Market Winner Section / 무한 가격 분할 매수 전략 / 승률 비례 종목 무한 분할 매수 전략 / (역)추세추종 전략(터틀) / 시계열 패널티 팩터 전략 / 이슈기반 탑-다운 / 사이클 기반 탑-다운 / 재무재표 기반 중장기(배당률,안정성,성장성,개발비,Valuation 등) / 근래 수혜주,대체주 전략 / 스프레드 차익거래 / GDP,금리,수공급 거시 경제 기반 사이클 섹터 매매 전략 / ETF xX 레버리지 무한매수 전략 / Mdd 백테스트 기반 승률 포지션 기반 종합 전략 / 헤지전략(콜,풋 후 변동성 기반 리밸런싱 무한 반복 : 주식-코인,대체재,채권) / 상관관계 헤지 / 스프레드 선형회귀 전략 / 주택공급량 분석 기반 건설,지주,사모,원자재납품,부동산중개업황 섹터 세부 접근 매매 / 행동경제학 기반 매매 / 직전일 미증시 및 중,홍콩 증시 기반 섹터 예상 타이밍 매매 / 지지 저항 선 롤링 계산 기반 약한 추세추종, 볼린저 / 호가총량 행동경제학 / 매수근거 훼손 패널티 팩터 리밸런싱 매매 / 지수(벌크운임지수,채광,원자재물량,이송,날씨,수확량) 기반 매매 전략 / 대장주 재무제표 건정성 비교 매매 전략 / 사이클 전환 리밸런싱 / 전략 조합 파라미터 변동 종합 전략 등 매매 전략] +\n  [Srim 목표가격 산정 / Valuation 목표가격 산정 / 리밸런싱,헤지 / Mdd / Log Scale 등 매매 탈출전략]\n​\t매매접근전략 + 매매전략 + 매매탈출전략 을 조합하여 최적의 지속가능하며 동적인 알파 찾기 패턴을 고수\n  Strategies\rc. Exception A/S system ​\t가) 스크린샷 텔레그램 전송 및 텔레그램 소켓 통신을 통한 프로그램, 컴퓨터 재시작 + GC Collect 기능 제공\n​\t나) Emergency Stop : 모든 종목 청산\n​\t다) 시스템 이상(온도, 리소스 점유율) 로그 및 자동 재시작 기능\n"
 },
 {
 	"uri": "https://nocturover.github.io/project/investo/progress/",
