@@ -6,7 +6,7 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Dec 2021 14:14:10 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Dec 2021 18:33:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. Progress</title>
       <link>https://nocturover.github.io/project/investo/progress/01_progress/</link>
@@ -297,6 +297,16 @@ HomePage LInk
     </item>
     
     <item>
+      <title>04. TreeView Text Finder</title>
+      <link>https://nocturover.github.io/csharp/winform/04_treeview_finder/</link>
+      <pubDate>Sun, 12 Dec 2021 18:33:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/04_treeview_finder/</guid>
+      <description>Overview  Treeview 컨트롤에서 string text 검색을 통해 매치되는 값을 Highlight 시키는 방법을 기술.
+TreeView Features  특징  Treeview 는 기본적으로 Node단위의 객체가 엮여진 형태로 존재함으로, 이 Node내 Node를 탐색하는 과정을 풀어내야 한다. 탐색기능은 String Equal() Method를 이용할 수 있으며, 대/소문자 구별을 무시함으로써 보다 넓은 범위의 정보를 포획할 수 있다.  Code  tvCopied Treeview Control의 모든 Node를 탐색하여 매칭되는 Node의 BackColor를 LightYellow로 변경  private List&amp;lt;TreeNode&amp;gt; NodeThatMatches = new();	// 탐색된 Node Collection.</description>
+    </item>
+    
+    <item>
       <title>04. DB 적재 및 불러오기</title>
       <link>https://nocturover.github.io/csharp/db/04_db_%EC%A0%81%EC%9E%AC_%EB%B0%8F_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/</link>
       <pubDate>Wed, 27 Oct 2021 18:20:29 +0900</pubDate>
@@ -351,6 +361,17 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
   연결을 미리 열어두고, 들어오는 각각의 command수행에 대응하여 수행할 수 있도록 arrangement 한다.
   최대로 설정된 연결 개수에 도달하는 명령수행 요청이 들어오게 된다면, queue의 형태로 해당 수행일정을 계획할 수 있다.
   MSDN 의 설명에 의하면 Close() Dispose()의 연결 종료와 관련하여 주 메서드(connection, datareader) 등에 다루지 말고, Finalize method 를 생성하고 관리하라고 지침한다.</description>
+    </item>
+    
+    <item>
+      <title>06. 목표지향</title>
+      <link>https://nocturover.github.io/daily/06_%EB%AA%A9%ED%91%9C%EC%A7%80%ED%96%A5/</link>
+      <pubDate>Sat, 11 Dec 2021 18:45:31 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/06_%EB%AA%A9%ED%91%9C%EC%A7%80%ED%96%A5/</guid>
+      <description>1
+무엇보다 나를 난감하게 만드는 것은 스스로의 효용가치를 잊을 때이다.
+무엇을 원하고 어떤 삶을 살아가기를 원하며, 그를 위한 지향점을 상상해나가는 과정 자체를 부정한다.</description>
     </item>
     
   </channel>

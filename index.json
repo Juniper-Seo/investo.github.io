@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://nocturover.github.io/csharp/winform/",
+	"title": "Winform",
+	"tags": [],
+	"description": "C#-Winform",
+	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n 02. C# Event \n 03. Thread/Invoke/BeginInvoke \n 04. TreeView Text Finder \n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/project/investo/",
 	"title": "Investo",
 	"tags": [],
@@ -12,13 +19,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Purpose Progress    Scheduler\n  Windows scheduler list Scheduler add / edit / remove configuration with Queue manager Managing All Server Scheduler list and Editable system Logging for start/running/end time with Error code send Log to Telegram / Socket / Web socket for user interface     API\n  Scrape API Data (Daily/Tick/Financial Statement) as Command Scrape API Data (Financial Statement) as Win32API Click and Save File Dialog Scrape Real time data for avoiding API Transaction limitation Analyze Real time data with Python/C# DataFame and view Data Visualization Load and Execute Conditional state for sub Ordering system     Web\n  Scrape Web contents (Financial Statement/People Thought) using Selenium nuget Scrape Web contents (Financial Statement/People Thought) using Python Requests Lib     Telegram / Site\n  Show Basic Report as .Docs or .Xls Provide that Stop all ordering system called Emergency Stop Receive message or command that can send socket from new client of Ordering Server Set all Configuration for Time Scheduler Send Screenshot to remote user that control window task status     DB\n  Save and Load on Local/Remote server order to Analyzing, Ordering, Logging, Back Testing etc.     Check List    Strategies\n  Metacognition Robust Results     Strategy - Parameters\n  Change value in Parameters for testing after market Automatically Change value and pronunciate Optimaized Result     "
-},
-{
-	"uri": "https://nocturover.github.io/csharp/winform/",
-	"title": "Winform",
-	"tags": [],
-	"description": "C#-Winform",
-	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n 02. C# Event \n 03. Thread/Invoke/BeginInvoke \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/db/",
@@ -63,6 +63,13 @@
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Idea Archive 공간입니다.\n​\n"
 },
 {
+	"uri": "https://nocturover.github.io/daily/",
+	"title": "Daily",
+	"tags": [],
+	"description": "Daily",
+	"content": "Overview  이 곳은 Daily Report를 기록하는 공간입니다.\n\rDaily Children List  \r01. 선택과 집중\r1 모든 선택에는 에너지가 소모되더라도 객관화가 필요하다. 여기서 말하는 객관화는 자기 객관화를 의미하는데, 자신의 능력 정도를 평가하는 방식부터 현재 하려는 행동의 방향성까지 모두 생각이 닿을 수 있는 끝자락까지는 수행하는 것이 옳다. 이런 방식이 반드시 옳은 선택을 부여하는 것은 아니지만 닥친 상황에서의 최선의 선택을 할 수 있게끔 방향성을 제시해주고 또 다른 루트를 열어주는 역할을 한다. 사소한 코드 구현 방식부터 일상생활에 모두 녹여야할 가치가 있다. 2 단축키 / 커맨드는 극한의 생산성을 요하는 프로가 아니더라도 필수적인 덕목이자 행동양식이라고 생각한다.\n\r\r02. 숙달과 일처리\r1 어떤 일이든 메뉴얼 / 경험사례가 존재하지 않는 온전히 새로운 일을 시도하는 것이 아니라면, 어느정도 옳바른 방식의 접근법을 알고 시간을 투자하면 궤도에 오르는 것이 가능하다. 그것은 학습하는 과정 자체가 될 수도 있으며 행동자체를 의미하기도 한다. 2 해야할 과제가 주어졌을 때 무작정 시작하는 방법은 무식할 수 있지만, 접근법을 메타인지적 관점에서 고려하고 빠르게 처리하려는 자세는 심적 부담을 줄여주는 동시에 돌아볼 수 있는 여유 시간을 부여하기 때문에 언제나 빠른 접근은 나은 결과를 창출할 수 있는 것 같다.\n\r\r03. 마음관리\r1 심리적 변화의 원천을 아는 것은 더한 심연에 빠지는 것을 방지해줄 수 있다. 자기 자신이 현재 어떤 기분을 느끼고 있는가, 이것은 무슨 감정이며 어디에서 발현된 것인가를 고민해보자. 물론 답이 나오지 않는 경우도 있겠지만, 대게는 그와 비슷했던 과거의 경험들이 오버랩되면서 현재의 상태가 이해될 수 있으리라 생각된다. 내가 현재 뭘하고 있는 건가 방향성이 흔들릴 때도 분명히 있다. 그런 불안감을 잠재우기 위해서 자잘한 계획들을 세우기도 하고 현실의 상황과 미래의 상황을 구체적으로 그려가는 편이다.\n\r\r04. 배움\r1 설계는 언제나 필요하다. pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에도 사소하게는 둘 중 하나의 선택을 해야하는 경우에도 적용될 수 있다. 정석적이며 보편적인 기본 내용들을 놓치고 싶지 않다면 인쇄물로 접근하는 방식이 간편할 수 있으며, 최신의 정보를 얻어내고 싶다면 공식 문서를 찾아보는 편이 좋다. 전체적인 흐름을 보고 싶다면, 실제 사용되고 있는 장면을 상상할 여지를 남겨줄 수 있는 비디오를 시청하는 것도 방법이다. 2 단축키를 익히는 것 또한 언제나 필요하다. 삶의 편리함이 주된 목표가 되지는 않는다.\n\r\r05. 허무주의\r1 피아노를 치기 시작한지 대략 9개월이 다 되었다. 음악 활동을 하는 건 몰입의 괜찮은 재료로 작용되어, 그 순간만큼은 오감에 집중할 수 있게 된다. 감정적 기복을 모두 내려놓고 할당된 시간을 연습시간으로 활용함으로써 평균에 해당하는 고요함을 찾기위한 과정이라고 생각된다. 무기력증, 헛됨, 허무주의로부터의 탈출하길 희망하면서도 파고드는 무력감을 느낄 때면 이런 몰입과정을 거치는 것이 필요할 때라는 신호이다. 요 며칠간의 망가진 자신의 모습을 보고있자면, 내가 아닌 타인이 되어 나를 바라보는 듯한, 내가 내가 아니게 될 때가 있다.\n\r\r06. 목표지향\r1 무엇보다 나를 난감하게 만드는 것은 스스로의 효용가치를 잊을 때이다. 무엇을 원하고 어떤 삶을 살아가기를 원하며, 그를 위한 지향점을 상상해나가는 과정 자체를 부정한다.\n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/project/investo/progress/02_plan/",
 	"title": "01. Plan",
 	"tags": [],
@@ -75,13 +82,6 @@
 	"tags": [],
 	"description": "Project-Investo-Progress",
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.10.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.10.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.10.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.10.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.10.25 (Mon) Function lists passing 미정  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r2021.10.26 (Tue) Prototype 제작 (Connection UI)  2 [hr]\r2021.10.27 (Wed) Prototype 제작  DB Encapsulation API Encapsulation passing 28    5 [hr]\r2021.10.28 (Thr) Prototype 제작  API Encapsulation - (검토결과 : 필요X) ChildConnectionForm (DB, API status)    5 [hr]\r2021.10.29 (Fri)  Prototype 제작\n ChildConnectionForm (DB, API status) DB connection pooling 방식 적용 Pause  array type (관리차원) Garbage Collector 원리 적용      Code Standard ver_1.0\n  5 [hr]\r2021.10.30 (Sat)  Prototype 제작\n ChildConnectionForm (DB, API status)    Code Standard ver_1.0\n  5 [hr]\r2021.10.31 (Sun)  Prototype 제작\n ChildConnectionForm (DB, API status)  APItestUtilForm.cs      Code Standard ver_1.0\n  3 [hr]\r2021.11.02 (Tue) 프로토타입의 취지에 맞게 Prototype 제작  ChildConnectionForm (DB, API status)  APItestUtilForm.cs     Code Standard ver_1.0 Pseudo Code 작성 UML 작성  3 [hr]\r2021.11.10 (Wed) 프로토타입의 취지에 맞게 Prototype 제작  LSR (Log-Socket-Rerun)   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.11 (Thr) 프로토타입의 취지에 맞게 Prototype 제작  LSR (Log-Socket-Rerun) Socket Module 완성 (Console) [+] header / body protocol   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.13 (Sat) 프로토타입의 취지에 맞게 Prototype 제작  High performance Server/Client Socket Module   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.17 (Wed) 프로토타입의 취지에 맞게 cInvesto_module 작성  physical    Code Standard ver_1.0    Strategy Form 작성  const Class 생성 Screen No 체계화 Scraping Socket (마지막 데이터-파라미터) Log TimeLine DB-Table 조직화 제한우회 (Multiple ID)   적용  DEBUG - 팁사용, #IF 전처리문 BIT COL in DB-Table UNIT_TEST (Boolean) Pseudo Code 작성 UML 작성    2 [hr]\r\r2021.11.26 (Fri) 현재 진행상태 점검  Socket Telegram  Telegram with Screenshot Telegram with sending Socket Server Command Telegram with Command that stop emergency   DB 적재  T. Data  RT After Maket Scrape from web     Data Analyze  Dataframe for c# measure overhead with Communicating py StdOut and c# Program that simple change data parameter for analyze back / after Visualiztion     Time Schedular 작성 및 연계성 검토 Data 적재 관련 리스트 생성 데이터 분석 방향성 검토  계획\r"
-},
-{
-	"uri": "https://nocturover.github.io/daily/",
-	"title": "Daily",
-	"tags": [],
-	"description": "Daily",
-	"content": "Overview  이 곳은 Daily Report를 기록하는 공간입니다.\n\rDaily Children List  \r01. 선택과 집중\r1 모든 선택에는 에너지가 소모되더라도 객관화가 필요하다. 여기서 말하는 객관화는 자기 객관화를 의미하는데, 자신의 능력 정도를 평가하는 방식부터 현재 하려는 행동의 방향성까지 모두 생각이 닿을 수 있는 끝자락까지는 수행하는 것이 옳다. 이런 방식이 반드시 옳은 선택을 부여하는 것은 아니지만 닥친 상황에서의 최선의 선택을 할 수 있게끔 방향성을 제시해주고 또 다른 루트를 열어주는 역할을 한다. 사소한 코드 구현 방식부터 일상생활에 모두 녹여야할 가치가 있다. 2 단축키 / 커맨드는 극한의 생산성을 요하는 프로가 아니더라도 필수적인 덕목이자 행동양식이라고 생각한다.\n\r\r02. 숙달과 일처리\r1 어떤 일이든 메뉴얼 / 경험사례가 존재하지 않는 온전히 새로운 일을 시도하는 것이 아니라면, 어느정도 옳바른 방식의 접근법을 알고 시간을 투자하면 궤도에 오르는 것이 가능하다. 그것은 학습하는 과정 자체가 될 수도 있으며 행동자체를 의미하기도 한다. 2 해야할 과제가 주어졌을 때 무작정 시작하는 방법은 무식할 수 있지만, 접근법을 메타인지적 관점에서 고려하고 빠르게 처리하려는 자세는 심적 부담을 줄여주는 동시에 돌아볼 수 있는 여유 시간을 부여하기 때문에 언제나 빠른 접근은 나은 결과를 창출할 수 있는 것 같다.\n\r\r03. 마음관리\r1 심리적 변화의 원천을 아는 것은 더한 심연에 빠지는 것을 방지해줄 수 있다. 자기 자신이 현재 어떤 기분을 느끼고 있는가, 이것은 무슨 감정이며 어디에서 발현된 것인가를 고민해보자. 물론 답이 나오지 않는 경우도 있겠지만, 대게는 그와 비슷했던 과거의 경험들이 오버랩되면서 현재의 상태가 이해될 수 있으리라 생각된다. 내가 현재 뭘하고 있는 건가 방향성이 흔들릴 때도 분명히 있다. 그런 불안감을 잠재우기 위해서 자잘한 계획들을 세우기도 하고 현실의 상황과 미래의 상황을 구체적으로 그려가는 편이다.\n\r\r04. 배움\r1 설계는 언제나 필요하다. pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에도 사소하게는 둘 중 하나의 선택을 해야하는 경우에도 적용될 수 있다. 정석적이며 보편적인 기본 내용들을 놓치고 싶지 않다면 인쇄물로 접근하는 방식이 간편할 수 있으며, 최신의 정보를 얻어내고 싶다면 공식 문서를 찾아보는 편이 좋다. 전체적인 흐름을 보고 싶다면, 실제 사용되고 있는 장면을 상상할 여지를 남겨줄 수 있는 비디오를 시청하는 것도 방법이다. 2 단축키를 익히는 것 또한 언제나 필요하다. 삶의 편리함이 주된 목표가 되지는 않는다.\n\r\r05. 허무주의\r1 피아노를 치기 시작한지 대략 9개월이 다 되었다. 음악 활동을 하는 건 몰입의 괜찮은 재료로 작용되어, 그 순간만큼은 오감에 집중할 수 있게 된다. 감정적 기복을 모두 내려놓고 할당된 시간을 연습시간으로 활용함으로써 평균에 해당하는 고요함을 찾기위한 과정이라고 생각된다. 무기력증, 헛됨, 허무주의로부터의 탈출하길 희망하면서도 파고드는 무력감을 느낄 때면 이런 몰입과정을 거치는 것이 필요할 때라는 신호이다. 요 며칠간의 망가진 자신의 모습을 보고있자면, 내가 아닌 타인이 되어 나를 바라보는 듯한, 내가 내가 아니게 될 때가 있다.\n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/winform/01_form_group/",
@@ -238,6 +238,13 @@
 	"content": "Overview 이 곳은 책, Documentation ,논문 을 리뷰하는 공간입니다.\n"
 },
 {
+	"uri": "https://nocturover.github.io/csharp/winform/04_treeview_finder/",
+	"title": "04. TreeView Text Finder",
+	"tags": [],
+	"description": "",
+	"content": "Overview  Treeview 컨트롤에서 string text 검색을 통해 매치되는 값을 Highlight 시키는 방법을 기술.\n\r\rTreeView Features  특징  Treeview 는 기본적으로 Node단위의 객체가 엮여진 형태로 존재함으로, 이 Node내 Node를 탐색하는 과정을 풀어내야 한다. 탐색기능은 String Equal() Method를 이용할 수 있으며, 대/소문자 구별을 무시함으로써 보다 넓은 범위의 정보를 포획할 수 있다.  \rCode  tvCopied Treeview Control의 모든 Node를 탐색하여 매칭되는 Node의 BackColor를 LightYellow로 변경  private List\u0026lt;TreeNode\u0026gt; NodeThatMatches = new();\t// 탐색된 Node Collection. private int selectedNum = 0;\t// 탐색 textbox에서 Enter를 눌러 다음 매칭 노드로 이동(Focus + Highlight)  private void txtFind_TextChanged(object sender, EventArgs e) { if (tvCopied.SelectedNode != null)\t// 이전 탐색 Node가 존재할 경우 Hightlight를 제거  tvCopied.SelectedNode.BackColor = Color.White; NodeThatMatches.Clear();\t// Text Changed 이벤트에 따라 이전 매칭 Collection Clear().  selectedNum = 0; foreach (TreeNode node in tvCopied.Nodes) { FindTextRecursive(node, txtFind.Text); if (NodeThatMatches.Count \u0026gt; 0) { tvCopied.SelectedNode = NodeThatMatches[0]; tvCopied.SelectedNode.BackColor = Color.LightYellow; } } void FindTextRecursive(TreeNode parentNode, string text) { foreach (TreeNode node in parentNode.Nodes) { if (node.Text.Contains(text, StringComparison.OrdinalIgnoreCase))\t// 대/소문자 구분 무시  { NodeThatMatches.Add(node); } FindTextRecursive(node, text);\t// 하위 노드 재귀적 탐색  } } } private void txtFind_KeyDown(object sender, KeyEventArgs e) { if (e.KeyCode == Keys.Enter) { e.SuppressKeyPress = true;\t// Enter Key눌림 무시  if ( NodeThatMatches.Count \u0026gt; 0)\t// 이전 index [0]에 대한 highlight를 white color로 바꾸고 다음 순서 매치  { tvCopied.SelectedNode.BackColor = Color.White; if (selectedNum == NodeThatMatches.Count - 1) { selectedNum = -1; } tvCopied.SelectedNode = NodeThatMatches[++selectedNum]; tvCopied.SelectedNode.BackColor = Color.LightYellow; } } } \nTroubleshooting   \r       \nSummary  Reference Link\nWinForms TreeView - how to manually \u0026ldquo;highlight\u0026rdquo; node (like it was clicked)\n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/csharp/db/04_db_%EC%A0%81%EC%9E%AC_%EB%B0%8F_%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0/",
 	"title": "04. DB 적재 및 불러오기",
 	"tags": [],
@@ -271,6 +278,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Overview  MariaDB DBMS의 성능향상을 위한 Connection pooling방식에 대해 정리\n\r\rConnection Pooling  개념   Pooling방식은 DBMS 상호작용 방식에서 connection의 Open / Close의 반복적 호출로 걸리는 오베헤드를 감소시키는 성능향상에 기인될 수 있다.\n  연결을 미리 열어두고, 들어오는 각각의 command수행에 대응하여 수행할 수 있도록 arrangement 한다.\n  최대로 설정된 연결 개수에 도달하는 명령수행 요청이 들어오게 된다면, queue의 형태로 해당 수행일정을 계획할 수 있다.\n  MSDN 의 설명에 의하면 Close() Dispose()의 연결 종료와 관련하여 주 메서드(connection, datareader) 등에 다루지 말고, Finalize method 를 생성하고 관리하라고 지침한다.\n  \rcode \rthird \nTroubleshooting  \r       \nSummary  Reference Link\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/daily/06_%EB%AA%A9%ED%91%9C%EC%A7%80%ED%96%A5/",
+	"title": "06. 목표지향",
+	"tags": [],
+	"description": "",
+	"content": "1\n무엇보다 나를 난감하게 만드는 것은 스스로의 효용가치를 잊을 때이다.\n무엇을 원하고 어떤 삶을 살아가기를 원하며, 그를 위한 지향점을 상상해나가는 과정 자체를 부정한다.\n"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/",
