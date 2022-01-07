@@ -6,7 +6,7 @@
     <description>Recent content in Daily on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Dec 2021 18:45:31 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Jan 2022 18:45:31 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. 선택과 집중</title>
       <link>https://nocturover.github.io/daily/01_%EC%84%A0%ED%83%9D%EA%B3%BC_%EC%A7%91%EC%A4%91/</link>
@@ -89,6 +89,20 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
       <description>1
 무엇보다 나를 난감하게 만드는 것은 스스로의 효용가치를 잊을 때이다.
 무엇을 원하고 어떤 삶을 살아가기를 원하며, 그를 위한 지향점을 상상해나가는 과정 자체를 부정한다.</description>
+    </item>
+    
+    <item>
+      <title>07. Performance</title>
+      <link>https://nocturover.github.io/daily/07_performance/</link>
+      <pubDate>Sun, 02 Jan 2022 18:45:31 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/07_performance/</guid>
+      <description>1
+모든 기기들은 자신만의 상대적인 성능을 가지고 있다.
+최신의 제품이 과거 제품 보다 가격이 높은 까닭을 증명하기 위한 데이터셋을 제공해주는 역할을 한다. 소비자는 해당 벤치마크나 성능표를 확인하고 나에게 적합한 제품인지를 판단하는 척도로 사용이 가능하다.
+사람도 마찬가지로 성능이 존재한다.
+스스로의 앎을 척도로 나타내자면, 메타인지적 사고능력과 객관화로부터 새로운 계획을 세우고 회귀하는 빈도나 정확도를 점으로 찍어본다면 하나의 성능 결과표가 나올 것이다.
+또한 스스로의 상황에서 최적의 목표를 지향점으로 삼고 환경의 변화에 따른 기존 파라미터의 증감이나 삭제/추가를 연속하며, 온전한 최적화 상황을 만들어가는 것의 빈도나 퀄리티를 척도로 삼을 수도 있겠다.</description>
     </item>
     
   </channel>

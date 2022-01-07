@@ -6,7 +6,7 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Dec 2021 18:33:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jan 2022 13:33:29 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. Progress</title>
       <link>https://nocturover.github.io/project/investo/progress/01_progress/</link>
@@ -337,6 +337,16 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
     </item>
     
     <item>
+      <title>05. ListBox Flicker</title>
+      <link>https://nocturover.github.io/csharp/winform/05_listbox/</link>
+      <pubDate>Fri, 07 Jan 2022 13:33:29 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/05_listbox/</guid>
+      <description>Overview  ListBox 컨트롤에서 Item들을 Graphics 객체를 이용해서 직접 Paint하는 방식을 구현
+ ListBox 업데이트(DrawItem Event Occur :: e.Graphics.DrawString/DrawFillRectangle)시 발생하는 Flicker 현상을 잡아보자.  ListBox 특징  특징  ListBox는 기본적으로 목록을 나열하는 목적으로 사용됨. ListView 컨트롤의 원시적 요소라고 판단됨. ListBox도 MultiColumns를 지원하지만, Contents의 Overflows에 대해 전체적으로 Oversight할 수 있도록 다음 컬럼으로 넘겨주는 역할만을 수행하며 열의 이름을 지정할 수 없음. ListBox 컨트롤은 .Items[{index}]를 통해 개별 객체를 특정하는 것은 가능하지만 {get;set;} Property로 Object타입만을 반환하여 해당 객체에 대한 ListBoxItem.</description>
+    </item>
+    
+    <item>
       <title>05. 허무주의</title>
       <link>https://nocturover.github.io/daily/05_%ED%97%88%EB%AC%B4%EC%A3%BC%EC%9D%98/</link>
       <pubDate>Thu, 04 Nov 2021 18:45:31 +0900</pubDate>
@@ -372,6 +382,20 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
       <description>1
 무엇보다 나를 난감하게 만드는 것은 스스로의 효용가치를 잊을 때이다.
 무엇을 원하고 어떤 삶을 살아가기를 원하며, 그를 위한 지향점을 상상해나가는 과정 자체를 부정한다.</description>
+    </item>
+    
+    <item>
+      <title>07. Performance</title>
+      <link>https://nocturover.github.io/daily/07_performance/</link>
+      <pubDate>Sun, 02 Jan 2022 18:45:31 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/07_performance/</guid>
+      <description>1
+모든 기기들은 자신만의 상대적인 성능을 가지고 있다.
+최신의 제품이 과거 제품 보다 가격이 높은 까닭을 증명하기 위한 데이터셋을 제공해주는 역할을 한다. 소비자는 해당 벤치마크나 성능표를 확인하고 나에게 적합한 제품인지를 판단하는 척도로 사용이 가능하다.
+사람도 마찬가지로 성능이 존재한다.
+스스로의 앎을 척도로 나타내자면, 메타인지적 사고능력과 객관화로부터 새로운 계획을 세우고 회귀하는 빈도나 정확도를 점으로 찍어본다면 하나의 성능 결과표가 나올 것이다.
+또한 스스로의 상황에서 최적의 목표를 지향점으로 삼고 환경의 변화에 따른 기존 파라미터의 증감이나 삭제/추가를 연속하며, 온전한 최적화 상황을 만들어가는 것의 빈도나 퀄리티를 척도로 삼을 수도 있겠다.</description>
     </item>
     
   </channel>

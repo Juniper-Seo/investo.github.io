@@ -4,7 +4,7 @@
 <html>
   <head>
     <title>
-	02. FAVICON :: 1998
+	05. ListBox Flicker :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,7 +13,7 @@
 
 
 
-<title>02. FAVICON :: 1998</title>
+<title>05. ListBox Flicker :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/web/hugo/02_favicon/"
+  <body data-url="/csharp/winform/05_listbox/"
 
   class="">
 
@@ -282,14 +282,15 @@
     </li>
     
 <hr/>
-    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item haschildren
+    <li data-nav-id="https://nocturover.github.io/csharp/" class="dd-item parent haschildren
         item_level_$level
         ">
 
       
       
       
-      <i class="fas fa-chevron-right ddexp"></i>
+      
+          <i class="fas fa-chevron-down ddexp"></i>
         
       
 			
@@ -298,7 +299,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -346,15 +347,14 @@
     </li>
     
 
-    <li data-nav-id="https://nocturover.github.io/web/" class="dd-item parent haschildren
+    <li data-nav-id="https://nocturover.github.io/web/" class="dd-item haschildren
         item_level_$level
         ">
 
       
       
       
-      
-          <i class="fas fa-chevron-down ddexp"></i>
+      <i class="fas fa-chevron-right ddexp"></i>
         
       
 			
@@ -363,7 +363,7 @@
         <ul>
               
 
-    <li data-nav-id="https://nocturover.github.io/web/hugo/" class="dd-item parent active
+    <li data-nav-id="https://nocturover.github.io/web/hugo/" class="dd-item
         item_level_$level
         ">
 
@@ -559,16 +559,16 @@
 	
   
     <li class="">
-      <a class="text-link" href="/web/">
-        Web
+      <a class="text-link" href="/csharp/">
+        C#
       </a>
     </li>
 	
   	
   
     <li class="">
-      <a class="text-link" href="/web/hugo/">
-        Hugo
+      <a class="text-link" href="/csharp/winform/">
+        Winform
       </a>
     </li>
 	
@@ -576,7 +576,7 @@
   
     <li class="active">
       
-        02. FAVICON
+        05. ListBox Flicker
       
     </li>
 
@@ -597,7 +597,7 @@
 		
 
 		
-			<h1>Hugo<span>02. FAVICON</span></h1>
+			<h1>Winform<span>05. ListBox Flicker</span></h1>
         
 
 			
@@ -609,17 +609,27 @@
 	            		
 	        			
 	            	<li >
-	            		<a title="$pagetitle" href="/web/hugo/01_custom_theme/">01. Custom Theme</a>
-	            	</li>
-	            		
-	        			
-	            	<li class="active">
-	            		<a title="$pagetitle" href="/web/hugo/02_favicon/">02. FAVICON</a>
+	            		<a title="$pagetitle" href="/csharp/winform/01_form_group/">01_Form_Group</a>
 	            	</li>
 	            		
 	        			
 	            	<li >
-	            		<a title="$pagetitle" href="/web/hugo/03_shortcodes/">03. ShortCodes</a>
+	            		<a title="$pagetitle" href="/csharp/winform/02_event/">02. C# Event</a>
+	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/csharp/winform/03_winform_thread/">03. Thread/Invoke/BeginInvoke</a>
+	            	</li>
+	            		
+	        			
+	            	<li >
+	            		<a title="$pagetitle" href="/csharp/winform/04_treeview_finder/">04. TreeView Text Finder</a>
+	            	</li>
+	            		
+	        			
+	            	<li class="active">
+	            		<a title="$pagetitle" href="/csharp/winform/05_listbox/">05. ListBox Flicker</a>
 	            	</li>
 	        	</nav> 
 		
@@ -636,13 +646,14 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#1-적용">1. 적용</a>
+    <li><a href="#listbox-특징">ListBox 특징</a>
       <ul>
-        <li><a href="#favicon">favicon</a></li>
-        <li><a href="#logo">logo</a></li>
+        <li><a href="#특징">특징</a></li>
+        <li><a href="#code">Code</a></li>
       </ul>
     </li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
@@ -657,49 +668,190 @@
 	<div class="content">
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<p>웹페이지의 대표 아이콘인 <code>favicon</code>의 설정 방법을 기술</p>
+<p><code>ListBox</code> 컨트롤에서 Item들을 Graphics 객체를 이용해서 직접 Paint하는 방식을 구현</p>
+<ul>
+<li>ListBox 업데이트(DrawItem Event Occur :: e.Graphics.DrawString/DrawFillRectangle)시 발생하는 Flicker 현상을 잡아보자.</li>
+</ul>
 <br/>
-<h2 ref="1-적용" >1. 적용</h2><a class="anchor" id="1-적용"></a>
+<br/>
+<h2 ref="listbox-특징" >ListBox 특징</h2><a class="anchor" id="listbox-특징"></a>
 <hr>
-<h3 ref="favicon" >favicon</h3><a class="anchor" id="favicon"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">├─static
-│  ├─admin
-│  │  └─shortcode
-│  ├─css
-│  ├─images
-│  ├─js
-│  └─vendor
-│      ├─auto-complete
-│      └─lunr
-</code></pre></div><p><code>static/images</code>에 <code>favicon.png</code> 이름으로 로고 파일을 저장한다.</p>
-<p><code>layouts/partials/html-head.html</code> 파일에 사이트 <code>title</code>과 <code>link</code>가 작성되어 있다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;{{ .Title }} :: {{ .Site.Title }}&lt;/<span style="color:#f92672">title</span>&gt;
+<h3 ref="특징" >특징</h3><a class="anchor" id="특징"></a>
+<ul>
+<li>ListBox는 기본적으로 목록을 나열하는 목적으로 사용됨.</li>
+<li>ListView 컨트롤의 원시적 요소라고 판단됨.</li>
+<li>ListBox도 MultiColumns를 지원하지만, Contents의 Overflows에 대해 전체적으로 Oversight할 수 있도록 다음 컬럼으로 넘겨주는 역할만을 수행하며 열의 이름을 지정할 수 없음.</li>
+<li>ListBox 컨트롤은 .Items[{index}]를 통해 개별 객체를 특정하는 것은 가능하지만 {get;set;} Property로 Object타입만을 반환하여 해당 객체에 대한 ListBoxItem.property 를 지원하지 않음(즉, 아이템의 속성을 변경하기 위해서는; 특히 Visualization 을 변경하기 위해서는 OnPaint()메서드를 오버라이드하거나, Listbox_DrawItem(object sender, DrawItemEventArgs e){} 에 작성하여야 함)
+<ul>
+<li>참고) Drawitem에서 작성하는 e.Graphics.~~ 들은 Flicker 현상을 유발함으로, DoubleBuffering 설정과 기본 OnPaint() 메서드를 override하여 **ListBox 개별 요소 Rectangle을 e로 반환하는 과정이 필요**)</li>
+</ul>
+</li>
+</ul>
+<br/>
+<h3 ref="code" >Code</h3><a class="anchor" id="code"></a>
+<ul>
+<li></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Collections.Generic;
+<span style="color:#66d9ef">using</span> System.ComponentModel;
+<span style="color:#66d9ef">using</span> System.Data;
+<span style="color:#66d9ef">using</span> System.Drawing;
+<span style="color:#66d9ef">using</span> System.Linq;
+<span style="color:#66d9ef">using</span> System.Reflection;
+<span style="color:#66d9ef">using</span> System.Text;
+<span style="color:#66d9ef">using</span> System.Threading.Tasks;
+<span style="color:#66d9ef">using</span> System.Windows.Forms;
 
-&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{{&#34;images/favicon.png&#34; | relURL}}&#39;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/x-icon&#34;</span> /&gt;
-</code></pre></div><br/>
-<h3 ref="logo" >logo</h3><a class="anchor" id="logo"></a>
-<p><code>layouts/partials/body-header.html</code> 파일에 <code>div</code>태그 내부에 상부 헤더  <code>title</code>이 작성되어 있다.</p>
-<p><code>a</code>태그를 새로 생성하여 아래와 같이 작성한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.BaseURL }}&#34;</span>&gt;
-     &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/images/favicon.png&#39;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:20px;height:20px;margin-top:3px;&#34;</span>/&gt;
-&lt;/<span style="color:#f92672">a</span>&gt;
+<span style="color:#66d9ef">namespace</span> TEMP_LISTBOX_DRAWING
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">partial</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Form1</span> : Form
+    {
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> eventCnt = <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">public</span> Form1()
+        {
+            InitializeComponent();
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> idx = <span style="color:#ae81ff">0</span>; idx &lt; <span style="color:#ae81ff">10</span>; idx++)
+                listBox1.Items.Add(<span style="color:#e6db74">&#34;itemSample&#34;</span>);
 
-&lt;<span style="color:#f92672">div</span>&gt;
-    {{- $defaultheader := printf &#34;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;baselink&#39;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%s&#39;</span>&gt;%s&lt;/<span style="color:#f92672">a</span>&gt;&#34; .Site.BaseURL .Site.Title -}}
-    {{- partial &#34;_mdinclude.html&#34; (dict &#34;name&#34; &#34;header&#34; &#34;context&#34; . &#34;tip&#34; $defaultheader ) -}}
-&lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><br/>
-<h2 ref="3-summary" >3. Summary</h2><a class="anchor" id="3-summary"></a>
+            <span style="color:#75715e">// Not normal Draw mode. :: 생략가능 - 해당 객체 생성 시 자동 설정.
+</span><span style="color:#75715e"></span>            listBox1.DrawMode = DrawMode.OwnerDrawVariable;
+            listBox1.DrawItem += listbox1_DrawItem;
+
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> listbox1_DrawItem(<span style="color:#66d9ef">object</span> sender, DrawItemEventArgs e)
+        {
+            txtCnt.AppendText((++eventCnt).ToString() + Environment.NewLine);
+
+            e.DrawBackground();
+            
+            <span style="color:#75715e">// 랜덤한 막대그래프 Background Drawing
+</span><span style="color:#75715e"></span>            e.Graphics.FillRectangle(Brushes.Gray, e.Bounds.X, e.Bounds.Y, e.Bounds.Width * <span style="color:#66d9ef">new</span> Random().Next(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>) / <span style="color:#ae81ff">100</span>, e.Bounds.Height);
+            
+            e.Graphics.DrawString(listBox1.Items[e.Index].ToString(), e.Font, <span style="color:#66d9ef">new</span> SolidBrush(<span style="color:#66d9ef">this</span>.ForeColor), <span style="color:#66d9ef">new</span> PointF(e.Bounds.X, e.Bounds.Y));
+            
+        }
+        
+		<span style="color:#75715e">// ListBox의 개별아이템이 변경되면(Add() 혹은 Item[{index}] = {x}), OnPaint()가 발생하고 DrawItem() Event 를 Occur 시킴으로써 Drawing이 가능한 환경을 만든다.
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnAdd_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            listBox1.Items[<span style="color:#ae81ff">0</span>] = txtInput.Text;
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> button1_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            listBox1.Items[<span style="color:#ae81ff">1</span>] = txtInput.Text;
+        }
+
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> button2_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+        {
+            <span style="color:#66d9ef">int</span> repCnt = <span style="color:#ae81ff">0</span>;
+            <span style="color:#66d9ef">if</span> (button2.Text == <span style="color:#e6db74">&#34;Start&#34;</span>)
+                button2.Text = <span style="color:#e6db74">&#34;Stop&#34;</span>;
+            <span style="color:#66d9ef">else</span>
+                button2.Text = <span style="color:#e6db74">&#34;Start&#34;</span>;
+            <span style="color:#66d9ef">this</span>.BeginInvoke(<span style="color:#66d9ef">new</span> Action(<span style="color:#66d9ef">async</span>() =&gt; {
+                <span style="color:#66d9ef">while</span> (button2.Text == <span style="color:#e6db74">&#34;Stop&#34;</span>)
+                {
+                    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> idx = <span style="color:#ae81ff">0</span>; idx &lt; <span style="color:#ae81ff">10</span>; idx++)
+                    {
+                        listBox1.Items[idx] = (repCnt++).ToString();
+                        <span style="color:#66d9ef">await</span> Task.Delay(<span style="color:#ae81ff">1000</span>);
+                    }
+                }
+            }));
+        }
+    }
+}
+
+
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">internal</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FlickerFreeListBox</span> : System.Windows.Forms.ListBox
+{
+    <span style="color:#66d9ef">public</span> FlickerFreeListBox()
+    {
+        <span style="color:#75715e">// DoubleBuffer
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.SetStyle(
+            ControlStyles.OptimizedDoubleBuffer |
+            ControlStyles.ResizeRedraw |
+            ControlStyles.UserPaint,
+            <span style="color:#66d9ef">true</span>);
+        <span style="color:#66d9ef">this</span>.DrawMode = DrawMode.OwnerDrawVariable;
+    }
+    <span style="color:#75715e">// 만약 Form Main Class에서 직접 컨트롤의 DrawItem 이벤트를 다룬다면 OnDrawItem() 메서드는 생략가능
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// or 이벤트 다루지 않고 ListBox 객체 자체에서 DrawItem을 다루기 위해서는 아래를 활성화
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnDrawItem(DrawItemEventArgs e)
+    {
+        <span style="color:#75715e">/*if (this.Items.Count &gt; 0)
+</span><span style="color:#75715e">        {
+</span><span style="color:#75715e">            e.DrawBackground();
+</span><span style="color:#75715e">            e.Graphics.FillRectangle(Brushes.Gray, e.Bounds.X, e.Bounds.Y, e.Bounds.Width * new Random().Next(1,100) / 100, e.Bounds.Height);
+</span><span style="color:#75715e">            e.Graphics.DrawString(this.Items[e.Index].ToString(), e.Font, new SolidBrush(this.ForeColor), new PointF(e.Bounds.X, e.Bounds.Y));
+</span><span style="color:#75715e">        } */</span>
+        <span style="color:#66d9ef">base</span>.OnDrawItem(e); <span style="color:#75715e">// Goto C# EventHandler.
+</span><span style="color:#75715e"></span>    }
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
+    {
+        Region iRegion = <span style="color:#66d9ef">new</span> Region(e.ClipRectangle);
+        e.Graphics.FillRegion(<span style="color:#66d9ef">new</span> SolidBrush(<span style="color:#66d9ef">this</span>.BackColor), iRegion);
+        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.Items.Count &gt; <span style="color:#ae81ff">0</span>)
+        {
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; <span style="color:#66d9ef">this</span>.Items.Count; ++i)
+            {
+                System.Drawing.Rectangle irect = <span style="color:#66d9ef">this</span>.GetItemRectangle(i);
+                <span style="color:#75715e">// Clip Rectangle
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (e.ClipRectangle.IntersectsWith(irect))
+                {
+                    <span style="color:#75715e">// Clicked.
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">if</span> ((<span style="color:#66d9ef">this</span>.SelectionMode == SelectionMode.One &amp;&amp; <span style="color:#66d9ef">this</span>.SelectedIndex == i)
+                    || (<span style="color:#66d9ef">this</span>.SelectionMode == SelectionMode.MultiSimple &amp;&amp; <span style="color:#66d9ef">this</span>.SelectedIndices.Contains(i))
+                    || (<span style="color:#66d9ef">this</span>.SelectionMode == SelectionMode.MultiExtended &amp;&amp; <span style="color:#66d9ef">this</span>.SelectedIndices.Contains(i)))
+                    {
+                        OnDrawItem(<span style="color:#66d9ef">new</span> DrawItemEventArgs(e.Graphics, <span style="color:#66d9ef">this</span>.Font,
+                            irect, i,
+                            DrawItemState.Selected, <span style="color:#66d9ef">this</span>.ForeColor,
+                            <span style="color:#66d9ef">this</span>.BackColor));
+                    }
+                    <span style="color:#75715e">// Not Clicked.
+</span><span style="color:#75715e"></span>                    <span style="color:#66d9ef">else</span>
+                    {
+                        OnDrawItem(<span style="color:#66d9ef">new</span> DrawItemEventArgs(e.Graphics, <span style="color:#66d9ef">this</span>.Font,
+                            irect, i,
+                            DrawItemState.Default, <span style="color:#66d9ef">this</span>.ForeColor,
+                            <span style="color:#66d9ef">this</span>.BackColor));
+                    }
+                    iRegion.Complement(irect);
+                }
+            }
+        }
+        <span style="color:#66d9ef">base</span>.OnPaint(e);
+    }
+}
+</code></pre></div><p><br/><br/></p>
+<h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
 <hr>
-<p><code>상대경로</code>를 <code>go</code> 방식이나 <code>html</code>방식으로 작성하여 <code>href</code> / <code>src</code> 등을 작성할 수 있다.</p>
-<p><code>img</code>의 <code>width</code> / <code>height</code>로 적용했을 때 <code>height</code>가 적용되지 않는 오류가 있어서 <code>style</code> 속성으로 대신 적용하였다. <code>margin</code>을 이용해 정렬을 할 수 있다.</p>
 
 
-<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Hugo Link</span></p>
-<p><a href="https://gohugo.io/templates/section-templates/">Hugo Templates</a></p>
-<p><a href="https://gohugo.io/functions/math/">Hugo Functions</a></p>
+<div class="alert warning" role="alert"><h4 ref="heading" ></h4><a class="anchor" id="heading"></a>
 </div>
 
+<ul>
+<li>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+<p><br/><br/></p>
+<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
+<hr>
+
+
+<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
+<p><a href="http://yacsharpblog.blogspot.com/2008/07/listbox-flicker.html">ListBox Flicker</a></p>
+</div>
+
+<br/>
 
 		</div>
 
@@ -710,10 +862,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/git/" title="Git" style="margin-right: 0px;">
+		<a class="next" href="/csharp/db/" title="DB" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>Git</label>
+                <label>DB</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -737,19 +889,20 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/web/hugo/02_favicon/">02. FAVICON</a></li>
+            <li><a href="/csharp/winform/05_listbox/">05. ListBox Flicker</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#1-적용">1. 적용</a>
+    <li><a href="#listbox-특징">ListBox 특징</a>
       <ul>
-        <li><a href="#favicon">favicon</a></li>
-        <li><a href="#logo">logo</a></li>
+        <li><a href="#특징">특징</a></li>
+        <li><a href="#code">Code</a></li>
       </ul>
     </li>
-    <li><a href="#3-summary">3. Summary</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 </div>
@@ -824,7 +977,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 24 October 2021
+		          Last update on 07 January 2022
 		      </li>
 		    
 		    
