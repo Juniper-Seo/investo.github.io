@@ -4,7 +4,7 @@
 	"title": "Winform",
 	"tags": [],
 	"description": "C#-Winform",
-	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n 02. C# Event \n 03. Thread/Invoke/BeginInvoke \n 04. TreeView Text Finder \n 05. ListBox Flicker \n\r\r"
+	"content": "Overview  이 곳은 C# Winform의 학습공간 입니다.\nLink 01_Form_Group \n 02. C# Event \n 03. Thread/Invoke/BeginInvoke \n 04. TreeView Text Finder \n 05. ListBox Flicker \n  \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/project/investo/",
@@ -348,6 +348,13 @@
 	"tags": [],
 	"description": "",
 	"content": "A bunch of Shortcodes are available with this theme :\n\rattachments\rThe Attachments shortcode displays a list of files attached to a page.\n\r\rbadge\rDisclaimers to help you structure your page\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/winform/06_formtoform/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "title: \u0026ldquo;06. Data shares multiple Forms\u0026rdquo; date: 2022-01-08T16:33:29+09:00 draft: false weight: 7\nOverview  다중 폼에서의 데이터 전달에 대한 방법을 기술.\n\r\rMethods  Static Global Class  public static class GLOBAL{} 같은 네임스페이스에 속한 클래스들은 해당 GLOBAL 정적 클래스의 맴버, 프로퍼티들에 접근하여 해당 값들을 Sharing. 코드의 관리가 용이  public class 할당  양 폼에 동일한 클래스를 정의하고 메인폼에서 서브폼으로 public을로 접근 가능한 동일 객체에 선언한다. 메인폼에서 모든 데이터를 관리할 수 있으며, 서브폼의 수명이 다하여 소멸 시 해당 복제 객체 처분(Dispose)만 해준다면 메모리 리크를 관리해줄 수 있다.  \rCode  Main Form  namespace UNIT_TEST_GLOBAL { public partial class Form1 : Form { TestAPI testAPI = new TestAPI(3406); public Form1() { InitializeComponent(); StartSubForm(); } private void StartSubForm() { SubForm sub = new SubForm(); sub.testAPI = this.testAPI; TextBox txtBox = new TextBox() { Text = \u0026#34;test sample text\u0026#34;, Location = new Point(10, 10), Size = new Size(20, 60), }; sub.txtTest = txtBox; sub.Controls.Add(txtBox); sub.Load += (sender, e) =\u0026gt; { Console.WriteLine($\u0026#34;In SubForm Id: {sub.testAPI.Id}\u0026#34;); Console.WriteLine((this.testAPI == sub.testAPI).ToString()) ; Console.WriteLine(); sub.testAPI.Id = 1999; Console.WriteLine($\u0026#34;In Form1 Id: {this.testAPI.Id}\u0026#34;); Console.WriteLine($\u0026#34;In SubForm Id: {sub.testAPI.Id}\u0026#34;); Console.WriteLine((this.testAPI == sub.testAPI).ToString()) ; Console.WriteLine(sub.txtTest.Text); }; sub.FormClosed += (sender, e) =\u0026gt; { Console.WriteLine(); Console.WriteLine(\u0026#34;subForm Closed.\u0026#34;); Console.WriteLine($\u0026#34;In Form1 Id: {this.testAPI.Id}\u0026#34;); Console.WriteLine($\u0026#34;In SubForm Id: {sub.testAPI.Id}\u0026#34;); Console.WriteLine(sub.txtTest.Text); }; sub.Show(); } } public class TestAPI { public int Id { get; set; } public TestAPI(int Id) { this.Id = Id; Console.WriteLine($\u0026#34;Success To Init value. [{this.Id}]\u0026#34;); } } }  Sub Form  namespace UNIT_TEST_GLOBAL { public partial class SubForm : Form { public TestAPI testAPI; public TextBox txtTest; public SubForm() { InitializeComponent(); } private void button1_Click(object sender, EventArgs e) { this.Close(); this.Dispose(); txtTest.Dispose(); } } } Troubleshooting   \r       \nSummary  Reference Link\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/shortcodes/attachments/",
