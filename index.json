@@ -1,5 +1,19 @@
 [
 {
+	"uri": "https://nocturover.github.io/csharp/common/01_common/",
+	"title": "01.Reflection",
+	"tags": [],
+	"description": "",
+	"content": "Overview  C# 문법 Reflection 의 활용법 기술\n\r\rWiki  동적 바인딩 기능을 내포한 객체  일반적으로 코드의 컴파일이 된 시점부터 프로그램은 컴파일된 코드의 구성에 따라 거동된다. Reflection을 이용하면 객체의 생성과 연결(binding), Invoking Method, Event Subscribing Method List를 추출하여 동적으로 사용하는 것이 가능하다. Plug-In 방식의 코드 구성에 활용가능하다.  \rUsage  Event - Get Invocation List  이번 챕터에서는 하나의 Instance 객체의 특정 이벤트에 등록된 Method를 추출하여 호출(Invoke)하거나, Window.Form.Control 객체의 Deep Copy(Clone())에 활용하는 예시를 보여준다.   Instance(txt)의 특정 EventHandler 정보를 추출  private void TestReflectionCopy() { // TextBox instance의 생성과 Event(2) 등록  TextBox txt = new(); txt.TextChanged += txt_TextChanged; txt.Click += (sender, e) =\u0026gt; { MessageBox.Show(\u0026#34;Textbox Clicked\u0026#34;); }; // TextBox 공통 클래스의 Events Property의 주소를 가져와 인스턴스화된 txt 객체에 반영된 Events를 특정  // txt.GetType() == typeof(TextBox)  PropertyInfo propertyInfo = txt.GetType().GetProperty(\u0026#34;Events\u0026#34;, BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance); EventHandlerList eventHandlerList = propertyInfo.GetValue(txt, new object[] { }) as EventHandlerList; // TextBox 공통 클래스의 Fileds 중 특정 EventHandler의 문자열 이름으로부터 객체 정보(FieldInfo)를 추출  // var fields = typeof(Control).GetFields(BindingFlags.NonPublic | BindingFlags.Static);\t// *문자열 이름 참고용 코드  FieldInfo fieldInfo = typeof(Control).GetField(\u0026#34;s_textEvent\u0026#34;, BindingFlags.NonPublic | BindingFlags.Static); // txt 인스턴스 객체로부터 TextEvent관련 값을 handlerList 중 Indxer로 색인하여, txt 인스턴스 객체의 특정 EvenetHandler를 추출  object eventKey = fieldInfo.GetValue(txt); var eventHandler = eventHandlerList[eventKey] as Delegate; Delegate[] invocationList = eventHandler.GetInvocationList(); } private void txt_TextChanged(object sender, EventArgs e) { MessageBox.Show(\u0026#34;TextChanged\u0026#34;); } Invoke Method  foreach (EventHandler method in invocationList) { method.Invoke(this, EventArgs.Empty); } 새로운 Instance에 txt인스턴스의 txt_TextChanged Method를 복사 등록  TextBox instance = Activator.CreateInstance\u0026lt;TextBox\u0026gt;(); EventInfo eventInfo = typeof(TextBox).GetEvent(\u0026#34;TextChanged\u0026#34;); foreach (EventHandler methodHandle in invocationList) { if (methodHandle.Method.Name.Equals(\u0026#34;txt_TextChanged\u0026#34;)) { eventInfo.AddEventHandler(instance, methodHandle); } }  일반적인 경우에서 Method의 이름을 알고 있기 때문에 위와 같이 번거러운 추출작업을 할 필요가 없겠으나, 하나의 EventHandler에 다수의 Method가 구독되어 있는 형태이거나, lambda 형태로 특정하기 어려운 형태에서 적용 가능하다.  ex) 특정 이벤트의 전체 구독을 취소(GetInvocationList.foreach() → eventInfo.RemoveEventHandler(instance, methodHandler))    Troubleshooting   Field 의 명이 커뮤니티 내에서는 Event+{EventName}의 형태로 알려져 있지만, s_click, s_textEvent의 형태로 존재하였다. TextChanged Event는 똑같은 Naming이 아닌 s_textEvent 내에 소속된 형태로 보여진다.  FieldInfo fieldInfo = typeof(Control).GetField(\u0026#34;s_textEvent\u0026#34;, BindingFlags.NonPublic | BindingFlags.Static); \r       \nSummary  Reference Link\nMSDS - Reflection\nHow to create a new object instance from a Type]\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/csharp/common/",
+	"title": "Common",
+	"tags": [],
+	"description": "C#-Common",
+	"content": "Overview  이 곳은 C# 공통 학습공간 입니다.\nLink 01.Reflection \n\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/csharp/winform/",
 	"title": "Winform",
 	"tags": [],
@@ -54,13 +68,6 @@
 	"tags": [],
 	"description": "Introduction of this site.",
 	"content": "Overview 이 사이트는 코딩과 그 밖의 모든 것에 대한 보관함 입니다.\n\r[사용가능 도구들] \r[ALERT]  \rprimary is a primary\rinfo is a text\rsuccess is a text\rwarning is a text\rdanger is a text\rdark is a dark\rlight is a light\rsecondary is a secondary\r\r[ATTATCHMENTS]  \t\r_files\r\rCarroll_AliceAuPaysDesMerveilles.pdf\u0026nbsp;(175 kB)adivorciarsetoca00cape.pdf\u0026nbsp;(212 kB)hugo.png\u0026nbsp;(17 kB)movieselectricsheep-flock-244-32500-2.mp4\u0026nbsp;(340 kB)zip.mp3\u0026nbsp;(57 kB)\r\r\r[TAB]  PHP\r​\tThis is how we do a Hello world with php\n\u0026lt;?php Print \u0026#34;Hello, World!\u0026#34;; ?\u0026gt;​\nGolang\r​\tThis is how we do a Hello world with go\npackage main import \u0026#34;fmt\u0026#34; func main() { fmt.Println(\u0026#34;hello world\u0026#34;) }\t​\nJava\r​\tThis is how we do a Hello world with java\nclass HelloWorld { public static void main(String[] args) { System.out.println(\u0026#34;Hello, World!\u0026#34;); } } ​\n\r\r[BADGE]  primary (default) In progress docport beta danger warning info light dark\n\r[BUTTON]  Google 이동\rInsight 페이지 이동\r\r\r[COLUMN]  1st column Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\r2nd column Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\rlast column Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\r \r[EXCERPT]  excerpt paragraph test\r\u0026lt;Excerpt\u0026gt;\r{{% alert primary %}} excerpt paragraph test {{% /alert %}}\r\r\r\r[EXPAND]  \rExpand me\r\rgit\nλ git submodule add https://github.com/~/~.git themes/~ \r\r\r[NOTICE]  TODOLearn language\n\r\r[PANEL]  panel titlethis is a panel text\npanel footer\r\r[ICON]  ICON LINKFONTAWESOME\n\r\n   "
-},
-{
-	"uri": "https://nocturover.github.io/csharp/common/",
-	"title": "Common",
-	"tags": [],
-	"description": "C#-Common",
-	"content": "Overview  이 곳은 C# 공통 학습공간 입니다.\nLink  \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/project/investo/idea/",
@@ -355,13 +362,6 @@
 	"tags": [],
 	"description": "",
 	"content": "A bunch of Shortcodes are available with this theme :\n\rattachments\rThe Attachments shortcode displays a list of files attached to a page.\n\r\rbadge\rDisclaimers to help you structure your page\n\r\r"
-},
-{
-	"uri": "https://nocturover.github.io/csharp/common/01_common/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "title: \u0026ldquo;01.Reflection\u0026rdquo; date: 2022-05-13T16:04:30 draft: false weight: 1\nOverview  C# 문법 Reflection 의 활용법 기술\n\r\rWiki  동적 바인딩 기능을 내포한 객체  일반적으로 코드의 컴파일이 된 시점부터 프로그램은 컴파일된 코드의 구성에 따라 거동된다. Reflection을 이용하면 객체의 생성과 연결(binding), Invoking Method, Event Subscribing Method List를 추출하여 동적으로 사용하는 것이 가능하다. Plug-In 방식의 코드 구성에 활용가능하다.  \rUsage  Event - Get Invocation List  이번 챕터에서는 하나의 Instance 객체의 특정 이벤트에 등록된 Method를 추출하여 호출(Invoke)하거나, Window.Form.Control 객체의 Deep Copy(Clone())에 활용하는 예시를 보여준다.   Instance(txt)의 특정 EventHandler 정보를 추출  private void TestReflectionCopy() { // TextBox instance의 생성과 Event(2) 등록  TextBox txt = new(); txt.TextChanged += txt_TextChanged; txt.Click += (sender, e) =\u0026gt; { MessageBox.Show(\u0026#34;Textbox Clicked\u0026#34;); }; // TextBox 공통 클래스의 Events Property의 주소를 가져와 인스턴스화된 txt 객체에 반영된 Events를 특정  // txt.GetType() == typeof(TextBox)  PropertyInfo propertyInfo = txt.GetType().GetProperty(\u0026#34;Events\u0026#34;, BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance); EventHandlerList eventHandlerList = propertyInfo.GetValue(txt, new object[] { }) as EventHandlerList; // TextBox 공통 클래스의 Fileds 중 특정 EventHandler의 문자열 이름으로부터 객체 정보(FieldInfo)를 추출  // var fields = typeof(Control).GetFields(BindingFlags.NonPublic | BindingFlags.Static);\t// *문자열 이름 참고용 코드  FieldInfo fieldInfo = typeof(Control).GetField(\u0026#34;s_textEvent\u0026#34;, BindingFlags.NonPublic | BindingFlags.Static); // txt 인스턴스 객체로부터 TextEvent관련 값을 handlerList 중 Indxer로 색인하여, txt 인스턴스 객체의 특정 EvenetHandler를 추출  object eventKey = fieldInfo.GetValue(txt); var eventHandler = eventHandlerList[eventKey] as Delegate; Delegate[] invocationList = eventHandler.GetInvocationList(); } private void txt_TextChanged(object sender, EventArgs e) { MessageBox.Show(\u0026#34;TextChanged\u0026#34;); } Invoke Method  foreach (EventHandler method in invocationList) { method.Invoke(this, EventArgs.Empty); } 새로운 Instance에 txt인스턴스의 txt_TextChanged Method를 복사 등록  TextBox instance = Activator.CreateInstance\u0026lt;TextBox\u0026gt;(); EventInfo eventInfo = typeof(TextBox).GetEvent(\u0026#34;TextChanged\u0026#34;); foreach (EventHandler methodHandle in invocationList) { if (methodHandle.Method.Name.Equals(\u0026#34;txt_TextChanged\u0026#34;)) { eventInfo.AddEventHandler(instance, methodHandle); } }  일반적인 경우에서 Method의 이름을 알고 있기 때문에 위와 같이 번거러운 추출작업을 할 필요가 없겠으나, 하나의 EventHandler에 다수의 Method가 구독되어 있는 형태이거나, lambda 형태로 특정하기 어려운 형태에서 적용 가능하다.  ex) 특정 이벤트의 전체 구독을 취소(GetInvocationList.foreach() → eventInfo.RemoveEventHandler(instance, methodHandler))    Troubleshooting   Field 의 명이 커뮤니티 내에서는 Event+{EventName}의 형태로 알려져 있지만, s_click, s_textEvent의 형태로 존재하였다. TextChanged Event는 똑같은 Naming이 아닌 s_textEvent 내에 소속된 형태로 보여진다.  FieldInfo fieldInfo = typeof(Control).GetField(\u0026#34;s_textEvent\u0026#34;, BindingFlags.NonPublic | BindingFlags.Static); \r       \nSummary  Reference Link\nMSDS - Reflection\nHow to create a new object instance from a Type]\n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/winform/06_formtoform/",

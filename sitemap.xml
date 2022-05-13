@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nocturover.github.io/csharp/common/01_common/</loc>
+    <lastmod>2022-05-13T16:04:30+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/csharp/common/</loc>
+    <lastmod>2022-05-13T16:04:30+09:00</lastmod>
+  </url><url>
     <loc>https://nocturover.github.io/csharp/winform/</loc>
     <lastmod>2022-01-07T13:33:29+09:00</lastmod>
   </url><url>
@@ -25,8 +31,6 @@
   </url><url>
     <loc>https://nocturover.github.io/hello/</loc>
     <lastmod>2021-10-15T22:56:37+09:00</lastmod>
-  </url><url>
-    <loc>https://nocturover.github.io/csharp/common/</loc>
   </url><url>
     <loc>https://nocturover.github.io/project/investo/idea/</loc>
   </url><url>
@@ -154,7 +158,7 @@
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/</loc>
-    <lastmod>2022-01-07T13:33:29+09:00</lastmod>
+    <lastmod>2022-05-13T16:04:30+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/_layout/</loc>
     <lastmod>2020-08-20T15:41:15+00:00</lastmod>
@@ -169,8 +173,6 @@
     <lastmod>2020-08-20T11:07:48+00:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/_layout/article-sidebar-after/</loc>
-  </url><url>
-    <loc>https://nocturover.github.io/csharp/common/01_common/</loc>
   </url><url>
     <loc>https://nocturover.github.io/csharp/winform/06_formtoform/</loc>
   </url><url>
