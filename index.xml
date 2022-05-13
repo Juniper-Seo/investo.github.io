@@ -253,7 +253,7 @@ SSH key 생성하고 GitHub에 등록
       
       <guid>https://nocturover.github.io/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/</guid>
       <description>Overview  MairaDB - C#의 연동 및 기타 메서드를 담는 클래스 생성
- Architecture  목적 :: 캡슐화  DB의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임. 단, (단일적 &amp;amp;&amp;amp; 외부 사용 필수) 요소는 static 허용 처리 방식의 고수준화  디자인  Member - Property - Structure - Method - TestCase   Warning  한정자  한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.  private - 소스 코드 내에서만 Retrieving public - 인스턴스로 외부에서 적용될 때 static - global setting의 개념 (단일성 - singleton Design pattern)    Execute command  반환값에 따른 방법 적용  ExecuteScalar - 1개 요소 ExecuteReader - next/current 방식 ExecuteAdapter - fill in Dataset[Datatable]    MySqlConnection  conn 할당 후 conn.</description>
+Architecture  목적 :: 캡슐화  DB의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임. 단, (단일적 &amp;amp;&amp;amp; 외부 사용 필수) 요소는 static 허용 처리 방식의 고수준화  디자인  Member - Property - Structure - Method - TestCase  Warning  한정자  한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.  private - 소스 코드 내에서만 Retrieving public - 인스턴스로 외부에서 적용될 때 static - global setting의 개념 (단일성 - singleton Design pattern)    Execute command  반환값에 따른 방법 적용  ExecuteScalar - 1개 요소 ExecuteReader - next/current 방식 ExecuteAdapter - fill in Dataset[Datatable]    MySqlConnection  conn 할당 후 conn.</description>
     </item>
     
     <item>
@@ -396,6 +396,17 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
 사람도 마찬가지로 성능이 존재한다.
 스스로의 앎을 척도로 나타내자면, 메타인지적 사고능력과 객관화로부터 새로운 계획을 세우고 회귀하는 빈도나 정확도를 점으로 찍어본다면 하나의 성능 결과표가 나올 것이다.
 또한 스스로의 상황에서 최적의 목표를 지향점으로 삼고 환경의 변화에 따른 기존 파라미터의 증감이나 삭제/추가를 연속하며, 온전한 최적화 상황을 만들어가는 것의 빈도나 퀄리티를 척도로 삼을 수도 있겠다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nocturover.github.io/csharp/common/01_common/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/common/01_common/</guid>
+      <description>title: &amp;ldquo;01. Start&amp;rdquo; date: 2022-05-13T16:33:29+09:00 draft: false weight: 1
+Overview  다중 폼에서의 데이터 전달에 대한 방법을 기술.
+Methods  Static Global Class  public static class GLOBAL{} 같은 네임스페이스에 속한 클래스들은 해당 GLOBAL 정적 클래스의 맴버, 프로퍼티들에 접근하여 해당 값들을 Sharing. 코드의 관리가 용이  public class 할당  양 폼에 동일한 클래스를 정의하고 메인폼에서 서브폼으로 public을로 접근 가능한 동일 객체에 선언한다. 메인폼에서 모든 데이터를 관리할 수 있으며, 서브폼의 수명이 다하여 소멸 시 해당 복제 객체 처분(Dispose)만 해준다면 메모리 리크를 관리해줄 수 있다.</description>
     </item>
     
     <item>

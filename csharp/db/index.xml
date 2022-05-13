@@ -36,7 +36,7 @@
       
       <guid>https://nocturover.github.io/csharp/db/03_sql_%EC%BA%A1%EC%8A%90%ED%99%94/</guid>
       <description>Overview  MairaDB - C#의 연동 및 기타 메서드를 담는 클래스 생성
- Architecture  목적 :: 캡슐화  DB의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임. 단, (단일적 &amp;amp;&amp;amp; 외부 사용 필수) 요소는 static 허용 처리 방식의 고수준화  디자인  Member - Property - Structure - Method - TestCase   Warning  한정자  한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.  private - 소스 코드 내에서만 Retrieving public - 인스턴스로 외부에서 적용될 때 static - global setting의 개념 (단일성 - singleton Design pattern)    Execute command  반환값에 따른 방법 적용  ExecuteScalar - 1개 요소 ExecuteReader - next/current 방식 ExecuteAdapter - fill in Dataset[Datatable]    MySqlConnection  conn 할당 후 conn.</description>
+Architecture  목적 :: 캡슐화  DB의 사용방식을 최대한 독립시킴으로써 타 소스들과의 의존성을 줄임. 단, (단일적 &amp;amp;&amp;amp; 외부 사용 필수) 요소는 static 허용 처리 방식의 고수준화  디자인  Member - Property - Structure - Method - TestCase  Warning  한정자  한정자의 등장배경 개념에 따른 코드 스탠다드 정형화 필요.  private - 소스 코드 내에서만 Retrieving public - 인스턴스로 외부에서 적용될 때 static - global setting의 개념 (단일성 - singleton Design pattern)    Execute command  반환값에 따른 방법 적용  ExecuteScalar - 1개 요소 ExecuteReader - next/current 방식 ExecuteAdapter - fill in Dataset[Datatable]    MySqlConnection  conn 할당 후 conn.</description>
     </item>
     
     <item>
