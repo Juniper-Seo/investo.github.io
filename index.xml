@@ -6,7 +6,7 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 May 2022 16:04:30 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 May 2022 17:02:53 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01.Reflection</title>
       <link>https://nocturover.github.io/csharp/common/01_common/</link>
@@ -406,6 +406,27 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
 사람도 마찬가지로 성능이 존재한다.
 스스로의 앎을 척도로 나타내자면, 메타인지적 사고능력과 객관화로부터 새로운 계획을 세우고 회귀하는 빈도나 정확도를 점으로 찍어본다면 하나의 성능 결과표가 나올 것이다.
 또한 스스로의 상황에서 최적의 목표를 지향점으로 삼고 환경의 변화에 따른 기존 파라미터의 증감이나 삭제/추가를 연속하며, 온전한 최적화 상황을 만들어가는 것의 빈도나 퀄리티를 척도로 삼을 수도 있겠다.</description>
+    </item>
+    
+    <item>
+      <title>01.Reflection</title>
+      <link>https://nocturover.github.io/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/</link>
+      <pubDate>Fri, 13 May 2022 17:02:53 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/</guid>
+      <description>1.
+정리의 목적이 있다면 상기되는 주기를 줄여 기억의 망각 주기를 거스르기 위해서라고 말할 수 있겠다.
+새로운 것을 습득하는 과정에서</description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://nocturover.github.io/git/new-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nocturover.github.io/git/new-file/</guid>
+      <description>Overview 이 곳은 Git 사용법의 학습 공간입니다.
+Link</description>
     </item>
     
     <item>
