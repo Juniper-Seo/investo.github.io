@@ -118,10 +118,10 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
     
     <item>
       <title>9. 프로그램</title>
-      <link>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</link>
+      <link>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/</link>
       <pubDate>Mon, 16 May 2022 17:22:53 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</guid>
+      <guid>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/</guid>
       <description>1.
 TyporaSupporter라는 Markdown Edit 프로그램의 쉬운 생성과 편집,
 Github.io에 간단히 게시하기 위한 Hugo, Push 방식을 자동화한 하나의 컨트롤러를 제작하였다.

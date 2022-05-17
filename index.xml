@@ -421,10 +421,10 @@ pre- 의 개념으로 학습의 전 단계에서, 프로젝트의 계획 전에�
     
     <item>
       <title>9. 프로그램</title>
-      <link>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</link>
+      <link>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/</link>
       <pubDate>Mon, 16 May 2022 17:22:53 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/</guid>
+      <guid>https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/</guid>
       <description>1.
 TyporaSupporter라는 Markdown Edit 프로그램의 쉬운 생성과 편집,
 Github.io에 간단히 게시하기 위한 Hugo, Push 방식을 자동화한 하나의 컨트롤러를 제작하였다.
@@ -443,6 +443,18 @@ Github.io에 간단히 게시하기 위한 Hugo, Push 방식을 자동화한 하
       <description>title: &amp;ldquo;06. Data shares multiple Forms&amp;rdquo; date: 2022-01-08T16:33:29+09:00 draft: false weight: 7
 Overview  다중 폼에서의 데이터 전달에 대한 방법을 기술.
 Methods  Static Global Class  public static class GLOBAL{} 같은 네임스페이스에 속한 클래스들은 해당 GLOBAL 정적 클래스의 맴버, 프로퍼티들에 접근하여 해당 값들을 Sharing. 코드의 관리가 용이  public class 할당  양 폼에 동일한 클래스를 정의하고 메인폼에서 서브폼으로 public을로 접근 가능한 동일 객체에 선언한다. 메인폼에서 모든 데이터를 관리할 수 있으며, 서브폼의 수명이 다하여 소멸 시 해당 복제 객체 처분(Dispose)만 해준다면 메모리 리크를 관리해줄 수 있다.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nocturover.github.io/csharp/winform/07_form_border_none/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/07_form_border_none/</guid>
+      <description>title: &amp;ldquo;7. FormBorderStryle - None &amp;quot; date: 2022-05-17T21:53:41+09:00 draft: false weight: 8
+Overview  Form의 테두리 없는 스타일 구현 기술
+Methods  Code(with WinAPI ) this.MouseDown += (sender, e) =&amp;gt; { if (e.Button == MouseButtons.Left) { ReleaseCapture(); SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, IntPtr.Zero); } }   Form 내 이동 이벤트가 수행될 컨트롤(패널 or Form)에 마우스 좌클릭 이벤트를 구독
+   Code  Main Form  namespace UNIT_TEST_GLOBAL { public partial class Form1 : Form { TestAPI testAPI = new TestAPI(3406); public Form1() { InitializeComponent(); StartSubForm(); } private void StartSubForm() { SubForm sub = new SubForm(); sub.</description>
     </item>
     
   </channel>
