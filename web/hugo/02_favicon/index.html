@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2022-05-17T22:05:50 KST">
+<meta name="revised" content="2022-05-18T16:06:55 KST">
 <meta name="description" content="">
 
 
@@ -227,7 +227,7 @@
         
       
 			
-          <a href="/project/">Project&nbsp;(6)&nbsp;⚗️</a>
+          <a href="/project/">Project&nbsp;(7)&nbsp;⚗️</a>
       
         <ul>
               
@@ -677,7 +677,7 @@
 <h2 ref="1-적용" >1. 적용</h2><a class="anchor" id="1-적용"></a>
 <hr>
 <h3 ref="favicon" >favicon</h3><a class="anchor" id="favicon"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">├─static
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">├─static
 │  ├─admin
 │  │  └─shortcode
 │  ├─css
@@ -688,14 +688,14 @@
 │      └─lunr
 </code></pre></div><p><code>static/images</code>에 <code>favicon.png</code> 이름으로 로고 파일을 저장한다.</p>
 <p><code>layouts/partials/html-head.html</code> 파일에 사이트 <code>title</code>과 <code>link</code>가 작성되어 있다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;{{ .Title }} :: {{ .Site.Title }}&lt;/<span style="color:#f92672">title</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">title</span>&gt;{{ .Title }} :: {{ .Site.Title }}&lt;/<span style="color:#f92672">title</span>&gt;
 
 &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shortcut icon&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;{{&#34;images/favicon.png&#34; | relURL}}&#39;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;image/x-icon&#34;</span> /&gt;
 </code></pre></div><br/>
 <h3 ref="logo" >logo</h3><a class="anchor" id="logo"></a>
 <p><code>layouts/partials/body-header.html</code> 파일에 <code>div</code>태그 내부에 상부 헤더  <code>title</code>이 작성되어 있다.</p>
 <p><code>a</code>태그를 새로 생성하여 아래와 같이 작성한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.BaseURL }}&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Site.BaseURL }}&#34;</span>&gt;
      &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;/images/favicon.png&#39;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width:20px;height:20px;margin-top:3px;&#34;</span>/&gt;
 &lt;/<span style="color:#f92672">a</span>&gt;
 
@@ -779,6 +779,8 @@
 	<p class="list-box">
 		
 		
+			<a class="list" href="/project/investo/progress/03_tree_struct_planing/"> > <strong>05.18</strong> | 03. Tree Struct Planing </a> <br/> 
+		
 			<a class="list" href="/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/"> > <strong>05.16</strong> | 9. 프로그램 </a> <br/> 
 		
 			<a class="list" href="/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/"> > <strong>05.13</strong> | 08. 습득과 정리 </a> <br/> 
@@ -786,8 +788,6 @@
 			<a class="list" href="/csharp/common/01_common/"> > <strong>05.13</strong> | 01.Reflection </a> <br/> 
 		
 			<a class="list" href="/csharp/winform/05_listbox/"> > <strong>01.07</strong> | 05. ListBox Flicker </a> <br/> 
-		
-			<a class="list" href="/daily/07_performance/"> > <strong>01.02</strong> | 07. Performance </a> <br/> 
 		
 	</p>
 </a>

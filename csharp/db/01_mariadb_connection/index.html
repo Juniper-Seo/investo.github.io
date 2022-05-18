@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2022-05-17T22:05:49 KST">
+<meta name="revised" content="2022-05-18T16:06:55 KST">
 <meta name="description" content="">
 
 
@@ -227,7 +227,7 @@
         
       
 			
-          <a href="/project/">Project&nbsp;(6)&nbsp;⚗️</a>
+          <a href="/project/">Project&nbsp;(7)&nbsp;⚗️</a>
       
         <ul>
               
@@ -701,12 +701,12 @@
 <p>프로젝트 종속성 로드</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\net5.0\MySql.Data.dll
 </code></pre></div><br/>
 <h2 ref="connection" >Connection</h2><a class="anchor" id="connection"></a>
 <hr>
 <h3 ref="code--form" >Code :: Form</h3><a class="anchor" id="code--form"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> System;
 <span style="color:#66d9ef">using</span> System.Windows.Forms;
 <span style="color:#66d9ef">using</span> MySql.Data.MySqlClient;					<span style="color:#75715e">// Load;
 </span><span style="color:#75715e"></span>
@@ -778,7 +778,7 @@
 <ul>
 <li>Connection string 작성 시 주의사항</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">string</span> connStr = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">string</span> connStr = <span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;Server={0};Port={1};Database={2};Uid={3};Pwd={4};&#34;</span>,
 <span style="color:#66d9ef">this</span>.txtServer.Text, <span style="color:#e6db74">&#34;3306&#34;</span>, <span style="color:#66d9ef">this</span>.txtDB.Text, <span style="color:#66d9ef">this</span>.txtId.Text, <span style="color:#66d9ef">this</span>.txtPwd.Text);
 </code></pre></div>
 
@@ -796,7 +796,7 @@
 <ul>
 <li>SqlCommand Excute</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">MySqlCommand command = <span style="color:#66d9ef">new</span> MySqlCommand(sqlStr, conn);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">MySqlCommand command = <span style="color:#66d9ef">new</span> MySqlCommand(sqlStr, conn);
 command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 </span></code></pre></div>
 
@@ -811,7 +811,7 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 <ul>
 <li>Common</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mydb; <span style="color:#75715e">-- mydb 데이터베이스 생성
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mydb; <span style="color:#75715e">-- mydb 데이터베이스 생성
 </span><span style="color:#75715e"></span>USE mydb; <span style="color:#75715e">-- 기본 데이터베이스로 mydb를 지정
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> mytable ( id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>, name VARCHAR(<span style="color:#ae81ff">20</span>) ); <span style="color:#75715e">-- mytable 테이블 생성
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> mytable <span style="color:#66d9ef">VALUES</span> ( <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;Will&#39;</span> ); <span style="color:#75715e">-- 데이터 입력
@@ -827,7 +827,7 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 </code></pre></div><ul>
 <li>Complex</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">user</span> <span style="color:#66d9ef">WHERE</span> ((id <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span> <span style="color:#66d9ef">AND</span> id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">OR</span> (id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">900000</span>)) <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> id <span style="color:#66d9ef">DESC</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> <span style="color:#66d9ef">user</span> <span style="color:#66d9ef">WHERE</span> ((id <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span> <span style="color:#66d9ef">AND</span> id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">OR</span> (id <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">900000</span>)) <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> id <span style="color:#66d9ef">DESC</span>;
 
 </code></pre></div><br/>
 <h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
@@ -909,6 +909,8 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 	<p class="list-box">
 		
 		
+			<a class="list" href="/project/investo/progress/03_tree_struct_planing/"> > <strong>05.18</strong> | 03. Tree Struct Planing </a> <br/> 
+		
 			<a class="list" href="/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/"> > <strong>05.16</strong> | 9. 프로그램 </a> <br/> 
 		
 			<a class="list" href="/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/"> > <strong>05.13</strong> | 08. 습득과 정리 </a> <br/> 
@@ -916,8 +918,6 @@ command.ExecuteNonQuery();			<span style="color:#75715e">// send Sql String;
 			<a class="list" href="/csharp/common/01_common/"> > <strong>05.13</strong> | 01.Reflection </a> <br/> 
 		
 			<a class="list" href="/csharp/winform/05_listbox/"> > <strong>01.07</strong> | 05. ListBox Flicker </a> <br/> 
-		
-			<a class="list" href="/daily/07_performance/"> > <strong>01.02</strong> | 07. Performance </a> <br/> 
 		
 	</p>
 </a>

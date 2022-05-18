@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2022-05-17T22:05:49 KST">
+<meta name="revised" content="2022-05-18T16:06:55 KST">
 <meta name="description" content="">
 
 
@@ -227,7 +227,7 @@
         
       
 			
-          <a href="/project/">Project&nbsp;(6)&nbsp;⚗️</a>
+          <a href="/project/">Project&nbsp;(7)&nbsp;⚗️</a>
       
         <ul>
               
@@ -689,7 +689,7 @@
 <ol>
 <li>Instance(<code>txt</code>)의 특정 <code>EventHandler</code> 정보를 추출</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"> <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> TestReflectionCopy()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"> <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> TestReflectionCopy()
  {
      <span style="color:#75715e">// TextBox instance의 생성과 Event(2) 등록
 </span><span style="color:#75715e"></span>     TextBox txt = <span style="color:#66d9ef">new</span>();
@@ -717,14 +717,14 @@
 </code></pre></div><ol start="2">
 <li>Invoke Method</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">foreach</span> (EventHandler method <span style="color:#66d9ef">in</span> invocationList)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">foreach</span> (EventHandler method <span style="color:#66d9ef">in</span> invocationList)
 {
 	method.Invoke(<span style="color:#66d9ef">this</span>, EventArgs.Empty);
 }
 </code></pre></div><ol start="3">
 <li>새로운 Instance에 <code>txt</code>인스턴스의 <code>txt_TextChanged</code> Method를 복사 등록</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">TextBox instance = Activator.CreateInstance&lt;TextBox&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">TextBox instance = Activator.CreateInstance&lt;TextBox&gt;();
 EventInfo eventInfo = <span style="color:#66d9ef">typeof</span>(TextBox).GetEvent(<span style="color:#e6db74">&#34;TextChanged&#34;</span>);
 <span style="color:#66d9ef">foreach</span> (EventHandler methodHandle <span style="color:#66d9ef">in</span> invocationList)
 {
@@ -748,7 +748,7 @@ EventInfo eventInfo = <span style="color:#66d9ef">typeof</span>(TextBox).GetEven
 <li><code>Field</code> 의 명이 커뮤니티 내에서는 <code>Event+{EventName}</code>의 형태로 알려져 있지만, <code>s_click</code>, <code>s_textEvent의</code> 형태로 존재하였다.</li>
 <li><code>TextChanged</code> Event는 똑같은 Naming이 아닌 <code>s_textEvent</code> 내에 소속된 형태로 보여진다.</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-c#" data-lang="c#">FieldInfo fieldInfo = <span style="color:#66d9ef">typeof</span>(Control).GetField(<span style="color:#e6db74">&#34;s_textEvent&#34;</span>, BindingFlags.NonPublic | BindingFlags.Static); 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">FieldInfo fieldInfo = <span style="color:#66d9ef">typeof</span>(Control).GetField(<span style="color:#e6db74">&#34;s_textEvent&#34;</span>, BindingFlags.NonPublic | BindingFlags.Static); 
 </code></pre></div></div>
 
 <ul>
@@ -838,6 +838,8 @@ EventInfo eventInfo = <span style="color:#66d9ef">typeof</span>(TextBox).GetEven
 	<p class="list-box">
 		
 		
+			<a class="list" href="/project/investo/progress/03_tree_struct_planing/"> > <strong>05.18</strong> | 03. Tree Struct Planing </a> <br/> 
+		
 			<a class="list" href="/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/"> > <strong>05.16</strong> | 9. 프로그램 </a> <br/> 
 		
 			<a class="list" href="/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/"> > <strong>05.13</strong> | 08. 습득과 정리 </a> <br/> 
@@ -845,8 +847,6 @@ EventInfo eventInfo = <span style="color:#66d9ef">typeof</span>(TextBox).GetEven
 			<a class="list" href="/csharp/common/01_common/"> > <strong>05.13</strong> | 01.Reflection </a> <br/> 
 		
 			<a class="list" href="/csharp/winform/05_listbox/"> > <strong>01.07</strong> | 05. ListBox Flicker </a> <br/> 
-		
-			<a class="list" href="/daily/07_performance/"> > <strong>01.02</strong> | 07. Performance </a> <br/> 
 		
 	</p>
 </a>

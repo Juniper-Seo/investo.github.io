@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2022-05-17T22:05:50 KST">
+<meta name="revised" content="2022-05-18T16:06:56 KST">
 <meta name="description" content="Introduction of this site.">
 
 
@@ -227,7 +227,7 @@
         
       
 			
-          <a href="/project/">Project&nbsp;(6)&nbsp;⚗️</a>
+          <a href="/project/">Project&nbsp;(7)&nbsp;⚗️</a>
       
         <ul>
               
@@ -653,34 +653,47 @@
 <br/>
 <h3 ref="alert" >[ALERT]</h3><a class="anchor" id="alert"></a>
 <hr>
-<p>
+<p>{{% alert primary %}}<strong>primary</strong> is a primary{{% /alert %}}
+
 
 <div class="alert primary" role="alert"><strong>primary</strong> is a primary</div>
 
+{{% alert primary %}}<strong>primary</strong> is a primary{{% /alert %}}
+
+
+<div class="alert primary" role="alert"><strong>primary</strong> is a primary</div>
+
+{{% alert theme=&ldquo;info&rdquo; %}}<strong>info</strong> is a text{{% /alert %}}
 
 
 <div class="alert info" role="alert"><strong>info</strong> is a text</div>
 
+{{% alert theme=&ldquo;success&rdquo; %}}<strong>success</strong> is a text{{% /alert %}}
 
 
 <div class="alert success" role="alert"><strong>success</strong> is a text</div>
 
+{{% alert theme=&ldquo;warning&rdquo; %}}<strong>warning</strong> is a text{{% /alert %}}
 
 
 <div class="alert warning" role="alert"><strong>warning</strong> is a text</div>
 
+{{% alert danger %}}<strong>danger</strong> is a text{{% /alert %}}
 
 
 <div class="alert danger" role="alert"><strong>danger</strong> is a text</div>
 
+{{% alert dark %}}<strong>dark</strong> is a dark{{% /alert %}}
 
 
 <div class="alert dark" role="alert"><strong>dark</strong> is a dark</div>
 
+{{% alert light %}}<strong>light</strong> is a light{{% /alert %}}
 
 
 <div class="alert light" role="alert"><strong>light</strong> is a light</div>
 
+{{% alert secondary %}}<strong>secondary</strong> is a secondary{{% /alert %}}
 
 
 <div class="alert secondary" role="alert"><strong>secondary</strong> is a secondary</div>
@@ -688,6 +701,9 @@
 <br/>
 <h3 ref="attatchments" >[ATTATCHMENTS]</h3><a class="anchor" id="attatchments"></a>
 <hr>
+<p>{{% alert  warning %}}</p>
+<p>{{%attachments title=&quot;_files&quot; /%}}</p>
+<p>{{% /alert %}}</p>
 
 
 <div class="alert warning" role="alert"><section class="attachments">
@@ -707,26 +723,26 @@ _files
 
 
 
-<div class="tabs"><input type="radio" name="tabs-9" id="tabs-9-0" checked="checked" />
-  <label for="tabs-9-0">PHP</label>
+<div class="tabs"><input type="radio" name="tabs-10" id="tabs-10-0" checked="checked" />
+  <label for="tabs-10-0">PHP</label>
   <div class="tab"><p>​	This is how we do a Hello world with php</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> 
     <span style="color:#66d9ef">Print</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
 <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><p>​</p>
-</div><input type="radio" name="tabs-9" id="tabs-9-1"  />
-  <label for="tabs-9-1">Golang</label>
+</div><input type="radio" name="tabs-10" id="tabs-10-1"  />
+  <label for="tabs-10-1">Golang</label>
   <div class="tab"><p>​	This is how we do a Hello world with go</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 <span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
     <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>)
 }	
 </code></pre></div><p>​</p>
-</div><input type="radio" name="tabs-9" id="tabs-9-2"  />
-  <label for="tabs-9-2">Java</label>
+</div><input type="radio" name="tabs-10" id="tabs-10-2"  />
+  <label for="tabs-10-2">Java</label>
   <div class="tab"><p>​	This is how we do a Hello world with java</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloWorld</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello, World!&#34;</span><span style="color:#f92672">);</span> 
     <span style="color:#f92672">}</span>
@@ -738,23 +754,51 @@ _files
 <br/>
 <h3 ref="badge" >[BADGE]</h3><a class="anchor" id="badge"></a>
 <hr>
-<p><span   class="badge badge-primary">primary <em>(default)</em></span>
+<p>{{% badge %}}primary <em>(default)</em>{{% /badge %}}
+<br/>
+<span   class="badge badge-primary">primary <em>(default)</em></span>
+<br/>
+{{% badge warning %}}In progress{{% /badge %}}
+<br/>
 <span   class="badge badge-warning">In progress</span>
+<br/>
+{{% badge secondary %}}docport{{% /badge %}}
+<br/>
 <span   class="badge badge-secondary">docport</span>
+<br/>
+{{% badge success %}}beta{{% /badge %}}
+<br/>
 <span   class="badge badge-success">beta</span>
+<br/>
+{{% badge danger %}}danger{{% /badge %}}
+<br/>
 <span   class="badge badge-danger">danger</span>
+<br/>
+{{% badge warning %}}warning{{% /badge %}}
+<br/>
 <span   class="badge badge-warning">warning</span>
+<br/>
+{{% badge info %}}info{{% /badge %}}
+<br/>
 <span   class="badge badge-info">info</span>
+<br/>
+{{% badge light %}}light{{% /badge %}}
+<br/>
 <span   class="badge badge-light">light</span>
+<br/>
+{{% badge dark %}}dark{{% /badge %}}
+<br/>
 <span   class="badge badge-dark">dark</span></p>
 <br/>
 <h3 ref="button" >[BUTTON]</h3><a class="anchor" id="button"></a>
 <hr>
+<p>{{&lt; button href=&ldquo;<a href="https://google.com">https://google.com</a>&rdquo; theme=&ldquo;&ldquo;primary&rdquo;&rdquo; <em>/&gt;} } <strong>Google</strong> 이동{{&lt;/</em> /button &gt;}}</p>
 
 
 <button type="button" class="btn  btn-primary"  onclick="location.href='https:\/\/google.com'" ><strong>Google</strong> 이동</button>
 
 
+<p>{ {&lt;/* button ref= &ldquo;&ldquo;Insight&rdquo;&rdquo; theme = &ldquo;secondary&rdquo; */&gt;} }**Insight** 페이지 이동 { {&lt;/*/ button */&gt;} }</p>
 
 
 <button type="button" class="btn  btn-secondary"   onclick="location.href='\/insight\/'"><strong>Insight</strong> 페이지 이동</button>
@@ -819,7 +863,7 @@ excerpt paragraph
         <span>Expand me</span>
     </div>
     <div class="expand-content" style="display: none;"><p><span   class="badge badge-dark">git</span></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">λ git submodule add https://github.com/~/~.git themes/~
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">λ git submodule add https://github.com/~/~.git themes/~
 </code></pre></div></div>
 </div>
 <br/>
@@ -929,6 +973,8 @@ excerpt paragraph
 	<p class="list-box">
 		
 		
+			<a class="list" href="/project/investo/progress/03_tree_struct_planing/"> > <strong>05.18</strong> | 03. Tree Struct Planing </a> <br/> 
+		
 			<a class="list" href="/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/"> > <strong>05.16</strong> | 9. 프로그램 </a> <br/> 
 		
 			<a class="list" href="/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/"> > <strong>05.13</strong> | 08. 습득과 정리 </a> <br/> 
@@ -936,8 +982,6 @@ excerpt paragraph
 			<a class="list" href="/csharp/common/01_common/"> > <strong>05.13</strong> | 01.Reflection </a> <br/> 
 		
 			<a class="list" href="/csharp/winform/05_listbox/"> > <strong>01.07</strong> | 05. ListBox Flicker </a> <br/> 
-		
-			<a class="list" href="/daily/07_performance/"> > <strong>01.02</strong> | 07. Performance </a> <br/> 
 		
 	</p>
 </a>

@@ -8,7 +8,7 @@
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="revised" content="2022-05-17T22:05:50 KST">
+<meta name="revised" content="2022-05-18T16:06:55 KST">
 <meta name="description" content="">
 
 
@@ -227,7 +227,7 @@
         
       
 			
-          <a href="/project/">Project&nbsp;(6)&nbsp;⚗️</a>
+          <a href="/project/">Project&nbsp;(7)&nbsp;⚗️</a>
       
         <ul>
               
@@ -678,7 +678,7 @@
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
 <p><code>hugo</code>를 이용하여 생성된 <code>static site</code> 는</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-fallback" data-lang="fallback">git submodule add ~.git themes/~~
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">git submodule add ~.git themes/~~
 </code></pre></div><p>커맨드를 이용하여 적재한 테마 파일의 모든 레이아웃을  따르게 되어있다.</p>
 <br/>
 <h3 ref="1-개념" >1. 개념</h3><a class="anchor" id="1-개념"></a>
@@ -696,7 +696,7 @@
 <h2 ref="customizing" >Customizing</h2><a class="anchor" id="customizing"></a>
 <hr>
 <p>커스터마이징에 앞서 <code>~/themes/테마명/Layouts</code>의 구조를 살펴보도록 하자.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-cmd" data-lang="cmd">├─partials
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">├─partials
 │      body-article-content.html
 │      body-article-sidepage.html
 │      body-footer.html
@@ -726,7 +726,7 @@
 <h3 ref="1-counting-section-pages" >1. Counting Section pages</h3><a class="anchor" id="1-counting-section-pages"></a>
 <hr>
 <p>각 섹션(<code>_index.md</code>를 포함하고 있는 각 폴더)의 총 페이지 수는 다음 코드의 반환값으로 카운트한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 디렉토리 이름과 비교하여 count를 반환 --&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- 디렉토리 이름과 비교하여 count를 반환 --&gt;</span>
 
 {{- $dirName :=substr .File.Dir 0 -1}}
 
@@ -742,7 +742,7 @@
 <hr>
 <p><code>~themes\docport\assets\sass\main.scss</code> 파일은 <code>scss</code>파일로 html에서 표현되는 스타일을 구현한다.</p>
 <p><code>.Site.Params.color_main</code> (<code>config.toml</code>설정 일부)으로부터 전체 테마의 색상을 적용하거나 <code>body</code>,<code>a</code> 등 각 태그의 스타일을 세부적으로 설정한다.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2"><code class="language-scss" data-lang="scss"><span style="color:#a6e22e">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Montserrat&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;나눔스퀘어&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-scss" data-lang="scss"><span style="color:#a6e22e">font-family</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Montserrat&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;나눔스퀘어&#34;</span>;
 <span style="color:#a6e22e">font-weight</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">400</span>;
 <span style="color:#a6e22e">line-height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#ae81ff">.5</span>;
 </code></pre></div><p>의 내용을 수정하면, 본문과 같이 영문만 지원되는 <code>Monterrat</code>과 <code>나눔스퀘어</code>가 동시 적용된다.</p>
@@ -826,6 +826,8 @@
 	<p class="list-box">
 		
 		
+			<a class="list" href="/project/investo/progress/03_tree_struct_planing/"> > <strong>05.18</strong> | 03. Tree Struct Planing </a> <br/> 
+		
 			<a class="list" href="/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/"> > <strong>05.16</strong> | 9. 프로그램 </a> <br/> 
 		
 			<a class="list" href="/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/"> > <strong>05.13</strong> | 08. 습득과 정리 </a> <br/> 
@@ -833,8 +835,6 @@
 			<a class="list" href="/csharp/common/01_common/"> > <strong>05.13</strong> | 01.Reflection </a> <br/> 
 		
 			<a class="list" href="/csharp/winform/05_listbox/"> > <strong>01.07</strong> | 05. ListBox Flicker </a> <br/> 
-		
-			<a class="list" href="/daily/07_performance/"> > <strong>01.02</strong> | 07. Performance </a> <br/> 
 		
 	</p>
 </a>
