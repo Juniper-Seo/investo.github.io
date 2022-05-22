@@ -37,11 +37,8 @@ a. WinForm UI를 이용한 System 사용자 컨트롤 b. Socket 통신을 통한
       <pubDate>Wed, 18 May 2022 00:26:27 +0900</pubDate>
       
       <guid>https://nocturover.github.io/project/investo/progress/03_tree_struct_planing/</guid>
-      <description>Investo  1.
-전체구조현 상황에서 재료의 준비상태를 확인한다.
-초창기 해당 프로젝트의 완성 이미지는 다음과 같았다.
-a. WinForm UI를 이용한 System 사용자 컨트롤 b. Socket 통신을 통한 최소 3대 컴퓨터 간의 Queue 관리 시스템 ​	가) Main Com(Order Server) : Open Api 주 거래 계좌를 이용해 거래(체결) 및 SS, AS의 총 Queue 관리
-​	나) Scrape Server : Web/API 내 데이터를 Win Scheduler에 따라 수집하고 Database에 적재 + OS에서 수행한 체결데이터(리포트 관리)를 Database에 적재 후 당일 리포트 발행 + Open API 실시간 데이터 수집 및 직전일 데이터 마이그레이션</description>
+      <description>Investo  목적성 현재까지의 진척도를 전체적으로 파악하고 필요한 부분과 불필요한 피상적 작업의 구분을 통해 몰입해야할 주제들을 색인 예상되는 실현가능성을 배제한 전체그림을 그려보고, 실현가능성을 주입한 각각의 기능들을 교차점 효과를 이용해 새로운 효율적 아이디어를 구축 단계별 계획을 시스템화시켜 필수적이면서 중요도가 높은(긴급한) 작업의 실질적 진척을 추구  전체구조Piggyback_Server SS_MainForm초창기 해당 프로젝트의 완성 이미지는 다음과 같았다.
+a. WinForm UI를 이용한 System 사용자 컨트롤 b. Socket 통신을 통한 최소 3대 컴퓨터 간의 Queue 관리 시스템 ​	가) Main Com(Order Server) : Open Api 주 거래 계좌를 이용해 거래(체결) 및 SS, AS의 총 Queue 관리</description>
     </item>
     
   </channel>

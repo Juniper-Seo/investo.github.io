@@ -6,7 +6,7 @@
     <description>Recent content in Daily on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 May 2022 17:22:53 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 20:24:12 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. 선택과 집중</title>
       <link>https://nocturover.github.io/daily/01_%EC%84%A0%ED%83%9D%EA%B3%BC_%EC%A7%91%EC%A4%91/</link>
@@ -129,6 +129,17 @@ Github.io에 간단히 게시하기 위한 Hugo, Push 방식을 자동화한 하
 자신이 행하는 일 중 어떤 일이 피상적이며 불필요한 시간을 낭비하고 있는지를 객관적으로 파악한다면
 자동화 프로그램을 만들어 향후 일어나게될 피상적 시간의 합계(넓이)를 간소화하는 하나의 알고리즘을 구현할 수 있겠다.
 이 프로그램은 어찌보면 지금까지 내가 습득해온 C#내 기술스택들의 조합이자 얼마나 단축된 시간으로 완성된 프로그램을 구현할 수 있는지 테스트하는 과정이었다고 본다.</description>
+    </item>
+    
+    <item>
+      <title>10. 목표</title>
+      <link>https://nocturover.github.io/daily/10_%EB%AA%A9%ED%91%9C/</link>
+      <pubDate>Sun, 22 May 2022 20:24:12 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/10_%EB%AA%A9%ED%91%9C/</guid>
+      <description>목표란 스스로에게 진정성을 입증할 수 있는 존재이자, 단순하며 추상적인 것이 아닌 가능한 구체적이고 가능성을 계산할 수 있는 닿을 수 있는 존재로 인식시켜야 한다.
+행복을 원하며, 자유를 소망하고 이것들을 위한 금전적인 자유를 목표한다는 것은 매우 추상적이며 그 무엇에도 접근할 수 있는 힌트를 제공하고 있지 않다.
+나는 부자가 되고 싶은 것인가라고 물으면 아니다. 부자 자체가 아닌 삶의 행동의 자율성을 강조하고 싶은데 이는 내가 운동을 하고 싶다면 선수급으로 지향하여 매진할 수 있으며, 피아노도, 학습도(연구의 목적도 포함시켜), 지적허영심을 채우기 위한 온갖 전문적인 활동에 대한 시간의 자율성을 부여받았을 때 제 2의 의미를 찾아나서는 단서를 얻게될 것이다.</description>
     </item>
     
   </channel>
