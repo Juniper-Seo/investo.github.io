@@ -1,10 +1,24 @@
 [
 {
+	"uri": "https://nocturover.github.io/project/investo/idea/01_%EB%8F%99%EB%A0%A5%EC%9D%98_%EB%B0%A9%EC%8B%9D/",
+	"title": "01. 아이디어 동력의 방식",
+	"tags": [],
+	"description": "",
+	"content": "Way to Find Idea  목적성\r 개인 프로젝트의 진행은 무척 고독하고 거짓된 행동과 진행상태로 결과에 도달할 수 없다. 충분한 시간은 물론 전체적인 구조를 탄탄히 짜내어 계획한 바를 수행하는 것 밖에 왕도가 없다. 번아웃과 게을러짐이 반복되는 과정을 극복하기 위해서 아이디어의 발굴을 목적한 긍정적 결과를 간접적으로 회상하는 절차가 주기적으로 필요하다. 성공한 결과물을 관찰만할 것이 아니라 추측해보고 문제점을 찾아내며, 더 나은 결과로 발전시키기 위한 지속적인 질의와 응답을 기록해야 한다. 아래의 방식을 예시로 현재의 감정기억을 이용하여 추후 이 시스템도 발전시킬 수 있도록 하자.  김용재\rPiggyback_Server\r SS_MainForm\r\rpanel titlepanel footer\r"
+},
+{
 	"uri": "https://nocturover.github.io/project/investo/",
 	"title": "Investo",
 	"tags": [],
 	"description": "Project-Investo",
 	"content": "Overview 이 곳은 프로젝트 Investo 의 Trouble shooting 과 진척도를 기록하는 공간입니다.\n"
+},
+{
+	"uri": "https://nocturover.github.io/web/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "Hugo",
+	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\nLink 01. Custom Theme \n 02. FAVICON \n 03. ShortCodes \n 4. Submodule Recursive \n\r\r"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/common/01_common/",
@@ -42,13 +56,6 @@
 	"content": "Overview  이 곳은 C# Database 연동의 학습공간 입니다.\nLink 01. MariaDB connection \n 02. SQL 문법 \n 03. SQL 캡슐화 \n 04. DB 적재 및 불러오기 \n 05. Connection Pooling \n\r\r"
 },
 {
-	"uri": "https://nocturover.github.io/web/hugo/",
-	"title": "Hugo",
-	"tags": [],
-	"description": "Hugo",
-	"content": "Overview 이 곳은 Go-Hugo Static site 개설과 커스터마이징 학습 공간입니다.\nLink 01. Custom Theme \n 02. FAVICON \n 03. ShortCodes \n\r\r"
-},
-{
 	"uri": "https://nocturover.github.io/git/troubleshooting/",
 	"title": "Troubleshooting",
 	"tags": [],
@@ -70,13 +77,6 @@
 	"content": "Overview 이 사이트는 코딩과 그 밖의 모든 것에 대한 보관함 입니다.\n\r[사용가능 도구들] \r[ALERT]  {{% alert primary %}}primary is a primary{{% /alert %}} primary is a primary\r{{% alert primary %}}primary is a primary{{% /alert %}} primary is a primary\r{{% alert theme=\u0026ldquo;info\u0026rdquo; %}}info is a text{{% /alert %}} info is a text\r{{% alert theme=\u0026ldquo;success\u0026rdquo; %}}success is a text{{% /alert %}} success is a text\r{{% alert theme=\u0026ldquo;warning\u0026rdquo; %}}warning is a text{{% /alert %}} warning is a text\r{{% alert danger %}}danger is a text{{% /alert %}} danger is a text\r{{% alert dark %}}dark is a dark{{% /alert %}} dark is a dark\r{{% alert light %}}light is a light{{% /alert %}} light is a light\r{{% alert secondary %}}secondary is a secondary{{% /alert %}} secondary is a secondary\r\r[ATTATCHMENTS]  {{% alert warning %}}\n{{%attachments title=\u0026quot;_files\u0026quot; /%}}\n{{% /alert %}}\n\t\r_files\r\rCarroll_AliceAuPaysDesMerveilles.pdf\u0026nbsp;(175 kB)adivorciarsetoca00cape.pdf\u0026nbsp;(212 kB)hugo.png\u0026nbsp;(17 kB)movieselectricsheep-flock-244-32500-2.mp4\u0026nbsp;(340 kB)zip.mp3\u0026nbsp;(57 kB)\r\r\r[TAB]  PHP\r​\tThis is how we do a Hello world with php\n\u0026lt;?php Print \u0026#34;Hello, World!\u0026#34;; ?\u0026gt;​\nGolang\r​\tThis is how we do a Hello world with go\npackage main import \u0026#34;fmt\u0026#34; func main() { fmt.Println(\u0026#34;hello world\u0026#34;) }\t​\nJava\r​\tThis is how we do a Hello world with java\nclass HelloWorld { public static void main(String[] args) { System.out.println(\u0026#34;Hello, World!\u0026#34;); } } ​\n\r\r[BADGE]  {{% badge %}}primary (default){{% /badge %}}  primary (default)  {{% badge warning %}}In progress{{% /badge %}}  In progress  {{% badge secondary %}}docport{{% /badge %}}  docport  {{% badge success %}}beta{{% /badge %}}  beta  {{% badge danger %}}danger{{% /badge %}}  danger  {{% badge warning %}}warning{{% /badge %}}  warning  {{% badge info %}}info{{% /badge %}}  info  {{% badge light %}}light{{% /badge %}}  light  {{% badge dark %}}dark{{% /badge %}}  dark\n\r[BUTTON]  {{\u0026lt; button href=\u0026ldquo;https://google.com\u0026rdquo; theme=\u0026ldquo;\u0026ldquo;primary\u0026rdquo;\u0026rdquo; /\u0026gt;} } Google 이동{{\u0026lt;/ /button \u0026gt;}}\nGoogle 이동\r{ {\u0026lt;/* button ref= \u0026ldquo;\u0026ldquo;Insight\u0026rdquo;\u0026rdquo; theme = \u0026ldquo;secondary\u0026rdquo; */\u0026gt;} }**Insight** 페이지 이동 { {\u0026lt;/*/ button */\u0026gt;} }\nInsight 페이지 이동\r\r\r[COLUMN]  1st column Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\r2nd column Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\rlast column Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\r \r[EXCERPT]  excerpt paragraph test\r\u0026lt;Excerpt\u0026gt;\r{{% alert primary %}} excerpt paragraph test {{% /alert %}}\r\r\r\r[EXPAND]  \rExpand me\r\rgit\nλ git submodule add https://github.com/~/~.git themes/~ \r\r\r[NOTICE]  TODOLearn language\n\r\r[PANEL]  panel titlethis is a panel text\npanel footer\r\r[ICON]  ICON LINKFONTAWESOME\n\r\n   "
 },
 {
-	"uri": "https://nocturover.github.io/project/investo/idea/",
-	"title": "Idea",
-	"tags": [],
-	"description": "Project-Investo-Idea",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Idea Archive 공간입니다.\n​\n"
-},
-{
 	"uri": "https://nocturover.github.io/daily/",
 	"title": "Daily",
 	"tags": [],
@@ -88,7 +88,7 @@
 	"title": "Progress",
 	"tags": [],
 	"description": "Project-Investo-Progress",
-	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.10.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.10.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.10.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.10.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.10.25 (Mon) Function lists passing 미정  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r2021.10.26 (Tue) Prototype 제작 (Connection UI)  2 [hr]\r2021.10.27 (Wed) Prototype 제작  DB Encapsulation API Encapsulation passing 28    5 [hr]\r2021.10.28 (Thr) Prototype 제작  API Encapsulation - (검토결과 : 필요X) ChildConnectionForm (DB, API status)    5 [hr]\r2021.10.29 (Fri)  Prototype 제작\n ChildConnectionForm (DB, API status) DB connection pooling 방식 적용 Pause  array type (관리차원) Garbage Collector 원리 적용      Code Standard ver_1.0\n  5 [hr]\r2021.10.30 (Sat)  Prototype 제작\n ChildConnectionForm (DB, API status)    Code Standard ver_1.0\n  5 [hr]\r2021.10.31 (Sun)  Prototype 제작\n ChildConnectionForm (DB, API status)  APItestUtilForm.cs      Code Standard ver_1.0\n  3 [hr]\r2021.11.02 (Tue) 프로토타입의 취지에 맞게 Prototype 제작  ChildConnectionForm (DB, API status)  APItestUtilForm.cs     Code Standard ver_1.0 Pseudo Code 작성 UML 작성  3 [hr]\r2021.11.10 (Wed) 프로토타입의 취지에 맞게 Prototype 제작  LSR (Log-Socket-Rerun)   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.11 (Thr) 프로토타입의 취지에 맞게 Prototype 제작  LSR (Log-Socket-Rerun) Socket Module 완성 (Console) [+] header / body protocol   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.13 (Sat) 프로토타입의 취지에 맞게 Prototype 제작  High performance Server/Client Socket Module   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.17 (Wed) 프로토타입의 취지에 맞게 cInvesto_module 작성  physical    Code Standard ver_1.0    Strategy Form 작성  const Class 생성 Screen No 체계화 Scraping Socket (마지막 데이터-파라미터) Log TimeLine DB-Table 조직화 제한우회 (Multiple ID)   적용  DEBUG - 팁사용, #IF 전처리문 BIT COL in DB-Table UNIT_TEST (Boolean) Pseudo Code 작성 UML 작성    2 [hr]\r\r2021.11.26 (Fri) 현재 진행상태 점검  Socket Telegram  Telegram with Screenshot Telegram with sending Socket Server Command Telegram with Command that stop emergency   DB 적재  T. Data  RT After Maket Scrape from web     Data Analyze  Dataframe for c# measure overhead with Communicating py StdOut and c# Program that simple change data parameter for analyze back / after Visualiztion     Time Schedular 작성 및 연계성 검토 Data 적재 관련 리스트 생성 데이터 분석 방향성 검토  계획\r"
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Progress 기록 공간입니다.\n일부 내용은 정보 보호를 위해 생략되거나 축약되어 있습니다.\n\rPlan   ~\u0026lsquo;21.10.31 | 기본 메뉴바 기능 구현 완료 (draft / 세부기능 생략) ~\u0026lsquo;21.11.31 | 전략 1 구현 및 Socket 활성화 ~\u0026lsquo;21.12.10 | Refactoring ~\u0026lsquo;21.12.31 | 전략 2 구현 및 최적화 (피드백 바탕) \u0026lsquo;21.12.31 | 방향성 검토 및 플랜 세부화 ~\u0026lsquo;22.01.15 | PS MK 적용 ~\u0026lsquo;22.01.31 | Parametere 적용 테스터 제작 ~\u0026lsquo;22.01.15 | R.P.yer 제작 ~\u0026lsquo;22.01.15 | BS 전략 모두 적용  \rProgress  2021.10.18 (Mon) 이전 코드 리뷰 passing 20  0.5 [hr]\r2021.10.20 (Wed) 쉬는 기간(5일) 이전 코드 리뷰\tpassing 21 구현 가능 리스트 추출 passing 22  1 [hr]\r2021.10.21 (Thur) 구현 기능 리스트 추출 passing 23  주문 기능   이전 코드 리뷰 및 필요시 기고  ParentMDIForm / AccountChildForm / CodeLink / Usage\r1.5 [hr]\r2021.10.22 (Fri) ~~API - R.T. HOG_ Sub/Pub Limit 검토~~ passing 23  0.5 [hr]\r2021.10.25 (Mon) Function lists passing 미정  DB Connection Child Form DB updater   Child Folder migration  2 [hr]\r2021.10.26 (Tue) Prototype 제작 (Connection UI)  2 [hr]\r2021.10.27 (Wed) Prototype 제작  DB Encapsulation API Encapsulation passing 28    5 [hr]\r2021.10.28 (Thr) Prototype 제작  API Encapsulation - (검토결과 : 필요X) ChildConnectionForm (DB, API status)    5 [hr]\r2021.10.29 (Fri)  Prototype 제작\n ChildConnectionForm (DB, API status) DB connection pooling 방식 적용 Pause  array type (관리차원) Garbage Collector 원리 적용      Code Standard ver_1.0\n  5 [hr]\r2021.10.30 (Sat)  Prototype 제작\n ChildConnectionForm (DB, API status)    Code Standard ver_1.0\n  5 [hr]\r2021.10.31 (Sun)  Prototype 제작\n ChildConnectionForm (DB, API status)  APItestUtilForm.cs      Code Standard ver_1.0\n  3 [hr]\r2021.11.02 (Tue) 프로토타입의 취지에 맞게 Prototype 제작  ChildConnectionForm (DB, API status)  APItestUtilForm.cs     Code Standard ver_1.0 Pseudo Code 작성 UML 작성  3 [hr]\r2021.11.10 (Wed) 프로토타입의 취지에 맞게 Prototype 제작  LSR (Log-Socket-Rerun)   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.11 (Thr) 프로토타입의 취지에 맞게 Prototype 제작  LSR (Log-Socket-Rerun) Socket Module 완성 (Console) [+] header / body protocol   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.13 (Sat) 프로토타입의 취지에 맞게 Prototype 제작  High performance Server/Client Socket Module   Code Standard ver_1.0 Pseudo Code 작성 UML 작성  2 [hr]\r2021.11.17 (Wed) 프로토타입의 취지에 맞게 cInvesto_module 작성  physical    Code Standard ver_1.0    Strategy Form 작성  const Class 생성 Screen No 체계화 Scraping Socket (마지막 데이터-파라미터) Log TimeLine DB-Table 조직화 제한우회 (Multiple ID)   적용  DEBUG - 팁사용, #IF 전처리문 BIT COL in DB-Table UNIT_TEST (Boolean) Pseudo Code 작성 UML 작성    2 [hr]\r\r2021.11.26 (Fri) 현재 진행상태 점검  Socket Telegram  Telegram with Screenshot Telegram with sending Socket Server Command Telegram with Command that stop emergency   DB 적재  T. Data  RT After Maket Scrape from web     Data Analyze  Dataframe for c# measure overhead with Communicating py StdOut and c# Program that simple change data parameter for analyze back / after Visualiztion     Time Schedular 작성 및 연계성 검토 Data 적재 관련 리스트 생성 데이터 분석 방향성 검토  계획\r2022.05.24 (Tue)  Typora Report Articles\n Web - Hugo - Submodule recursive Project - Investo - Idea - Base format example    Custom Components 제작(Form Controls)\n Label : Title, Content ListView / ListBox (Dark mode + Consolas + Easily Add Columns) Panel Button : Main, Content CheckBox, RadioButton    Scraping System Prototype 구동(내일부터)\n 시동 Telegram(정보전달) Scraping Realtime (호가창 포함) Scraping Transition (검증?)    계획\r"
 },
 {
 	"uri": "https://nocturover.github.io/project/investo/progress/02_plan/",
@@ -259,6 +259,13 @@
 	"content": "Overview 이 곳은 책, Documentation ,논문 을 리뷰하는 공간입니다.\n"
 },
 {
+	"uri": "https://nocturover.github.io/web/hugo/04_submodule_recursive/",
+	"title": "4. Submodule Recursive",
+	"tags": [],
+	"description": "",
+	"content": "Overview  githubClone 파일 복제와 Submodule의 등록(Troubleshooting) 방법의 기술\n\rCustom Shortcodes  Clone \u0026amp; Submodule  1번 방법  git clone --recurse -submodules https://~page-resource.igt  2번 방법  git clone https://~page-resource.igt git submodule update --init --recursive cd public git checkout master // Check main branch using : git branch -v  submodule에 관한 정보는 폴더 내 .git 파일에 기록되어 있음(Hugo static page 이용자라면, Theme과 Public을 최초에 등록했어야 함)  \rTroubleshooting  \r       parameter 할당 오류\r       \rSummary  Reference Link\r\r"
+},
+{
 	"uri": "https://nocturover.github.io/csharp/winform/04_treeview_finder/",
 	"title": "04. TreeView Text Finder",
 	"tags": [],
@@ -336,18 +343,18 @@
 	"content": "Overview 이 곳은 Python 언어의 학습 공간입니다.\n"
 },
 {
-	"uri": "https://nocturover.github.io/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/",
-	"title": "08. 습득과 정리",
-	"tags": [],
-	"description": "",
-	"content": "1.\n정리의 목적이 있다면 상기되는 주기를 줄여 기억의 망각 주기를 거스르기 위해서라고 말할 수 있겠다.\n새로운 것을 습득하는 과정에서\n"
-},
-{
 	"uri": "https://nocturover.github.io/web/",
 	"title": "Web",
 	"tags": [],
 	"description": "Web",
 	"content": "Overview 이 곳은 Web / Frontend 언어들의 학습 공간입니다.\n"
+},
+{
+	"uri": "https://nocturover.github.io/daily/08_%EC%8A%B5%EB%93%9D%EA%B3%BC-%EC%A0%95%EB%A6%AC/",
+	"title": "08. 습득과 정리",
+	"tags": [],
+	"description": "",
+	"content": "1.\n정리의 목적이 있다면 상기되는 주기를 줄여 기억의 망각 주기를 거스르기 위해서라고 말할 수 있겠다.\n새로운 것을 습득하는 과정에서\n"
 },
 {
 	"uri": "https://nocturover.github.io/daily/09_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8_%EC%9E%90%EB%8F%99%ED%99%94/",
@@ -390,6 +397,13 @@
 	"tags": [],
 	"description": "",
 	"content": "A bunch of Shortcodes are available with this theme :\n\rattachments\rThe Attachments shortcode displays a list of files attached to a page.\n\r\rbadge\rDisclaimers to help you structure your page\n\r\r"
+},
+{
+	"uri": "https://nocturover.github.io/project/investo/idea/",
+	"title": "Idea",
+	"tags": [],
+	"description": "Project-Investo-Idea",
+	"content": "Overview 이 곳은 프로젝트 Investo 의 Idea Archive 공간입니다.\n​\n"
 },
 {
 	"uri": "https://nocturover.github.io/csharp/winform/06_formtoform/",
