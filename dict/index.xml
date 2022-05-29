@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dict on 1998</title>
+    <link>https://nocturover.github.io/dict/</link>
+    <description>Recent content in Dict on 1998</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 May 2022 19:00:19 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/dict/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. IPC(Interprocess Communication)</title>
+      <link>https://nocturover.github.io/dict/01_ipc/</link>
+      <pubDate>Sun, 29 May 2022 19:00:19 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/dict/01_ipc/</guid>
+      <description>IPC (Interprocess Communication)  MSDN IPC
+Interprocess communication between C# and C++
+ WinSocket Named Pipe  </description>
+    </item>
+    
+  </channel>
+</rss>

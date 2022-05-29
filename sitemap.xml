@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nocturover.github.io/dict/01_ipc/</loc>
+    <lastmod>2022-05-29T19:00:19+09:00</lastmod>
+  </url><url>
     <loc>https://nocturover.github.io/project/investo/idea/01_%EB%8F%99%EB%A0%A5%EC%9D%98_%EB%B0%A9%EC%8B%9D/</loc>
     <lastmod>2022-05-24T13:46:27+09:00</lastmod>
   </url><url>
@@ -160,6 +163,9 @@
   </url><url>
     <loc>https://nocturover.github.io/git/</loc>
     <lastmod>2021-10-23T13:38:34+09:00</lastmod>
+  </url><url>
+    <loc>https://nocturover.github.io/dict/</loc>
+    <lastmod>2022-05-29T19:00:19+09:00</lastmod>
   </url><url>
     <loc>https://nocturover.github.io/daily/10_%EB%AA%A9%ED%91%9C/</loc>
     <lastmod>2022-05-22T20:24:12+09:00</lastmod>
