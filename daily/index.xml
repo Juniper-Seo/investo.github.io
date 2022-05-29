@@ -6,7 +6,7 @@
     <description>Recent content in Daily on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 May 2022 20:24:12 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 19:11:36 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/daily/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. 선택과 집중</title>
       <link>https://nocturover.github.io/daily/01_%EC%84%A0%ED%83%9D%EA%B3%BC_%EC%A7%91%EC%A4%91/</link>
@@ -140,6 +140,16 @@ Github.io에 간단히 게시하기 위한 Hugo, Push 방식을 자동화한 하
       <description>목표란 스스로에게 진정성을 입증할 수 있는 존재이자, 단순하며 추상적인 것이 아닌 가능한 구체적이고 가능성을 계산할 수 있는 닿을 수 있는 존재로 인식시켜야 한다.
 행복을 원하며, 자유를 소망하고 이것들을 위한 금전적인 자유를 목표한다는 것은 매우 추상적이며 그 무엇에도 접근할 수 있는 힌트를 제공하고 있지 않다.
 나는 부자가 되고 싶은 것인가라고 물으면 아니다. 부자 자체가 아닌 삶의 행동의 자율성을 강조하고 싶은데 이는 내가 운동을 하고 싶다면 선수급으로 지향하여 매진할 수 있으며, 피아노도, 학습도(연구의 목적도 포함시켜), 지적허영심을 채우기 위한 온갖 전문적인 활동에 대한 시간의 자율성을 부여받았을 때 제 2의 의미를 찾아나서는 단서를 얻게될 것이다.</description>
+    </item>
+    
+    <item>
+      <title>11. 성공가능성 향상법(방법 탐색 기법)</title>
+      <link>https://nocturover.github.io/daily/11_%EC%84%B1%EA%B3%B5%EA%B0%80%EB%8A%A5%EC%84%B1_%ED%96%A5%EC%83%81%EB%B2%95_%ED%83%90%EC%83%89%EA%B8%B0%EB%B2%95/</link>
+      <pubDate>Sun, 29 May 2022 19:11:36 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/11_%EC%84%B1%EA%B3%B5%EA%B0%80%EB%8A%A5%EC%84%B1_%ED%96%A5%EC%83%81%EB%B2%95_%ED%83%90%EC%83%89%EA%B8%B0%EB%B2%95/</guid>
+      <description>프로젝트에 진입하기 전 구현할 스택 / 기술을 생각해보고, 해당되는 기술의 가장 최적점을 탐색하는 과정을 거쳐야 한다.
+최적점 탐색  현재 고민하고 있는 C# 과 C++ (Unmanaged Code)의 ICP의 최적화 방법에 대해서 고민하고 있다면,  구글링(스택오버플로)을 통해 가장 많은 공감수로 채택된 답변(큐레이션의 기간 단축)을 토대로 필요한 정보를 트리 탐색한다. 이때 발견된 기술들(신, 조합이나 학습, 연구등이 필요한 기술 정보)은 Dictionary 형태로 정리하고 해당 내용을 활용가능한 형태로 다듬기 위해 UnitTest를 진행하는데, 이때의 결과도 함께 기록하는 편을 추천한다.</description>
     </item>
     
   </channel>

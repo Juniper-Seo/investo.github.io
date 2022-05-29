@@ -6,7 +6,7 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 24 May 2022 13:46:27 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 19:11:36 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>01. 아이디어 동력의 방식</title>
       <link>https://nocturover.github.io/project/investo/idea/01_%EB%8F%99%EB%A0%A5%EC%9D%98_%EB%B0%A9%EC%8B%9D/</link>
@@ -475,6 +475,16 @@ Github.io에 간단히 게시하기 위한 Hugo, Push 방식을 자동화한 하
     </item>
     
     <item>
+      <title>11. 성공가능성 향상법(방법 탐색 기법)</title>
+      <link>https://nocturover.github.io/daily/11_%EC%84%B1%EA%B3%B5%EA%B0%80%EB%8A%A5%EC%84%B1_%ED%96%A5%EC%83%81%EB%B2%95_%ED%83%90%EC%83%89%EA%B8%B0%EB%B2%95/</link>
+      <pubDate>Sun, 29 May 2022 19:11:36 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/daily/11_%EC%84%B1%EA%B3%B5%EA%B0%80%EB%8A%A5%EC%84%B1_%ED%96%A5%EC%83%81%EB%B2%95_%ED%83%90%EC%83%89%EA%B8%B0%EB%B2%95/</guid>
+      <description>프로젝트에 진입하기 전 구현할 스택 / 기술을 생각해보고, 해당되는 기술의 가장 최적점을 탐색하는 과정을 거쳐야 한다.
+최적점 탐색  현재 고민하고 있는 C# 과 C++ (Unmanaged Code)의 ICP의 최적화 방법에 대해서 고민하고 있다면,  구글링(스택오버플로)을 통해 가장 많은 공감수로 채택된 답변(큐레이션의 기간 단축)을 토대로 필요한 정보를 트리 탐색한다. 이때 발견된 기술들(신, 조합이나 학습, 연구등이 필요한 기술 정보)은 Dictionary 형태로 정리하고 해당 내용을 활용가능한 형태로 다듬기 위해 UnitTest를 진행하는데, 이때의 결과도 함께 기록하는 편을 추천한다.</description>
+    </item>
+    
+    <item>
       <title></title>
       <link>https://nocturover.github.io/csharp/winform/06_formtoform/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -495,6 +505,19 @@ Overview  다중 폼에서의 데이터 전달에 대한 방법을 기술.
 Overview  Form의 테두리 없는 스타일 구현 기술
 Methods  Code(with WinAPI ) this.MouseDown += (sender, e) =&amp;gt; { if (e.Button == MouseButtons.Left) { ReleaseCapture(); SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, IntPtr.Zero); } }   Form 내 이동 이벤트가 수행될 컨트롤(패널 or Form)에 마우스 좌클릭 이벤트를 구독
    Code  Main Form  namespace UNIT_TEST_GLOBAL { public partial class Form1 : Form { TestAPI testAPI = new TestAPI(3406); public Form1() { InitializeComponent(); StartSubForm(); } private void StartSubForm() { SubForm sub = new SubForm(); sub.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://nocturover.github.io/csharp/winform/08_winform_unittest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/winform/08_winform_unittest/</guid>
+      <description>title: &amp;ldquo;8. Unit Test&amp;rdquo; date: 2022-05-24T14:31:19+09:00 draft: false weight: 9
+Overview  Window Form의 Unit test 구현
+Methods  Ordinary Test   기존의 테스트 방식은 진행되고 있는 프로젝트 내에서 해당 코드를 삽입하고 의도된 계획에 따라 버튼을 클릭하거나 입력을 수행했을 때 얻어지는 값을 수동적으로 확인하였다.
+  당연하게도 흐름의 전과정을 재수행하는 과정이 반복되는 일이 잦아졌고 그로인한 디버깅 시간소모가 증대되게 된다.
+  각각의 기능은 서로간의 간섭을 최소화하는 캡슐성을 지녀야한다.</description>
     </item>
     
   </channel>
