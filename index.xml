@@ -6,7 +6,7 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 May 2022 19:11:36 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 19:15:53 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1. IPC(Interprocess Communication)</title>
       <link>https://nocturover.github.io/dict/01_ipc/</link>
@@ -29,10 +29,10 @@ Interprocess communication between C# and C++
     
     <item>
       <title>01.Reflection</title>
-      <link>https://nocturover.github.io/csharp/common/01_common/</link>
+      <link>https://nocturover.github.io/csharp/common/01_reflection/</link>
       <pubDate>Fri, 13 May 2022 16:04:30 +0900</pubDate>
       
-      <guid>https://nocturover.github.io/csharp/common/01_common/</guid>
+      <guid>https://nocturover.github.io/csharp/common/01_reflection/</guid>
       <description>Overview  C# 문법 Reflection 의 활용법 기술
 Wiki  동적 바인딩 기능을 내포한 객체  일반적으로 코드의 컴파일이 된 시점부터 프로그램은 컴파일된 코드의 구성에 따라 거동된다. Reflection을 이용하면 객체의 생성과 연결(binding), Invoking Method, Event Subscribing Method List를 추출하여 동적으로 사용하는 것이 가능하다. Plug-In 방식의 코드 구성에 활용가능하다.  Usage  Event - Get Invocation List  이번 챕터에서는 하나의 Instance 객체의 특정 이벤트에 등록된 Method를 추출하여 호출(Invoke)하거나, Window.</description>
     </item>
@@ -46,6 +46,16 @@ Interprocess communication between C# and C++
       <description>Purpose Progress    Scheduler
   Windows scheduler list Scheduler add / edit / remove configuration with Queue manager Managing All Server Scheduler list and Editable system Logging for start/running/end time with Error code send Log to Telegram / Socket / Web socket for user interface     API
   Scrape API Data (Daily/Tick/Financial Statement) as Command Scrape API Data (Financial Statement) as Win32API Click and Save File Dialog Scrape Real time data for avoiding API Transaction limitation Analyze Real time data with Python/C# DataFame and view Data Visualization Load and Execute Conditional state for sub Ordering system     Web</description>
+    </item>
+    
+    <item>
+      <title>2. Asyncronous</title>
+      <link>https://nocturover.github.io/csharp/common/02_asyncronous/</link>
+      <pubDate>Mon, 30 May 2022 19:15:53 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/common/02_asyncronous/</guid>
+      <description>Overview  C# 키워드 Async Await를 포함한 비동기 구현방식 기술.
+Example  using System; using System.Threading; using System.Threading.Tasks; using System.Reflection; namespace _02_ReturnTask { class Program { static async Task Main(string[] args) { int result = await SumAsync(1, 2); //int result = SumAsync(1, 2).GetAwaiter().GetResult();  Console.WriteLine(&amp;#34;\tresult = &amp;#34; + result); await DownloadImageAsync(1, 2); DownloadImageAsyncVoid(1, 2); while (true) {} } static async Task&amp;lt;int&amp;gt; SumAsync(int a, int b) { await Task.Delay(1000); string method = MethodBase.</description>
     </item>
     
     <item>
