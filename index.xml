@@ -6,7 +6,18 @@
     <description>Recent content on 1998</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 May 2022 19:15:53 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Jun 2022 01:39:36 +0900</lastBuildDate><atom:link href="https://nocturover.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>01_HelloWorld</title>
+      <link>https://nocturover.github.io/csharp/asp.net/01_helloworld/</link>
+      <pubDate>Wed, 01 Jun 2022 01:39:36 +0900</pubDate>
+      
+      <guid>https://nocturover.github.io/csharp/asp.net/01_helloworld/</guid>
+      <description>Overview  ASP.NET을 이용한 홈페이지 구축
+
+Ref  Microsoft  ASP.NET Core를 사용하여 웹 UI 만들기 ASP.NET Core 컨트롤러를 사용하여 웹 API 만들기 [ASP.NET Core] Razor Page로 웹프로젝트 만들기  </description>
+    </item>
+    
     <item>
       <title>1. IPC(Interprocess Communication)</title>
       <link>https://nocturover.github.io/dict/01_ipc/</link>

@@ -4,16 +4,16 @@
 <html>
   <head>
     <title>
-	03. Thread/Invoke/BeginInvoke :: 1998
+	01_HelloWorld :: 1998
 </title>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="revised" content="2022-06-01T02:38:13 KST">
-<meta name="description" content="">
+<meta name="description" content="C#-ASP.NET-BEGINNER">
 
 
 
-<title>03. Thread/Invoke/BeginInvoke :: 1998</title>
+<title>01_HelloWorld :: 1998</title>
 
 <link rel="shortcut icon" href='/images/favicon.png' type="image/x-icon" />
 
@@ -50,7 +50,7 @@
     
   </head>
 
-  <body data-url="/csharp/winform/03_winform_thread/"
+  <body data-url="/csharp/asp.net/01_helloworld/"
 
   class="">
 
@@ -325,7 +325,7 @@
               
 
 
-    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item parent active
+    <li data-nav-id="https://nocturover.github.io/csharp/winform/" class="dd-item
         item_level_$level
         ">
 
@@ -357,7 +357,7 @@
               
 
 
-    <li data-nav-id="https://nocturover.github.io/csharp/asp.net/" class="dd-item
+    <li data-nav-id="https://nocturover.github.io/csharp/asp.net/" class="dd-item parent active
         item_level_$level
         ">
 
@@ -638,8 +638,8 @@
   	
   
     <li class="">
-      <a class="text-link" href="/csharp/winform/">
-        Winform
+      <a class="text-link" href="/csharp/asp.net/">
+        ASP.NET
       </a>
     </li>
 	
@@ -647,7 +647,7 @@
   
     <li class="active">
       
-        03. Thread/Invoke/BeginInvoke
+        01_HelloWorld
       
     </li>
 
@@ -668,7 +668,7 @@
 		
 
 		
-			<h1>Winform<span>03. Thread/Invoke/BeginInvoke</span></h1>
+			<h1>ASP.NET<span>01_HelloWorld</span></h1>
         
 
 			
@@ -679,43 +679,8 @@
 				<nav class="subpages">
 	            		
 	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/01_form_group/">01_Form_Group</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/02_event/">02. C# Event</a>
-	            	</li>
-	            		
-	        			
 	            	<li class="active">
-	            		<a title="$pagetitle" href="/csharp/winform/03_winform_thread/">03. Thread/Invoke/BeginInvoke</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/04_treeview_finder/">04. TreeView Text Finder</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/05_listbox/">05. ListBox Flicker</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/06_formtoform/">06_FormToForm</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/07_form_border_none/">07_Form_Border_None</a>
-	            	</li>
-	            		
-	        			
-	            	<li >
-	            		<a title="$pagetitle" href="/csharp/winform/08_winform_unittest/">08_WinForm_UnitTest</a>
+	            		<a title="$pagetitle" href="/csharp/asp.net/01_helloworld/">01_HelloWorld</a>
 	            	</li>
 	        	</nav> 
 		
@@ -732,16 +697,11 @@
 		<nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#winform-environment">WinForm Environment</a>
+    <li><a href="#ref">Ref</a>
       <ul>
-        <li><a href="#개념">개념</a></li>
-        <li><a href="#thread--begininvoke-code">(Thread + BeginInvoke) Code</a></li>
-        <li><a href="#invoke-vs-begininvoke">Invoke vs BeginInvoke</a></li>
-        <li><a href="#taskrun--begininvoke-code">(Task.Run + BeginInvoke) Code</a></li>
+        <li><a href="#microsoft">Microsoft</a></li>
       </ul>
     </li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 	</div>
@@ -756,134 +716,17 @@
 	<div class="content">
 	    <h2 ref="overview" >Overview</h2><a class="anchor" id="overview"></a>
 <hr>
-<p><code>WinForm</code>에서 멀티 쓰레딩 환경을 구성하는 방법을 기술</p>
-<br/>
-<br/>
-<h2 ref="winform-environment" >WinForm Environment</h2><a class="anchor" id="winform-environment"></a>
-<hr>
-<h3 ref="개념" >개념</h3><a class="anchor" id="개념"></a>
-<ul>
-<li>
-<p><code>WinForm</code>은 기본적으로 <code>main()</code> 메서드 내에서 <code>Application.Run(new Form1())</code>을 수행하게 되고 따라서 UI Thread라고 명명되는 <code>MainThread</code>환경에서 동작되게 된다.</p>
-</li>
-<li>
-<p>이는 <code>WinForm</code>에서 컨트롤을 업데이트 하는 과정을 포함하여 모든 코드 동작이 <code>MainThread</code> 내에서 일어남을 의미하며, 따라서 다른 쓰레드에서 접근하여 컨트롤을 업데이트하는 것을 금지한다. ( Throw <code>Cross-Thread Exception</code> )</p>
-</li>
-<li>
-<p>이러한 이유로 새로운 <code>Thread</code>를 생성하여 무거운 작업(DB Select / FileStream)을 수행한 후에 결과 <code>Form</code>에 반영하기 위한 <a href="https://stackoverflow.com/questions/1314155/returning-a-value-from-thread/6584661">Thread.Join()</a> 과정에서 또한 <code>Form</code>의 <code>Wait</code>과정을 거쳐야하기 때문에 유저의 유동적 활동을 제한한다.</p>
-</li>
-<li>
-<p>따라서 <code>Form</code>상속 클래스 내 인스턴스를 지칭하는 <code>this.</code>의 컨트롤 권한을 <code>Delegate</code>에 할당된 메서드에 전달하여 컨트롤을 타 <code>Thread</code>환경에서 연결되게 만들어줄 수 있는 <code>Invoke</code> 와 <code>BeginInvoke</code>를 사용한다.</p>
-</li>
-</ul>
-<br/>
-<h3 ref="thread--begininvoke-code" >(Thread + BeginInvoke) Code</h3><a class="anchor" id="thread--begininvoke-code"></a>
-<ul>
-<li>일반적인 Thread환경을 구축하기 위한 방법으로 새로운 Thread를 생성하고 Method를 반환값 여부에 따라 Action Func 무명메서드를 전달하여 UI의 간섭을 배제한 채 작업을 수행한다.
-<ul>
-<li>반환값을 소유하는 Func Delegate를 사용할 경우, .EndInvoke()로 Thread작업의 종료를 대기하는 코드를 추가하여야 한다.</li>
-</ul>
-</li>
-<li>다음 코드는 버튼을 클릭하였을 때, .csv확장자 파일을 읽어들여 ComboBox Form control에 반영한다.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> btnUpdateList_Click(<span style="color:#66d9ef">object</span> sneder, EventArgs e)
-{
-    Thread T_ComboUpdate = <span style="color:#66d9ef">new</span> Thread(<span style="color:#66d9ef">new</span> ThreadStart(UpdateComboBox));
-    T_ComboUpdate.Start();
-
-    <span style="color:#66d9ef">void</span> UpdateComboBox()
-    {
-        FileStream fs = <span style="color:#66d9ef">new</span> FileStream(<span style="color:#e6db74">@&#34;UserList.csv&#34;</span>, FileMode.Open);
-        StreamReader sr = <span style="color:#66d9ef">new</span> StreamReader(fs, Encoding.UTF8);
-        <span style="color:#66d9ef">while</span> (sr.Peek() &gt;= <span style="color:#ae81ff">0</span>)							<span style="color:#75715e">// 다음 read가 존재할 때,
-</span><span style="color:#75715e"></span>        {
-            <span style="color:#66d9ef">string</span> row = sr.ReadLine();
-            <span style="color:#66d9ef">this</span>.BeginInvoke(<span style="color:#66d9ef">new</span> Action(() =&gt; { 
-                <span style="color:#66d9ef">this</span>.cboUserList.Items.AddRange(row.Split(<span style="color:#e6db74">&#34;\r\n&#34;</span>));	<span style="color:#75715e">// 문자개행으로 구분, 한줄 씩 받아옴.
-</span><span style="color:#75715e"></span>            }));
-        }
-        <span style="color:#66d9ef">this</span>.cboUserList.SelectedIndex = <span style="color:#ae81ff">0</span>;
-        sr.Close();
-        fs.Close();
-    }
-}
-</code></pre></div><br/>
-<h3 ref="invoke-vs-begininvoke" >Invoke vs BeginInvoke</h3><a class="anchor" id="invoke-vs-begininvoke"></a>
-<ul>
-<li>
-<p>단어의 구성에서 유추할 수 있듯이 BeginInvoke는 비동기 처리를 의미한다.</p>
-</li>
-<li>
-<p>위 예시 코드에서는 비동기로 작동하는 Thread 내 BeginInvoke 를 사용한 것을 볼 수 있는데, 파일의 정보가 적기 때문에 Invoke를 사용하더라도 Overhead의 큰 차이 없이 또 유저측면의 Main UI 거동에도 간섭없이 동일한 결과가 표출되는 것으로 보여진다.</p>
-</li>
-<li>
-<p>그러나, <a href="https://blog.naver.com/PostView.nhn?blogId=hjleesm&amp;logNo=221733077555">Invoke vs BeginInvoke 예시</a> 아티클에서 제시된 예시처럼 Invoke를 사용하게 되면 UI의 동작에 영향을 받기 때문에 만약 또다른 Invoke 메서드가 동시에 사용될 경우 메시지 큐에서 순차적으로 처리하게 된다.</p>
-</li>
-<li>
-<p>따라서 Control의 딜레이 없는 결과를 얻고 싶다면, BeginInvoke를 사용하는 것이 일반적인 경우에 부합한다.</p>
-</li>
-</ul>
-
-
-<div class="alert info" role="alert"><h4 ref="참고" >[참고]</h4><a class="anchor" id="참고"></a>
-<ol>
-<li>this.BeginInvoke 와 this.cboUserList.BeginInvoke 는 동일한 Form에서 파생되는 ThreadPool을 이용하기 때문에 차이가 없다.</li>
-</ol>
-</div>
-
-<br/>
-<h3 ref="taskrun--begininvoke-code" >(Task.Run + BeginInvoke) Code</h3><a class="anchor" id="taskrun--begininvoke-code"></a>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">void</span> btnUpdateList_Click(<span style="color:#66d9ef">object</span> sneder, EventArgs e)
-{
-   	<span style="color:#66d9ef">await</span> Task.Run(<span style="color:#66d9ef">new</span> Action(UpdateComboBox));
-	
-    <span style="color:#66d9ef">this</span>.lblResult.Text = <span style="color:#e6db74">&#34;UserList Loaded&#34;</span>
-        
-    <span style="color:#66d9ef">void</span> UpdateComboBox()
-    {
-        FileStream fs = <span style="color:#66d9ef">new</span> FileStream(<span style="color:#e6db74">@&#34;UserList.csv&#34;</span>, FileMode.Open);
-        StreamReader sr = <span style="color:#66d9ef">new</span> StreamReader(fs, Encoding.UTF8);
-        <span style="color:#66d9ef">while</span> (sr.Peek() &gt;= <span style="color:#ae81ff">0</span>)							<span style="color:#75715e">// 다음 read가 존재할 때,
-</span><span style="color:#75715e"></span>        {
-            <span style="color:#66d9ef">string</span> row = sr.ReadLine();
-            <span style="color:#66d9ef">this</span>.BeginInvoke(<span style="color:#66d9ef">new</span> Action(() =&gt; { 
-                <span style="color:#66d9ef">this</span>.cboUserList.Items.AddRange(row.Split(<span style="color:#e6db74">&#34;\r\n&#34;</span>));	<span style="color:#75715e">// 문자개행으로 구분, 한줄 씩 받아옴.
-</span><span style="color:#75715e"></span>            }));
-        }
-        <span style="color:#66d9ef">this</span>.cboUserList.SelectedIndex = <span style="color:#ae81ff">0</span>;
-        sr.Close();
-        fs.Close();
-    }
-}
-</code></pre></div><ul>
-<li>async / await 구문에 따라 버튼이 클릭되면, UpdateComboBox()가 Form이 아닌 새로운 ThreadPool에서 실행되고 완료되면 label Text를 업데이트한다.</li>
-</ul>
+<p><code>ASP.NET</code>을 이용한 홈페이지 구축</p>
 <p><br/><br/></p>
-<h2 ref="troubleshooting" >Troubleshooting</h2><a class="anchor" id="troubleshooting"></a>
+<h2 ref="ref" >Ref</h2><a class="anchor" id="ref"></a>
 <hr>
-
-
-<div class="alert warning" role="alert"><h4 ref="performance-checklist" >Performance CheckList</h4><a class="anchor" id="performance-checklist"></a>
-</div>
-
+<h3 ref="microsoft" >Microsoft</h3><a class="anchor" id="microsoft"></a>
 <ul>
-<li>
-<ul>
-<li></li>
+<li><a href="https://docs.microsoft.com/en-us/learn/modules/create-razor-pages-aspnet-core/?WT.mc_id=dotnet-35129-website">ASP.NET Core를 사용하여 웹 UI 만들기</a></li>
+<li><a href="https://docs.microsoft.com/ko-kr/learn/modules/build-web-api-aspnet-core/?WT.mc_id=dotnet-35129-website">ASP.NET Core 컨트롤러를 사용하여 웹 API 만들기</a></li>
+<li><a href="https://lab.cliel.com/entry/ASPNET-Core-Razor-Page">[ASP.NET Core] Razor Page로 웹프로젝트 만들기</a></li>
 </ul>
-</li>
-</ul>
-<p><br/><br/></p>
-<h2 ref="summary" >Summary</h2><a class="anchor" id="summary"></a>
-<hr>
-
-
-<div class="alert dark" role="alert"><p><span   class="badge badge-secondary">Reference Link</span></p>
-<p><a href="https://stackoverflow.com/questions/1226457/difference-between-begininvoke-and-thread-start/1227026">Difference between BeginInvoke and Thread.Start</a></p>
-<p><a href="https://stackoverflow.com/questions/23657709/does-thread-sleep-affect-the-threadpool">Does Thread.Sleep affect the ThreadPool?</a></p>
-<p><a href="https://social.technet.microsoft.com/wiki/contents/articles/21177.visual-c-thread-sleep-vs-task-delay.aspx">Visual C#: Thread.Sleep vs. Task.Delay</a></p>
-</div>
-
+<br/>
 <br/>
 
 		</div>
@@ -895,10 +738,10 @@
 
 	 
 	<div class="chevrons">
-		<a class="next" href="/csharp/db/" title="DB" style="margin-right: 0px;">
+		<a class="next" href="/python/" title="Python" style="margin-right: 0px;">
             <div>
                 <p>다음 글</p>
-                <label>DB</label>
+                <label>Python</label>
             </div>
             <i class="fas fa-arrow-right" style="font-size: 1.7em"></i></a>
 	</div>
@@ -922,22 +765,17 @@
     <label><i class="fas fa-align-right"></i>&nbsp;&nbsp;목 차</label>
     <nav>
         <ul >
-            <li><a href="/csharp/winform/03_winform_thread/">03. Thread/Invoke/BeginInvoke</a></li>
+            <li><a href="/csharp/asp.net/01_helloworld/">01_HelloWorld</a></li>
         </ul>
     </nav>
     <nav id="TableOfContents">
   <ul>
     <li><a href="#overview">Overview</a></li>
-    <li><a href="#winform-environment">WinForm Environment</a>
+    <li><a href="#ref">Ref</a>
       <ul>
-        <li><a href="#개념">개념</a></li>
-        <li><a href="#thread--begininvoke-code">(Thread + BeginInvoke) Code</a></li>
-        <li><a href="#invoke-vs-begininvoke">Invoke vs BeginInvoke</a></li>
-        <li><a href="#taskrun--begininvoke-code">(Task.Run + BeginInvoke) Code</a></li>
+        <li><a href="#microsoft">Microsoft</a></li>
       </ul>
     </li>
-    <li><a href="#troubleshooting">Troubleshooting</a></li>
-    <li><a href="#summary">Summary</a></li>
   </ul>
 </nav>
 </div>
@@ -1012,7 +850,7 @@
 			
 		      <li>
 		          <i class='fas fa-calendar'></i>
-		          Last update on 31 October 2021
+		          Last update on 01 June 2022
 		      </li>
 		    
 		    
